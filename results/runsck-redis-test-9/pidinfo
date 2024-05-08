@@ -1,0 +1,36 @@
+containerd-shim,98541 -namespace moby -id 8ffa0de2ccef326d019112c14b9d38bc7e6ea4c10c0c0c504270a32c1426886e -address /run/containerd/containerd.sock
+  |-exe,98559 --log-format=json --platform=kvm --systemd-cgroup=true --root=/var/run/docker/runtime-runc/moby --log=/run/containerd/io.containerd.runtime.v2.task/moby/8ffa0de2ccef326d019112c14b9d38bc7e6ea4c10c0c0c504270a32c1426886e/log.json --log-fd=3 gofer --bundle=/run/containerd/io.containerd.runtime.v2.task/moby/8ffa0de2ccef326d019112c14b9d38bc7e6ea4c10c0c0c504270a32c1426886e --gofer-mount-confs=lisafs:self,lisafs:none,lisafs:none,lisafs:none,lisafs:none --io-fds=6,7,8,9,10 --mounts-fd=5 --spec-fd=4 --apply-caps=false --setup-root=false --sync-nvproxy-fd=-1 --sync-userns-fd=-1 --proc-mount-sync-fd=17
+  |   |-{exe},98576
+  |   |-{exe},98577
+  |   |-{exe},98578
+  |   |-{exe},98579
+  |   |-{exe},98590
+  |   |-{exe},98591
+  |   `-{exe},98592
+  |-exe,98565 --root=/var/run/docker/runtime-runc/moby --log=/run/containerd/io.containerd.runtime.v2.task/moby/8ffa0de2ccef326d019112c14b9d38bc7e6ea4c10c0c0c504270a32c1426886e/log.json --log-format=json --platform=kvm --systemd-cgroup=true --log-fd=3 boot --apply-caps=false --bundle=/run/containerd/io.containerd.runtime.v2.task/moby/8ffa0de2ccef326d019112c14b9d38bc7e6ea4c10c0c0c504270a32c1426886e --controller-fd=12 --cpu-num=4 --dev-io-fd=-1 --device-fd=14 --gofer-filestore-fds=9 --gofer-mount-confs=lisafs:self,lisafs:none,lisafs:none,lisafs:none,lisafs:none --io-fds=4,5,6,7,8 --mounts-fd=10 --pidns=true --setup-root=false --spec-fd=13 --start-sync-fd=11 --stdio-fds=15,16,17 --total-host-memory=16472928256 --total-memory=16472928256 --product-name=Vostro 3400 --proc-mount-sync-fd=25 8ffa0de2ccef326d019112c14b9d38bc7e6ea4c10c0c0c504270a32c1426886e
+  |   |-{exe},98586
+  |   |-{exe},98587
+  |   |-{exe},98588
+  |   |-{exe},98589
+  |   |-{exe},98595
+  |   |-{exe},98620
+  |   |-{exe},98621
+  |   |-{exe},98622
+  |   |-{exe},98623
+  |   |-{exe},98624
+  |   |-{exe},98625
+  |   |-{exe},98626
+  |   |-{exe},98627
+  |   |-{exe},98628
+  |   |-{exe},98629
+  |   |-{exe},98630
+  |   `-{exe},98631
+  |-{containerd-shim},98543
+  |-{containerd-shim},98544
+  |-{containerd-shim},98545
+  |-{containerd-shim},98546
+  |-{containerd-shim},98547
+  |-{containerd-shim},98548
+  |-{containerd-shim},98549
+  |-{containerd-shim},98550
+  `-{containerd-shim},98551

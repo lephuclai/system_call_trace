@@ -1,0 +1,350 @@
+ 0)   exe-73900    |           finish_task_switch.isra.0() {
+ 0)   exe-73900    |             raw_spin_rq_unlock() {
+ 0)   exe-73900    |               _raw_spin_unlock();
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |         } /* schedule */
+ 0)   exe-73900    |       } /* futex_wait_queue */
+ 0)   exe-73900    |       futex_unqueue();
+ 0)   exe-73900    |     } /* futex_wait */
+ 0)   exe-73900    |   } /* do_futex */
+ 0)   exe-73900    | } /* __x64_sys_futex */
+ 0)   exe-73900    | exit_to_user_mode_prepare() {
+ 0)   exe-73900    |   fpregs_assert_state_consistent();
+ 0)   exe-73900    |   switch_fpu_return() {
+ 0)   exe-73900    |     restore_fpregs_from_fpstate() {
+ 0)   exe-73900    |       xfd_validate_state();
+ 0)   exe-73900    |     }
+ 0)   exe-73900    |   }
+ 0)   exe-73900    | }
+ 0)   exe-73900    | syscall_trace_enter.constprop.0() {
+ 0)   exe-73900    |   __secure_computing() {
+ 0)   exe-73900    |     __seccomp_filter() {
+ 0)   exe-73900    |       populate_seccomp_data();
+ 0)   exe-73900    |     }
+ 0)   exe-73900    |   }
+ 0)   exe-73900    | }
+ 0)   exe-73900    | __x64_sys_nanosleep() {
+ 0)   exe-73900    |   get_timespec64();
+ 0)   exe-73900    |   hrtimer_nanosleep() {
+ 0)   exe-73900    |     __hrtimer_init();
+ 0)   exe-73900    |     do_nanosleep() {
+ 0)   exe-73900    |       hrtimer_start_range_ns() {
+ 0)   exe-73900    |         _raw_spin_lock_irqsave();
+ 0)   exe-73900    |         __hrtimer_start_range_ns() {
+ 0)   exe-73900    |           ktime_get();
+ 0)   exe-73900    |           get_nohz_timer_target();
+ 0)   exe-73900    |           enqueue_hrtimer();
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |         hrtimer_reprogram() {
+ 0)   exe-73900    |           tick_program_event() {
+ 0)   exe-73900    |             clockevents_program_event() {
+ 0)   exe-73900    |               ktime_get();
+ 0)   exe-73900    |               lapic_next_deadline();
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |         _raw_spin_unlock_irqrestore();
+ 0)   exe-73900    |       }
+ 0)   exe-73900    |       schedule() {
+ 0)   exe-73900    |         rcu_note_context_switch();
+ 0)   exe-73900    |         raw_spin_rq_lock_nested() {
+ 0)   exe-73900    |           _raw_spin_lock();
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |         update_rq_clock();
+ 0)   exe-73900    |         dequeue_task_fair() {
+ 0)   exe-73900    |           dequeue_entity() {
+ 0)   exe-73900    |             update_curr() {
+ 0)   exe-73900    |               update_min_vruntime();
+ 0)   exe-73900    |               cpuacct_charge();
+ 0)   exe-73900    |               __cgroup_account_cputime() {
+ 0)   exe-73900    |                 cgroup_rstat_updated();
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |             __update_load_avg_se();
+ 0)   exe-73900    |             __update_load_avg_cfs_rq();
+ 0)   exe-73900    |             clear_buddies();
+ 0)   exe-73900    |             update_cfs_group();
+ 0)   exe-73900    |             update_min_vruntime();
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           set_next_buddy();
+ 0)   exe-73900    |           __update_load_avg_se();
+ 0)   exe-73900    |           __update_load_avg_cfs_rq();
+ 0)   exe-73900    |           update_cfs_group() {
+ 0)   exe-73900    |             reweight_entity() {
+ 0)   exe-73900    |               update_curr() {
+ 0)   exe-73900    |                 update_min_vruntime();
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           __update_load_avg_se();
+ 0)   exe-73900    |           __update_load_avg_cfs_rq();
+ 0)   exe-73900    |           update_cfs_group() {
+ 0)   exe-73900    |             reweight_entity() {
+ 0)   exe-73900    |               update_curr() {
+ 0)   exe-73900    |                 __calc_delta();
+ 0)   exe-73900    |                 update_min_vruntime();
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           hrtick_update();
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |         pick_next_task() {
+ 0)   exe-73900    |           pick_next_task_fair() {
+ 0)   exe-73900    |             update_curr();
+ 0)   exe-73900    |             check_cfs_rq_runtime();
+ 0)   exe-73900    |             pick_next_entity();
+ 0)   exe-73900    |             update_curr();
+ 0)   exe-73900    |             check_cfs_rq_runtime();
+ 0)   exe-73900    |             pick_next_entity();
+ 0)   exe-73900    |             check_cfs_rq_runtime();
+ 0)   exe-73900    |             pick_next_entity();
+ 0)   exe-73900    |             put_prev_entity() {
+ 0)   exe-73900    |               check_cfs_rq_runtime();
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |             set_next_entity() {
+ 0)   exe-73900    |               clear_buddies();
+ 0)   exe-73900    |               __update_load_avg_se();
+ 0)   exe-73900    |               __update_load_avg_cfs_rq();
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |         psi_task_switch() {
+ 0)   exe-73900    |           psi_flags_change();
+ 0)   exe-73900    |           psi_flags_change();
+ 0)   exe-73900    |           psi_group_change() {
+ 0)   exe-73900    |             record_times();
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           psi_group_change() {
+ 0)   exe-73900    |             record_times();
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           psi_group_change() {
+ 0)   exe-73900    |             record_times();
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |         __traceiter_sched_switch() {
+ 0)   exe-73900    |           _raw_spin_lock_irqsave();
+ 0)   exe-73900    |           _raw_spin_unlock_irqrestore();
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |         switch_mm_irqs_off();
+ 0)   exe-73900    |         save_fpregs_to_fpstate() {
+ 0)   exe-73900    |           xfd_validate_state();
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |         finish_task_switch.isra.0() {
+ 0)   exe-73900    |           raw_spin_rq_unlock() {
+ 0)   exe-73900    |             _raw_spin_unlock();
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |       } /* schedule */
+ 0)   exe-73900    |       hrtimer_active();
+ 0)   exe-73900    |     }
+ 0)   exe-73900    |   }
+ 0)   exe-73900    | }
+ 0)   exe-73900    | exit_to_user_mode_prepare() {
+ 0)   exe-73900    |   fpregs_assert_state_consistent();
+ 0)   exe-73900    |   switch_fpu_return();
+ 0)   exe-73900    | }
+ 0)   exe-73900    | syscall_trace_enter.constprop.0() {
+ 0)   exe-73900    |   __secure_computing() {
+ 0)   exe-73900    |     __seccomp_filter() {
+ 0)   exe-73900    |       populate_seccomp_data();
+ 0)   exe-73900    |       migrate_disable();
+ 0)   exe-73900    |       migrate_enable();
+ 0)   exe-73900    |     }
+ 0)   exe-73900    |   }
+ 0)   exe-73900    | }
+ 0)   exe-73900    | __x64_sys_futex() {
+ 0)   exe-73900    |   do_futex() {
+ 0)   exe-73900    |     futex_wake() {
+ 0)   exe-73900    |       get_futex_key();
+ 0)   exe-73900    |       futex_hash();
+ 0)   exe-73900    |       _raw_spin_lock();
+ 0)   exe-73900    |       futex_wake_mark() {
+ 0)   exe-73900    |         __futex_unqueue();
+ 0)   exe-73900    |         wake_q_add_safe();
+ 0)   exe-73900    |       }
+ 0)   exe-73900    |       _raw_spin_unlock();
+ 0)   exe-73900    |       wake_up_q() {
+ 0)   exe-73900    |         try_to_wake_up() {
+ 0)   exe-73900    |           _raw_spin_lock_irqsave();
+ 0)   exe-73900    |           ttwu_queue_wakelist();
+ 0)   exe-73900    |           raw_spin_rq_lock_nested() {
+ 0)   exe-73900    |             _raw_spin_lock();
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           update_rq_clock();
+ 0)   exe-73900    |           ttwu_do_activate() {
+ 0)   exe-73900    |             psi_task_change() {
+ 0)   exe-73900    |               psi_flags_change();
+ 0)   exe-73900    |               psi_group_change() {
+ 0)   exe-73900    |                 record_times();
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |               psi_group_change() {
+ 0)   exe-73900    |                 record_times();
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |               psi_group_change() {
+ 0)   exe-73900    |                 record_times();
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |             enqueue_task_fair() {
+ 0)   exe-73900    |               enqueue_entity() {
+ 0)   exe-73900    |                 update_curr() {
+ 0)   exe-73900    |                   update_min_vruntime();
+ 0)   exe-73900    |                   cpuacct_charge();
+ 0)   exe-73900    |                   __cgroup_account_cputime() {
+ 0)   exe-73900    |                     cgroup_rstat_updated();
+ 0)   exe-73900    |                   }
+ 0)   exe-73900    |                 }
+ 0)   exe-73900    |                 __update_load_avg_se();
+ 0)   exe-73900    |                 __update_load_avg_cfs_rq();
+ 0)   exe-73900    |                 update_cfs_group();
+ 0)   exe-73900    |                 place_entity();
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |               __update_load_avg_se();
+ 0)   exe-73900    |               __update_load_avg_cfs_rq();
+ 0)   exe-73900    |               update_cfs_group() {
+ 0)   exe-73900    |                 reweight_entity() {
+ 0)   exe-73900    |                   update_curr() {
+ 0)   exe-73900    |                     update_min_vruntime();
+ 0)   exe-73900    |                   }
+ 0)   exe-73900    |                 }
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |               __update_load_avg_se();
+ 0)   exe-73900    |               __update_load_avg_cfs_rq();
+ 0)   exe-73900    |               update_cfs_group() {
+ 0)   exe-73900    |                 reweight_entity() {
+ 0)   exe-73900    |                   update_curr() {
+ 0)   exe-73900    |                     __calc_delta();
+ 0)   exe-73900    |                     update_min_vruntime();
+ 0)   exe-73900    |                   }
+ 0)   exe-73900    |                 }
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |               hrtick_update();
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |             ttwu_do_wakeup() {
+ 0)   exe-73900    |               check_preempt_curr() {
+ 0)   exe-73900    |                 check_preempt_wakeup() {
+ 0)   exe-73900    |                   update_curr();
+ 0)   exe-73900    |                 }
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           raw_spin_rq_unlock() {
+ 0)   exe-73900    |             _raw_spin_unlock();
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           _raw_spin_unlock_irqrestore();
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |       }
+ 0)   exe-73900    |     }
+ 0)   exe-73900    |   }
+ 0)   exe-73900    | }
+ 0)   exe-73900    | exit_to_user_mode_prepare() {
+ 0)   exe-73900    |   fpregs_assert_state_consistent();
+ 0)   exe-73900    | }
+ 0)   exe-73900    | syscall_trace_enter.constprop.0() {
+ 0)   exe-73900    |   __secure_computing() {
+ 0)   exe-73900    |     __seccomp_filter() {
+ 0)   exe-73900    |       populate_seccomp_data();
+ 0)   exe-73900    |       migrate_disable();
+ 0)   exe-73900    |       migrate_enable();
+ 0)   exe-73900    |     }
+ 0)   exe-73900    |   }
+ 0)   exe-73900    | }
+ 0)   exe-73900    | __x64_sys_futex() {
+ 0)   exe-73900    |   do_futex() {
+ 0)   exe-73900    |     futex_wait() {
+ 0)   exe-73900    |       futex_setup_timer();
+ 0)   exe-73900    |       futex_wait_setup() {
+ 0)   exe-73900    |         get_futex_key();
+ 0)   exe-73900    |         futex_q_lock() {
+ 0)   exe-73900    |           futex_hash();
+ 0)   exe-73900    |           _raw_spin_lock();
+ 0)   exe-73900    |         }
+ 0)   exe-73900    |         futex_get_value_locked();
+ 0)   exe-73900    |       }
+ 0)   exe-73900    |       futex_wait_queue() {
+ 0)   exe-73900    |         __futex_queue();
+ 0)   exe-73900    |         _raw_spin_unlock();
+ 0)   exe-73900    |         schedule() {
+ 0)   exe-73900    |           rcu_note_context_switch();
+ 0)   exe-73900    |           raw_spin_rq_lock_nested() {
+ 0)   exe-73900    |             _raw_spin_lock();
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           update_rq_clock();
+ 0)   exe-73900    |           dequeue_task_fair() {
+ 0)   exe-73900    |             dequeue_entity() {
+ 0)   exe-73900    |               update_curr() {
+ 0)   exe-73900    |                 update_min_vruntime();
+ 0)   exe-73900    |                 cpuacct_charge();
+ 0)   exe-73900    |                 __cgroup_account_cputime() {
+ 0)   exe-73900    |                   cgroup_rstat_updated();
+ 0)   exe-73900    |                 }
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |               __update_load_avg_se();
+ 0)   exe-73900    |               __update_load_avg_cfs_rq();
+ 0)   exe-73900    |               clear_buddies();
+ 0)   exe-73900    |               update_cfs_group();
+ 0)   exe-73900    |               update_min_vruntime();
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |             set_next_buddy();
+ 0)   exe-73900    |             __update_load_avg_se();
+ 0)   exe-73900    |             __update_load_avg_cfs_rq();
+ 0)   exe-73900    |             update_cfs_group() {
+ 0)   exe-73900    |               reweight_entity() {
+ 0)   exe-73900    |                 update_curr() {
+ 0)   exe-73900    |                   update_min_vruntime();
+ 0)   exe-73900    |                 }
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |             __update_load_avg_se();
+ 0)   exe-73900    |             __update_load_avg_cfs_rq();
+ 0)   exe-73900    |             update_cfs_group() {
+ 0)   exe-73900    |               reweight_entity() {
+ 0)   exe-73900    |                 update_curr() {
+ 0)   exe-73900    |                   __calc_delta();
+ 0)   exe-73900    |                   update_min_vruntime();
+ 0)   exe-73900    |                 }
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |             hrtick_update();
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           pick_next_task() {
+ 0)   exe-73900    |             pick_next_task_fair() {
+ 0)   exe-73900    |               update_curr();
+ 0)   exe-73900    |               check_cfs_rq_runtime();
+ 0)   exe-73900    |               pick_next_entity();
+ 0)   exe-73900    |               update_curr();
+ 0)   exe-73900    |               check_cfs_rq_runtime();
+ 0)   exe-73900    |               pick_next_entity();
+ 0)   exe-73900    |               check_cfs_rq_runtime();
+ 0)   exe-73900    |               pick_next_entity();
+ 0)   exe-73900    |               put_prev_entity() {
+ 0)   exe-73900    |                 check_cfs_rq_runtime();
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |               set_next_entity() {
+ 0)   exe-73900    |                 clear_buddies();
+ 0)   exe-73900    |                 __update_load_avg_se();
+ 0)   exe-73900    |                 __update_load_avg_cfs_rq();
+ 0)   exe-73900    |               }
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           psi_task_switch() {
+ 0)   exe-73900    |             psi_flags_change();
+ 0)   exe-73900    |             psi_flags_change();
+ 0)   exe-73900    |             psi_group_change() {
+ 0)   exe-73900    |               record_times();
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |             psi_group_change() {
+ 0)   exe-73900    |               record_times();
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |             psi_group_change() {
+ 0)   exe-73900    |               record_times();
+ 0)   exe-73900    |             }
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           __traceiter_sched_switch() {
+ 0)   exe-73900    |             _raw_spin_lock_irqsave();
+ 0)   exe-73900    |             _raw_spin_unlock_irqrestore();
+ 0)   exe-73900    |           }
+ 0)   exe-73900    |           switch_mm_irqs_off();
+ 0)   exe-73900    |           save_fpregs_to_fpstate() {
+ 0)   exe-73900    |             xfd_validate_state();
+ 0)   exe-73900    |           }

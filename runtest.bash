@@ -28,7 +28,7 @@ mkdir -p $DIR
 
 # pull latest test container
 docker pull $CONTAINER-legacy
-docker pull $CONTAINER-nabla
+# docker pull $CONTAINER-nabla
 
 # set up kernel ftrace parameters
 echo "function_graph" > /sys/kernel/debug/tracing/current_tracer

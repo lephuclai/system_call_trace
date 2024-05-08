@@ -1,0 +1,884 @@
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           } /* psi_group_change */
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         } /* psi_task_switch */
+ 0)   exe-59396    |         __traceiter_sched_switch() {
+ 0)   exe-59396    |           _raw_spin_lock_irqsave();
+ 0)   exe-59396    |           _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         finish_task_switch.isra.0() {
+ 0)   exe-59396    |           raw_spin_rq_unlock() {
+ 0)   exe-59396    |             _raw_spin_unlock();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |       } /* schedule */
+ 0)   exe-59396    |       hrtimer_active();
+ 0)   exe-59396    |     } /* do_nanosleep */
+ 0)   exe-59396    |   } /* hrtimer_nanosleep */
+ 0)   exe-59396    | } /* __x64_sys_nanosleep */
+ 0)   exe-59396    | exit_to_user_mode_prepare() {
+ 0)   exe-59396    |   fpregs_assert_state_consistent();
+ 0)   exe-59396    |   switch_fpu_return() {
+ 0)   exe-59396    |     restore_fpregs_from_fpstate() {
+ 0)   exe-59396    |       xfd_validate_state();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | syscall_trace_enter.constprop.0() {
+ 0)   exe-59396    |   __secure_computing() {
+ 0)   exe-59396    |     __seccomp_filter() {
+ 0)   exe-59396    |       populate_seccomp_data();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | __do_sys_getpid() {
+ 0)   exe-59396    |   __task_pid_nr_ns() {
+ 0)   exe-59396    |     __rcu_read_lock();
+ 0)   exe-59396    |     __rcu_read_unlock();
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | exit_to_user_mode_prepare() {
+ 0)   exe-59396    |   fpregs_assert_state_consistent();
+ 0)   exe-59396    | }
+ 0)   exe-59396    | syscall_trace_enter.constprop.0() {
+ 0)   exe-59396    |   __secure_computing() {
+ 0)   exe-59396    |     __seccomp_filter() {
+ 0)   exe-59396    |       populate_seccomp_data();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | __x64_sys_tgkill() {
+ 0)   exe-59396    |   do_tkill() {
+ 0)   exe-59396    |     __task_pid_nr_ns() {
+ 0)   exe-59396    |       __rcu_read_lock();
+ 0)   exe-59396    |       __rcu_read_unlock();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |     from_kuid_munged() {
+ 0)   exe-59396    |       map_id_up();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |     do_send_specific() {
+ 0)   exe-59396    |       __rcu_read_lock();
+ 0)   exe-59396    |       find_task_by_vpid();
+ 0)   exe-59396    |       __task_pid_nr_ns() {
+ 0)   exe-59396    |         __rcu_read_lock();
+ 0)   exe-59396    |         __rcu_read_unlock();
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       check_kill_permission() {
+ 0)   exe-59396    |         audit_signal_info() {
+ 0)   exe-59396    |           __rcu_read_lock();
+ 0)   exe-59396    |           __rcu_read_unlock();
+ 0)   exe-59396    |           audit_signal_info_syscall() {
+ 0)   exe-59396    |             __rcu_read_lock();
+ 0)   exe-59396    |             __rcu_read_unlock();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         security_task_kill() {
+ 0)   exe-59396    |           apparmor_task_kill() {
+ 0)   exe-59396    |             get_task_cred() {
+ 0)   exe-59396    |               __rcu_read_lock();
+ 0)   exe-59396    |               __rcu_read_unlock();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             aa_may_signal() {
+ 0)   exe-59396    |               profile_signal_perm();
+ 0)   exe-59396    |               profile_signal_perm();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       do_send_sig_info() {
+ 0)   exe-59396    |         __rcu_read_lock();
+ 0)   exe-59396    |         _raw_spin_lock_irqsave();
+ 0)   exe-59396    |         __rcu_read_unlock();
+ 0)   exe-59396    |         send_signal_locked() {
+ 0)   exe-59396    |           siginfo_layout();
+ 0)   exe-59396    |           __rcu_read_lock();
+ 0)   exe-59396    |           __rcu_read_lock();
+ 0)   exe-59396    |           __rcu_read_unlock();
+ 0)   exe-59396    |           __rcu_read_unlock();
+ 0)   exe-59396    |           task_active_pid_ns();
+ 0)   exe-59396    |           __task_pid_nr_ns() {
+ 0)   exe-59396    |             __rcu_read_lock();
+ 0)   exe-59396    |             __rcu_read_unlock();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           __send_signal_locked() {
+ 0)   exe-59396    |             prepare_signal();
+ 0)   exe-59396    |             __sigqueue_alloc() {
+ 0)   exe-59396    |               __rcu_read_lock();
+ 0)   exe-59396    |               __rcu_read_lock();
+ 0)   exe-59396    |               __rcu_read_unlock();
+ 0)   exe-59396    |               inc_rlimit_get_ucounts();
+ 0)   exe-59396    |               __rcu_read_unlock();
+ 0)   exe-59396    |               kmem_cache_alloc() {
+ 0)   exe-59396    |                 should_failslab();
+ 0)   exe-59396    |                 __rcu_read_lock();
+ 0)   exe-59396    |                 __get_obj_cgroup_from_memcg() {
+ 0)   exe-59396    |                   __rcu_read_lock();
+ 0)   exe-59396    |                   __rcu_read_unlock();
+ 0)   exe-59396    |                 }
+ 0)   exe-59396    |                 __rcu_read_unlock();
+ 0)   exe-59396    |                 obj_cgroup_charge() {
+ 0)   exe-59396    |                   consume_obj_stock();
+ 0)   exe-59396    |                   __rcu_read_lock();
+ 0)   exe-59396    |                   __rcu_read_lock();
+ 0)   exe-59396    |                   __rcu_read_unlock();
+ 0)   exe-59396    |                   __rcu_read_unlock();
+ 0)   exe-59396    |                   try_charge_memcg() {
+ 0)   exe-59396    |                     consume_stock();
+ 0)   exe-59396    |                     page_counter_try_charge() {
+ 0)   exe-59396    |                       propagate_protected_usage();
+ 0)   exe-59396    |                       propagate_protected_usage();
+ 0)   exe-59396    |                       propagate_protected_usage();
+ 0)   exe-59396    |                     }
+ 0)   exe-59396    |                     refill_stock() {
+ 0)   exe-59396    |                       __refill_stock() {
+ 0)   exe-59396    |                         drain_stock() {
+ 0)   exe-59396    |                           page_counter_uncharge() {
+ 0)   exe-59396    |                             page_counter_cancel() {
+ 0)   exe-59396    |                               propagate_protected_usage();
+ 0)   exe-59396    |                             }
+ 0)   exe-59396    |                             page_counter_cancel() {
+ 0)   exe-59396    |                               propagate_protected_usage();
+ 0)   exe-59396    |                             }
+ 0)   exe-59396    |                             page_counter_cancel() {
+ 0)   exe-59396    |                               propagate_protected_usage();
+ 0)   exe-59396    |                             }
+ 0)   exe-59396    |                             page_counter_cancel() {
+ 0)   exe-59396    |                               propagate_protected_usage();
+ 0)   exe-59396    |                             }
+ 0)   exe-59396    |                             page_counter_cancel() {
+ 0)   exe-59396    |                               propagate_protected_usage();
+ 0)   exe-59396    |                             }
+ 0)   exe-59396    |                             page_counter_cancel() {
+ 0)   exe-59396    |                               propagate_protected_usage();
+ 0)   exe-59396    |                             }
+ 0)   exe-59396    |                           }
+ 0)   exe-59396    |                           __rcu_read_lock();
+ 0)   exe-59396    |                           __rcu_read_unlock();
+ 0)   exe-59396    |                         }
+ 0)   exe-59396    |                         __rcu_read_lock();
+ 0)   exe-59396    |                         __rcu_read_unlock();
+ 0)   exe-59396    |                       }
+ 0)   exe-59396    |                     }
+ 0)   exe-59396    |                   }
+ 0)   exe-59396    |                   memcg_account_kmem() {
+ 0)   exe-59396    |                     __mod_memcg_state() {
+ 0)   exe-59396    |                       cgroup_rstat_updated();
+ 0)   exe-59396    |                     }
+ 0)   exe-59396    |                   }
+ 0)   exe-59396    |                   __rcu_read_lock();
+ 0)   exe-59396    |                   __rcu_read_unlock();
+ 0)   exe-59396    |                   refill_obj_stock() {
+ 0)   exe-59396    |                     drain_obj_stock() {
+ 0)   exe-59396    |                       __rcu_read_lock();
+ 0)   exe-59396    |                       __mod_memcg_lruvec_state() {
+ 0)   exe-59396    |                         cgroup_rstat_updated();
+ 0)   exe-59396    |                       }
+ 0)   exe-59396    |                       __rcu_read_unlock();
+ 0)   exe-59396    |                     }
+ 0)   exe-59396    |                     __rcu_read_lock();
+ 0)   exe-59396    |                     __rcu_read_unlock();
+ 0)   exe-59396    |                     __rcu_read_lock();
+ 0)   exe-59396    |                     __rcu_read_unlock();
+ 0)   exe-59396    |                     obj_cgroup_uncharge_pages() {
+ 0)   exe-59396    |                       __rcu_read_lock();
+ 0)   exe-59396    |                       __rcu_read_lock();
+ 0)   exe-59396    |                       __rcu_read_unlock();
+ 0)   exe-59396    |                       __rcu_read_unlock();
+ 0)   exe-59396    |                       memcg_account_kmem() {
+ 0)   exe-59396    |                         __mod_memcg_state() {
+ 0)   exe-59396    |                           cgroup_rstat_updated();
+ 0)   exe-59396    |                         }
+ 0)   exe-59396    |                       }
+ 0)   exe-59396    |                       refill_stock() {
+ 0)   exe-59396    |                         __refill_stock();
+ 0)   exe-59396    |                       }
+ 0)   exe-59396    |                       __rcu_read_lock();
+ 0)   exe-59396    |                       __rcu_read_unlock();
+ 0)   exe-59396    |                     }
+ 0)   exe-59396    |                   }
+ 0)   exe-59396    |                 }
+ 0)   exe-59396    |                 __rcu_read_lock();
+ 0)   exe-59396    |                 __rcu_read_unlock();
+ 0)   exe-59396    |                 mod_objcg_state();
+ 0)   exe-59396    |                 __rcu_read_lock();
+ 0)   exe-59396    |                 __rcu_read_unlock();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             complete_signal() {
+ 0)   exe-59396    |               wake_up_state() {
+ 0)   exe-59396    |                 try_to_wake_up() {
+ 0)   exe-59396    |                   _raw_spin_lock_irqsave();
+ 0)   exe-59396    |                   _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |                 }
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |               kick_process();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       __rcu_read_unlock();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | exit_to_user_mode_prepare() {
+ 0)   exe-59396    |   fpregs_assert_state_consistent();
+ 0)   exe-59396    | }
+ 0)   exe-59396    | syscall_trace_enter.constprop.0() {
+ 0)   exe-59396    |   __secure_computing() {
+ 0)   exe-59396    |     __seccomp_filter() {
+ 0)   exe-59396    |       populate_seccomp_data();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | __x64_sys_nanosleep() {
+ 0)   exe-59396    |   get_timespec64();
+ 0)   exe-59396    |   hrtimer_nanosleep() {
+ 0)   exe-59396    |     __hrtimer_init();
+ 0)   exe-59396    |     do_nanosleep() {
+ 0)   exe-59396    |       hrtimer_start_range_ns() {
+ 0)   exe-59396    |         _raw_spin_lock_irqsave();
+ 0)   exe-59396    |         __hrtimer_start_range_ns() {
+ 0)   exe-59396    |           ktime_get();
+ 0)   exe-59396    |           get_nohz_timer_target();
+ 0)   exe-59396    |           enqueue_hrtimer();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       schedule() {
+ 0)   exe-59396    |         rcu_note_context_switch();
+ 0)   exe-59396    |         raw_spin_rq_lock_nested() {
+ 0)   exe-59396    |           _raw_spin_lock();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         update_rq_clock();
+ 0)   exe-59396    |         dequeue_task_fair() {
+ 0)   exe-59396    |           dequeue_entity() {
+ 0)   exe-59396    |             update_curr() {
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |               cpuacct_charge();
+ 0)   exe-59396    |               __cgroup_account_cputime() {
+ 0)   exe-59396    |                 cgroup_rstat_updated();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             __update_load_avg_se();
+ 0)   exe-59396    |             __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             clear_buddies();
+ 0)   exe-59396    |             update_cfs_group();
+ 0)   exe-59396    |             update_min_vruntime();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           set_next_buddy();
+ 0)   exe-59396    |           __update_load_avg_se();
+ 0)   exe-59396    |           __update_load_avg_cfs_rq();
+ 0)   exe-59396    |           update_cfs_group() {
+ 0)   exe-59396    |             reweight_entity() {
+ 0)   exe-59396    |               update_curr() {
+ 0)   exe-59396    |                 update_min_vruntime();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           __update_load_avg_se();
+ 0)   exe-59396    |           __update_load_avg_cfs_rq();
+ 0)   exe-59396    |           update_cfs_group() {
+ 0)   exe-59396    |             reweight_entity() {
+ 0)   exe-59396    |               update_curr() {
+ 0)   exe-59396    |                 __calc_delta();
+ 0)   exe-59396    |                 update_min_vruntime();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           hrtick_update();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         pick_next_task() {
+ 0)   exe-59396    |           pick_next_task_fair() {
+ 0)   exe-59396    |             update_curr();
+ 0)   exe-59396    |             check_cfs_rq_runtime();
+ 0)   exe-59396    |             pick_next_entity();
+ 0)   exe-59396    |             update_curr();
+ 0)   exe-59396    |             check_cfs_rq_runtime();
+ 0)   exe-59396    |             pick_next_entity();
+ 0)   exe-59396    |             check_cfs_rq_runtime();
+ 0)   exe-59396    |             pick_next_entity();
+ 0)   exe-59396    |             put_prev_entity() {
+ 0)   exe-59396    |               check_cfs_rq_runtime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             set_next_entity() {
+ 0)   exe-59396    |               clear_buddies();
+ 0)   exe-59396    |               __update_load_avg_se();
+ 0)   exe-59396    |               __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         psi_task_switch() {
+ 0)   exe-59396    |           psi_flags_change();
+ 0)   exe-59396    |           psi_flags_change();
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         __traceiter_sched_switch() {
+ 0)   exe-59396    |           _raw_spin_lock_irqsave();
+ 0)   exe-59396    |           _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         switch_mm_irqs_off();
+ 0)   exe-59396    |         save_fpregs_to_fpstate() {
+ 0)   exe-59396    |           xfd_validate_state();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         finish_task_switch.isra.0() {
+ 0)   exe-59396    |           raw_spin_rq_unlock() {
+ 0)   exe-59396    |             _raw_spin_unlock();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |       } /* schedule */
+ 0)   exe-59396    |       hrtimer_active();
+ 0)   exe-59396    |     } /* do_nanosleep */
+ 0)   exe-59396    |   } /* hrtimer_nanosleep */
+ 0)   exe-59396    | } /* __x64_sys_nanosleep */
+ 0)   exe-59396    | exit_to_user_mode_prepare() {
+ 0)   exe-59396    |   fpregs_assert_state_consistent();
+ 0)   exe-59396    |   switch_fpu_return() {
+ 0)   exe-59396    |     restore_fpregs_from_fpstate() {
+ 0)   exe-59396    |       xfd_validate_state();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | syscall_trace_enter.constprop.0() {
+ 0)   exe-59396    |   __secure_computing() {
+ 0)   exe-59396    |     __seccomp_filter() {
+ 0)   exe-59396    |       populate_seccomp_data();
+ 0)   exe-59396    |       migrate_disable();
+ 0)   exe-59396    |       migrate_enable();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | __x64_sys_futex() {
+ 0)   exe-59396    |   get_timespec64();
+ 0)   exe-59396    |   ktime_get();
+ 0)   exe-59396    |   ktime_add_safe();
+ 0)   exe-59396    |   do_futex() {
+ 0)   exe-59396    |     futex_wait() {
+ 0)   exe-59396    |       futex_setup_timer() {
+ 0)   exe-59396    |         hrtimer_init_sleeper() {
+ 0)   exe-59396    |           __hrtimer_init();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         ktime_add_safe();
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       futex_wait_setup() {
+ 0)   exe-59396    |         get_futex_key();
+ 0)   exe-59396    |         futex_q_lock() {
+ 0)   exe-59396    |           futex_hash();
+ 0)   exe-59396    |           _raw_spin_lock();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         futex_get_value_locked();
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       futex_wait_queue() {
+ 0)   exe-59396    |         __futex_queue();
+ 0)   exe-59396    |         _raw_spin_unlock();
+ 0)   exe-59396    |         hrtimer_sleeper_start_expires() {
+ 0)   exe-59396    |           hrtimer_start_range_ns() {
+ 0)   exe-59396    |             _raw_spin_lock_irqsave();
+ 0)   exe-59396    |             __hrtimer_start_range_ns() {
+ 0)   exe-59396    |               get_nohz_timer_target();
+ 0)   exe-59396    |               enqueue_hrtimer();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             hrtimer_reprogram() {
+ 0)   exe-59396    |               tick_program_event() {
+ 0)   exe-59396    |                 clockevents_program_event() {
+ 0)   exe-59396    |                   ktime_get();
+ 0)   exe-59396    |                   lapic_next_deadline();
+ 0)   exe-59396    |                 }
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         schedule() {
+ 0)   exe-59396    |           rcu_note_context_switch();
+ 0)   exe-59396    |           raw_spin_rq_lock_nested() {
+ 0)   exe-59396    |             _raw_spin_lock();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           update_rq_clock();
+ 0)   exe-59396    |           dequeue_task_fair() {
+ 0)   exe-59396    |             dequeue_entity() {
+ 0)   exe-59396    |               update_curr() {
+ 0)   exe-59396    |                 update_min_vruntime();
+ 0)   exe-59396    |                 cpuacct_charge();
+ 0)   exe-59396    |                 __cgroup_account_cputime() {
+ 0)   exe-59396    |                   cgroup_rstat_updated();
+ 0)   exe-59396    |                 }
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |               __update_load_avg_se();
+ 0)   exe-59396    |               __update_load_avg_cfs_rq();
+ 0)   exe-59396    |               clear_buddies();
+ 0)   exe-59396    |               update_cfs_group();
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             dequeue_entity() {
+ 0)   exe-59396    |               update_curr() {
+ 0)   exe-59396    |                 update_min_vruntime();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |               __update_load_avg_se();
+ 0)   exe-59396    |               __update_load_avg_cfs_rq();
+ 0)   exe-59396    |               clear_buddies();
+ 0)   exe-59396    |               update_cfs_group() {
+ 0)   exe-59396    |                 reweight_entity();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             dequeue_entity() {
+ 0)   exe-59396    |               update_curr() {
+ 0)   exe-59396    |                 __calc_delta();
+ 0)   exe-59396    |                 update_min_vruntime();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |               __update_load_avg_se();
+ 0)   exe-59396    |               __update_load_avg_cfs_rq();
+ 0)   exe-59396    |               clear_buddies();
+ 0)   exe-59396    |               update_cfs_group() {
+ 0)   exe-59396    |                 reweight_entity();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             hrtick_update();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           pick_next_task() {
+ 0)   exe-59396    |             pick_next_task_fair() {
+ 0)   exe-59396    |               newidle_balance() {
+ 0)   exe-59396    |                 __rcu_read_lock();
+ 0)   exe-59396    |                 __msecs_to_jiffies();
+ 0)   exe-59396    |                 __rcu_read_unlock();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             put_prev_task_fair() {
+ 0)   exe-59396    |               put_prev_entity() {
+ 0)   exe-59396    |                 check_cfs_rq_runtime();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |               put_prev_entity() {
+ 0)   exe-59396    |                 check_cfs_rq_runtime();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |               put_prev_entity() {
+ 0)   exe-59396    |                 check_cfs_rq_runtime();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             pick_next_task_idle() {
+ 0)   exe-59396    |               __update_idle_core() {
+ 0)   exe-59396    |                 __rcu_read_lock();
+ 0)   exe-59396    |                 __rcu_read_unlock();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           psi_task_switch() {
+ 0)   exe-59396    |             psi_flags_change();
+ 0)   exe-59396    |             psi_group_change() {
+ 0)   exe-59396    |               record_times();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             psi_group_change() {
+ 0)   exe-59396    |               record_times();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             psi_group_change() {
+ 0)   exe-59396    |               record_times();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           __traceiter_sched_switch() {
+ 0)   exe-59396    |             _raw_spin_lock_irqsave();
+ 0)   exe-59396    |             _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           finish_task_switch.isra.0() {
+ 0)   exe-59396    |             raw_spin_rq_unlock() {
+ 0)   exe-59396    |               _raw_spin_unlock();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       futex_unqueue() {
+ 0)   exe-59396    |         _raw_spin_lock();
+ 0)   exe-59396    |         __futex_unqueue();
+ 0)   exe-59396    |         _raw_spin_unlock();
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       hrtimer_cancel() {
+ 0)   exe-59396    |         hrtimer_active();
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | } /* __x64_sys_futex */
+ 0)   exe-59396    | exit_to_user_mode_prepare() {
+ 0)   exe-59396    |   fpregs_assert_state_consistent();
+ 0)   exe-59396    |   switch_fpu_return();
+ 0)   exe-59396    | }
+ 0)   exe-59396    | syscall_trace_enter.constprop.0() {
+ 0)   exe-59396    |   __secure_computing() {
+ 0)   exe-59396    |     __seccomp_filter() {
+ 0)   exe-59396    |       populate_seccomp_data();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | __x64_sys_nanosleep() {
+ 0)   exe-59396    |   get_timespec64();
+ 0)   exe-59396    |   hrtimer_nanosleep() {
+ 0)   exe-59396    |     __hrtimer_init();
+ 0)   exe-59396    |     do_nanosleep() {
+ 0)   exe-59396    |       hrtimer_start_range_ns() {
+ 0)   exe-59396    |         _raw_spin_lock_irqsave();
+ 0)   exe-59396    |         __hrtimer_start_range_ns() {
+ 0)   exe-59396    |           ktime_get();
+ 0)   exe-59396    |           get_nohz_timer_target();
+ 0)   exe-59396    |           enqueue_hrtimer();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       schedule() {
+ 0)   exe-59396    |         rcu_note_context_switch();
+ 0)   exe-59396    |         raw_spin_rq_lock_nested() {
+ 0)   exe-59396    |           _raw_spin_lock();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         update_rq_clock();
+ 0)   exe-59396    |         dequeue_task_fair() {
+ 0)   exe-59396    |           dequeue_entity() {
+ 0)   exe-59396    |             update_curr() {
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |               cpuacct_charge();
+ 0)   exe-59396    |               __cgroup_account_cputime() {
+ 0)   exe-59396    |                 cgroup_rstat_updated();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             __update_load_avg_se();
+ 0)   exe-59396    |             __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             clear_buddies();
+ 0)   exe-59396    |             update_cfs_group();
+ 0)   exe-59396    |             update_min_vruntime();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           dequeue_entity() {
+ 0)   exe-59396    |             update_curr() {
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             __update_load_avg_se();
+ 0)   exe-59396    |             __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             clear_buddies();
+ 0)   exe-59396    |             update_cfs_group() {
+ 0)   exe-59396    |               reweight_entity();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             update_min_vruntime();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           dequeue_entity() {
+ 0)   exe-59396    |             update_curr() {
+ 0)   exe-59396    |               __calc_delta();
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             __update_load_avg_se();
+ 0)   exe-59396    |             __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             clear_buddies();
+ 0)   exe-59396    |             update_cfs_group() {
+ 0)   exe-59396    |               reweight_entity();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             update_min_vruntime();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           hrtick_update();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         pick_next_task() {
+ 0)   exe-59396    |           pick_next_task_fair() {
+ 0)   exe-59396    |             newidle_balance() {
+ 0)   exe-59396    |               __rcu_read_lock();
+ 0)   exe-59396    |               __msecs_to_jiffies();
+ 0)   exe-59396    |               __rcu_read_unlock();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           put_prev_task_fair() {
+ 0)   exe-59396    |             put_prev_entity() {
+ 0)   exe-59396    |               check_cfs_rq_runtime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             put_prev_entity() {
+ 0)   exe-59396    |               check_cfs_rq_runtime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             put_prev_entity() {
+ 0)   exe-59396    |               check_cfs_rq_runtime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           pick_next_task_idle() {
+ 0)   exe-59396    |             __update_idle_core() {
+ 0)   exe-59396    |               __rcu_read_lock();
+ 0)   exe-59396    |               __rcu_read_unlock();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         psi_task_switch() {
+ 0)   exe-59396    |           psi_flags_change();
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         __traceiter_sched_switch() {
+ 0)   exe-59396    |           _raw_spin_lock_irqsave();
+ 0)   exe-59396    |           _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         finish_task_switch.isra.0() {
+ 0)   exe-59396    |           raw_spin_rq_unlock() {
+ 0)   exe-59396    |             _raw_spin_unlock();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |       } /* schedule */
+ 0)   exe-59396    |       hrtimer_active();
+ 0)   exe-59396    |     } /* do_nanosleep */
+ 0)   exe-59396    |   } /* hrtimer_nanosleep */
+ 0)   exe-59396    | } /* __x64_sys_nanosleep */
+ 0)   exe-59396    | exit_to_user_mode_prepare() {
+ 0)   exe-59396    |   fpregs_assert_state_consistent();
+ 0)   exe-59396    |   switch_fpu_return() {
+ 0)   exe-59396    |     restore_fpregs_from_fpstate() {
+ 0)   exe-59396    |       xfd_validate_state();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | syscall_trace_enter.constprop.0() {
+ 0)   exe-59396    |   __secure_computing() {
+ 0)   exe-59396    |     __seccomp_filter() {
+ 0)   exe-59396    |       populate_seccomp_data();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | __x64_sys_nanosleep() {
+ 0)   exe-59396    |   get_timespec64();
+ 0)   exe-59396    |   hrtimer_nanosleep() {
+ 0)   exe-59396    |     __hrtimer_init();
+ 0)   exe-59396    |     do_nanosleep() {
+ 0)   exe-59396    |       hrtimer_start_range_ns() {
+ 0)   exe-59396    |         _raw_spin_lock_irqsave();
+ 0)   exe-59396    |         __hrtimer_start_range_ns() {
+ 0)   exe-59396    |           ktime_get();
+ 0)   exe-59396    |           get_nohz_timer_target();
+ 0)   exe-59396    |           enqueue_hrtimer();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       schedule() {
+ 0)   exe-59396    |         rcu_note_context_switch();
+ 0)   exe-59396    |         raw_spin_rq_lock_nested() {
+ 0)   exe-59396    |           _raw_spin_lock();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         update_rq_clock();
+ 0)   exe-59396    |         dequeue_task_fair() {
+ 0)   exe-59396    |           dequeue_entity() {
+ 0)   exe-59396    |             update_curr() {
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |               cpuacct_charge();
+ 0)   exe-59396    |               __cgroup_account_cputime() {
+ 0)   exe-59396    |                 cgroup_rstat_updated();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             __update_load_avg_se();
+ 0)   exe-59396    |             __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             clear_buddies();
+ 0)   exe-59396    |             update_cfs_group();
+ 0)   exe-59396    |             update_min_vruntime();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           dequeue_entity() {
+ 0)   exe-59396    |             update_curr() {
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             __update_load_avg_se();
+ 0)   exe-59396    |             __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             clear_buddies();
+ 0)   exe-59396    |             update_cfs_group() {
+ 0)   exe-59396    |               reweight_entity();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             update_min_vruntime();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           dequeue_entity() {
+ 0)   exe-59396    |             update_curr() {
+ 0)   exe-59396    |               __calc_delta();
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             __update_load_avg_se();
+ 0)   exe-59396    |             __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             clear_buddies();
+ 0)   exe-59396    |             update_cfs_group() {
+ 0)   exe-59396    |               reweight_entity();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             update_min_vruntime();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           hrtick_update();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         pick_next_task() {
+ 0)   exe-59396    |           pick_next_task_fair() {
+ 0)   exe-59396    |             newidle_balance() {
+ 0)   exe-59396    |               __rcu_read_lock();
+ 0)   exe-59396    |               __msecs_to_jiffies();
+ 0)   exe-59396    |               __rcu_read_unlock();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           put_prev_task_fair() {
+ 0)   exe-59396    |             put_prev_entity() {
+ 0)   exe-59396    |               check_cfs_rq_runtime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             put_prev_entity() {
+ 0)   exe-59396    |               check_cfs_rq_runtime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             put_prev_entity() {
+ 0)   exe-59396    |               check_cfs_rq_runtime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           pick_next_task_idle() {
+ 0)   exe-59396    |             __update_idle_core() {
+ 0)   exe-59396    |               __rcu_read_lock();
+ 0)   exe-59396    |               __rcu_read_unlock();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         psi_task_switch() {
+ 0)   exe-59396    |           psi_flags_change();
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         __traceiter_sched_switch() {
+ 0)   exe-59396    |           _raw_spin_lock_irqsave();
+ 0)   exe-59396    |           _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         finish_task_switch.isra.0() {
+ 0)   exe-59396    |           raw_spin_rq_unlock() {
+ 0)   exe-59396    |             _raw_spin_unlock();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |       } /* schedule */
+ 0)   exe-59396    |       hrtimer_active();
+ 0)   exe-59396    |     } /* do_nanosleep */
+ 0)   exe-59396    |   } /* hrtimer_nanosleep */
+ 0)   exe-59396    | } /* __x64_sys_nanosleep */
+ 0)   exe-59396    | exit_to_user_mode_prepare() {
+ 0)   exe-59396    |   fpregs_assert_state_consistent();
+ 0)   exe-59396    |   switch_fpu_return() {
+ 0)   exe-59396    |     restore_fpregs_from_fpstate() {
+ 0)   exe-59396    |       xfd_validate_state();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | syscall_trace_enter.constprop.0() {
+ 0)   exe-59396    |   __secure_computing() {
+ 0)   exe-59396    |     __seccomp_filter() {
+ 0)   exe-59396    |       populate_seccomp_data();
+ 0)   exe-59396    |     }
+ 0)   exe-59396    |   }
+ 0)   exe-59396    | }
+ 0)   exe-59396    | __x64_sys_nanosleep() {
+ 0)   exe-59396    |   get_timespec64();
+ 0)   exe-59396    |   hrtimer_nanosleep() {
+ 0)   exe-59396    |     __hrtimer_init();
+ 0)   exe-59396    |     do_nanosleep() {
+ 0)   exe-59396    |       hrtimer_start_range_ns() {
+ 0)   exe-59396    |         _raw_spin_lock_irqsave();
+ 0)   exe-59396    |         __hrtimer_start_range_ns() {
+ 0)   exe-59396    |           ktime_get();
+ 0)   exe-59396    |           get_nohz_timer_target();
+ 0)   exe-59396    |           enqueue_hrtimer();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |       }
+ 0)   exe-59396    |       schedule() {
+ 0)   exe-59396    |         rcu_note_context_switch();
+ 0)   exe-59396    |         raw_spin_rq_lock_nested() {
+ 0)   exe-59396    |           _raw_spin_lock();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         update_rq_clock();
+ 0)   exe-59396    |         dequeue_task_fair() {
+ 0)   exe-59396    |           dequeue_entity() {
+ 0)   exe-59396    |             update_curr() {
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |               cpuacct_charge();
+ 0)   exe-59396    |               __cgroup_account_cputime() {
+ 0)   exe-59396    |                 cgroup_rstat_updated();
+ 0)   exe-59396    |               }
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             __update_load_avg_se();
+ 0)   exe-59396    |             __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             clear_buddies();
+ 0)   exe-59396    |             update_cfs_group();
+ 0)   exe-59396    |             update_min_vruntime();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           dequeue_entity() {
+ 0)   exe-59396    |             update_curr() {
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             __update_load_avg_se();
+ 0)   exe-59396    |             __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             clear_buddies();
+ 0)   exe-59396    |             update_cfs_group() {
+ 0)   exe-59396    |               reweight_entity();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             update_min_vruntime();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           dequeue_entity() {
+ 0)   exe-59396    |             update_curr() {
+ 0)   exe-59396    |               update_min_vruntime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             __update_load_avg_se();
+ 0)   exe-59396    |             __update_load_avg_cfs_rq();
+ 0)   exe-59396    |             clear_buddies();
+ 0)   exe-59396    |             update_cfs_group() {
+ 0)   exe-59396    |               reweight_entity();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             update_min_vruntime();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           hrtick_update();
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         pick_next_task() {
+ 0)   exe-59396    |           pick_next_task_fair() {
+ 0)   exe-59396    |             newidle_balance() {
+ 0)   exe-59396    |               __rcu_read_lock();
+ 0)   exe-59396    |               __msecs_to_jiffies();
+ 0)   exe-59396    |               __rcu_read_unlock();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           put_prev_task_fair() {
+ 0)   exe-59396    |             put_prev_entity() {
+ 0)   exe-59396    |               check_cfs_rq_runtime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             put_prev_entity() {
+ 0)   exe-59396    |               check_cfs_rq_runtime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |             put_prev_entity() {
+ 0)   exe-59396    |               check_cfs_rq_runtime();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           pick_next_task_idle() {
+ 0)   exe-59396    |             __update_idle_core() {
+ 0)   exe-59396    |               __rcu_read_lock();
+ 0)   exe-59396    |               __rcu_read_unlock();
+ 0)   exe-59396    |             }
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         psi_task_switch() {
+ 0)   exe-59396    |           psi_flags_change();
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |           psi_group_change() {
+ 0)   exe-59396    |             record_times();
+ 0)   exe-59396    |           }
+ 0)   exe-59396    |         }
+ 0)   exe-59396    |         __traceiter_sched_switch() {
+ 0)   exe-59396    |           _raw_spin_lock_irqsave();
+ 0)   exe-59396    |           _raw_spin_unlock_irqrestore();
+ 0)   exe-59396    |         }

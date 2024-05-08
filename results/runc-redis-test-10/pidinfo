@@ -1,0 +1,13 @@
+containerd-shim,49411 -namespace moby -id 7783242e13dccb35d317a16ee1afa1486d596d81bc6042381f13701fb5a9dd64 -address /run/containerd/containerd.sock
+  |-redis-server,49434
+  |   |-{redis-server},49469
+  |   `-{redis-server},49470
+  |-{containerd-shim},49412
+  |-{containerd-shim},49413
+  |-{containerd-shim},49414
+  |-{containerd-shim},49415
+  |-{containerd-shim},49416
+  |-{containerd-shim},49417
+  |-{containerd-shim},49418
+  |-{containerd-shim},49419
+  `-{containerd-shim},49420

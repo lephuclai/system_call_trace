@@ -1,0 +1,50 @@
+containerd-shim,53620 -namespace moby -id b82e75e1b85f608ed9cfaae31c5d3035561c917830354e5fafff89738a96a816 -address /run/containerd/containerd.sock
+  |-exe,53636 --systemd-cgroup=true --root=/var/run/docker/runtime-runc/moby --log=/run/containerd/io.containerd.runtime.v2.task/moby/b82e75e1b85f608ed9cfaae31c5d3035561c917830354e5fafff89738a96a816/log.json --log-format=json --log-fd=3 gofer --bundle=/run/containerd/io.containerd.runtime.v2.task/moby/b82e75e1b85f608ed9cfaae31c5d3035561c917830354e5fafff89738a96a816 --gofer-mount-confs=lisafs:self,lisafs:none,lisafs:none,lisafs:none,lisafs:none --io-fds=6,7,8,9,10 --mounts-fd=5 --spec-fd=4 --proc-mount-sync-fd=17 --apply-caps=false --setup-root=false --sync-nvproxy-fd=-1 --sync-userns-fd=-1
+  |   |-{exe},53660
+  |   |-{exe},53661
+  |   |-{exe},53662
+  |   |-{exe},53663
+  |   |-{exe},53668
+  |   |-{exe},53669
+  |   |-{exe},53670
+  |   `-{exe},53671
+  |-exe,53641 --log-format=json --systemd-cgroup=true --root=/var/run/docker/runtime-runc/moby --log=/run/containerd/io.containerd.runtime.v2.task/moby/b82e75e1b85f608ed9cfaae31c5d3035561c917830354e5fafff89738a96a816/log.json --log-fd=3 boot --apply-caps=false --bundle=/run/containerd/io.containerd.runtime.v2.task/moby/b82e75e1b85f608ed9cfaae31c5d3035561c917830354e5fafff89738a96a816 --controller-fd=12 --cpu-num=4 --dev-io-fd=-1 --gofer-filestore-fds=9 --gofer-mount-confs=lisafs:self,lisafs:none,lisafs:none,lisafs:none,lisafs:none --io-fds=4,5,6,7,8 --mounts-fd=10 --setup-root=false --spec-fd=13 --start-sync-fd=11 --stdio-fds=14,15,16 --total-host-memory=16472928256 --total-memory=16472928256 --proc-mount-sync-fd=24 --product-name=Vostro 3400 b82e75e1b85f608ed9cfaae31c5d3035561c917830354e5fafff89738a96a816
+  |   |-(exe,53673)
+  |   |   |-(exe,53674)
+  |   |   |-(exe,53710)
+  |   |   |   `-(exe,53711)
+  |   |   |-(exe,53713)
+  |   |   |   |-(exe,53714)
+  |   |   |   |-(exe,53720)
+  |   |   |   `-(exe,53721)
+  |   |   `-(exe,53715)
+  |   |       |-(exe,53716)
+  |   |       |-(exe,53722)
+  |   |       `-(exe,53723)
+  |   |-{exe},53664
+  |   |-{exe},53665
+  |   |-{exe},53666
+  |   |-{exe},53667
+  |   |-{exe},53672
+  |   |-{exe},53675
+  |   |-{exe},53699
+  |   |-{exe},53700
+  |   |-{exe},53701
+  |   |-{exe},53702
+  |   |-{exe},53703
+  |   |-{exe},53704
+  |   |-{exe},53705
+  |   |-{exe},53706
+  |   |-{exe},53707
+  |   |-{exe},53708
+  |   |-{exe},53709
+  |   `-{exe},53712
+  |-{containerd-shim},53621
+  |-{containerd-shim},53622
+  |-{containerd-shim},53623
+  |-{containerd-shim},53624
+  |-{containerd-shim},53625
+  |-{containerd-shim},53626
+  |-{containerd-shim},53627
+  |-{containerd-shim},53628
+  `-{containerd-shim},53629

@@ -1,0 +1,5312 @@
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer();
+       futex_wait_setup() {
+         get_futex_key();
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off();
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         } /* schedule */
+       } /* futex_wait_queue */
+       futex_unqueue();
+     } /* futex_wait */
+   } /* do_futex */
+ } /* __x64_sys_futex */
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key();
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_sendmmsg() {
+   __sys_sendmmsg() {
+     sockfd_lookup_light() {
+       __fdget() {
+         __fget_light() {
+           __rcu_read_lock();
+           __rcu_read_unlock();
+         }
+       }
+     }
+     ___sys_sendmsg() {
+       copy_msghdr_from_user() {
+         __copy_msghdr();
+         __check_object_size() {
+           __check_object_size.part.0() {
+             check_stack_object();
+           }
+         }
+       }
+       ____sys_sendmsg() {
+         sock_sendmsg() {
+           security_socket_sendmsg() {
+             apparmor_socket_sendmsg() {
+               aa_sk_perm() {
+                 __cond_resched();
+               }
+             }
+           }
+           packet_sendmsg() {
+             packet_snd() {
+               __rcu_read_lock();
+               __rcu_read_unlock();
+               sock_alloc_send_pskb() {
+                 alloc_skb_with_frags() {
+                   __alloc_skb() {
+                     kmem_cache_alloc_node() {
+                       __cond_resched();
+                       should_failslab();
+                     }
+                     kmalloc_reserve() {
+                       kmalloc_size_roundup() {
+                         kmalloc_slab();
+                       }
+                       __kmalloc_node_track_caller() {
+                         kmalloc_slab();
+                         __kmem_cache_alloc_node() {
+                           __cond_resched();
+                           should_failslab();
+                         }
+                       }
+                     }
+                     __build_skb_around();
+                   }
+                 }
+                 skb_set_owner_w();
+               }
+               skb_put();
+               skb_copy_datagram_from_iter() {
+                 __check_object_size() {
+                   __check_object_size.part.0() {
+                     check_stack_object();
+                     is_vmalloc_addr();
+                     __virt_addr_valid();
+                     __check_heap_object();
+                   }
+                 }
+               }
+               packet_parse_headers() {
+                 eth_header_parse_protocol();
+                 __skb_flow_dissect() {
+                   __rcu_read_lock();
+                   __rcu_read_unlock();
+                 }
+               }
+               skb_partial_csum_set();
+               __dev_queue_xmit() {
+                 qdisc_pkt_len_init();
+                 netdev_core_pick_tx();
+                 validate_xmit_skb() {
+                   netif_skb_features() {
+                     passthru_features_check();
+                     skb_network_protocol();
+                   }
+                   skb_csum_hwoffload_help();
+                   validate_xmit_xfrm();
+                 }
+                 dev_hard_start_xmit() {
+                   dev_queue_xmit_nit() {
+                     __rcu_read_lock();
+                     match_fanout_group();
+                     __rcu_read_unlock();
+                   }
+                   veth_xmit [veth]() {
+                     __rcu_read_lock();
+                     skb_clone_tx_timestamp();
+                     __dev_forward_skb() {
+                       __dev_forward_skb2() {
+                         skb_scrub_packet();
+                         eth_type_trans();
+                       }
+                     }
+                     __netif_rx() {
+                       netif_rx_internal() {
+                         enqueue_to_backlog() {
+                           _raw_spin_lock_irqsave();
+                           __raise_softirq_irqoff();
+                           _raw_spin_unlock_irqrestore();
+                         }
+                       }
+                     }
+                     __rcu_read_unlock();
+                   }
+                 }
+                 __local_bh_enable_ip() {
+                 }
+               }
+             }
+           }
+         }
+       }
+       kfree();
+     }
+     __cond_resched();
+     fput();
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           __switch_to_xtra() {
+             set_cpuid_faulting();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           __switch_to_xtra() {
+             set_cpuid_faulting();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           __switch_to_xtra() {
+             set_cpuid_faulting();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           __switch_to_xtra() {
+             set_cpuid_faulting();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key();
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           __switch_to_xtra() {
+             set_cpuid_faulting();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           __switch_to_xtra() {
+             set_cpuid_faulting();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           __switch_to_xtra() {
+             set_cpuid_faulting();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           __switch_to_xtra() {
+             set_cpuid_faulting();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           __switch_to_xtra() {
+             set_cpuid_faulting();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           __switch_to_xtra() {
+             set_cpuid_faulting();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         }
+       }
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off() {
+             load_new_mm_cr3();
+             switch_ldt();
+           }
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         } /* schedule */
+       } /* futex_wait_queue */
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     } /* futex_wait */
+   } /* do_futex */
+ } /* __x64_sys_futex */
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key();
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wake() {
+       get_futex_key() {
+         get_user_pages_fast() {
+           internal_get_user_pages_fast() {
+             lockless_pages_from_mm() {
+               gup_pgd_range() {
+                 pud_huge();
+                 gup_pmd_range.constprop.0() {
+                   pmd_huge();
+                   gup_pte_range() {
+                     try_grab_folio();
+                   }
+                 }
+               }
+               irq_enter_rcu();
+               idle_cpu();
+             }
+           }
+         }
+         __rcu_read_lock();
+         PageHuge();
+         __rcu_read_unlock();
+       }
+       futex_hash();
+       _raw_spin_lock();
+       futex_wake_mark() {
+         __futex_unqueue();
+         wake_q_add_safe();
+       }
+       _raw_spin_unlock();
+       wake_up_q() {
+         try_to_wake_up() {
+           _raw_spin_lock_irqsave();
+           ttwu_queue_wakelist();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           ttwu_do_activate() {
+             psi_task_change() {
+               psi_flags_change();
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+               psi_group_change() {
+                 record_times();
+               }
+             }
+             enqueue_task_fair() {
+               enqueue_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                   cpuacct_charge();
+                   __cgroup_account_cputime() {
+                     cgroup_rstat_updated();
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group();
+                 place_entity();
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               update_cfs_group() {
+                 reweight_entity() {
+                   update_curr() {
+                     __calc_delta();
+                     update_min_vruntime();
+                   }
+                 }
+               }
+               hrtick_update();
+             }
+             ttwu_do_wakeup() {
+               check_preempt_curr() {
+                 check_preempt_wakeup() {
+                   update_curr();
+                   __calc_delta();
+                 }
+               }
+             }
+           }
+           raw_spin_rq_unlock() {
+             _raw_spin_unlock();
+           }
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     }
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_sendmmsg() {
+   __sys_sendmmsg() {
+     sockfd_lookup_light() {
+       __fdget() {
+         __fget_light() {
+           __rcu_read_lock();
+           __rcu_read_unlock();
+         }
+       }
+     }
+     ___sys_sendmsg() {
+       copy_msghdr_from_user() {
+         __copy_msghdr();
+         __check_object_size() {
+           __check_object_size.part.0() {
+             check_stack_object();
+           }
+         }
+       }
+       ____sys_sendmsg() {
+         sock_sendmsg() {
+           security_socket_sendmsg() {
+             apparmor_socket_sendmsg() {
+               aa_sk_perm() {
+                 __cond_resched();
+               }
+             }
+           }
+           packet_sendmsg() {
+             packet_snd() {
+               __rcu_read_lock();
+               __rcu_read_unlock();
+               sock_alloc_send_pskb() {
+                 alloc_skb_with_frags() {
+                   __alloc_skb() {
+                     kmem_cache_alloc_node() {
+                       __cond_resched();
+                       should_failslab();
+                     }
+                     kmalloc_reserve() {
+                       kmalloc_size_roundup() {
+                         kmalloc_slab();
+                       }
+                       __kmalloc_node_track_caller() {
+                         kmalloc_slab();
+                         __kmem_cache_alloc_node() {
+                           __cond_resched();
+                           should_failslab();
+                         }
+                       }
+                     }
+                     __build_skb_around();
+                   }
+                 }
+                 skb_set_owner_w();
+               }
+               skb_put();
+               skb_copy_datagram_from_iter() {
+                 __check_object_size() {
+                   __check_object_size.part.0() {
+                     check_stack_object();
+                     is_vmalloc_addr();
+                     __virt_addr_valid();
+                     __check_heap_object();
+                   }
+                 }
+               }
+               packet_parse_headers() {
+                 eth_header_parse_protocol();
+                 __skb_flow_dissect() {
+                   __rcu_read_lock();
+                   __rcu_read_unlock();
+                 }
+               }
+               skb_partial_csum_set();
+               __dev_queue_xmit() {
+                 qdisc_pkt_len_init();
+                 netdev_core_pick_tx();
+                 validate_xmit_skb() {
+                   netif_skb_features() {
+                     passthru_features_check();
+                     skb_network_protocol();
+                   }
+                   skb_csum_hwoffload_help();
+                   validate_xmit_xfrm();
+                 }
+                 dev_hard_start_xmit() {
+                   dev_queue_xmit_nit() {
+                     __rcu_read_lock();
+                     match_fanout_group();
+                     __rcu_read_unlock();
+                   }
+                   veth_xmit [veth]() {
+                     __rcu_read_lock();
+                     skb_clone_tx_timestamp();
+                     __dev_forward_skb() {
+                       __dev_forward_skb2() {
+                         skb_scrub_packet();
+                         eth_type_trans();
+                       }
+                     }
+                     __netif_rx() {
+                       netif_rx_internal() {
+                         enqueue_to_backlog() {
+                           _raw_spin_lock_irqsave();
+                           __raise_softirq_irqoff();
+                           _raw_spin_unlock_irqrestore();
+                         }
+                       }
+                     }
+                     __rcu_read_unlock();
+                   }
+                 }
+                 __local_bh_enable_ip() {
+                 }
+               }
+             }
+           }
+         }
+       }
+       kfree();
+     }
+     __cond_resched();
+     fput();
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   get_timespec64();
+   ktime_get();
+   ktime_add_safe();
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer() {
+         hrtimer_init_sleeper() {
+           __hrtimer_init();
+         }
+         ktime_add_safe();
+       }
+       futex_wait_setup() {
+         get_futex_key() {
+           get_user_pages_fast() {
+             internal_get_user_pages_fast() {
+               lockless_pages_from_mm() {
+                 gup_pgd_range() {
+                   pud_huge();
+                   gup_pmd_range.constprop.0() {
+                     pmd_huge();
+                     gup_pte_range() {
+                       try_grab_folio();
+                     }
+                   }
+                 }
+               }
+             }
+           }
+           __rcu_read_lock();
+           PageHuge();
+           __rcu_read_unlock();
+         }
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked();
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         hrtimer_sleeper_start_expires() {
+           hrtimer_start_range_ns() {
+             _raw_spin_lock_irqsave();
+             __hrtimer_start_range_ns() {
+               get_nohz_timer_target();
+               enqueue_hrtimer();
+             }
+             _raw_spin_unlock_irqrestore();
+           }
+         }
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off();
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         } /* schedule */
+       } /* futex_wait_queue */
+       futex_unqueue();
+       hrtimer_cancel() {
+         hrtimer_active();
+         hrtimer_try_to_cancel.part.0() {
+           _raw_spin_lock_irqsave();
+           __remove_hrtimer();
+           _raw_spin_unlock_irqrestore();
+         }
+       }
+     } /* futex_wait */
+   } /* do_futex */
+ } /* __x64_sys_futex */
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_futex() {
+   do_futex() {
+     futex_wait() {
+       futex_setup_timer();
+       futex_wait_setup() {
+         get_futex_key();
+         futex_q_lock() {
+           futex_hash();
+           _raw_spin_lock();
+         }
+         futex_get_value_locked() {
+           irq_enter_rcu();
+           idle_cpu();
+         }
+       }
+       futex_wait_queue() {
+         __futex_queue();
+         _raw_spin_unlock();
+         schedule() {
+           rcu_note_context_switch();
+           raw_spin_rq_lock_nested() {
+             _raw_spin_lock();
+           }
+           update_rq_clock();
+           dequeue_task_fair() {
+             dequeue_entity() {
+               update_curr() {
+                 update_min_vruntime();
+                 cpuacct_charge();
+                 __cgroup_account_cputime() {
+                   cgroup_rstat_updated();
+                 }
+               }
+               __update_load_avg_se();
+               __update_load_avg_cfs_rq();
+               clear_buddies();
+               update_cfs_group();
+               update_min_vruntime();
+             }
+             set_next_buddy();
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   update_min_vruntime();
+                 }
+               }
+             }
+             __update_load_avg_se();
+             __update_load_avg_cfs_rq();
+             update_cfs_group() {
+               reweight_entity() {
+                 update_curr() {
+                   __calc_delta();
+                   update_min_vruntime();
+                 }
+               }
+             }
+             hrtick_update();
+           }
+           pick_next_task() {
+             pick_next_task_fair() {
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               update_curr();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               check_cfs_rq_runtime();
+               pick_next_entity();
+               put_prev_entity() {
+                 check_cfs_rq_runtime();
+               }
+               set_next_entity() {
+                 clear_buddies();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+               }
+             }
+           }
+           psi_task_switch() {
+             psi_flags_change();
+             psi_flags_change();
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+             psi_group_change() {
+               record_times();
+             }
+           }
+           __traceiter_sched_switch() {
+             _raw_spin_lock_irqsave();
+             _raw_spin_unlock_irqrestore();
+           }
+           switch_mm_irqs_off();
+           save_fpregs_to_fpstate() {
+             xfd_validate_state();
+           }
+           finish_task_switch.isra.0() {
+             raw_spin_rq_unlock() {
+               _raw_spin_unlock();
+             }
+           }
+         } /* schedule */
+       } /* futex_wait_queue */
+       futex_unqueue();
+     } /* futex_wait */
+   } /* do_futex */
+ } /* __x64_sys_futex */
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_epoll_pwait() {
+   ktime_get_ts64();
+   timespec64_add_safe();
+   set_user_sigmask();
+   do_compat_epoll_pwait.part.0() {
+     do_epoll_wait() {
+       __fdget() {
+         __fget_light() {
+           __rcu_read_lock();
+           __rcu_read_unlock();
+         }
+       }
+       ep_poll() {
+         select_estimate_accuracy() {
+           ktime_get_ts64();
+           set_normalized_timespec64();
+         }
+         ep_send_events() {
+           mutex_lock() {
+             __cond_resched();
+           }
+           _raw_write_lock_irq();
+           _raw_write_unlock_irq();
+           ep_item_poll.isra.0() {
+             pipe_poll();
+           }
+           ep_done_scan() {
+             _raw_write_lock_irq();
+             __pm_relax();
+             _raw_write_unlock_irq();
+           }
+           mutex_unlock();
+         }
+         _raw_write_lock_irq();
+         _raw_write_unlock_irq() {
+           irq_enter_rcu();
+           idle_cpu();
+         }
+         schedule_hrtimeout_range() {
+           schedule_hrtimeout_range_clock() {
+             hrtimer_init_sleeper() {
+               __hrtimer_init();
+             }
+             hrtimer_start_range_ns() {
+               _raw_spin_lock_irqsave();
+               __hrtimer_start_range_ns() {
+                 get_nohz_timer_target();
+                 enqueue_hrtimer();
+               }
+               _raw_spin_unlock_irqrestore();
+             }
+             schedule() {
+               rcu_note_context_switch();
+               raw_spin_rq_lock_nested() {
+                 _raw_spin_lock();
+               }
+               update_rq_clock();
+               dequeue_task_fair() {
+                 dequeue_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                     cpuacct_charge();
+                     __cgroup_account_cputime() {
+                       cgroup_rstat_updated();
+                     }
+                   }
+                   __update_load_avg_se();
+                   __update_load_avg_cfs_rq();
+                   clear_buddies();
+                   update_cfs_group();
+                   update_min_vruntime();
+                 }
+                 set_next_buddy();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group() {
+                   reweight_entity() {
+                     update_curr() {
+                       update_min_vruntime();
+                     }
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group() {
+                   reweight_entity() {
+                     update_curr() {
+                       __calc_delta();
+                       update_min_vruntime();
+                     }
+                   }
+                 }
+                 hrtick_update();
+               }
+               pick_next_task() {
+                 pick_next_task_fair() {
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity();
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity();
+                   check_cfs_rq_runtime();
+                   pick_next_entity();
+                   put_prev_entity() {
+                     check_cfs_rq_runtime();
+                   }
+                   set_next_entity() {
+                     clear_buddies();
+                     __update_load_avg_se();
+                     __update_load_avg_cfs_rq();
+                   }
+                 }
+               }
+               psi_task_switch() {
+                 psi_flags_change();
+                 psi_flags_change();
+                 psi_group_change() {
+                   record_times();
+                 }
+                 psi_group_change() {
+                   record_times();
+                 }
+                 psi_group_change() {
+                   record_times();
+                 }
+               }
+               __traceiter_sched_switch() {
+                 _raw_spin_lock_irqsave();
+                 _raw_spin_unlock_irqrestore();
+               }
+               switch_mm_irqs_off();
+               save_fpregs_to_fpstate() {
+                 xfd_validate_state();
+               }
+               finish_task_switch.isra.0() {
+                 raw_spin_rq_unlock() {
+                   _raw_spin_unlock();
+                 }
+               }
+             } /* schedule */
+             hrtimer_active();
+             hrtimer_try_to_cancel.part.0() {
+               _raw_spin_lock_irqsave();
+               __remove_hrtimer();
+               _raw_spin_unlock_irqrestore();
+             }
+           } /* schedule_hrtimeout_range_clock */
+         } /* schedule_hrtimeout_range */
+         ep_send_events() {
+           mutex_lock() {
+             __cond_resched();
+           }
+           _raw_write_lock_irq();
+           _raw_write_unlock_irq();
+           ep_item_poll.isra.0() {
+             pipe_poll();
+           }
+           ep_done_scan() {
+             _raw_write_lock_irq();
+             __pm_relax();
+             _raw_write_unlock_irq();
+           }
+           mutex_unlock();
+         }
+       } /* ep_poll */
+       fput();
+     } /* do_epoll_wait */
+   } /* do_compat_epoll_pwait.part.0 */
+ } /* __x64_sys_epoll_pwait */
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+   switch_fpu_return() {
+     restore_fpregs_from_fpstate() {
+       xfd_validate_state();
+     }
+   }
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+     }
+   }
+ }
+ __x64_sys_read() {
+   ksys_read() {
+     __fdget_pos() {
+       __fget_light() {
+         __rcu_read_lock();
+         __rcu_read_unlock();
+       }
+     }
+     vfs_read() {
+       rw_verify_area() {
+         security_file_permission() {
+           apparmor_file_permission() {
+             aa_file_perm() {
+               __rcu_read_lock();
+               __rcu_read_unlock();
+             }
+           }
+         }
+       }
+       __get_task_ioprio();
+       pipe_read() {
+         mutex_lock() {
+           __cond_resched();
+         }
+         anon_pipe_buf_release();
+         _raw_spin_lock_irq();
+         _raw_spin_unlock_irq();
+         mutex_unlock();
+         kill_fasync();
+         touch_atime() {
+           atime_needs_update() {
+             mnt_user_ns();
+             current_time() {
+               ktime_get_coarse_real_ts64();
+             }
+           }
+         }
+       }
+     }
+     fput();
+   }
+ }
+ exit_to_user_mode_prepare() {
+   fpregs_assert_state_consistent();
+ }
+ syscall_trace_enter.constprop.0() {
+   __secure_computing() {
+     __seccomp_filter() {
+       populate_seccomp_data();
+       migrate_disable();
+       migrate_enable();
+     }
+   }
+ }
+ __x64_sys_epoll_pwait() {
+   ktime_get_ts64();
+   timespec64_add_safe();
+   set_user_sigmask();
+   do_compat_epoll_pwait.part.0() {
+     do_epoll_wait() {
+       __fdget() {
+         __fget_light() {
+           __rcu_read_lock();
+           __rcu_read_unlock();
+         }
+       }
+       ep_poll() {
+         select_estimate_accuracy() {
+           ktime_get_ts64();
+           set_normalized_timespec64();
+         }
+         ep_send_events() {
+           mutex_lock() {
+             __cond_resched();
+           }
+           _raw_write_lock_irq();
+           _raw_write_unlock_irq();
+           ep_item_poll.isra.0() {
+             pipe_poll();
+           }
+           ep_done_scan() {
+             _raw_write_lock_irq();
+             __pm_relax();
+             _raw_write_unlock_irq();
+           }
+           mutex_unlock();
+         }
+         _raw_write_lock_irq();
+         _raw_write_unlock_irq();
+         schedule_hrtimeout_range() {
+           schedule_hrtimeout_range_clock() {
+             hrtimer_init_sleeper() {
+               __hrtimer_init();
+             }
+             hrtimer_start_range_ns() {
+               _raw_spin_lock_irqsave();
+               __hrtimer_start_range_ns() {
+                 get_nohz_timer_target();
+                 enqueue_hrtimer();
+               }
+               hrtimer_reprogram() {
+                 tick_program_event() {
+                   clockevents_program_event() {
+                     ktime_get();
+                     lapic_next_deadline();
+                   }
+                 }
+               }
+               _raw_spin_unlock_irqrestore();
+             }
+             schedule() {
+               rcu_note_context_switch();
+               raw_spin_rq_lock_nested() {
+                 _raw_spin_lock();
+               }
+               update_rq_clock();
+               dequeue_task_fair() {
+                 dequeue_entity() {
+                   update_curr() {
+                     update_min_vruntime();
+                     cpuacct_charge();
+                     __cgroup_account_cputime() {
+                       cgroup_rstat_updated();
+                     }
+                   }
+                   __update_load_avg_se();
+                   __update_load_avg_cfs_rq();
+                   clear_buddies();
+                   update_cfs_group();
+                   update_min_vruntime();
+                 }
+                 set_next_buddy();
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group() {
+                   reweight_entity() {
+                     update_curr() {
+                       update_min_vruntime();
+                     }
+                   }
+                 }
+                 __update_load_avg_se();
+                 __update_load_avg_cfs_rq();
+                 update_cfs_group() {
+                   reweight_entity() {
+                     update_curr() {
+                       __calc_delta();
+                       update_min_vruntime();
+                     }
+                   }
+                 }
+                 hrtick_update();
+               }
+               pick_next_task() {
+                 pick_next_task_fair() {
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity();
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity();
+                   check_cfs_rq_runtime();
+                   pick_next_entity();
+                   put_prev_entity() {
+                     check_cfs_rq_runtime();
+                   }
+                   set_next_entity() {
+                     clear_buddies();
+                     __update_load_avg_se();
+                     __update_load_avg_cfs_rq();
+                   }
+                 }
+               }
+               psi_task_switch() {
+                 psi_flags_change();
+                 psi_flags_change();
+                 psi_group_change() {
+                   record_times();
+                 }
+                 psi_group_change() {
+                   record_times();
+                 }
+                 psi_group_change() {
+                   record_times();
+                 }
+               }
+               __traceiter_sched_switch() {
+                 _raw_spin_lock_irqsave();
+                 _raw_spin_unlock_irqrestore();
+               }
+               switch_mm_irqs_off();
+               save_fpregs_to_fpstate() {
+                 xfd_validate_state();
+               }
