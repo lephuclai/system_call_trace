@@ -1,0 +1,27 @@
+ 0) mongod-1549887 |                 } /* check_cfs_rq_runtime */
+ 0) mongod-1549887 |                 pick_next_entity() {
+ 0) mongod-1549887 |                   clear_buddies();
+ 0) mongod-1549887 |                 }
+ 0) mongod-1549887 |                 put_prev_entity() {
+ 0) mongod-1549887 |                   check_cfs_rq_runtime();
+ 0) mongod-1549887 |                 }
+ 0) mongod-1549887 |                 set_next_entity() {
+ 0) mongod-1549887 |                   __update_load_avg_se();
+ 0) mongod-1549887 |                   __update_load_avg_cfs_rq();
+ 0) mongod-1549887 |                 }
+ 0) mongod-1549887 |               } /* pick_next_task_fair */
+ 0) mongod-1549887 |               fpsimd_thread_switch() {
+ 0) mongod-1549887 |                 __get_cpu_fpsimd_context();
+ 0) mongod-1549887 |                 fpsimd_save() {
+ 0) mongod-1549887 |                   have_cpu_fpsimd_context();
+ 0) mongod-1549887 |                 }
+ 0) mongod-1549887 |                 __put_cpu_fpsimd_context();
+ 0) mongod-1549887 |               }
+ 0) mongod-1549887 |               hw_breakpoint_thread_switch();
+ 0) mongod-1549887 |               uao_thread_switch();
+ 0) mongod-1549887 |               cpu_have_feature();
+ 0) mongod-1549887 |               erratum_1418040_thread_switch() {
+ 0) mongod-1549887 |                 this_cpu_has_cap() {
+ 0) mongod-1549887 |                   is_affected_midr_range_list();
+ 0) mongod-1549887 |                 }
+ 0) mongod-1549887 |               }

@@ -1,0 +1,20 @@
+containerd-shim,1540442 -namespace k8s.io -id 7b1b70ff066f8423d08a2c5ca9ad09faea21ead28b063d4f30afb3f87f763e51 -address /run/containerd/containerd.sock
+  |-pause,1540480
+  |-sh,1540580 -c gunicorn -w 4 -b 0.0.0.0:5500 app:application
+  |   `-gunicorn,1540610 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+  |       |-gunicorn,1540620 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+  |       |-gunicorn,1540621 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+  |       |-gunicorn,1540622 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+  |       `-gunicorn,1540623 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+  |-{containerd-shim},1540443
+  |-{containerd-shim},1540444
+  |-{containerd-shim},1540445
+  |-{containerd-shim},1540446
+  |-{containerd-shim},1540447
+  |-{containerd-shim},1540448
+  |-{containerd-shim},1540449
+  |-{containerd-shim},1540450
+  |-{containerd-shim},1540499
+  |-{containerd-shim},1540500
+  |-{containerd-shim},1540501
+  `-{containerd-shim},1540751

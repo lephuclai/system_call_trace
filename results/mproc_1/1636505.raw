@@ -1,0 +1,1580 @@
+ 0) gunicor-1636505 |                                                               } /* jiffies_to_usecs */
+ 0) gunicor-1636505 |                                                               __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                               sk_reset_timer() {
+ 0) gunicor-1636505 |                                                                 mod_timer() {
+ 0) gunicor-1636505 |                                                                   lock_timer_base() {
+ 0) gunicor-1636505 |                                                                     _raw_spin_lock_irqsave();
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                   calc_wheel_index();
+ 0) gunicor-1636505 |                                                                   detach_if_pending();
+ 0) gunicor-1636505 |                                                                   get_nohz_timer_target();
+ 0) gunicor-1636505 |                                                                   enqueue_timer();
+ 0) gunicor-1636505 |                                                                   trigger_dyntick_cpu.isra.0();
+ 0) gunicor-1636505 |                                                                   _raw_spin_unlock_irqrestore();
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             } /* tcp_rearm_rto */
+ 0) gunicor-1636505 |                                                             tcp_check_space();
+ 0) gunicor-1636505 |                                                           } /* tcp_event_new_data_sent */
+ 0) gunicor-1636505 |                                                           tcp_chrono_stop();
+ 0) gunicor-1636505 |                                                           tcp_schedule_loss_probe.part.0() {
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                             jiffies_to_usecs();
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                             sk_reset_timer() {
+ 0) gunicor-1636505 |                                                               mod_timer() {
+ 0) gunicor-1636505 |                                                                 lock_timer_base() {
+ 0) gunicor-1636505 |                                                                   _raw_spin_lock_irqsave();
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                                 calc_wheel_index();
+ 0) gunicor-1636505 |                                                                 detach_if_pending();
+ 0) gunicor-1636505 |                                                                 get_nohz_timer_target();
+ 0) gunicor-1636505 |                                                                 enqueue_timer();
+ 0) gunicor-1636505 |                                                                 trigger_dyntick_cpu.isra.0();
+ 0) gunicor-1636505 |                                                                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                         } /* tcp_write_xmit */
+ 0) gunicor-1636505 |                                                       } /* __tcp_push_pending_frames */
+ 0) gunicor-1636505 |                                                       tcp_check_space();
+ 0) gunicor-1636505 |                                                     } /* tcp_rcv_established */
+ 0) gunicor-1636505 |                                                   } /* tcp_v4_do_rcv */
+ 0) gunicor-1636505 |                                                   _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                 } /* tcp_v4_rcv */
+ 0) gunicor-1636505 |                                               } /* ip_protocol_deliver_rcu */
+ 0) gunicor-1636505 |                                               __rcu_read_unlock();
+ 0) gunicor-1636505 |                                             } /* ip_local_deliver_finish */
+ 0) gunicor-1636505 |                                           } /* ip_local_deliver */
+ 0) gunicor-1636505 |                                           ip_local_deliver() {
+ 0) gunicor-1636505 |                                             __rcu_read_lock();
+ 0) gunicor-1636505 |                                             nf_hook_slow() {
+ 0) gunicor-1636505 |                                               iptable_mangle_hook [iptable_mangle]() {
+ 0) gunicor-1636505 |                                                 ipt_do_table [ip_tables]() {
+ 0) gunicor-1636505 |                                                   __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                   __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                 }
+ 0) gunicor-1636505 |                                               }
+ 0) gunicor-1636505 |                                               iptable_filter_hook [iptable_filter]() {
+ 0) gunicor-1636505 |                                                 ipt_do_table [ip_tables]() {
+ 0) gunicor-1636505 |                                                   __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                   conntrack_mt_v3 [xt_conntrack]() {
+ 0) gunicor-1636505 |                                                     conntrack_mt [xt_conntrack]();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                   comment_mt [xt_comment]();
+ 0) gunicor-1636505 |                                                   conntrack_mt_v3 [xt_conntrack]() {
+ 0) gunicor-1636505 |                                                     conntrack_mt [xt_conntrack]();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                   __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                 }
+ 0) gunicor-1636505 |                                               }
+ 0) gunicor-1636505 |                                               nf_nat_ipv4_local_in [nf_nat]() {
+ 0) gunicor-1636505 |                                                 nf_nat_ipv4_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                   nf_nat_inet_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                     nf_nat_packet [nf_nat]();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                 }
+ 0) gunicor-1636505 |                                               }
+ 0) gunicor-1636505 |                                               ipv4_confirm [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                 nf_confirm [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                   nf_ct_deliver_cached_events [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                     __rcu_read_lock();
+ 0) gunicor-1636505 |                                                     __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                 }
+ 0) gunicor-1636505 |                                               }
+ 0) gunicor-1636505 |                                             }
+ 0) gunicor-1636505 |                                             __rcu_read_unlock();
+ 0) gunicor-1636505 |                                             ip_local_deliver_finish() {
+ 0) gunicor-1636505 |                                               __rcu_read_lock();
+ 0) gunicor-1636505 |                                               ip_protocol_deliver_rcu() {
+ 0) gunicor-1636505 |                                                 raw_local_deliver();
+ 0) gunicor-1636505 |                                                 tcp_v4_rcv() {
+ 0) gunicor-1636505 |                                                   tcp_v4_inbound_md5_hash() {
+ 0) gunicor-1636505 |                                                     tcp_parse_md5sig_option();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                   sk_filter_trim_cap() {
+ 0) gunicor-1636505 |                                                     __cgroup_bpf_run_filter_skb() {
+ 0) gunicor-1636505 |                                                       __rcu_read_lock();
+ 0) gunicor-1636505 |                                                       __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                     }
+ 0) gunicor-1636505 |                                                     security_sock_rcv_skb() {
+ 0) gunicor-1636505 |                                                       apparmor_socket_sock_rcv_skb();
+ 0) gunicor-1636505 |                                                     }
+ 0) gunicor-1636505 |                                                     __rcu_read_lock();
+ 0) gunicor-1636505 |                                                     __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                   tcp_v4_fill_cb();
+ 0) gunicor-1636505 |                                                   _raw_spin_lock();
+ 0) gunicor-1636505 |                                                   tcp_v4_do_rcv() {
+ 0) gunicor-1636505 |                                                     ipv4_dst_check();
+ 0) gunicor-1636505 |                                                     tcp_rcv_established() {
+ 0) gunicor-1636505 |                                                       tcp_mstamp_refresh() {
+ 0) gunicor-1636505 |                                                         ktime_get() {
+ 0) gunicor-1636505 |                                                           arch_counter_read();
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                       }
+ 0) gunicor-1636505 |                                                       tcp_parse_aligned_timestamp.part.0();
+ 0) gunicor-1636505 |                                                       ktime_get_seconds();
+ 0) gunicor-1636505 |                                                       tcp_ack() {
+ 0) gunicor-1636505 |                                                         tcp_clean_rtx_queue() {
+ 0) gunicor-1636505 |                                                           tcp_rack_advance();
+ 0) gunicor-1636505 |                                                           tcp_rate_skb_delivered();
+ 0) gunicor-1636505 |                                                           __kfree_skb() {
+ 0) gunicor-1636505 |                                                             skb_release_all() {
+ 0) gunicor-1636505 |                                                               skb_release_head_state();
+ 0) gunicor-1636505 |                                                               skb_release_data() {
+ 0) gunicor-1636505 |                                                                 skb_free_head() {
+ 0) gunicor-1636505 |                                                                   kfree() {
+ 0) gunicor-1636505 |                                                                     __slab_free() {
+ 0) gunicor-1636505 |                                                                       put_cpu_partial();
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                             kfree_skbmem();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                           tcp_ack_update_rtt.isra.0() {
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                           bictcp_acked();
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                         tcp_rack_update_reo_wnd();
+ 0) gunicor-1636505 |                                                         tcp_schedule_loss_probe() {
+ 0) gunicor-1636505 |                                                           tcp_schedule_loss_probe.part.0() {
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                             jiffies_to_usecs();
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                             sk_reset_timer() {
+ 0) gunicor-1636505 |                                                               mod_timer();
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                         tcp_newly_delivered();
+ 0) gunicor-1636505 |                                                         tcp_rate_gen();
+ 0) gunicor-1636505 |                                                         bictcp_cong_avoid();
+ 0) gunicor-1636505 |                                                         tcp_update_pacing_rate();
+ 0) gunicor-1636505 |                                                       }
+ 0) gunicor-1636505 |                                                       __kfree_skb() {
+ 0) gunicor-1636505 |                                                         skb_release_all() {
+ 0) gunicor-1636505 |                                                           skb_release_head_state();
+ 0) gunicor-1636505 |                                                           skb_release_data() {
+ 0) gunicor-1636505 |                                                             skb_free_head() {
+ 0) gunicor-1636505 |                                                               page_frag_free();
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                         kfree_skbmem() {
+ 0) gunicor-1636505 |                                                           kmem_cache_free() {
+ 0) gunicor-1636505 |                                                             __slab_free();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                       }
+ 0) gunicor-1636505 |                                                       tcp_current_mss() {
+ 0) gunicor-1636505 |                                                         ipv4_mtu();
+ 0) gunicor-1636505 |                                                         tcp_established_options();
+ 0) gunicor-1636505 |                                                       }
+ 0) gunicor-1636505 |                                                       __tcp_push_pending_frames() {
+ 0) gunicor-1636505 |                                                         tcp_write_xmit() {
+ 0) gunicor-1636505 |                                                           ktime_get() {
+ 0) gunicor-1636505 |                                                             arch_counter_read();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                           tcp_mtu_probe();
+ 0) gunicor-1636505 |                                                           tcp_small_queue_check.isra.0();
+ 0) gunicor-1636505 |                                                           __tcp_transmit_skb() {
+ 0) gunicor-1636505 |                                                             skb_clone() {
+ 0) gunicor-1636505 |                                                               __skb_clone() {
+ 0) gunicor-1636505 |                                                                 __copy_skb_header();
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                             tcp_established_options();
+ 0) gunicor-1636505 |                                                             skb_push();
+ 0) gunicor-1636505 |                                                             tcp_options_write();
+ 0) gunicor-1636505 |                                                             __tcp_select_window();
+ 0) gunicor-1636505 |                                                             tcp_v4_send_check() {
+ 0) gunicor-1636505 |                                                               __tcp_v4_send_check();
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                             __ip_queue_xmit() {
+ 0) gunicor-1636505 |                                                               __rcu_read_lock();
+ 0) gunicor-1636505 |                                                               __sk_dst_check() {
+ 0) gunicor-1636505 |                                                                 ipv4_dst_check();
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                               skb_push();
+ 0) gunicor-1636505 |                                                               ip_local_out() {
+ 0) gunicor-1636505 |                                                                 __ip_local_out() {
+ 0) gunicor-1636505 |                                                                   __rcu_read_lock();
+ 0) gunicor-1636505 |                                                                   nf_hook_slow() {
+ 0) gunicor-1636505 |                                                                     ipv4_conntrack_defrag [nf_defrag_ipv4]();
+ 0) gunicor-1636505 |                                                                     ipv4_conntrack_local [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                       nf_conntrack_in [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                         get_l4proto [nf_conntrack]();
+ 0) gunicor-1636505 |                                                                         nf_ct_get_tuple [nf_conntrack]();
+ 0) gunicor-1636505 |                                                                         hash_conntrack_raw [nf_conntrack]();
+ 0) gunicor-1636505 |                                                                         __nf_conntrack_find_get [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                           __rcu_read_lock();
+ 0) gunicor-1636505 |                                                                           __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                         nf_conntrack_tcp_packet [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                           _raw_spin_lock_bh() {
+ 0) gunicor-1636505 |                                                                             __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                           }
+ 0) gunicor-1636505 |                                                                           tcp_in_window [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                             nf_ct_seq_offset [nf_conntrack]();
+ 0) gunicor-1636505 |                                                                           }
+ 0) gunicor-1636505 |                                                                           _raw_spin_unlock_bh() {
+ 0) gunicor-1636505 |                                                                             __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                           }
+ 0) gunicor-1636505 |                                                                           __nf_ct_refresh_acct [nf_conntrack]();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     iptable_mangle_hook [iptable_mangle]() {
+ 0) gunicor-1636505 |                                                                       ipt_do_table [ip_tables]() {
+ 0) gunicor-1636505 |                                                                         __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                         __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     nf_nat_ipv4_local_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                                       nf_nat_ipv4_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                                         nf_nat_inet_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                                           nf_nat_packet [nf_nat]();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     iptable_filter_hook [iptable_filter]() {
+ 0) gunicor-1636505 |                                                                       ipt_do_table [ip_tables]() {
+ 0) gunicor-1636505 |                                                                         __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                         conntrack_mt_v3 [xt_conntrack]() {
+ 0) gunicor-1636505 |                                                                           conntrack_mt [xt_conntrack]();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                         conntrack_mt_v3 [xt_conntrack]() {
+ 0) gunicor-1636505 |                                                                           conntrack_mt [xt_conntrack]();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                         __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                   __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                                 ip_output() {
+ 0) gunicor-1636505 |                                                                   __rcu_read_lock();
+ 0) gunicor-1636505 |                                                                   nf_hook_slow() {
+ 0) gunicor-1636505 |                                                                     iptable_mangle_hook [iptable_mangle]() {
+ 0) gunicor-1636505 |                                                                       ipt_do_table [ip_tables]() {
+ 0) gunicor-1636505 |                                                                         __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                         __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     nf_nat_ipv4_out [nf_nat]() {
+ 0) gunicor-1636505 |                                                                       nf_nat_ipv4_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                                         nf_nat_inet_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                                           nf_nat_packet [nf_nat]();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     ipv4_confirm [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                       nf_confirm [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                         nf_ct_deliver_cached_events [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                           __rcu_read_lock();
+ 0) gunicor-1636505 |                                                                           __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                   __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                                   ip_finish_output() {
+ 0) gunicor-1636505 |                                                                     __cgroup_bpf_run_filter_skb() {
+ 0) gunicor-1636505 |                                                                       __rcu_read_lock();
+ 0) gunicor-1636505 |                                                                       __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     __ip_finish_output() {
+ 0) gunicor-1636505 |                                                                       ipv4_mtu();
+ 0) gunicor-1636505 |                                                                       ip_finish_output2() {
+ 0) gunicor-1636505 |                                                                         __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                         dev_queue_xmit() {
+ 0) gunicor-1636505 |                                                                           __dev_queue_xmit() {
+ 0) gunicor-1636505 |                                                                             __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                             netdev_core_pick_tx() {
+ 0) gunicor-1636505 |                                                                               netdev_pick_tx();
+ 0) gunicor-1636505 |                                                                             }
+ 0) gunicor-1636505 |                                                                             _raw_spin_lock();
+ 0) gunicor-1636505 |                                                                             sch_direct_xmit() {
+ 0) gunicor-1636505 |                                                                               _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                                               validate_xmit_skb_list() {
+ 0) gunicor-1636505 |                                                                                 validate_xmit_skb() {
+ 0) gunicor-1636505 |                                                                                   netif_skb_features() {
+ 0) gunicor-1636505 |                                                                                     skb_network_protocol();
+ 0) gunicor-1636505 |                                                                                   }
+ 0) gunicor-1636505 |                                                                                   __pskb_pull_tail() {
+ 0) gunicor-1636505 |                                                                                     pskb_expand_head() {
+ 0) gunicor-1636505 |                                                                                       __kmalloc_reserve.isra.0() {
+ 0) gunicor-1636505 |                                                                                         __kmalloc_track_caller() {
+ 0) gunicor-1636505 |                                                                                           kmalloc_slab();
+ 0) gunicor-1636505 |                                                                                           should_failslab();
+ 0) gunicor-1636505 |                                                                                           memcg_kmem_put_cache();
+ 0) gunicor-1636505 |                                                                                         }
+ 0) gunicor-1636505 |                                                                                       }
+ 0) gunicor-1636505 |                                                                                       ksize() {
+ 0) gunicor-1636505 |                                                                                         __ksize();
+ 0) gunicor-1636505 |                                                                                       }
+ 0) gunicor-1636505 |                                                                                       skb_release_data();
+ 0) gunicor-1636505 |                                                                                       skb_headers_offset_update();
+ 0) gunicor-1636505 |                                                                                     }
+ 0) gunicor-1636505 |                                                                                     skb_copy_bits();
+ 0) gunicor-1636505 |                                                                                   }
+ 0) gunicor-1636505 |                                                                                   skb_csum_hwoffload_help() {
+ 0) gunicor-1636505 |                                                                                     skb_checksum_help() {
+ 0) gunicor-1636505 |                                                                                       skb_checksum() {
+ 0) gunicor-1636505 |                                                                                         __skb_checksum();
+ 0) gunicor-1636505 |                                                                                       }
+ 0) gunicor-1636505 |                                                                                     }
+ 0) gunicor-1636505 |                                                                                   }
+ 0) gunicor-1636505 |                                                                                   validate_xmit_xfrm();
+ 0) gunicor-1636505 |                                                                                 }
+ 0) gunicor-1636505 |                                                                               }
+ 0) gunicor-1636505 |                                                                               _raw_spin_lock();
+ 0) gunicor-1636505 |                                                                               dev_hard_start_xmit() {
+ 0) gunicor-1636505 |                                                                                 bcmgenet_xmit() {
+ 0) gunicor-1636505 |                                                                                   _raw_spin_lock();
+ 0) gunicor-1636505 |                                                                                   dma_direct_map_page() {
+ 0) gunicor-1636505 |                                                                                     arch_sync_dma_for_device();
+ 0) gunicor-1636505 |                                                                                   }
+ 0) gunicor-1636505 |                                                                                   skb_clone_tx_timestamp() {
+ 0) gunicor-1636505 |                                                                                     ptp_classify_raw();
+ 0) gunicor-1636505 |                                                                                   }
+ 0) gunicor-1636505 |                                                                                   _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                                                 }
+ 0) gunicor-1636505 |                                                                               }
+ 0) gunicor-1636505 |                                                                               _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                                               _raw_spin_lock();
+ 0) gunicor-1636505 |                                                                             }
+ 0) gunicor-1636505 |                                                                             __qdisc_run() {
+ 0) gunicor-1636505 |                                                                               dequeue_skb() {
+ 0) gunicor-1636505 |                                                                                 fq_codel_dequeue [sch_fq_codel]();
+ 0) gunicor-1636505 |                                                                               }
+ 0) gunicor-1636505 |                                                                             }
+ 0) gunicor-1636505 |                                                                             _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                                             __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                           }
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                         __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                               __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                             tcp_update_skb_after_send();
+ 0) gunicor-1636505 |                                                             tcp_rate_skb_sent();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                           tcp_event_new_data_sent() {
+ 0) gunicor-1636505 |                                                             tcp_rbtree_insert();
+ 0) gunicor-1636505 |                                                             tcp_rearm_rto() {
+ 0) gunicor-1636505 |                                                               jiffies_to_usecs();
+ 0) gunicor-1636505 |                                                               __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                               sk_reset_timer() {
+ 0) gunicor-1636505 |                                                                 mod_timer() {
+ 0) gunicor-1636505 |                                                                   lock_timer_base() {
+ 0) gunicor-1636505 |                                                                     _raw_spin_lock_irqsave();
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                   calc_wheel_index();
+ 0) gunicor-1636505 |                                                                   detach_if_pending();
+ 0) gunicor-1636505 |                                                                   get_nohz_timer_target();
+ 0) gunicor-1636505 |                                                                   enqueue_timer();
+ 0) gunicor-1636505 |                                                                   trigger_dyntick_cpu.isra.0();
+ 0) gunicor-1636505 |                                                                   _raw_spin_unlock_irqrestore();
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                             tcp_check_space();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                           tcp_chrono_stop();
+ 0) gunicor-1636505 |                                                           tcp_schedule_loss_probe.part.0() {
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                             jiffies_to_usecs();
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                             sk_reset_timer() {
+ 0) gunicor-1636505 |                                                               mod_timer() {
+ 0) gunicor-1636505 |                                                                 lock_timer_base() {
+ 0) gunicor-1636505 |                                                                   _raw_spin_lock_irqsave();
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                                 calc_wheel_index();
+ 0) gunicor-1636505 |                                                                 detach_if_pending();
+ 0) gunicor-1636505 |                                                                 get_nohz_timer_target();
+ 0) gunicor-1636505 |                                                                 enqueue_timer();
+ 0) gunicor-1636505 |                                                                 trigger_dyntick_cpu.isra.0();
+ 0) gunicor-1636505 |                                                                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                       }
+ 0) gunicor-1636505 |                                                       tcp_check_space();
+ 0) gunicor-1636505 |                                                     }
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                   _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                 }
+ 0) gunicor-1636505 |                                               }
+ 0) gunicor-1636505 |                                               __rcu_read_unlock();
+ 0) gunicor-1636505 |                                             }
+ 0) gunicor-1636505 |                                           }
+ 0) gunicor-1636505 |                                           ip_local_deliver() {
+ 0) gunicor-1636505 |                                             __rcu_read_lock();
+ 0) gunicor-1636505 |                                             nf_hook_slow() {
+ 0) gunicor-1636505 |                                               iptable_mangle_hook [iptable_mangle]() {
+ 0) gunicor-1636505 |                                                 ipt_do_table [ip_tables]() {
+ 0) gunicor-1636505 |                                                   __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                   __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                 }
+ 0) gunicor-1636505 |                                               }
+ 0) gunicor-1636505 |                                               iptable_filter_hook [iptable_filter]() {
+ 0) gunicor-1636505 |                                                 ipt_do_table [ip_tables]() {
+ 0) gunicor-1636505 |                                                   __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                   conntrack_mt_v3 [xt_conntrack]() {
+ 0) gunicor-1636505 |                                                     conntrack_mt [xt_conntrack]();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                   comment_mt [xt_comment]();
+ 0) gunicor-1636505 |                                                   conntrack_mt_v3 [xt_conntrack]() {
+ 0) gunicor-1636505 |                                                     conntrack_mt [xt_conntrack]();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                   __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                 }
+ 0) gunicor-1636505 |                                               }
+ 0) gunicor-1636505 |                                               nf_nat_ipv4_local_in [nf_nat]() {
+ 0) gunicor-1636505 |                                                 nf_nat_ipv4_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                   nf_nat_inet_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                     nf_nat_packet [nf_nat]();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                 }
+ 0) gunicor-1636505 |                                               }
+ 0) gunicor-1636505 |                                               ipv4_confirm [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                 nf_confirm [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                   nf_ct_deliver_cached_events [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                     __rcu_read_lock();
+ 0) gunicor-1636505 |                                                     __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                 }
+ 0) gunicor-1636505 |                                               }
+ 0) gunicor-1636505 |                                             }
+ 0) gunicor-1636505 |                                             __rcu_read_unlock();
+ 0) gunicor-1636505 |                                             ip_local_deliver_finish() {
+ 0) gunicor-1636505 |                                               __rcu_read_lock();
+ 0) gunicor-1636505 |                                               ip_protocol_deliver_rcu() {
+ 0) gunicor-1636505 |                                                 raw_local_deliver();
+ 0) gunicor-1636505 |                                                 tcp_v4_rcv() {
+ 0) gunicor-1636505 |                                                   tcp_v4_inbound_md5_hash() {
+ 0) gunicor-1636505 |                                                     tcp_parse_md5sig_option();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                   sk_filter_trim_cap() {
+ 0) gunicor-1636505 |                                                     __cgroup_bpf_run_filter_skb() {
+ 0) gunicor-1636505 |                                                       __rcu_read_lock();
+ 0) gunicor-1636505 |                                                       __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                     }
+ 0) gunicor-1636505 |                                                     security_sock_rcv_skb() {
+ 0) gunicor-1636505 |                                                       apparmor_socket_sock_rcv_skb();
+ 0) gunicor-1636505 |                                                     }
+ 0) gunicor-1636505 |                                                     __rcu_read_lock();
+ 0) gunicor-1636505 |                                                     __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                   tcp_v4_fill_cb();
+ 0) gunicor-1636505 |                                                   _raw_spin_lock();
+ 0) gunicor-1636505 |                                                   tcp_v4_do_rcv() {
+ 0) gunicor-1636505 |                                                     ipv4_dst_check();
+ 0) gunicor-1636505 |                                                     tcp_rcv_established() {
+ 0) gunicor-1636505 |                                                       tcp_mstamp_refresh() {
+ 0) gunicor-1636505 |                                                         ktime_get() {
+ 0) gunicor-1636505 |                                                           arch_counter_read();
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                       }
+ 0) gunicor-1636505 |                                                       tcp_parse_aligned_timestamp.part.0();
+ 0) gunicor-1636505 |                                                       ktime_get_seconds();
+ 0) gunicor-1636505 |                                                       tcp_ack() {
+ 0) gunicor-1636505 |                                                         tcp_clean_rtx_queue() {
+ 0) gunicor-1636505 |                                                           tcp_rack_advance();
+ 0) gunicor-1636505 |                                                           tcp_rate_skb_delivered();
+ 0) gunicor-1636505 |                                                           __kfree_skb() {
+ 0) gunicor-1636505 |                                                             skb_release_all() {
+ 0) gunicor-1636505 |                                                               skb_release_head_state();
+ 0) gunicor-1636505 |                                                               skb_release_data() {
+ 0) gunicor-1636505 |                                                                 skb_free_head() {
+ 0) gunicor-1636505 |                                                                   kfree() {
+ 0) gunicor-1636505 |                                                                     __slab_free() {
+ 0) gunicor-1636505 |                                                                       put_cpu_partial() {
+ 0) gunicor-1636505 |                                                                         unfreeze_partials.isra.0() {
+ 0) gunicor-1636505 |                                                                           _raw_spin_lock();
+ 0) gunicor-1636505 |                                                                           _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                             kfree_skbmem();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                           tcp_ack_update_rtt.isra.0() {
+ 0) gunicor-1636505 |                                                             jiffies_to_usecs();
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                           bictcp_acked();
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                         tcp_rack_update_reo_wnd();
+ 0) gunicor-1636505 |                                                         tcp_schedule_loss_probe() {
+ 0) gunicor-1636505 |                                                           tcp_schedule_loss_probe.part.0() {
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                             jiffies_to_usecs();
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                             sk_reset_timer() {
+ 0) gunicor-1636505 |                                                               mod_timer();
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                         tcp_newly_delivered();
+ 0) gunicor-1636505 |                                                         tcp_rate_gen();
+ 0) gunicor-1636505 |                                                         bictcp_cong_avoid();
+ 0) gunicor-1636505 |                                                         tcp_update_pacing_rate();
+ 0) gunicor-1636505 |                                                       }
+ 0) gunicor-1636505 |                                                       __kfree_skb() {
+ 0) gunicor-1636505 |                                                         skb_release_all() {
+ 0) gunicor-1636505 |                                                           skb_release_head_state();
+ 0) gunicor-1636505 |                                                           skb_release_data() {
+ 0) gunicor-1636505 |                                                             skb_free_head() {
+ 0) gunicor-1636505 |                                                               page_frag_free() {
+ 0) gunicor-1636505 |                                                                 __free_pages_ok() {
+ 0) gunicor-1636505 |                                                                   kernel_poison_pages();
+ 0) gunicor-1636505 |                                                                   free_one_page() {
+ 0) gunicor-1636505 |                                                                     _raw_spin_lock();
+ 0) gunicor-1636505 |                                                                     __mod_zone_page_state();
+ 0) gunicor-1636505 |                                                                     pfn_valid() {
+ 0) gunicor-1636505 |                                                                       memblock_is_map_memory();
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     pfn_valid() {
+ 0) gunicor-1636505 |                                                                       memblock_is_map_memory();
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     pfn_valid() {
+ 0) gunicor-1636505 |                                                                       memblock_is_map_memory();
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                         kfree_skbmem() {
+ 0) gunicor-1636505 |                                                           kmem_cache_free() {
+ 0) gunicor-1636505 |                                                             __slab_free();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                       }
+ 0) gunicor-1636505 |                                                       tcp_current_mss() {
+ 0) gunicor-1636505 |                                                         ipv4_mtu();
+ 0) gunicor-1636505 |                                                         tcp_established_options();
+ 0) gunicor-1636505 |                                                       }
+ 0) gunicor-1636505 |                                                       __tcp_push_pending_frames() {
+ 0) gunicor-1636505 |                                                         tcp_write_xmit() {
+ 0) gunicor-1636505 |                                                           ktime_get() {
+ 0) gunicor-1636505 |                                                             arch_counter_read();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                           tcp_mtu_probe();
+ 0) gunicor-1636505 |                                                           tcp_small_queue_check.isra.0();
+ 0) gunicor-1636505 |                                                           __tcp_transmit_skb() {
+ 0) gunicor-1636505 |                                                             skb_clone() {
+ 0) gunicor-1636505 |                                                               __skb_clone() {
+ 0) gunicor-1636505 |                                                                 __copy_skb_header();
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                             tcp_established_options();
+ 0) gunicor-1636505 |                                                             skb_push();
+ 0) gunicor-1636505 |                                                             tcp_options_write();
+ 0) gunicor-1636505 |                                                             __tcp_select_window();
+ 0) gunicor-1636505 |                                                             tcp_v4_send_check() {
+ 0) gunicor-1636505 |                                                               __tcp_v4_send_check();
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                             __ip_queue_xmit() {
+ 0) gunicor-1636505 |                                                               __rcu_read_lock();
+ 0) gunicor-1636505 |                                                               __sk_dst_check() {
+ 0) gunicor-1636505 |                                                                 ipv4_dst_check();
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                               skb_push();
+ 0) gunicor-1636505 |                                                               ip_local_out() {
+ 0) gunicor-1636505 |                                                                 __ip_local_out() {
+ 0) gunicor-1636505 |                                                                   __rcu_read_lock();
+ 0) gunicor-1636505 |                                                                   nf_hook_slow() {
+ 0) gunicor-1636505 |                                                                     ipv4_conntrack_defrag [nf_defrag_ipv4]();
+ 0) gunicor-1636505 |                                                                     ipv4_conntrack_local [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                       nf_conntrack_in [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                         get_l4proto [nf_conntrack]();
+ 0) gunicor-1636505 |                                                                         nf_ct_get_tuple [nf_conntrack]();
+ 0) gunicor-1636505 |                                                                         hash_conntrack_raw [nf_conntrack]();
+ 0) gunicor-1636505 |                                                                         __nf_conntrack_find_get [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                           __rcu_read_lock();
+ 0) gunicor-1636505 |                                                                           __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                         nf_conntrack_tcp_packet [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                           _raw_spin_lock_bh() {
+ 0) gunicor-1636505 |                                                                             __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                           }
+ 0) gunicor-1636505 |                                                                           tcp_in_window [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                             nf_ct_seq_offset [nf_conntrack]();
+ 0) gunicor-1636505 |                                                                           }
+ 0) gunicor-1636505 |                                                                           _raw_spin_unlock_bh() {
+ 0) gunicor-1636505 |                                                                             __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                           }
+ 0) gunicor-1636505 |                                                                           __nf_ct_refresh_acct [nf_conntrack]();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     iptable_mangle_hook [iptable_mangle]() {
+ 0) gunicor-1636505 |                                                                       ipt_do_table [ip_tables]() {
+ 0) gunicor-1636505 |                                                                         __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                         __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     nf_nat_ipv4_local_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                                       nf_nat_ipv4_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                                         nf_nat_inet_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                                           nf_nat_packet [nf_nat]();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     iptable_filter_hook [iptable_filter]() {
+ 0) gunicor-1636505 |                                                                       ipt_do_table [ip_tables]() {
+ 0) gunicor-1636505 |                                                                         __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                         conntrack_mt_v3 [xt_conntrack]() {
+ 0) gunicor-1636505 |                                                                           conntrack_mt [xt_conntrack]();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                         conntrack_mt_v3 [xt_conntrack]() {
+ 0) gunicor-1636505 |                                                                           conntrack_mt [xt_conntrack]();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                         __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                   __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                                 ip_output() {
+ 0) gunicor-1636505 |                                                                   __rcu_read_lock();
+ 0) gunicor-1636505 |                                                                   nf_hook_slow() {
+ 0) gunicor-1636505 |                                                                     iptable_mangle_hook [iptable_mangle]() {
+ 0) gunicor-1636505 |                                                                       ipt_do_table [ip_tables]() {
+ 0) gunicor-1636505 |                                                                         __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                         __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     nf_nat_ipv4_out [nf_nat]() {
+ 0) gunicor-1636505 |                                                                       nf_nat_ipv4_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                                         nf_nat_inet_fn [nf_nat]() {
+ 0) gunicor-1636505 |                                                                           nf_nat_packet [nf_nat]();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     ipv4_confirm [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                       nf_confirm [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                         nf_ct_deliver_cached_events [nf_conntrack]() {
+ 0) gunicor-1636505 |                                                                           __rcu_read_lock();
+ 0) gunicor-1636505 |                                                                           __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                   __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                                   ip_finish_output() {
+ 0) gunicor-1636505 |                                                                     __cgroup_bpf_run_filter_skb() {
+ 0) gunicor-1636505 |                                                                       __rcu_read_lock();
+ 0) gunicor-1636505 |                                                                       __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                     __ip_finish_output() {
+ 0) gunicor-1636505 |                                                                       ipv4_mtu();
+ 0) gunicor-1636505 |                                                                       ip_finish_output2() {
+ 0) gunicor-1636505 |                                                                         __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                         dev_queue_xmit() {
+ 0) gunicor-1636505 |                                                                           __dev_queue_xmit() {
+ 0) gunicor-1636505 |                                                                             __local_bh_disable_ip();
+ 0) gunicor-1636505 |                                                                             netdev_core_pick_tx() {
+ 0) gunicor-1636505 |                                                                               netdev_pick_tx();
+ 0) gunicor-1636505 |                                                                             }
+ 0) gunicor-1636505 |                                                                             _raw_spin_lock();
+ 0) gunicor-1636505 |                                                                             sch_direct_xmit() {
+ 0) gunicor-1636505 |                                                                               _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                                               validate_xmit_skb_list() {
+ 0) gunicor-1636505 |                                                                                 validate_xmit_skb() {
+ 0) gunicor-1636505 |                                                                                   netif_skb_features() {
+ 0) gunicor-1636505 |                                                                                     skb_network_protocol();
+ 0) gunicor-1636505 |                                                                                   }
+ 0) gunicor-1636505 |                                                                                   __pskb_pull_tail() {
+ 0) gunicor-1636505 |                                                                                     pskb_expand_head() {
+ 0) gunicor-1636505 |                                                                                       __kmalloc_reserve.isra.0() {
+ 0) gunicor-1636505 |                                                                                         __kmalloc_track_caller() {
+ 0) gunicor-1636505 |                                                                                           kmalloc_slab();
+ 0) gunicor-1636505 |                                                                                           should_failslab();
+ 0) gunicor-1636505 |                                                                                           memcg_kmem_put_cache();
+ 0) gunicor-1636505 |                                                                                         }
+ 0) gunicor-1636505 |                                                                                       }
+ 0) gunicor-1636505 |                                                                                       ksize() {
+ 0) gunicor-1636505 |                                                                                         __ksize();
+ 0) gunicor-1636505 |                                                                                       }
+ 0) gunicor-1636505 |                                                                                       skb_release_data();
+ 0) gunicor-1636505 |                                                                                       skb_headers_offset_update();
+ 0) gunicor-1636505 |                                                                                     }
+ 0) gunicor-1636505 |                                                                                     skb_copy_bits();
+ 0) gunicor-1636505 |                                                                                   }
+ 0) gunicor-1636505 |                                                                                   skb_csum_hwoffload_help() {
+ 0) gunicor-1636505 |                                                                                     skb_checksum_help() {
+ 0) gunicor-1636505 |                                                                                       skb_checksum() {
+ 0) gunicor-1636505 |                                                                                         __skb_checksum();
+ 0) gunicor-1636505 |                                                                                       }
+ 0) gunicor-1636505 |                                                                                     }
+ 0) gunicor-1636505 |                                                                                   }
+ 0) gunicor-1636505 |                                                                                   validate_xmit_xfrm();
+ 0) gunicor-1636505 |                                                                                 }
+ 0) gunicor-1636505 |                                                                               }
+ 0) gunicor-1636505 |                                                                               _raw_spin_lock();
+ 0) gunicor-1636505 |                                                                               dev_hard_start_xmit() {
+ 0) gunicor-1636505 |                                                                                 bcmgenet_xmit() {
+ 0) gunicor-1636505 |                                                                                   _raw_spin_lock();
+ 0) gunicor-1636505 |                                                                                   dma_direct_map_page() {
+ 0) gunicor-1636505 |                                                                                     arch_sync_dma_for_device();
+ 0) gunicor-1636505 |                                                                                   }
+ 0) gunicor-1636505 |                                                                                   skb_clone_tx_timestamp() {
+ 0) gunicor-1636505 |                                                                                     ptp_classify_raw();
+ 0) gunicor-1636505 |                                                                                   }
+ 0) gunicor-1636505 |                                                                                   _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                                                 }
+ 0) gunicor-1636505 |                                                                               }
+ 0) gunicor-1636505 |                                                                               _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                                               _raw_spin_lock();
+ 0) gunicor-1636505 |                                                                             }
+ 0) gunicor-1636505 |                                                                             __qdisc_run() {
+ 0) gunicor-1636505 |                                                                               dequeue_skb() {
+ 0) gunicor-1636505 |                                                                                 fq_codel_dequeue [sch_fq_codel]();
+ 0) gunicor-1636505 |                                                                               }
+ 0) gunicor-1636505 |                                                                             }
+ 0) gunicor-1636505 |                                                                             _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                                             __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                           }
+ 0) gunicor-1636505 |                                                                         }
+ 0) gunicor-1636505 |                                                                         __local_bh_enable_ip();
+ 0) gunicor-1636505 |                                                                       }
+ 0) gunicor-1636505 |                                                                     }
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                               __rcu_read_unlock();
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                             tcp_update_skb_after_send();
+ 0) gunicor-1636505 |                                                             tcp_rate_skb_sent();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                           tcp_event_new_data_sent() {
+ 0) gunicor-1636505 |                                                             tcp_rbtree_insert();
+ 0) gunicor-1636505 |                                                             tcp_rearm_rto() {
+ 0) gunicor-1636505 |                                                               jiffies_to_usecs();
+ 0) gunicor-1636505 |                                                               __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                               sk_reset_timer() {
+ 0) gunicor-1636505 |                                                                 mod_timer() {
+ 0) gunicor-1636505 |                                                                   lock_timer_base() {
+ 0) gunicor-1636505 |                                                                     _raw_spin_lock_irqsave();
+ 0) gunicor-1636505 |                                                                   }
+ 0) gunicor-1636505 |                                                                   calc_wheel_index();
+ 0) gunicor-1636505 |                                                                   detach_if_pending();
+ 0) gunicor-1636505 |                                                                   get_nohz_timer_target();
+ 0) gunicor-1636505 |                                                                   enqueue_timer();
+ 0) gunicor-1636505 |                                                                   trigger_dyntick_cpu.isra.0();
+ 0) gunicor-1636505 |                                                                   _raw_spin_unlock_irqrestore();
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                             tcp_check_space();
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                           tcp_chrono_stop();
+ 0) gunicor-1636505 |                                                           tcp_schedule_loss_probe.part.0() {
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                             jiffies_to_usecs();
+ 0) gunicor-1636505 |                                                             __usecs_to_jiffies();
+ 0) gunicor-1636505 |                                                             sk_reset_timer() {
+ 0) gunicor-1636505 |                                                               mod_timer() {
+ 0) gunicor-1636505 |                                                                 lock_timer_base() {
+ 0) gunicor-1636505 |                                                                   _raw_spin_lock_irqsave();
+ 0) gunicor-1636505 |                                                                 }
+ 0) gunicor-1636505 |                                                                 calc_wheel_index();
+ 0) gunicor-1636505 |                                                                 detach_if_pending();
+ 0) gunicor-1636505 |                                                                 get_nohz_timer_target();
+ 0) gunicor-1636505 |                                                                 enqueue_timer();
+ 0) gunicor-1636505 |                                                                 trigger_dyntick_cpu.isra.0();
+ 0) gunicor-1636505 |                                                                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-1636505 |                                                               }
+ 0) gunicor-1636505 |                                                             }
+ 0) gunicor-1636505 |                                                           }
+ 0) gunicor-1636505 |                                                         }
+ 0) gunicor-1636505 |                                                       }
+ 0) gunicor-1636505 |                                                       tcp_check_space();
+ 0) gunicor-1636505 |                                                     }
+ 0) gunicor-1636505 |                                                   }
+ 0) gunicor-1636505 |                                                   _raw_spin_unlock();
+ 0) gunicor-1636505 |                                                 }
+ 0) gunicor-1636505 |                                               }
+ 0) gunicor-1636505 |                                               __rcu_read_unlock();
+ 0) gunicor-1636505 |                                             }
+ 0) gunicor-1636505 |                                           }
+ 0) gunicor-1636505 |                                         } /* ip_sublist_rcv_finish */
+ 0) gunicor-1636505 |                                       } /* ip_sublist_rcv */
+ 0) gunicor-1636505 |                                     } /* ip_list_rcv */
+ 0) gunicor-1636505 |                                   } /* __netif_receive_skb_list_core */
+ 0) gunicor-1636505 |                                   __rcu_read_unlock();
+ 0) gunicor-1636505 |                                 } /* netif_receive_skb_list_internal */
+ 0) gunicor-1636505 |                               } /* gro_normal_list.part.0 */
+ 0) gunicor-1636505 |                             } /* napi_complete_done */
+ 0) gunicor-1636505 |                           } /* bcmgenet_rx_poll */
+ 0) gunicor-1636505 |                           bcmgenet_tx_poll() {
+ 0) gunicor-1636505 |                             _raw_spin_lock();
+ 0) gunicor-1636505 |                             __bcmgenet_tx_reclaim() {
+ 0) gunicor-1636505 |                               bcmgenet_free_tx_cb() {
+ 0) gunicor-1636505 |                                 dma_direct_unmap_page() {
+ 0) gunicor-1636505 |                                   dma_direct_sync_single_for_cpu() {
+ 0) gunicor-1636505 |                                     arch_sync_dma_for_cpu();
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               __dev_kfree_skb_any() {
+ 0) gunicor-1636505 |                                 consume_skb() {
+ 0) gunicor-1636505 |                                   skb_release_all() {
+ 0) gunicor-1636505 |                                     skb_release_head_state() {
+ 0) gunicor-1636505 |                                       tcp_wfree() {
+ 0) gunicor-1636505 |                                         __tasklet_schedule() {
+ 0) gunicor-1636505 |                                           __tasklet_schedule_common() {
+ 0) gunicor-1636505 |                                             __raise_softirq_irqoff();
+ 0) gunicor-1636505 |                                           }
+ 0) gunicor-1636505 |                                         }
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                     skb_release_data() {
+ 0) gunicor-1636505 |                                       skb_free_head() {
+ 0) gunicor-1636505 |                                         kfree() {
+ 0) gunicor-1636505 |                                           __slab_free();
+ 0) gunicor-1636505 |                                         }
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                   kfree_skbmem() {
+ 0) gunicor-1636505 |                                     kmem_cache_free() {
+ 0) gunicor-1636505 |                                       __slab_free();
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               bcmgenet_free_tx_cb() {
+ 0) gunicor-1636505 |                                 dma_direct_unmap_page() {
+ 0) gunicor-1636505 |                                   dma_direct_sync_single_for_cpu() {
+ 0) gunicor-1636505 |                                     arch_sync_dma_for_cpu();
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               __dev_kfree_skb_any() {
+ 0) gunicor-1636505 |                                 consume_skb() {
+ 0) gunicor-1636505 |                                   skb_release_all() {
+ 0) gunicor-1636505 |                                     skb_release_head_state() {
+ 0) gunicor-1636505 |                                       tcp_wfree() {
+ 0) gunicor-1636505 |                                         sk_free();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                     skb_release_data() {
+ 0) gunicor-1636505 |                                       skb_free_head() {
+ 0) gunicor-1636505 |                                         kfree() {
+ 0) gunicor-1636505 |                                           __slab_free();
+ 0) gunicor-1636505 |                                         }
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                   kfree_skbmem() {
+ 0) gunicor-1636505 |                                     kmem_cache_free() {
+ 0) gunicor-1636505 |                                       __slab_free();
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               bcmgenet_free_tx_cb() {
+ 0) gunicor-1636505 |                                 dma_direct_unmap_page() {
+ 0) gunicor-1636505 |                                   dma_direct_sync_single_for_cpu() {
+ 0) gunicor-1636505 |                                     arch_sync_dma_for_cpu();
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               __dev_kfree_skb_any() {
+ 0) gunicor-1636505 |                                 consume_skb() {
+ 0) gunicor-1636505 |                                   skb_release_all() {
+ 0) gunicor-1636505 |                                     skb_release_head_state() {
+ 0) gunicor-1636505 |                                       tcp_wfree() {
+ 0) gunicor-1636505 |                                         sk_free();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                     skb_release_data() {
+ 0) gunicor-1636505 |                                       skb_free_head() {
+ 0) gunicor-1636505 |                                         kfree();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                   kfree_skbmem() {
+ 0) gunicor-1636505 |                                     kmem_cache_free() {
+ 0) gunicor-1636505 |                                       __slab_free();
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               bcmgenet_free_tx_cb() {
+ 0) gunicor-1636505 |                                 dma_direct_unmap_page() {
+ 0) gunicor-1636505 |                                   dma_direct_sync_single_for_cpu() {
+ 0) gunicor-1636505 |                                     arch_sync_dma_for_cpu();
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               __dev_kfree_skb_any() {
+ 0) gunicor-1636505 |                                 consume_skb() {
+ 0) gunicor-1636505 |                                   skb_release_all() {
+ 0) gunicor-1636505 |                                     skb_release_head_state() {
+ 0) gunicor-1636505 |                                       tcp_wfree() {
+ 0) gunicor-1636505 |                                         sk_free();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                     skb_release_data() {
+ 0) gunicor-1636505 |                                       skb_free_head() {
+ 0) gunicor-1636505 |                                         kfree();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                   kfree_skbmem();
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               bcmgenet_free_tx_cb() {
+ 0) gunicor-1636505 |                                 dma_direct_unmap_page() {
+ 0) gunicor-1636505 |                                   dma_direct_sync_single_for_cpu() {
+ 0) gunicor-1636505 |                                     arch_sync_dma_for_cpu();
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               __dev_kfree_skb_any() {
+ 0) gunicor-1636505 |                                 consume_skb() {
+ 0) gunicor-1636505 |                                   skb_release_all() {
+ 0) gunicor-1636505 |                                     skb_release_head_state() {
+ 0) gunicor-1636505 |                                       tcp_wfree() {
+ 0) gunicor-1636505 |                                         sk_free();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                     skb_release_data() {
+ 0) gunicor-1636505 |                                       skb_free_head() {
+ 0) gunicor-1636505 |                                         kfree();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                   kfree_skbmem();
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               bcmgenet_free_tx_cb() {
+ 0) gunicor-1636505 |                                 dma_direct_unmap_page() {
+ 0) gunicor-1636505 |                                   dma_direct_sync_single_for_cpu() {
+ 0) gunicor-1636505 |                                     arch_sync_dma_for_cpu();
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               __dev_kfree_skb_any() {
+ 0) gunicor-1636505 |                                 consume_skb() {
+ 0) gunicor-1636505 |                                   skb_release_all() {
+ 0) gunicor-1636505 |                                     skb_release_head_state() {
+ 0) gunicor-1636505 |                                       tcp_wfree() {
+ 0) gunicor-1636505 |                                         sk_free();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                     skb_release_data() {
+ 0) gunicor-1636505 |                                       skb_free_head() {
+ 0) gunicor-1636505 |                                         kfree();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                   kfree_skbmem();
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               bcmgenet_free_tx_cb() {
+ 0) gunicor-1636505 |                                 dma_direct_unmap_page() {
+ 0) gunicor-1636505 |                                   dma_direct_sync_single_for_cpu() {
+ 0) gunicor-1636505 |                                     arch_sync_dma_for_cpu();
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               __dev_kfree_skb_any() {
+ 0) gunicor-1636505 |                                 consume_skb() {
+ 0) gunicor-1636505 |                                   skb_release_all() {
+ 0) gunicor-1636505 |                                     skb_release_head_state() {
+ 0) gunicor-1636505 |                                       tcp_wfree() {
+ 0) gunicor-1636505 |                                         sk_free();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                     skb_release_data() {
+ 0) gunicor-1636505 |                                       skb_free_head() {
+ 0) gunicor-1636505 |                                         kfree();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                   kfree_skbmem();
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                             }
+ 0) gunicor-1636505 |                             netif_tx_wake_queue();
+ 0) gunicor-1636505 |                             _raw_spin_unlock();
+ 0) gunicor-1636505 |                           }
+ 0) gunicor-1636505 |                           __raise_softirq_irqoff();
+ 0) gunicor-1636505 |                           net_rps_action_and_irq_enable.isra.0();
+ 0) gunicor-1636505 |                           __kfree_skb_flush();
+ 0) gunicor-1636505 |                         } /* net_rx_action */
+ 0) gunicor-1636505 |                         wakeup_softirqd() {
+ 0) gunicor-1636505 |                           wake_up_process() {
+ 0) gunicor-1636505 |                             try_to_wake_up() {
+ 0) gunicor-1636505 |                               _raw_spin_lock_irqsave();
+ 0) gunicor-1636505 |                               _raw_spin_lock();
+ 0) gunicor-1636505 |                               update_rq_clock();
+ 0) gunicor-1636505 |                               ttwu_do_activate() {
+ 0) gunicor-1636505 |                                 activate_task() {
+ 0) gunicor-1636505 |                                   psi_task_change() {
+ 0) gunicor-1636505 |                                     record_times.isra.0();
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                   enqueue_task_fair() {
+ 0) gunicor-1636505 |                                     enqueue_entity() {
+ 0) gunicor-1636505 |                                       update_curr() {
+ 0) gunicor-1636505 |                                         __calc_delta();
+ 0) gunicor-1636505 |                                         update_min_vruntime();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                       __update_load_avg_se() {
+ 0) gunicor-1636505 |                                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                       __update_load_avg_cfs_rq() {
+ 0) gunicor-1636505 |                                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                       dbs_update_util_handler() {
+ 0) gunicor-1636505 |                                         cpufreq_this_cpu_can_update();
+ 0) gunicor-1636505 |                                       }
+ 0) gunicor-1636505 |                                       update_cfs_group();
+ 0) gunicor-1636505 |                                       place_entity();
+ 0) gunicor-1636505 |                                       __enqueue_entity();
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                     hrtick_update();
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                                 ttwu_do_wakeup() {
+ 0) gunicor-1636505 |                                   check_preempt_curr() {
+ 0) gunicor-1636505 |                                     check_preempt_wakeup() {
+ 0) gunicor-1636505 |                                       update_curr();
+ 0) gunicor-1636505 |                                       wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                                       set_next_buddy();
+ 0) gunicor-1636505 |                                       resched_curr();
+ 0) gunicor-1636505 |                                     }
+ 0) gunicor-1636505 |                                   }
+ 0) gunicor-1636505 |                                 }
+ 0) gunicor-1636505 |                               }
+ 0) gunicor-1636505 |                               _raw_spin_unlock();
+ 0) gunicor-1636505 |                               _raw_spin_unlock_irqrestore();
+ 0) gunicor-1636505 |                             }
+ 0) gunicor-1636505 |                           }
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                       } /* __do_softirq */
+ 0) gunicor-1636505 |                       idle_cpu();
+ 0) gunicor-1636505 |                       rcu_irq_exit();
+ 0) gunicor-1636505 |                     } /* __handle_domain_irq */
+ 0) gunicor-1636505 |                   } /* gic_handle_irq */
+ 0) gunicor-1636505 | <==========
+ 0) gunicor-1636505 |                   rcu_note_context_switch() {
+ 0) gunicor-1636505 |                     rcu_preempt_deferred_qs() {
+ 0) gunicor-1636505 |                       rcu_preempt_need_deferred_qs();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     rcu_qs();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   _raw_spin_lock();
+ 0) gunicor-1636505 |                   update_rq_clock();
+ 0) gunicor-1636505 |                   pick_next_task_fair() {
+ 0) gunicor-1636505 |                     update_curr();
+ 0) gunicor-1636505 |                     check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                     pick_next_entity() {
+ 0) gunicor-1636505 |                       wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                       clear_buddies();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     put_prev_entity() {
+ 0) gunicor-1636505 |                       update_curr() {
+ 0) gunicor-1636505 |                         update_min_vruntime();
+ 0) gunicor-1636505 |                         cpuacct_charge() {
+ 0) gunicor-1636505 |                           __rcu_read_lock();
+ 0) gunicor-1636505 |                           __rcu_read_unlock();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                         __rcu_read_lock();
+ 0) gunicor-1636505 |                         __cgroup_account_cputime() {
+ 0) gunicor-1636505 |                           cgroup_base_stat_cputime_account_begin();
+ 0) gunicor-1636505 |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) gunicor-1636505 |                             cgroup_rstat_updated();
+ 0) gunicor-1636505 |                           }
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                         __rcu_read_unlock();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                       __enqueue_entity();
+ 0) gunicor-1636505 |                       __update_load_avg_se() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     put_prev_entity() {
+ 0) gunicor-1636505 |                       update_curr() {
+ 0) gunicor-1636505 |                         __calc_delta();
+ 0) gunicor-1636505 |                         update_min_vruntime();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                       __enqueue_entity();
+ 0) gunicor-1636505 |                       __update_load_avg_se() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     put_prev_entity() {
+ 0) gunicor-1636505 |                       update_curr() {
+ 0) gunicor-1636505 |                         __calc_delta();
+ 0) gunicor-1636505 |                         update_min_vruntime();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                       __enqueue_entity();
+ 0) gunicor-1636505 |                       __update_load_avg_se() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     put_prev_entity() {
+ 0) gunicor-1636505 |                       update_curr() {
+ 0) gunicor-1636505 |                         __calc_delta();
+ 0) gunicor-1636505 |                         update_min_vruntime();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                       __enqueue_entity();
+ 0) gunicor-1636505 |                       __update_load_avg_se() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     put_prev_entity() {
+ 0) gunicor-1636505 |                       update_curr();
+ 0) gunicor-1636505 |                       check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                       __enqueue_entity();
+ 0) gunicor-1636505 |                       __update_load_avg_se() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     set_next_entity() {
+ 0) gunicor-1636505 |                       __update_load_avg_se();
+ 0) gunicor-1636505 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   finish_task_switch() {
+ 0) gunicor-1636505 |                     _raw_spin_unlock_irq();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                 } /* _raw_spin_unlock_irqrestore */
+ 0) gunicor-1636505 |               } /* hrtimer_try_to_cancel */
+ 0) gunicor-1636505 |             }
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           __fdget() {
+ 0) gunicor-1636505 |             __fget_light() {
+ 0) gunicor-1636505 |               __fget() {
+ 0) gunicor-1636505 |                 __rcu_read_lock();
+ 0) gunicor-1636505 |                 __rcu_read_unlock();
+ 0) gunicor-1636505 |               }
+ 0) gunicor-1636505 |             }
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           sock_poll() {
+ 0) gunicor-1636505 |             tcp_poll();
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           fput() {
+ 0) gunicor-1636505 |             fput_many();
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           __fdget() {
+ 0) gunicor-1636505 |             __fget_light() {
+ 0) gunicor-1636505 |               __fget() {
+ 0) gunicor-1636505 |                 __rcu_read_lock();
+ 0) gunicor-1636505 |                 __rcu_read_unlock();
+ 0) gunicor-1636505 |               }
+ 0) gunicor-1636505 |             }
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           pipe_poll();
+ 0) gunicor-1636505 |           fput() {
+ 0) gunicor-1636505 |             fput_many();
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           schedule_hrtimeout_range() {
+ 0) gunicor-1636505 |             schedule_hrtimeout_range_clock() {
+ 0) gunicor-1636505 |               hrtimer_init_sleeper() {
+ 0) gunicor-1636505 |                 __hrtimer_init();
+ 0) gunicor-1636505 |               }
+ 0) gunicor-1636505 |               hrtimer_start_range_ns() {
+ 0) gunicor-1636505 |                 lock_hrtimer_base() {
+ 0) gunicor-1636505 |                   _raw_spin_lock_irqsave();
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 get_nohz_timer_target();
+ 0) gunicor-1636505 |                 enqueue_hrtimer();
+ 0) gunicor-1636505 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-1636505 |               }
+ 0) gunicor-1636505 |               schedule() {
+ 0) gunicor-1636505 |                 rcu_note_context_switch() {
+ 0) gunicor-1636505 |                   rcu_preempt_deferred_qs() {
+ 0) gunicor-1636505 |                     rcu_preempt_need_deferred_qs();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   rcu_qs();
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 _raw_spin_lock();
+ 0) gunicor-1636505 |                 update_rq_clock();
+ 0) gunicor-1636505 |                 deactivate_task() {
+ 0) gunicor-1636505 |                   psi_task_change() {
+ 0) gunicor-1636505 |                     record_times.isra.0();
+ 0) gunicor-1636505 |                     record_times.isra.0();
+ 0) gunicor-1636505 |                     record_times.isra.0();
+ 0) gunicor-1636505 |                     record_times.isra.0();
+ 0) gunicor-1636505 |                     record_times.isra.0();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   dequeue_task_fair() {
+ 0) gunicor-1636505 |                     dequeue_entity() {
+ 0) gunicor-1636505 |                       update_curr() {
+ 0) gunicor-1636505 |                         update_min_vruntime();
+ 0) gunicor-1636505 |                         cpuacct_charge() {
+ 0) gunicor-1636505 |                           __rcu_read_lock();
+ 0) gunicor-1636505 |                           __rcu_read_unlock();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                         __rcu_read_lock();
+ 0) gunicor-1636505 |                         __cgroup_account_cputime() {
+ 0) gunicor-1636505 |                           cgroup_base_stat_cputime_account_begin();
+ 0) gunicor-1636505 |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) gunicor-1636505 |                             cgroup_rstat_updated();
+ 0) gunicor-1636505 |                           }
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                         __rcu_read_unlock();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       __update_load_avg_se();
+ 0) gunicor-1636505 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-1636505 |                       clear_buddies();
+ 0) gunicor-1636505 |                       update_cfs_group();
+ 0) gunicor-1636505 |                       update_min_vruntime();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     set_next_buddy();
+ 0) gunicor-1636505 |                     __update_load_avg_se();
+ 0) gunicor-1636505 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-1636505 |                     update_cfs_group() {
+ 0) gunicor-1636505 |                       reweight_entity() {
+ 0) gunicor-1636505 |                         update_curr() {
+ 0) gunicor-1636505 |                           __calc_delta();
+ 0) gunicor-1636505 |                           update_min_vruntime();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_se();
+ 0) gunicor-1636505 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-1636505 |                     update_cfs_group() {
+ 0) gunicor-1636505 |                       reweight_entity() {
+ 0) gunicor-1636505 |                         update_curr() {
+ 0) gunicor-1636505 |                           __calc_delta();
+ 0) gunicor-1636505 |                           update_min_vruntime();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_se();
+ 0) gunicor-1636505 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-1636505 |                     update_cfs_group() {
+ 0) gunicor-1636505 |                       reweight_entity() {
+ 0) gunicor-1636505 |                         update_curr() {
+ 0) gunicor-1636505 |                           __calc_delta();
+ 0) gunicor-1636505 |                           update_min_vruntime();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_se();
+ 0) gunicor-1636505 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-1636505 |                     update_cfs_group() {
+ 0) gunicor-1636505 |                       reweight_entity() {
+ 0) gunicor-1636505 |                         update_curr() {
+ 0) gunicor-1636505 |                           __calc_delta();
+ 0) gunicor-1636505 |                           update_min_vruntime();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     hrtick_update();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 pick_next_task_fair() {
+ 0) gunicor-1636505 |                   update_curr();
+ 0) gunicor-1636505 |                   check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   pick_next_entity() {
+ 0) gunicor-1636505 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                     clear_buddies();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   update_curr();
+ 0) gunicor-1636505 |                   check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   pick_next_entity() {
+ 0) gunicor-1636505 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                     clear_buddies();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   update_curr();
+ 0) gunicor-1636505 |                   check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   pick_next_entity() {
+ 0) gunicor-1636505 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                     clear_buddies();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   update_curr();
+ 0) gunicor-1636505 |                   check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   pick_next_entity() {
+ 0) gunicor-1636505 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                     clear_buddies();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   pick_next_entity() {
+ 0) gunicor-1636505 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                     clear_buddies();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   put_prev_entity() {
+ 0) gunicor-1636505 |                     check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   set_next_entity() {
+ 0) gunicor-1636505 |                     __update_load_avg_se() {
+ 0) gunicor-1636505 |                       __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 check_and_switch_context();
+ 0) gunicor-1636505 |                 fpsimd_thread_switch() {
+ 0) gunicor-1636505 |                   __get_cpu_fpsimd_context();
+ 0) gunicor-1636505 |                   fpsimd_save() {
+ 0) gunicor-1636505 |                     have_cpu_fpsimd_context();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   __put_cpu_fpsimd_context();
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 hw_breakpoint_thread_switch();
+ 0) gunicor-1636505 |                 uao_thread_switch();
+ 0) gunicor-1636505 |                 cpu_have_feature();
+ 0) gunicor-1636505 |                 erratum_1418040_thread_switch() {
+ 0) gunicor-1636505 |                   this_cpu_has_cap() {
+ 0) gunicor-1636505 |                     is_affected_midr_range_list();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 finish_task_switch() {
+ 0) gunicor-1636505 |                   _raw_spin_unlock_irq();
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |               } /* schedule */
+ 0) gunicor-1636505 |               hrtimer_try_to_cancel() {
+ 0) gunicor-1636505 |                 hrtimer_active();
+ 0) gunicor-1636505 |                 lock_hrtimer_base() {
+ 0) gunicor-1636505 |                   _raw_spin_lock_irqsave();
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 __remove_hrtimer();
+ 0) gunicor-1636505 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-1636505 |               }
+ 0) gunicor-1636505 |             } /* schedule_hrtimeout_range_clock */
+ 0) gunicor-1636505 |           } /* schedule_hrtimeout_range */
+ 0) gunicor-1636505 |           __fdget() {
+ 0) gunicor-1636505 |             __fget_light() {
+ 0) gunicor-1636505 |               __fget() {
+ 0) gunicor-1636505 |                 __rcu_read_lock();
+ 0) gunicor-1636505 |                 __rcu_read_unlock();
+ 0) gunicor-1636505 |               }
+ 0) gunicor-1636505 |             }
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           sock_poll() {
+ 0) gunicor-1636505 |             tcp_poll();
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           fput() {
+ 0) gunicor-1636505 |             fput_many();
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           __fdget() {
+ 0) gunicor-1636505 |             __fget_light() {
+ 0) gunicor-1636505 |               __fget() {
+ 0) gunicor-1636505 |                 __rcu_read_lock();
+ 0) gunicor-1636505 |                 __rcu_read_unlock();
+ 0) gunicor-1636505 |               }
+ 0) gunicor-1636505 |             }
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           pipe_poll();
+ 0) gunicor-1636505 |           fput() {
+ 0) gunicor-1636505 |             fput_many();
+ 0) gunicor-1636505 |           }
+ 0) gunicor-1636505 |           schedule_hrtimeout_range() {
+ 0) gunicor-1636505 |             schedule_hrtimeout_range_clock() {
+ 0) gunicor-1636505 |               hrtimer_init_sleeper() {
+ 0) gunicor-1636505 |                 __hrtimer_init();
+ 0) gunicor-1636505 |               }
+ 0) gunicor-1636505 |               hrtimer_start_range_ns() {
+ 0) gunicor-1636505 |                 lock_hrtimer_base() {
+ 0) gunicor-1636505 |                   _raw_spin_lock_irqsave();
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 get_nohz_timer_target();
+ 0) gunicor-1636505 |                 enqueue_hrtimer();
+ 0) gunicor-1636505 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-1636505 |               }
+ 0) gunicor-1636505 |               schedule() {
+ 0) gunicor-1636505 |                 rcu_note_context_switch() {
+ 0) gunicor-1636505 |                   rcu_preempt_deferred_qs() {
+ 0) gunicor-1636505 |                     rcu_preempt_need_deferred_qs();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   rcu_qs();
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 _raw_spin_lock();
+ 0) gunicor-1636505 |                 update_rq_clock();
+ 0) gunicor-1636505 |                 deactivate_task() {
+ 0) gunicor-1636505 |                   psi_task_change() {
+ 0) gunicor-1636505 |                     record_times.isra.0();
+ 0) gunicor-1636505 |                     record_times.isra.0();
+ 0) gunicor-1636505 |                     record_times.isra.0();
+ 0) gunicor-1636505 |                     record_times.isra.0();
+ 0) gunicor-1636505 |                     record_times.isra.0();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   dequeue_task_fair() {
+ 0) gunicor-1636505 |                     dequeue_entity() {
+ 0) gunicor-1636505 |                       update_curr() {
+ 0) gunicor-1636505 |                         update_min_vruntime();
+ 0) gunicor-1636505 |                         cpuacct_charge() {
+ 0) gunicor-1636505 |                           __rcu_read_lock();
+ 0) gunicor-1636505 |                           __rcu_read_unlock();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                         __rcu_read_lock();
+ 0) gunicor-1636505 |                         __cgroup_account_cputime() {
+ 0) gunicor-1636505 |                           cgroup_base_stat_cputime_account_begin();
+ 0) gunicor-1636505 |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) gunicor-1636505 |                             cgroup_rstat_updated();
+ 0) gunicor-1636505 |                           }
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                         __rcu_read_unlock();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       __update_load_avg_se() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-1636505 |                         __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                       clear_buddies();
+ 0) gunicor-1636505 |                       update_cfs_group();
+ 0) gunicor-1636505 |                       update_min_vruntime();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     set_next_buddy();
+ 0) gunicor-1636505 |                     __update_load_avg_se() {
+ 0) gunicor-1636505 |                       __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_cfs_rq() {
+ 0) gunicor-1636505 |                       __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     update_cfs_group() {
+ 0) gunicor-1636505 |                       reweight_entity() {
+ 0) gunicor-1636505 |                         update_curr() {
+ 0) gunicor-1636505 |                           __calc_delta();
+ 0) gunicor-1636505 |                           update_min_vruntime();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_se() {
+ 0) gunicor-1636505 |                       __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_cfs_rq() {
+ 0) gunicor-1636505 |                       __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     update_cfs_group() {
+ 0) gunicor-1636505 |                       reweight_entity() {
+ 0) gunicor-1636505 |                         update_curr() {
+ 0) gunicor-1636505 |                           __calc_delta();
+ 0) gunicor-1636505 |                           update_min_vruntime();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_se() {
+ 0) gunicor-1636505 |                       __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_cfs_rq() {
+ 0) gunicor-1636505 |                       __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     update_cfs_group() {
+ 0) gunicor-1636505 |                       reweight_entity() {
+ 0) gunicor-1636505 |                         update_curr() {
+ 0) gunicor-1636505 |                           __calc_delta();
+ 0) gunicor-1636505 |                           update_min_vruntime();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_se() {
+ 0) gunicor-1636505 |                       __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_cfs_rq() {
+ 0) gunicor-1636505 |                       __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     dbs_update_util_handler() {
+ 0) gunicor-1636505 |                       cpufreq_this_cpu_can_update();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     update_cfs_group() {
+ 0) gunicor-1636505 |                       reweight_entity() {
+ 0) gunicor-1636505 |                         update_curr() {
+ 0) gunicor-1636505 |                           __calc_delta();
+ 0) gunicor-1636505 |                           update_min_vruntime();
+ 0) gunicor-1636505 |                         }
+ 0) gunicor-1636505 |                       }
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     hrtick_update();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 pick_next_task_fair() {
+ 0) gunicor-1636505 |                   update_curr();
+ 0) gunicor-1636505 |                   check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   pick_next_entity() {
+ 0) gunicor-1636505 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                     clear_buddies();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   update_curr();
+ 0) gunicor-1636505 |                   check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   pick_next_entity() {
+ 0) gunicor-1636505 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                     clear_buddies();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   update_curr();
+ 0) gunicor-1636505 |                   check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   pick_next_entity() {
+ 0) gunicor-1636505 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                     clear_buddies();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   update_curr();
+ 0) gunicor-1636505 |                   check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   pick_next_entity() {
+ 0) gunicor-1636505 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-1636505 |                     clear_buddies();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   pick_next_entity() {
+ 0) gunicor-1636505 |                     clear_buddies();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   put_prev_entity() {
+ 0) gunicor-1636505 |                     check_cfs_rq_runtime();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   set_next_entity() {
+ 0) gunicor-1636505 |                     __update_load_avg_se() {
+ 0) gunicor-1636505 |                       __accumulate_pelt_segments();
+ 0) gunicor-1636505 |                     }
+ 0) gunicor-1636505 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 check_and_switch_context();
+ 0) gunicor-1636505 |                 fpsimd_thread_switch() {
+ 0) gunicor-1636505 |                   __get_cpu_fpsimd_context();
+ 0) gunicor-1636505 |                   fpsimd_save() {
+ 0) gunicor-1636505 |                     have_cpu_fpsimd_context();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                   __put_cpu_fpsimd_context();
+ 0) gunicor-1636505 |                 }
+ 0) gunicor-1636505 |                 hw_breakpoint_thread_switch();
+ 0) gunicor-1636505 |                 uao_thread_switch();
+ 0) gunicor-1636505 |                 cpu_have_feature();
+ 0) gunicor-1636505 |                 erratum_1418040_thread_switch() {
+ 0) gunicor-1636505 |                   this_cpu_has_cap() {
+ 0) gunicor-1636505 |                     is_affected_midr_range_list();
+ 0) gunicor-1636505 |                   }
+ 0) gunicor-1636505 |                 }

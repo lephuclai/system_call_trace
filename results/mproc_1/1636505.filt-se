@@ -1,0 +1,1578 @@
+                                                               __usecs_to_jiffies();
+                                                               sk_reset_timer() {
+                                                                 mod_timer() {
+                                                                   lock_timer_base() {
+                                                                     _raw_spin_lock_irqsave();
+                                                                   }
+                                                                   calc_wheel_index();
+                                                                   detach_if_pending();
+                                                                   get_nohz_timer_target();
+                                                                   enqueue_timer();
+                                                                   trigger_dyntick_cpu.isra.0();
+                                                                   _raw_spin_unlock_irqrestore();
+                                                                 }
+                                                               }
+                                                             } /* tcp_rearm_rto */
+                                                             tcp_check_space();
+                                                           } /* tcp_event_new_data_sent */
+                                                           tcp_chrono_stop();
+                                                           tcp_schedule_loss_probe.part.0() {
+                                                             __usecs_to_jiffies();
+                                                             jiffies_to_usecs();
+                                                             __usecs_to_jiffies();
+                                                             sk_reset_timer() {
+                                                               mod_timer() {
+                                                                 lock_timer_base() {
+                                                                   _raw_spin_lock_irqsave();
+                                                                 }
+                                                                 calc_wheel_index();
+                                                                 detach_if_pending();
+                                                                 get_nohz_timer_target();
+                                                                 enqueue_timer();
+                                                                 trigger_dyntick_cpu.isra.0();
+                                                                 _raw_spin_unlock_irqrestore();
+                                                               }
+                                                             }
+                                                           }
+                                                         } /* tcp_write_xmit */
+                                                       } /* __tcp_push_pending_frames */
+                                                       tcp_check_space();
+                                                     } /* tcp_rcv_established */
+                                                   } /* tcp_v4_do_rcv */
+                                                   _raw_spin_unlock();
+                                                 } /* tcp_v4_rcv */
+                                               } /* ip_protocol_deliver_rcu */
+                                               __rcu_read_unlock();
+                                             } /* ip_local_deliver_finish */
+                                           } /* ip_local_deliver */
+                                           ip_local_deliver() {
+                                             __rcu_read_lock();
+                                             nf_hook_slow() {
+                                               iptable_mangle_hook [iptable_mangle]() {
+                                                 ipt_do_table [ip_tables]() {
+                                                   __local_bh_disable_ip();
+                                                   __local_bh_enable_ip();
+                                                 }
+                                               }
+                                               iptable_filter_hook [iptable_filter]() {
+                                                 ipt_do_table [ip_tables]() {
+                                                   __local_bh_disable_ip();
+                                                   conntrack_mt_v3 [xt_conntrack]() {
+                                                     conntrack_mt [xt_conntrack]();
+                                                   }
+                                                   comment_mt [xt_comment]();
+                                                   conntrack_mt_v3 [xt_conntrack]() {
+                                                     conntrack_mt [xt_conntrack]();
+                                                   }
+                                                   __local_bh_enable_ip();
+                                                 }
+                                               }
+                                               nf_nat_ipv4_local_in [nf_nat]() {
+                                                 nf_nat_ipv4_fn [nf_nat]() {
+                                                   nf_nat_inet_fn [nf_nat]() {
+                                                     nf_nat_packet [nf_nat]();
+                                                   }
+                                                 }
+                                               }
+                                               ipv4_confirm [nf_conntrack]() {
+                                                 nf_confirm [nf_conntrack]() {
+                                                   nf_ct_deliver_cached_events [nf_conntrack]() {
+                                                     __rcu_read_lock();
+                                                     __rcu_read_unlock();
+                                                   }
+                                                 }
+                                               }
+                                             }
+                                             __rcu_read_unlock();
+                                             ip_local_deliver_finish() {
+                                               __rcu_read_lock();
+                                               ip_protocol_deliver_rcu() {
+                                                 raw_local_deliver();
+                                                 tcp_v4_rcv() {
+                                                   tcp_v4_inbound_md5_hash() {
+                                                     tcp_parse_md5sig_option();
+                                                   }
+                                                   sk_filter_trim_cap() {
+                                                     __cgroup_bpf_run_filter_skb() {
+                                                       __rcu_read_lock();
+                                                       __rcu_read_unlock();
+                                                     }
+                                                     security_sock_rcv_skb() {
+                                                       apparmor_socket_sock_rcv_skb();
+                                                     }
+                                                     __rcu_read_lock();
+                                                     __rcu_read_unlock();
+                                                   }
+                                                   tcp_v4_fill_cb();
+                                                   _raw_spin_lock();
+                                                   tcp_v4_do_rcv() {
+                                                     ipv4_dst_check();
+                                                     tcp_rcv_established() {
+                                                       tcp_mstamp_refresh() {
+                                                         ktime_get() {
+                                                           arch_counter_read();
+                                                         }
+                                                       }
+                                                       tcp_parse_aligned_timestamp.part.0();
+                                                       ktime_get_seconds();
+                                                       tcp_ack() {
+                                                         tcp_clean_rtx_queue() {
+                                                           tcp_rack_advance();
+                                                           tcp_rate_skb_delivered();
+                                                           __kfree_skb() {
+                                                             skb_release_all() {
+                                                               skb_release_head_state();
+                                                               skb_release_data() {
+                                                                 skb_free_head() {
+                                                                   kfree() {
+                                                                     __slab_free() {
+                                                                       put_cpu_partial();
+                                                                     }
+                                                                   }
+                                                                 }
+                                                               }
+                                                             }
+                                                             kfree_skbmem();
+                                                           }
+                                                           tcp_ack_update_rtt.isra.0() {
+                                                             __usecs_to_jiffies();
+                                                           }
+                                                           bictcp_acked();
+                                                         }
+                                                         tcp_rack_update_reo_wnd();
+                                                         tcp_schedule_loss_probe() {
+                                                           tcp_schedule_loss_probe.part.0() {
+                                                             __usecs_to_jiffies();
+                                                             jiffies_to_usecs();
+                                                             __usecs_to_jiffies();
+                                                             sk_reset_timer() {
+                                                               mod_timer();
+                                                             }
+                                                           }
+                                                         }
+                                                         tcp_newly_delivered();
+                                                         tcp_rate_gen();
+                                                         bictcp_cong_avoid();
+                                                         tcp_update_pacing_rate();
+                                                       }
+                                                       __kfree_skb() {
+                                                         skb_release_all() {
+                                                           skb_release_head_state();
+                                                           skb_release_data() {
+                                                             skb_free_head() {
+                                                               page_frag_free();
+                                                             }
+                                                           }
+                                                         }
+                                                         kfree_skbmem() {
+                                                           kmem_cache_free() {
+                                                             __slab_free();
+                                                           }
+                                                         }
+                                                       }
+                                                       tcp_current_mss() {
+                                                         ipv4_mtu();
+                                                         tcp_established_options();
+                                                       }
+                                                       __tcp_push_pending_frames() {
+                                                         tcp_write_xmit() {
+                                                           ktime_get() {
+                                                             arch_counter_read();
+                                                           }
+                                                           tcp_mtu_probe();
+                                                           tcp_small_queue_check.isra.0();
+                                                           __tcp_transmit_skb() {
+                                                             skb_clone() {
+                                                               __skb_clone() {
+                                                                 __copy_skb_header();
+                                                               }
+                                                             }
+                                                             tcp_established_options();
+                                                             skb_push();
+                                                             tcp_options_write();
+                                                             __tcp_select_window();
+                                                             tcp_v4_send_check() {
+                                                               __tcp_v4_send_check();
+                                                             }
+                                                             __ip_queue_xmit() {
+                                                               __rcu_read_lock();
+                                                               __sk_dst_check() {
+                                                                 ipv4_dst_check();
+                                                               }
+                                                               skb_push();
+                                                               ip_local_out() {
+                                                                 __ip_local_out() {
+                                                                   __rcu_read_lock();
+                                                                   nf_hook_slow() {
+                                                                     ipv4_conntrack_defrag [nf_defrag_ipv4]();
+                                                                     ipv4_conntrack_local [nf_conntrack]() {
+                                                                       nf_conntrack_in [nf_conntrack]() {
+                                                                         get_l4proto [nf_conntrack]();
+                                                                         nf_ct_get_tuple [nf_conntrack]();
+                                                                         hash_conntrack_raw [nf_conntrack]();
+                                                                         __nf_conntrack_find_get [nf_conntrack]() {
+                                                                           __rcu_read_lock();
+                                                                           __rcu_read_unlock();
+                                                                         }
+                                                                         nf_conntrack_tcp_packet [nf_conntrack]() {
+                                                                           _raw_spin_lock_bh() {
+                                                                             __local_bh_disable_ip();
+                                                                           }
+                                                                           tcp_in_window [nf_conntrack]() {
+                                                                             nf_ct_seq_offset [nf_conntrack]();
+                                                                           }
+                                                                           _raw_spin_unlock_bh() {
+                                                                             __local_bh_enable_ip();
+                                                                           }
+                                                                           __nf_ct_refresh_acct [nf_conntrack]();
+                                                                         }
+                                                                       }
+                                                                     }
+                                                                     iptable_mangle_hook [iptable_mangle]() {
+                                                                       ipt_do_table [ip_tables]() {
+                                                                         __local_bh_disable_ip();
+                                                                         __local_bh_enable_ip();
+                                                                       }
+                                                                     }
+                                                                     nf_nat_ipv4_local_fn [nf_nat]() {
+                                                                       nf_nat_ipv4_fn [nf_nat]() {
+                                                                         nf_nat_inet_fn [nf_nat]() {
+                                                                           nf_nat_packet [nf_nat]();
+                                                                         }
+                                                                       }
+                                                                     }
+                                                                     iptable_filter_hook [iptable_filter]() {
+                                                                       ipt_do_table [ip_tables]() {
+                                                                         __local_bh_disable_ip();
+                                                                         conntrack_mt_v3 [xt_conntrack]() {
+                                                                           conntrack_mt [xt_conntrack]();
+                                                                         }
+                                                                         conntrack_mt_v3 [xt_conntrack]() {
+                                                                           conntrack_mt [xt_conntrack]();
+                                                                         }
+                                                                         __local_bh_enable_ip();
+                                                                       }
+                                                                     }
+                                                                   }
+                                                                   __rcu_read_unlock();
+                                                                 }
+                                                                 ip_output() {
+                                                                   __rcu_read_lock();
+                                                                   nf_hook_slow() {
+                                                                     iptable_mangle_hook [iptable_mangle]() {
+                                                                       ipt_do_table [ip_tables]() {
+                                                                         __local_bh_disable_ip();
+                                                                         __local_bh_enable_ip();
+                                                                       }
+                                                                     }
+                                                                     nf_nat_ipv4_out [nf_nat]() {
+                                                                       nf_nat_ipv4_fn [nf_nat]() {
+                                                                         nf_nat_inet_fn [nf_nat]() {
+                                                                           nf_nat_packet [nf_nat]();
+                                                                         }
+                                                                       }
+                                                                     }
+                                                                     ipv4_confirm [nf_conntrack]() {
+                                                                       nf_confirm [nf_conntrack]() {
+                                                                         nf_ct_deliver_cached_events [nf_conntrack]() {
+                                                                           __rcu_read_lock();
+                                                                           __rcu_read_unlock();
+                                                                         }
+                                                                       }
+                                                                     }
+                                                                   }
+                                                                   __rcu_read_unlock();
+                                                                   ip_finish_output() {
+                                                                     __cgroup_bpf_run_filter_skb() {
+                                                                       __rcu_read_lock();
+                                                                       __rcu_read_unlock();
+                                                                     }
+                                                                     __ip_finish_output() {
+                                                                       ipv4_mtu();
+                                                                       ip_finish_output2() {
+                                                                         __local_bh_disable_ip();
+                                                                         dev_queue_xmit() {
+                                                                           __dev_queue_xmit() {
+                                                                             __local_bh_disable_ip();
+                                                                             netdev_core_pick_tx() {
+                                                                               netdev_pick_tx();
+                                                                             }
+                                                                             _raw_spin_lock();
+                                                                             sch_direct_xmit() {
+                                                                               _raw_spin_unlock();
+                                                                               validate_xmit_skb_list() {
+                                                                                 validate_xmit_skb() {
+                                                                                   netif_skb_features() {
+                                                                                     skb_network_protocol();
+                                                                                   }
+                                                                                   __pskb_pull_tail() {
+                                                                                     pskb_expand_head() {
+                                                                                       __kmalloc_reserve.isra.0() {
+                                                                                         __kmalloc_track_caller() {
+                                                                                           kmalloc_slab();
+                                                                                           should_failslab();
+                                                                                           memcg_kmem_put_cache();
+                                                                                         }
+                                                                                       }
+                                                                                       ksize() {
+                                                                                         __ksize();
+                                                                                       }
+                                                                                       skb_release_data();
+                                                                                       skb_headers_offset_update();
+                                                                                     }
+                                                                                     skb_copy_bits();
+                                                                                   }
+                                                                                   skb_csum_hwoffload_help() {
+                                                                                     skb_checksum_help() {
+                                                                                       skb_checksum() {
+                                                                                         __skb_checksum();
+                                                                                       }
+                                                                                     }
+                                                                                   }
+                                                                                   validate_xmit_xfrm();
+                                                                                 }
+                                                                               }
+                                                                               _raw_spin_lock();
+                                                                               dev_hard_start_xmit() {
+                                                                                 bcmgenet_xmit() {
+                                                                                   _raw_spin_lock();
+                                                                                   dma_direct_map_page() {
+                                                                                     arch_sync_dma_for_device();
+                                                                                   }
+                                                                                   skb_clone_tx_timestamp() {
+                                                                                     ptp_classify_raw();
+                                                                                   }
+                                                                                   _raw_spin_unlock();
+                                                                                 }
+                                                                               }
+                                                                               _raw_spin_unlock();
+                                                                               _raw_spin_lock();
+                                                                             }
+                                                                             __qdisc_run() {
+                                                                               dequeue_skb() {
+                                                                                 fq_codel_dequeue [sch_fq_codel]();
+                                                                               }
+                                                                             }
+                                                                             _raw_spin_unlock();
+                                                                             __local_bh_enable_ip();
+                                                                           }
+                                                                         }
+                                                                         __local_bh_enable_ip();
+                                                                       }
+                                                                     }
+                                                                   }
+                                                                 }
+                                                               }
+                                                               __rcu_read_unlock();
+                                                             }
+                                                             tcp_update_skb_after_send();
+                                                             tcp_rate_skb_sent();
+                                                           }
+                                                           tcp_event_new_data_sent() {
+                                                             tcp_rbtree_insert();
+                                                             tcp_rearm_rto() {
+                                                               jiffies_to_usecs();
+                                                               __usecs_to_jiffies();
+                                                               sk_reset_timer() {
+                                                                 mod_timer() {
+                                                                   lock_timer_base() {
+                                                                     _raw_spin_lock_irqsave();
+                                                                   }
+                                                                   calc_wheel_index();
+                                                                   detach_if_pending();
+                                                                   get_nohz_timer_target();
+                                                                   enqueue_timer();
+                                                                   trigger_dyntick_cpu.isra.0();
+                                                                   _raw_spin_unlock_irqrestore();
+                                                                 }
+                                                               }
+                                                             }
+                                                             tcp_check_space();
+                                                           }
+                                                           tcp_chrono_stop();
+                                                           tcp_schedule_loss_probe.part.0() {
+                                                             __usecs_to_jiffies();
+                                                             jiffies_to_usecs();
+                                                             __usecs_to_jiffies();
+                                                             sk_reset_timer() {
+                                                               mod_timer() {
+                                                                 lock_timer_base() {
+                                                                   _raw_spin_lock_irqsave();
+                                                                 }
+                                                                 calc_wheel_index();
+                                                                 detach_if_pending();
+                                                                 get_nohz_timer_target();
+                                                                 enqueue_timer();
+                                                                 trigger_dyntick_cpu.isra.0();
+                                                                 _raw_spin_unlock_irqrestore();
+                                                               }
+                                                             }
+                                                           }
+                                                         }
+                                                       }
+                                                       tcp_check_space();
+                                                     }
+                                                   }
+                                                   _raw_spin_unlock();
+                                                 }
+                                               }
+                                               __rcu_read_unlock();
+                                             }
+                                           }
+                                           ip_local_deliver() {
+                                             __rcu_read_lock();
+                                             nf_hook_slow() {
+                                               iptable_mangle_hook [iptable_mangle]() {
+                                                 ipt_do_table [ip_tables]() {
+                                                   __local_bh_disable_ip();
+                                                   __local_bh_enable_ip();
+                                                 }
+                                               }
+                                               iptable_filter_hook [iptable_filter]() {
+                                                 ipt_do_table [ip_tables]() {
+                                                   __local_bh_disable_ip();
+                                                   conntrack_mt_v3 [xt_conntrack]() {
+                                                     conntrack_mt [xt_conntrack]();
+                                                   }
+                                                   comment_mt [xt_comment]();
+                                                   conntrack_mt_v3 [xt_conntrack]() {
+                                                     conntrack_mt [xt_conntrack]();
+                                                   }
+                                                   __local_bh_enable_ip();
+                                                 }
+                                               }
+                                               nf_nat_ipv4_local_in [nf_nat]() {
+                                                 nf_nat_ipv4_fn [nf_nat]() {
+                                                   nf_nat_inet_fn [nf_nat]() {
+                                                     nf_nat_packet [nf_nat]();
+                                                   }
+                                                 }
+                                               }
+                                               ipv4_confirm [nf_conntrack]() {
+                                                 nf_confirm [nf_conntrack]() {
+                                                   nf_ct_deliver_cached_events [nf_conntrack]() {
+                                                     __rcu_read_lock();
+                                                     __rcu_read_unlock();
+                                                   }
+                                                 }
+                                               }
+                                             }
+                                             __rcu_read_unlock();
+                                             ip_local_deliver_finish() {
+                                               __rcu_read_lock();
+                                               ip_protocol_deliver_rcu() {
+                                                 raw_local_deliver();
+                                                 tcp_v4_rcv() {
+                                                   tcp_v4_inbound_md5_hash() {
+                                                     tcp_parse_md5sig_option();
+                                                   }
+                                                   sk_filter_trim_cap() {
+                                                     __cgroup_bpf_run_filter_skb() {
+                                                       __rcu_read_lock();
+                                                       __rcu_read_unlock();
+                                                     }
+                                                     security_sock_rcv_skb() {
+                                                       apparmor_socket_sock_rcv_skb();
+                                                     }
+                                                     __rcu_read_lock();
+                                                     __rcu_read_unlock();
+                                                   }
+                                                   tcp_v4_fill_cb();
+                                                   _raw_spin_lock();
+                                                   tcp_v4_do_rcv() {
+                                                     ipv4_dst_check();
+                                                     tcp_rcv_established() {
+                                                       tcp_mstamp_refresh() {
+                                                         ktime_get() {
+                                                           arch_counter_read();
+                                                         }
+                                                       }
+                                                       tcp_parse_aligned_timestamp.part.0();
+                                                       ktime_get_seconds();
+                                                       tcp_ack() {
+                                                         tcp_clean_rtx_queue() {
+                                                           tcp_rack_advance();
+                                                           tcp_rate_skb_delivered();
+                                                           __kfree_skb() {
+                                                             skb_release_all() {
+                                                               skb_release_head_state();
+                                                               skb_release_data() {
+                                                                 skb_free_head() {
+                                                                   kfree() {
+                                                                     __slab_free() {
+                                                                       put_cpu_partial() {
+                                                                         unfreeze_partials.isra.0() {
+                                                                           _raw_spin_lock();
+                                                                           _raw_spin_unlock();
+                                                                         }
+                                                                       }
+                                                                     }
+                                                                   }
+                                                                 }
+                                                               }
+                                                             }
+                                                             kfree_skbmem();
+                                                           }
+                                                           tcp_ack_update_rtt.isra.0() {
+                                                             jiffies_to_usecs();
+                                                             __usecs_to_jiffies();
+                                                           }
+                                                           bictcp_acked();
+                                                         }
+                                                         tcp_rack_update_reo_wnd();
+                                                         tcp_schedule_loss_probe() {
+                                                           tcp_schedule_loss_probe.part.0() {
+                                                             __usecs_to_jiffies();
+                                                             jiffies_to_usecs();
+                                                             __usecs_to_jiffies();
+                                                             sk_reset_timer() {
+                                                               mod_timer();
+                                                             }
+                                                           }
+                                                         }
+                                                         tcp_newly_delivered();
+                                                         tcp_rate_gen();
+                                                         bictcp_cong_avoid();
+                                                         tcp_update_pacing_rate();
+                                                       }
+                                                       __kfree_skb() {
+                                                         skb_release_all() {
+                                                           skb_release_head_state();
+                                                           skb_release_data() {
+                                                             skb_free_head() {
+                                                               page_frag_free() {
+                                                                 __free_pages_ok() {
+                                                                   kernel_poison_pages();
+                                                                   free_one_page() {
+                                                                     _raw_spin_lock();
+                                                                     __mod_zone_page_state();
+                                                                     pfn_valid() {
+                                                                       memblock_is_map_memory();
+                                                                     }
+                                                                     pfn_valid() {
+                                                                       memblock_is_map_memory();
+                                                                     }
+                                                                     pfn_valid() {
+                                                                       memblock_is_map_memory();
+                                                                     }
+                                                                     _raw_spin_unlock();
+                                                                   }
+                                                                 }
+                                                               }
+                                                             }
+                                                           }
+                                                         }
+                                                         kfree_skbmem() {
+                                                           kmem_cache_free() {
+                                                             __slab_free();
+                                                           }
+                                                         }
+                                                       }
+                                                       tcp_current_mss() {
+                                                         ipv4_mtu();
+                                                         tcp_established_options();
+                                                       }
+                                                       __tcp_push_pending_frames() {
+                                                         tcp_write_xmit() {
+                                                           ktime_get() {
+                                                             arch_counter_read();
+                                                           }
+                                                           tcp_mtu_probe();
+                                                           tcp_small_queue_check.isra.0();
+                                                           __tcp_transmit_skb() {
+                                                             skb_clone() {
+                                                               __skb_clone() {
+                                                                 __copy_skb_header();
+                                                               }
+                                                             }
+                                                             tcp_established_options();
+                                                             skb_push();
+                                                             tcp_options_write();
+                                                             __tcp_select_window();
+                                                             tcp_v4_send_check() {
+                                                               __tcp_v4_send_check();
+                                                             }
+                                                             __ip_queue_xmit() {
+                                                               __rcu_read_lock();
+                                                               __sk_dst_check() {
+                                                                 ipv4_dst_check();
+                                                               }
+                                                               skb_push();
+                                                               ip_local_out() {
+                                                                 __ip_local_out() {
+                                                                   __rcu_read_lock();
+                                                                   nf_hook_slow() {
+                                                                     ipv4_conntrack_defrag [nf_defrag_ipv4]();
+                                                                     ipv4_conntrack_local [nf_conntrack]() {
+                                                                       nf_conntrack_in [nf_conntrack]() {
+                                                                         get_l4proto [nf_conntrack]();
+                                                                         nf_ct_get_tuple [nf_conntrack]();
+                                                                         hash_conntrack_raw [nf_conntrack]();
+                                                                         __nf_conntrack_find_get [nf_conntrack]() {
+                                                                           __rcu_read_lock();
+                                                                           __rcu_read_unlock();
+                                                                         }
+                                                                         nf_conntrack_tcp_packet [nf_conntrack]() {
+                                                                           _raw_spin_lock_bh() {
+                                                                             __local_bh_disable_ip();
+                                                                           }
+                                                                           tcp_in_window [nf_conntrack]() {
+                                                                             nf_ct_seq_offset [nf_conntrack]();
+                                                                           }
+                                                                           _raw_spin_unlock_bh() {
+                                                                             __local_bh_enable_ip();
+                                                                           }
+                                                                           __nf_ct_refresh_acct [nf_conntrack]();
+                                                                         }
+                                                                       }
+                                                                     }
+                                                                     iptable_mangle_hook [iptable_mangle]() {
+                                                                       ipt_do_table [ip_tables]() {
+                                                                         __local_bh_disable_ip();
+                                                                         __local_bh_enable_ip();
+                                                                       }
+                                                                     }
+                                                                     nf_nat_ipv4_local_fn [nf_nat]() {
+                                                                       nf_nat_ipv4_fn [nf_nat]() {
+                                                                         nf_nat_inet_fn [nf_nat]() {
+                                                                           nf_nat_packet [nf_nat]();
+                                                                         }
+                                                                       }
+                                                                     }
+                                                                     iptable_filter_hook [iptable_filter]() {
+                                                                       ipt_do_table [ip_tables]() {
+                                                                         __local_bh_disable_ip();
+                                                                         conntrack_mt_v3 [xt_conntrack]() {
+                                                                           conntrack_mt [xt_conntrack]();
+                                                                         }
+                                                                         conntrack_mt_v3 [xt_conntrack]() {
+                                                                           conntrack_mt [xt_conntrack]();
+                                                                         }
+                                                                         __local_bh_enable_ip();
+                                                                       }
+                                                                     }
+                                                                   }
+                                                                   __rcu_read_unlock();
+                                                                 }
+                                                                 ip_output() {
+                                                                   __rcu_read_lock();
+                                                                   nf_hook_slow() {
+                                                                     iptable_mangle_hook [iptable_mangle]() {
+                                                                       ipt_do_table [ip_tables]() {
+                                                                         __local_bh_disable_ip();
+                                                                         __local_bh_enable_ip();
+                                                                       }
+                                                                     }
+                                                                     nf_nat_ipv4_out [nf_nat]() {
+                                                                       nf_nat_ipv4_fn [nf_nat]() {
+                                                                         nf_nat_inet_fn [nf_nat]() {
+                                                                           nf_nat_packet [nf_nat]();
+                                                                         }
+                                                                       }
+                                                                     }
+                                                                     ipv4_confirm [nf_conntrack]() {
+                                                                       nf_confirm [nf_conntrack]() {
+                                                                         nf_ct_deliver_cached_events [nf_conntrack]() {
+                                                                           __rcu_read_lock();
+                                                                           __rcu_read_unlock();
+                                                                         }
+                                                                       }
+                                                                     }
+                                                                   }
+                                                                   __rcu_read_unlock();
+                                                                   ip_finish_output() {
+                                                                     __cgroup_bpf_run_filter_skb() {
+                                                                       __rcu_read_lock();
+                                                                       __rcu_read_unlock();
+                                                                     }
+                                                                     __ip_finish_output() {
+                                                                       ipv4_mtu();
+                                                                       ip_finish_output2() {
+                                                                         __local_bh_disable_ip();
+                                                                         dev_queue_xmit() {
+                                                                           __dev_queue_xmit() {
+                                                                             __local_bh_disable_ip();
+                                                                             netdev_core_pick_tx() {
+                                                                               netdev_pick_tx();
+                                                                             }
+                                                                             _raw_spin_lock();
+                                                                             sch_direct_xmit() {
+                                                                               _raw_spin_unlock();
+                                                                               validate_xmit_skb_list() {
+                                                                                 validate_xmit_skb() {
+                                                                                   netif_skb_features() {
+                                                                                     skb_network_protocol();
+                                                                                   }
+                                                                                   __pskb_pull_tail() {
+                                                                                     pskb_expand_head() {
+                                                                                       __kmalloc_reserve.isra.0() {
+                                                                                         __kmalloc_track_caller() {
+                                                                                           kmalloc_slab();
+                                                                                           should_failslab();
+                                                                                           memcg_kmem_put_cache();
+                                                                                         }
+                                                                                       }
+                                                                                       ksize() {
+                                                                                         __ksize();
+                                                                                       }
+                                                                                       skb_release_data();
+                                                                                       skb_headers_offset_update();
+                                                                                     }
+                                                                                     skb_copy_bits();
+                                                                                   }
+                                                                                   skb_csum_hwoffload_help() {
+                                                                                     skb_checksum_help() {
+                                                                                       skb_checksum() {
+                                                                                         __skb_checksum();
+                                                                                       }
+                                                                                     }
+                                                                                   }
+                                                                                   validate_xmit_xfrm();
+                                                                                 }
+                                                                               }
+                                                                               _raw_spin_lock();
+                                                                               dev_hard_start_xmit() {
+                                                                                 bcmgenet_xmit() {
+                                                                                   _raw_spin_lock();
+                                                                                   dma_direct_map_page() {
+                                                                                     arch_sync_dma_for_device();
+                                                                                   }
+                                                                                   skb_clone_tx_timestamp() {
+                                                                                     ptp_classify_raw();
+                                                                                   }
+                                                                                   _raw_spin_unlock();
+                                                                                 }
+                                                                               }
+                                                                               _raw_spin_unlock();
+                                                                               _raw_spin_lock();
+                                                                             }
+                                                                             __qdisc_run() {
+                                                                               dequeue_skb() {
+                                                                                 fq_codel_dequeue [sch_fq_codel]();
+                                                                               }
+                                                                             }
+                                                                             _raw_spin_unlock();
+                                                                             __local_bh_enable_ip();
+                                                                           }
+                                                                         }
+                                                                         __local_bh_enable_ip();
+                                                                       }
+                                                                     }
+                                                                   }
+                                                                 }
+                                                               }
+                                                               __rcu_read_unlock();
+                                                             }
+                                                             tcp_update_skb_after_send();
+                                                             tcp_rate_skb_sent();
+                                                           }
+                                                           tcp_event_new_data_sent() {
+                                                             tcp_rbtree_insert();
+                                                             tcp_rearm_rto() {
+                                                               jiffies_to_usecs();
+                                                               __usecs_to_jiffies();
+                                                               sk_reset_timer() {
+                                                                 mod_timer() {
+                                                                   lock_timer_base() {
+                                                                     _raw_spin_lock_irqsave();
+                                                                   }
+                                                                   calc_wheel_index();
+                                                                   detach_if_pending();
+                                                                   get_nohz_timer_target();
+                                                                   enqueue_timer();
+                                                                   trigger_dyntick_cpu.isra.0();
+                                                                   _raw_spin_unlock_irqrestore();
+                                                                 }
+                                                               }
+                                                             }
+                                                             tcp_check_space();
+                                                           }
+                                                           tcp_chrono_stop();
+                                                           tcp_schedule_loss_probe.part.0() {
+                                                             __usecs_to_jiffies();
+                                                             jiffies_to_usecs();
+                                                             __usecs_to_jiffies();
+                                                             sk_reset_timer() {
+                                                               mod_timer() {
+                                                                 lock_timer_base() {
+                                                                   _raw_spin_lock_irqsave();
+                                                                 }
+                                                                 calc_wheel_index();
+                                                                 detach_if_pending();
+                                                                 get_nohz_timer_target();
+                                                                 enqueue_timer();
+                                                                 trigger_dyntick_cpu.isra.0();
+                                                                 _raw_spin_unlock_irqrestore();
+                                                               }
+                                                             }
+                                                           }
+                                                         }
+                                                       }
+                                                       tcp_check_space();
+                                                     }
+                                                   }
+                                                   _raw_spin_unlock();
+                                                 }
+                                               }
+                                               __rcu_read_unlock();
+                                             }
+                                           }
+                                         } /* ip_sublist_rcv_finish */
+                                       } /* ip_sublist_rcv */
+                                     } /* ip_list_rcv */
+                                   } /* __netif_receive_skb_list_core */
+                                   __rcu_read_unlock();
+                                 } /* netif_receive_skb_list_internal */
+                               } /* gro_normal_list.part.0 */
+                             } /* napi_complete_done */
+                           } /* bcmgenet_rx_poll */
+                           bcmgenet_tx_poll() {
+                             _raw_spin_lock();
+                             __bcmgenet_tx_reclaim() {
+                               bcmgenet_free_tx_cb() {
+                                 dma_direct_unmap_page() {
+                                   dma_direct_sync_single_for_cpu() {
+                                     arch_sync_dma_for_cpu();
+                                   }
+                                 }
+                               }
+                               __dev_kfree_skb_any() {
+                                 consume_skb() {
+                                   skb_release_all() {
+                                     skb_release_head_state() {
+                                       tcp_wfree() {
+                                         __tasklet_schedule() {
+                                           __tasklet_schedule_common() {
+                                             __raise_softirq_irqoff();
+                                           }
+                                         }
+                                       }
+                                     }
+                                     skb_release_data() {
+                                       skb_free_head() {
+                                         kfree() {
+                                           __slab_free();
+                                         }
+                                       }
+                                     }
+                                   }
+                                   kfree_skbmem() {
+                                     kmem_cache_free() {
+                                       __slab_free();
+                                     }
+                                   }
+                                 }
+                               }
+                               bcmgenet_free_tx_cb() {
+                                 dma_direct_unmap_page() {
+                                   dma_direct_sync_single_for_cpu() {
+                                     arch_sync_dma_for_cpu();
+                                   }
+                                 }
+                               }
+                               __dev_kfree_skb_any() {
+                                 consume_skb() {
+                                   skb_release_all() {
+                                     skb_release_head_state() {
+                                       tcp_wfree() {
+                                         sk_free();
+                                       }
+                                     }
+                                     skb_release_data() {
+                                       skb_free_head() {
+                                         kfree() {
+                                           __slab_free();
+                                         }
+                                       }
+                                     }
+                                   }
+                                   kfree_skbmem() {
+                                     kmem_cache_free() {
+                                       __slab_free();
+                                     }
+                                   }
+                                 }
+                               }
+                               bcmgenet_free_tx_cb() {
+                                 dma_direct_unmap_page() {
+                                   dma_direct_sync_single_for_cpu() {
+                                     arch_sync_dma_for_cpu();
+                                   }
+                                 }
+                               }
+                               __dev_kfree_skb_any() {
+                                 consume_skb() {
+                                   skb_release_all() {
+                                     skb_release_head_state() {
+                                       tcp_wfree() {
+                                         sk_free();
+                                       }
+                                     }
+                                     skb_release_data() {
+                                       skb_free_head() {
+                                         kfree();
+                                       }
+                                     }
+                                   }
+                                   kfree_skbmem() {
+                                     kmem_cache_free() {
+                                       __slab_free();
+                                     }
+                                   }
+                                 }
+                               }
+                               bcmgenet_free_tx_cb() {
+                                 dma_direct_unmap_page() {
+                                   dma_direct_sync_single_for_cpu() {
+                                     arch_sync_dma_for_cpu();
+                                   }
+                                 }
+                               }
+                               __dev_kfree_skb_any() {
+                                 consume_skb() {
+                                   skb_release_all() {
+                                     skb_release_head_state() {
+                                       tcp_wfree() {
+                                         sk_free();
+                                       }
+                                     }
+                                     skb_release_data() {
+                                       skb_free_head() {
+                                         kfree();
+                                       }
+                                     }
+                                   }
+                                   kfree_skbmem();
+                                 }
+                               }
+                               bcmgenet_free_tx_cb() {
+                                 dma_direct_unmap_page() {
+                                   dma_direct_sync_single_for_cpu() {
+                                     arch_sync_dma_for_cpu();
+                                   }
+                                 }
+                               }
+                               __dev_kfree_skb_any() {
+                                 consume_skb() {
+                                   skb_release_all() {
+                                     skb_release_head_state() {
+                                       tcp_wfree() {
+                                         sk_free();
+                                       }
+                                     }
+                                     skb_release_data() {
+                                       skb_free_head() {
+                                         kfree();
+                                       }
+                                     }
+                                   }
+                                   kfree_skbmem();
+                                 }
+                               }
+                               bcmgenet_free_tx_cb() {
+                                 dma_direct_unmap_page() {
+                                   dma_direct_sync_single_for_cpu() {
+                                     arch_sync_dma_for_cpu();
+                                   }
+                                 }
+                               }
+                               __dev_kfree_skb_any() {
+                                 consume_skb() {
+                                   skb_release_all() {
+                                     skb_release_head_state() {
+                                       tcp_wfree() {
+                                         sk_free();
+                                       }
+                                     }
+                                     skb_release_data() {
+                                       skb_free_head() {
+                                         kfree();
+                                       }
+                                     }
+                                   }
+                                   kfree_skbmem();
+                                 }
+                               }
+                               bcmgenet_free_tx_cb() {
+                                 dma_direct_unmap_page() {
+                                   dma_direct_sync_single_for_cpu() {
+                                     arch_sync_dma_for_cpu();
+                                   }
+                                 }
+                               }
+                               __dev_kfree_skb_any() {
+                                 consume_skb() {
+                                   skb_release_all() {
+                                     skb_release_head_state() {
+                                       tcp_wfree() {
+                                         sk_free();
+                                       }
+                                     }
+                                     skb_release_data() {
+                                       skb_free_head() {
+                                         kfree();
+                                       }
+                                     }
+                                   }
+                                   kfree_skbmem();
+                                 }
+                               }
+                             }
+                             netif_tx_wake_queue();
+                             _raw_spin_unlock();
+                           }
+                           __raise_softirq_irqoff();
+                           net_rps_action_and_irq_enable.isra.0();
+                           __kfree_skb_flush();
+                         } /* net_rx_action */
+                         wakeup_softirqd() {
+                           wake_up_process() {
+                             try_to_wake_up() {
+                               _raw_spin_lock_irqsave();
+                               _raw_spin_lock();
+                               update_rq_clock();
+                               ttwu_do_activate() {
+                                 activate_task() {
+                                   psi_task_change() {
+                                     record_times.isra.0();
+                                   }
+                                   enqueue_task_fair() {
+                                     enqueue_entity() {
+                                       update_curr() {
+                                         __calc_delta();
+                                         update_min_vruntime();
+                                       }
+                                       __update_load_avg_se() {
+                                         __accumulate_pelt_segments();
+                                       }
+                                       __update_load_avg_cfs_rq() {
+                                         __accumulate_pelt_segments();
+                                       }
+                                       dbs_update_util_handler() {
+                                         cpufreq_this_cpu_can_update();
+                                       }
+                                       update_cfs_group();
+                                       place_entity();
+                                       __enqueue_entity();
+                                     }
+                                     hrtick_update();
+                                   }
+                                 }
+                                 ttwu_do_wakeup() {
+                                   check_preempt_curr() {
+                                     check_preempt_wakeup() {
+                                       update_curr();
+                                       wakeup_preempt_entity.isra.0();
+                                       set_next_buddy();
+                                       resched_curr();
+                                     }
+                                   }
+                                 }
+                               }
+                               _raw_spin_unlock();
+                               _raw_spin_unlock_irqrestore();
+                             }
+                           }
+                         }
+                       } /* __do_softirq */
+                       idle_cpu();
+                       rcu_irq_exit();
+                     } /* __handle_domain_irq */
+                   } /* gic_handle_irq */
+                   rcu_note_context_switch() {
+                     rcu_preempt_deferred_qs() {
+                       rcu_preempt_need_deferred_qs();
+                     }
+                     rcu_qs();
+                   }
+                   _raw_spin_lock();
+                   update_rq_clock();
+                   pick_next_task_fair() {
+                     update_curr();
+                     check_cfs_rq_runtime();
+                     pick_next_entity() {
+                       wakeup_preempt_entity.isra.0();
+                       clear_buddies();
+                     }
+                     put_prev_entity() {
+                       update_curr() {
+                         update_min_vruntime();
+                         cpuacct_charge() {
+                           __rcu_read_lock();
+                           __rcu_read_unlock();
+                         }
+                         __rcu_read_lock();
+                         __cgroup_account_cputime() {
+                           cgroup_base_stat_cputime_account_begin();
+                           cgroup_base_stat_cputime_account_end.isra.0() {
+                             cgroup_rstat_updated();
+                           }
+                         }
+                         __rcu_read_unlock();
+                       }
+                       check_cfs_rq_runtime();
+                       __enqueue_entity();
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq() {
+                         __accumulate_pelt_segments();
+                       }
+                     }
+                     put_prev_entity() {
+                       update_curr() {
+                         __calc_delta();
+                         update_min_vruntime();
+                       }
+                       check_cfs_rq_runtime();
+                       __enqueue_entity();
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq() {
+                         __accumulate_pelt_segments();
+                       }
+                     }
+                     put_prev_entity() {
+                       update_curr() {
+                         __calc_delta();
+                         update_min_vruntime();
+                       }
+                       check_cfs_rq_runtime();
+                       __enqueue_entity();
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq() {
+                         __accumulate_pelt_segments();
+                       }
+                     }
+                     put_prev_entity() {
+                       update_curr() {
+                         __calc_delta();
+                         update_min_vruntime();
+                       }
+                       check_cfs_rq_runtime();
+                       __enqueue_entity();
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq() {
+                         __accumulate_pelt_segments();
+                       }
+                     }
+                     put_prev_entity() {
+                       update_curr();
+                       check_cfs_rq_runtime();
+                       __enqueue_entity();
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq();
+                     }
+                     set_next_entity() {
+                       __update_load_avg_se();
+                       __update_load_avg_cfs_rq();
+                     }
+                   }
+                   finish_task_switch() {
+                     _raw_spin_unlock_irq();
+                   }
+                 } /* _raw_spin_unlock_irqrestore */
+               } /* hrtimer_try_to_cancel */
+             }
+           }
+           __fdget() {
+             __fget_light() {
+               __fget() {
+                 __rcu_read_lock();
+                 __rcu_read_unlock();
+               }
+             }
+           }
+           sock_poll() {
+             tcp_poll();
+           }
+           fput() {
+             fput_many();
+           }
+           __fdget() {
+             __fget_light() {
+               __fget() {
+                 __rcu_read_lock();
+                 __rcu_read_unlock();
+               }
+             }
+           }
+           pipe_poll();
+           fput() {
+             fput_many();
+           }
+           schedule_hrtimeout_range() {
+             schedule_hrtimeout_range_clock() {
+               hrtimer_init_sleeper() {
+                 __hrtimer_init();
+               }
+               hrtimer_start_range_ns() {
+                 lock_hrtimer_base() {
+                   _raw_spin_lock_irqsave();
+                 }
+                 get_nohz_timer_target();
+                 enqueue_hrtimer();
+                 _raw_spin_unlock_irqrestore();
+               }
+               schedule() {
+                 rcu_note_context_switch() {
+                   rcu_preempt_deferred_qs() {
+                     rcu_preempt_need_deferred_qs();
+                   }
+                   rcu_qs();
+                 }
+                 _raw_spin_lock();
+                 update_rq_clock();
+                 deactivate_task() {
+                   psi_task_change() {
+                     record_times.isra.0();
+                     record_times.isra.0();
+                     record_times.isra.0();
+                     record_times.isra.0();
+                     record_times.isra.0();
+                   }
+                   dequeue_task_fair() {
+                     dequeue_entity() {
+                       update_curr() {
+                         update_min_vruntime();
+                         cpuacct_charge() {
+                           __rcu_read_lock();
+                           __rcu_read_unlock();
+                         }
+                         __rcu_read_lock();
+                         __cgroup_account_cputime() {
+                           cgroup_base_stat_cputime_account_begin();
+                           cgroup_base_stat_cputime_account_end.isra.0() {
+                             cgroup_rstat_updated();
+                           }
+                         }
+                         __rcu_read_unlock();
+                       }
+                       __update_load_avg_se();
+                       __update_load_avg_cfs_rq();
+                       clear_buddies();
+                       update_cfs_group();
+                       update_min_vruntime();
+                     }
+                     set_next_buddy();
+                     __update_load_avg_se();
+                     __update_load_avg_cfs_rq();
+                     update_cfs_group() {
+                       reweight_entity() {
+                         update_curr() {
+                           __calc_delta();
+                           update_min_vruntime();
+                         }
+                       }
+                     }
+                     __update_load_avg_se();
+                     __update_load_avg_cfs_rq();
+                     update_cfs_group() {
+                       reweight_entity() {
+                         update_curr() {
+                           __calc_delta();
+                           update_min_vruntime();
+                         }
+                       }
+                     }
+                     __update_load_avg_se();
+                     __update_load_avg_cfs_rq();
+                     update_cfs_group() {
+                       reweight_entity() {
+                         update_curr() {
+                           __calc_delta();
+                           update_min_vruntime();
+                         }
+                       }
+                     }
+                     __update_load_avg_se();
+                     __update_load_avg_cfs_rq();
+                     update_cfs_group() {
+                       reweight_entity() {
+                         update_curr() {
+                           __calc_delta();
+                           update_min_vruntime();
+                         }
+                       }
+                     }
+                     hrtick_update();
+                   }
+                 }
+                 pick_next_task_fair() {
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     wakeup_preempt_entity.isra.0();
+                     clear_buddies();
+                   }
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     wakeup_preempt_entity.isra.0();
+                     clear_buddies();
+                   }
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     wakeup_preempt_entity.isra.0();
+                     clear_buddies();
+                   }
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     wakeup_preempt_entity.isra.0();
+                     clear_buddies();
+                   }
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     wakeup_preempt_entity.isra.0();
+                     clear_buddies();
+                   }
+                   put_prev_entity() {
+                     check_cfs_rq_runtime();
+                   }
+                   set_next_entity() {
+                     __update_load_avg_se() {
+                       __accumulate_pelt_segments();
+                     }
+                     __update_load_avg_cfs_rq();
+                   }
+                 }
+                 check_and_switch_context();
+                 fpsimd_thread_switch() {
+                   __get_cpu_fpsimd_context();
+                   fpsimd_save() {
+                     have_cpu_fpsimd_context();
+                   }
+                   __put_cpu_fpsimd_context();
+                 }
+                 hw_breakpoint_thread_switch();
+                 uao_thread_switch();
+                 cpu_have_feature();
+                 erratum_1418040_thread_switch() {
+                   this_cpu_has_cap() {
+                     is_affected_midr_range_list();
+                   }
+                 }
+                 finish_task_switch() {
+                   _raw_spin_unlock_irq();
+                 }
+               } /* schedule */
+               hrtimer_try_to_cancel() {
+                 hrtimer_active();
+                 lock_hrtimer_base() {
+                   _raw_spin_lock_irqsave();
+                 }
+                 __remove_hrtimer();
+                 _raw_spin_unlock_irqrestore();
+               }
+             } /* schedule_hrtimeout_range_clock */
+           } /* schedule_hrtimeout_range */
+           __fdget() {
+             __fget_light() {
+               __fget() {
+                 __rcu_read_lock();
+                 __rcu_read_unlock();
+               }
+             }
+           }
+           sock_poll() {
+             tcp_poll();
+           }
+           fput() {
+             fput_many();
+           }
+           __fdget() {
+             __fget_light() {
+               __fget() {
+                 __rcu_read_lock();
+                 __rcu_read_unlock();
+               }
+             }
+           }
+           pipe_poll();
+           fput() {
+             fput_many();
+           }
+           schedule_hrtimeout_range() {
+             schedule_hrtimeout_range_clock() {
+               hrtimer_init_sleeper() {
+                 __hrtimer_init();
+               }
+               hrtimer_start_range_ns() {
+                 lock_hrtimer_base() {
+                   _raw_spin_lock_irqsave();
+                 }
+                 get_nohz_timer_target();
+                 enqueue_hrtimer();
+                 _raw_spin_unlock_irqrestore();
+               }
+               schedule() {
+                 rcu_note_context_switch() {
+                   rcu_preempt_deferred_qs() {
+                     rcu_preempt_need_deferred_qs();
+                   }
+                   rcu_qs();
+                 }
+                 _raw_spin_lock();
+                 update_rq_clock();
+                 deactivate_task() {
+                   psi_task_change() {
+                     record_times.isra.0();
+                     record_times.isra.0();
+                     record_times.isra.0();
+                     record_times.isra.0();
+                     record_times.isra.0();
+                   }
+                   dequeue_task_fair() {
+                     dequeue_entity() {
+                       update_curr() {
+                         update_min_vruntime();
+                         cpuacct_charge() {
+                           __rcu_read_lock();
+                           __rcu_read_unlock();
+                         }
+                         __rcu_read_lock();
+                         __cgroup_account_cputime() {
+                           cgroup_base_stat_cputime_account_begin();
+                           cgroup_base_stat_cputime_account_end.isra.0() {
+                             cgroup_rstat_updated();
+                           }
+                         }
+                         __rcu_read_unlock();
+                       }
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq() {
+                         __accumulate_pelt_segments();
+                       }
+                       clear_buddies();
+                       update_cfs_group();
+                       update_min_vruntime();
+                     }
+                     set_next_buddy();
+                     __update_load_avg_se() {
+                       __accumulate_pelt_segments();
+                     }
+                     __update_load_avg_cfs_rq() {
+                       __accumulate_pelt_segments();
+                     }
+                     update_cfs_group() {
+                       reweight_entity() {
+                         update_curr() {
+                           __calc_delta();
+                           update_min_vruntime();
+                         }
+                       }
+                     }
+                     __update_load_avg_se() {
+                       __accumulate_pelt_segments();
+                     }
+                     __update_load_avg_cfs_rq() {
+                       __accumulate_pelt_segments();
+                     }
+                     update_cfs_group() {
+                       reweight_entity() {
+                         update_curr() {
+                           __calc_delta();
+                           update_min_vruntime();
+                         }
+                       }
+                     }
+                     __update_load_avg_se() {
+                       __accumulate_pelt_segments();
+                     }
+                     __update_load_avg_cfs_rq() {
+                       __accumulate_pelt_segments();
+                     }
+                     update_cfs_group() {
+                       reweight_entity() {
+                         update_curr() {
+                           __calc_delta();
+                           update_min_vruntime();
+                         }
+                       }
+                     }
+                     __update_load_avg_se() {
+                       __accumulate_pelt_segments();
+                     }
+                     __update_load_avg_cfs_rq() {
+                       __accumulate_pelt_segments();
+                     }
+                     dbs_update_util_handler() {
+                       cpufreq_this_cpu_can_update();
+                     }
+                     update_cfs_group() {
+                       reweight_entity() {
+                         update_curr() {
+                           __calc_delta();
+                           update_min_vruntime();
+                         }
+                       }
+                     }
+                     hrtick_update();
+                   }
+                 }
+                 pick_next_task_fair() {
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     wakeup_preempt_entity.isra.0();
+                     clear_buddies();
+                   }
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     wakeup_preempt_entity.isra.0();
+                     clear_buddies();
+                   }
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     wakeup_preempt_entity.isra.0();
+                     clear_buddies();
+                   }
+                   update_curr();
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     wakeup_preempt_entity.isra.0();
+                     clear_buddies();
+                   }
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     clear_buddies();
+                   }
+                   put_prev_entity() {
+                     check_cfs_rq_runtime();
+                   }
+                   set_next_entity() {
+                     __update_load_avg_se() {
+                       __accumulate_pelt_segments();
+                     }
+                     __update_load_avg_cfs_rq();
+                   }
+                 }
+                 check_and_switch_context();
+                 fpsimd_thread_switch() {
+                   __get_cpu_fpsimd_context();
+                   fpsimd_save() {
+                     have_cpu_fpsimd_context();
+                   }
+                   __put_cpu_fpsimd_context();
+                 }
+                 hw_breakpoint_thread_switch();
+                 uao_thread_switch();
+                 cpu_have_feature();
+                 erratum_1418040_thread_switch() {
+                   this_cpu_has_cap() {
+                     is_affected_midr_range_list();
+                   }
+                 }

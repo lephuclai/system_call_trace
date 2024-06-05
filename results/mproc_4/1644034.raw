@@ -1,0 +1,276 @@
+ 0) Journal-1644034 |                         __rcu_read_lock();
+ 0) Journal-1644034 |                         __rcu_read_unlock();
+ 0) Journal-1644034 |                       } /* cpuacct_charge */
+ 0) Journal-1644034 |                       __rcu_read_lock();
+ 0) Journal-1644034 |                       __cgroup_account_cputime() {
+ 0) Journal-1644034 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Journal-1644034 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Journal-1644034 |                           cgroup_rstat_updated();
+ 0) Journal-1644034 |                         }
+ 0) Journal-1644034 |                       }
+ 0) Journal-1644034 |                       __rcu_read_unlock();
+ 0) Journal-1644034 |                     } /* update_curr */
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     clear_buddies();
+ 0) Journal-1644034 |                     update_cfs_group();
+ 0) Journal-1644034 |                     update_min_vruntime();
+ 0) Journal-1644034 |                   } /* dequeue_entity */
+ 0) Journal-1644034 |                   dequeue_entity() {
+ 0) Journal-1644034 |                     update_curr() {
+ 0) Journal-1644034 |                       __calc_delta();
+ 0) Journal-1644034 |                       update_min_vruntime();
+ 0) Journal-1644034 |                     }
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     clear_buddies();
+ 0) Journal-1644034 |                     update_cfs_group() {
+ 0) Journal-1644034 |                       reweight_entity();
+ 0) Journal-1644034 |                     }
+ 0) Journal-1644034 |                     update_min_vruntime();
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                   dequeue_entity() {
+ 0) Journal-1644034 |                     update_curr() {
+ 0) Journal-1644034 |                       __calc_delta();
+ 0) Journal-1644034 |                       update_min_vruntime();
+ 0) Journal-1644034 |                     }
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     clear_buddies();
+ 0) Journal-1644034 |                     update_cfs_group() {
+ 0) Journal-1644034 |                       reweight_entity();
+ 0) Journal-1644034 |                     }
+ 0) Journal-1644034 |                     update_min_vruntime();
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                   dequeue_entity() {
+ 0) Journal-1644034 |                     update_curr() {
+ 0) Journal-1644034 |                       __calc_delta();
+ 0) Journal-1644034 |                       update_min_vruntime();
+ 0) Journal-1644034 |                     }
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     clear_buddies();
+ 0) Journal-1644034 |                     update_cfs_group() {
+ 0) Journal-1644034 |                       reweight_entity();
+ 0) Journal-1644034 |                     }
+ 0) Journal-1644034 |                     update_min_vruntime();
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                   dequeue_entity() {
+ 0) Journal-1644034 |                     update_curr() {
+ 0) Journal-1644034 |                       __calc_delta();
+ 0) Journal-1644034 |                       update_min_vruntime();
+ 0) Journal-1644034 |                     }
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     clear_buddies();
+ 0) Journal-1644034 |                     update_cfs_group() {
+ 0) Journal-1644034 |                       reweight_entity();
+ 0) Journal-1644034 |                     }
+ 0) Journal-1644034 |                     update_min_vruntime();
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                   hrtick_update();
+ 0) Journal-1644034 |                 } /* dequeue_task_fair */
+ 0) Journal-1644034 |               } /* deactivate_task */
+ 0) Journal-1644034 |               pick_next_task_fair() {
+ 0) Journal-1644034 |                 newidle_balance() {
+ 0) Journal-1644034 |                   _raw_spin_unlock();
+ 0) Journal-1644034 |                   update_blocked_averages() {
+ 0) Journal-1644034 |                     _raw_spin_lock_irqsave();
+ 0) Journal-1644034 |                     update_rq_clock();
+ 0) Journal-1644034 |                     update_rt_rq_load_avg();
+ 0) Journal-1644034 |                     update_dl_rq_load_avg();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_se();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                     _raw_spin_unlock_irqrestore();
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                   __rcu_read_lock();
+ 0) Journal-1644034 |                   load_balance() {
+ 0) Journal-1644034 |                     find_busiest_group() {
+ 0) Journal-1644034 |                       update_group_capacity() {
+ 0) Journal-1644034 |                         __msecs_to_jiffies();
+ 0) Journal-1644034 |                       }
+ 0) Journal-1644034 |                       update_nohz_stats();
+ 0) Journal-1644034 |                       idle_cpu();
+ 0) Journal-1644034 |                       update_nohz_stats() {
+ 0) Journal-1644034 |                         update_blocked_averages() {
+ 0) Journal-1644034 |                           _raw_spin_lock_irqsave();
+ 0) Journal-1644034 |                           update_rq_clock();
+ 0) Journal-1644034 |                           update_rt_rq_load_avg() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           update_dl_rq_load_avg() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_se() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           dbs_update_util_handler() {
+ 0) Journal-1644034 |                             cpufreq_this_cpu_can_update();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                           dbs_update_util_handler() {
+ 0) Journal-1644034 |                             cpufreq_this_cpu_can_update();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           _raw_spin_unlock_irqrestore();
+ 0) Journal-1644034 |                         }
+ 0) Journal-1644034 |                       }
+ 0) Journal-1644034 |                       idle_cpu();
+ 0) Journal-1644034 |                       update_nohz_stats() {
+ 0) Journal-1644034 |                         update_blocked_averages() {
+ 0) Journal-1644034 |                           _raw_spin_lock_irqsave();
+ 0) Journal-1644034 |                           update_rq_clock();
+ 0) Journal-1644034 |                           update_rt_rq_load_avg() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           update_dl_rq_load_avg() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_se() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_se() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           dbs_update_util_handler() {
+ 0) Journal-1644034 |                             cpufreq_this_cpu_can_update();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_se() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                           __update_load_avg_se() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                           dbs_update_util_handler() {
+ 0) Journal-1644034 |                             cpufreq_this_cpu_can_update();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           _raw_spin_unlock_irqrestore();
+ 0) Journal-1644034 |                         }
+ 0) Journal-1644034 |                       }
+ 0) Journal-1644034 |                       idle_cpu();
+ 0) Journal-1644034 |                       update_nohz_stats() {
+ 0) Journal-1644034 |                         update_blocked_averages() {
+ 0) Journal-1644034 |                           _raw_spin_lock_irqsave();
+ 0) Journal-1644034 |                           update_rq_clock();
+ 0) Journal-1644034 |                           update_rt_rq_load_avg() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           update_dl_rq_load_avg() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_se() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_se() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           dbs_update_util_handler() {
+ 0) Journal-1644034 |                             cpufreq_this_cpu_can_update();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                           __update_load_avg_se() {
+ 0) Journal-1644034 |                             __accumulate_pelt_segments();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                           __update_load_avg_cfs_rq();
+ 0) Journal-1644034 |                           dbs_update_util_handler() {
+ 0) Journal-1644034 |                             cpufreq_this_cpu_can_update();
+ 0) Journal-1644034 |                           }
+ 0) Journal-1644034 |                           _raw_spin_unlock_irqrestore();
+ 0) Journal-1644034 |                         }
+ 0) Journal-1644034 |                       }
+ 0) Journal-1644034 |                       idle_cpu();
+ 0) Journal-1644034 |                     }
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                   __msecs_to_jiffies();
+ 0) Journal-1644034 |                   __rcu_read_unlock();
+ 0) Journal-1644034 |                   _raw_spin_lock();
+ 0) Journal-1644034 |                 }
+ 0) Journal-1644034 |               }
+ 0) Journal-1644034 |               pick_next_task_idle() {
+ 0) Journal-1644034 |                 put_prev_task_fair() {
+ 0) Journal-1644034 |                   put_prev_entity() {
+ 0) Journal-1644034 |                     check_cfs_rq_runtime();
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                   put_prev_entity() {
+ 0) Journal-1644034 |                     check_cfs_rq_runtime();
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                   put_prev_entity() {
+ 0) Journal-1644034 |                     check_cfs_rq_runtime();
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                   put_prev_entity() {
+ 0) Journal-1644034 |                     check_cfs_rq_runtime();
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                   put_prev_entity() {
+ 0) Journal-1644034 |                     check_cfs_rq_runtime();
+ 0) Journal-1644034 |                   }
+ 0) Journal-1644034 |                 }
+ 0) Journal-1644034 |               }

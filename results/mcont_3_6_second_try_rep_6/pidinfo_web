@@ -1,0 +1,6 @@
+sh,3238455 -c gunicorn -w 4 -b 0.0.0.0:5500 app:application
+  `-gunicorn,3238476 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+      |-gunicorn,3238478 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+      |-gunicorn,3238479 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+      |-gunicorn,3238480 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+      `-gunicorn,3238482 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application

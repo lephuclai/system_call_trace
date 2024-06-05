@@ -1,0 +1,26 @@
+ 0) clientc-3687492 |               finish_task_switch() {
+ 0) clientc-3687492 |                 _raw_spin_unlock_irq();
+ 0) clientc-3687492 |               }
+ 0) clientc-3687492 |             } /* schedule */
+ 0) clientc-3687492 |             hrtimer_try_to_cancel() {
+ 0) clientc-3687492 |               hrtimer_active();
+ 0) clientc-3687492 |             }
+ 0) clientc-3687492 |           } /* do_nanosleep */
+ 0) clientc-3687492 |         } /* hrtimer_nanosleep */
+ 0) clientc-3687492 |       } /* common_nsleep */
+ 0) clientc-3687492 |     } /* __arm64_sys_clock_nanosleep */
+ 0) clientc-3687492 |   } /* el0_svc_common.constprop.0 */
+ 0) clientc-3687492 | } /* el0_svc_handler */
+ 0) clientc-3687492 | do_notify_resume() {
+ 0) clientc-3687492 |   fpsimd_restore_current_state() {
+ 0) clientc-3687492 |     __get_cpu_fpsimd_context();
+ 0) clientc-3687492 |     task_fpsimd_load() {
+ 0) clientc-3687492 |       have_cpu_fpsimd_context();
+ 0) clientc-3687492 |     }
+ 0) clientc-3687492 |     fpsimd_bind_task_to_cpu();
+ 0) clientc-3687492 |     put_cpu_fpsimd_context() {
+ 0) clientc-3687492 |       __put_cpu_fpsimd_context();
+ 0) clientc-3687492 |     }
+ 0) clientc-3687492 |   }
+ 0) clientc-3687492 | }
+ 0) clientc-3687492 | post_ttbr_update_workaround();

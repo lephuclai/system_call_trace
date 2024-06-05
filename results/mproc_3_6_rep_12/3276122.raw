@@ -1,0 +1,1345 @@
+ 0) Backgro-3276122 |               finish_task_switch() {
+ 0) Backgro-3276122 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |             } /* schedule */
+ 0) Backgro-3276122 |           } /* futex_wait_queue_me */
+ 0) Backgro-3276122 |           _raw_spin_lock();
+ 0) Backgro-3276122 |           __unqueue_futex();
+ 0) Backgro-3276122 |           _raw_spin_unlock();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           hrtimer_cancel() {
+ 0) Backgro-3276122 |             hrtimer_try_to_cancel() {
+ 0) Backgro-3276122 |               hrtimer_active();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |         } /* futex_wait */
+ 0) Backgro-3276122 |       } /* do_futex */
+ 0) Backgro-3276122 |     } /* __arm64_sys_futex */
+ 0) Backgro-3276122 |   } /* el0_svc_common.constprop.0 */
+ 0) Backgro-3276122 | } /* el0_svc_handler */
+ 0) Backgro-3276122 | do_notify_resume() {
+ 0) Backgro-3276122 |   fpsimd_restore_current_state() {
+ 0) Backgro-3276122 |     __get_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     task_fpsimd_load() {
+ 0) Backgro-3276122 |       have_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |     fpsimd_bind_task_to_cpu();
+ 0) Backgro-3276122 |     put_cpu_fpsimd_context() {
+ 0) Backgro-3276122 |       __put_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wake() {
+ 0) Backgro-3276122 |           get_futex_key() {
+ 0) Backgro-3276122 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           hash_futex();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |         }
+ 0) Backgro-3276122 |       }
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       get_timespec64();
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wait() {
+ 0) Backgro-3276122 |           hrtimer_init_sleeper() {
+ 0) Backgro-3276122 |             __hrtimer_init();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           ktime_add_safe();
+ 0) Backgro-3276122 |           futex_wait_setup() {
+ 0) Backgro-3276122 |             get_futex_key() {
+ 0) Backgro-3276122 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |             hash_futex();
+ 0) Backgro-3276122 |             _raw_spin_lock();
+ 0) Backgro-3276122 |             get_futex_value_locked();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           futex_wait_queue_me() {
+ 0) Backgro-3276122 |             _raw_spin_unlock();
+ 0) Backgro-3276122 |             hrtimer_sleeper_start_expires() {
+ 0) Backgro-3276122 |               hrtimer_start_range_ns() {
+ 0) Backgro-3276122 |                 lock_hrtimer_base() {
+ 0) Backgro-3276122 |                   _raw_spin_lock_irqsave();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 get_nohz_timer_target();
+ 0) Backgro-3276122 |                 enqueue_hrtimer();
+ 0) Backgro-3276122 |                 hrtimer_reprogram.constprop.0();
+ 0) Backgro-3276122 |                 _raw_spin_unlock_irqrestore();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |             schedule() {
+ 0) Backgro-3276122 |               rcu_note_context_switch() {
+ 0) Backgro-3276122 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3276122 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 rcu_qs();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               _raw_spin_lock();
+ 0) Backgro-3276122 |               update_rq_clock();
+ 0) Backgro-3276122 |               deactivate_task() {
+ 0) Backgro-3276122 |                 psi_task_change() {
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 dequeue_task_fair() {
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                       cpuacct_charge() {
+ 0) Backgro-3276122 |                         __rcu_read_lock();
+ 0) Backgro-3276122 |                         __rcu_read_unlock();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_lock();
+ 0) Backgro-3276122 |                       __cgroup_account_cputime() {
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Backgro-3276122 |                           cgroup_rstat_updated();
+ 0) Backgro-3276122 |                         }
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_unlock();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group();
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   set_next_buddy();
+ 0) Backgro-3276122 |                   __update_load_avg_se();
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_se();
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_se();
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_se();
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   hrtick_update();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               pick_next_task_fair() {
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 put_prev_entity() {
+ 0) Backgro-3276122 |                   check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 set_next_entity() {
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               fpsimd_thread_switch() {
+ 0) Backgro-3276122 |                 __get_cpu_fpsimd_context();
+ 0) Backgro-3276122 |                 fpsimd_save() {
+ 0) Backgro-3276122 |                   have_cpu_fpsimd_context();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 __put_cpu_fpsimd_context();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               hw_breakpoint_thread_switch();
+ 0) Backgro-3276122 |               uao_thread_switch();
+ 0) Backgro-3276122 |               cpu_have_feature();
+ 0) Backgro-3276122 |               erratum_1418040_thread_switch() {
+ 0) Backgro-3276122 |                 this_cpu_has_cap() {
+ 0) Backgro-3276122 |                   is_affected_midr_range_list();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               finish_task_switch() {
+ 0) Backgro-3276122 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |             } /* schedule */
+ 0) Backgro-3276122 |           } /* futex_wait_queue_me */
+ 0) Backgro-3276122 |           _raw_spin_lock();
+ 0) Backgro-3276122 |           __unqueue_futex();
+ 0) Backgro-3276122 |           _raw_spin_unlock();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           hrtimer_cancel() {
+ 0) Backgro-3276122 |             hrtimer_try_to_cancel() {
+ 0) Backgro-3276122 |               hrtimer_active();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |         } /* futex_wait */
+ 0) Backgro-3276122 |       } /* do_futex */
+ 0) Backgro-3276122 |     } /* __arm64_sys_futex */
+ 0) Backgro-3276122 |   } /* el0_svc_common.constprop.0 */
+ 0) Backgro-3276122 | } /* el0_svc_handler */
+ 0) Backgro-3276122 | do_notify_resume() {
+ 0) Backgro-3276122 |   fpsimd_restore_current_state() {
+ 0) Backgro-3276122 |     __get_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     task_fpsimd_load() {
+ 0) Backgro-3276122 |       have_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |     fpsimd_bind_task_to_cpu();
+ 0) Backgro-3276122 |     put_cpu_fpsimd_context() {
+ 0) Backgro-3276122 |       __put_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wake() {
+ 0) Backgro-3276122 |           get_futex_key() {
+ 0) Backgro-3276122 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           hash_futex();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |         }
+ 0) Backgro-3276122 |       }
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       get_timespec64();
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wait() {
+ 0) Backgro-3276122 |           hrtimer_init_sleeper() {
+ 0) Backgro-3276122 |             __hrtimer_init();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           ktime_add_safe();
+ 0) Backgro-3276122 |           futex_wait_setup() {
+ 0) Backgro-3276122 |             get_futex_key() {
+ 0) Backgro-3276122 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |             hash_futex();
+ 0) Backgro-3276122 |             _raw_spin_lock();
+ 0) Backgro-3276122 |             get_futex_value_locked();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           futex_wait_queue_me() {
+ 0) Backgro-3276122 |             _raw_spin_unlock();
+ 0) Backgro-3276122 |             hrtimer_sleeper_start_expires() {
+ 0) Backgro-3276122 |               hrtimer_start_range_ns() {
+ 0) Backgro-3276122 |                 lock_hrtimer_base() {
+ 0) Backgro-3276122 |                   _raw_spin_lock_irqsave();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 get_nohz_timer_target();
+ 0) Backgro-3276122 |                 enqueue_hrtimer();
+ 0) Backgro-3276122 |                 hrtimer_reprogram.constprop.0();
+ 0) Backgro-3276122 |                 _raw_spin_unlock_irqrestore();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |             schedule() {
+ 0) Backgro-3276122 |               rcu_note_context_switch() {
+ 0) Backgro-3276122 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3276122 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 rcu_qs();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               _raw_spin_lock();
+ 0) Backgro-3276122 |               update_rq_clock();
+ 0) Backgro-3276122 |               deactivate_task() {
+ 0) Backgro-3276122 |                 psi_task_change() {
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 dequeue_task_fair() {
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                       cpuacct_charge() {
+ 0) Backgro-3276122 |                         __rcu_read_lock();
+ 0) Backgro-3276122 |                         __rcu_read_unlock();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_lock();
+ 0) Backgro-3276122 |                       __cgroup_account_cputime() {
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Backgro-3276122 |                           cgroup_rstat_updated();
+ 0) Backgro-3276122 |                         }
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_unlock();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group();
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   hrtick_update();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               pick_next_task_fair() {
+ 0) Backgro-3276122 |                 newidle_balance() {
+ 0) Backgro-3276122 |                   __rcu_read_lock();
+ 0) Backgro-3276122 |                   __msecs_to_jiffies();
+ 0) Backgro-3276122 |                   __rcu_read_unlock();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               pick_next_task_idle() {
+ 0) Backgro-3276122 |                 put_prev_task_fair() {
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               finish_task_switch() {
+ 0) Backgro-3276122 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           _raw_spin_lock();
+ 0) Backgro-3276122 |           __unqueue_futex();
+ 0) Backgro-3276122 |           _raw_spin_unlock();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           hrtimer_cancel() {
+ 0) Backgro-3276122 |             hrtimer_try_to_cancel() {
+ 0) Backgro-3276122 |               hrtimer_active();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |         }
+ 0) Backgro-3276122 |       }
+ 0) Backgro-3276122 |     } /* __arm64_sys_futex */
+ 0) Backgro-3276122 |   } /* el0_svc_common.constprop.0 */
+ 0) Backgro-3276122 | } /* el0_svc_handler */
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wake() {
+ 0) Backgro-3276122 |           get_futex_key() {
+ 0) Backgro-3276122 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           hash_futex();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |         }
+ 0) Backgro-3276122 |       }
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wait() {
+ 0) Backgro-3276122 |           futex_wait_setup() {
+ 0) Backgro-3276122 |             get_futex_key() {
+ 0) Backgro-3276122 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |             hash_futex();
+ 0) Backgro-3276122 |             _raw_spin_lock();
+ 0) Backgro-3276122 |             get_futex_value_locked();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           futex_wait_queue_me() {
+ 0) Backgro-3276122 |             _raw_spin_unlock();
+ 0) Backgro-3276122 |             schedule() {
+ 0) Backgro-3276122 |               rcu_note_context_switch() {
+ 0) Backgro-3276122 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3276122 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 rcu_qs();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               _raw_spin_lock();
+ 0) Backgro-3276122 |               update_rq_clock();
+ 0) Backgro-3276122 |               deactivate_task() {
+ 0) Backgro-3276122 |                 psi_task_change() {
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 dequeue_task_fair() {
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                       cpuacct_charge() {
+ 0) Backgro-3276122 |                         __rcu_read_lock();
+ 0) Backgro-3276122 |                         __rcu_read_unlock();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_lock();
+ 0) Backgro-3276122 |                       __cgroup_account_cputime() {
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Backgro-3276122 |                           cgroup_rstat_updated();
+ 0) Backgro-3276122 |                         }
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_unlock();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group();
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   hrtick_update();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               pick_next_task_fair() {
+ 0) Backgro-3276122 |                 newidle_balance() {
+ 0) Backgro-3276122 |                   _raw_spin_unlock();
+ 0) Backgro-3276122 |                   update_blocked_averages() {
+ 0) Backgro-3276122 |                     _raw_spin_lock_irqsave();
+ 0) Backgro-3276122 |                     update_rq_clock();
+ 0) Backgro-3276122 |                     update_rt_rq_load_avg() {
+ 0) Backgro-3276122 |                       __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_dl_rq_load_avg() {
+ 0) Backgro-3276122 |                       __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                       __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                       __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                       __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                       __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     dbs_update_util_handler() {
+ 0) Backgro-3276122 |                       cpufreq_this_cpu_can_update();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     _raw_spin_unlock_irqrestore();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __rcu_read_lock();
+ 0) Backgro-3276122 |                   load_balance() {
+ 0) Backgro-3276122 |                     find_busiest_group() {
+ 0) Backgro-3276122 |                       update_nohz_stats();
+ 0) Backgro-3276122 |                       idle_cpu();
+ 0) Backgro-3276122 |                       update_nohz_stats();
+ 0) Backgro-3276122 |                       idle_cpu();
+ 0) Backgro-3276122 |                       update_nohz_stats();
+ 0) Backgro-3276122 |                       idle_cpu();
+ 0) Backgro-3276122 |                       update_nohz_stats() {
+ 0) Backgro-3276122 |                         update_blocked_averages() {
+ 0) Backgro-3276122 |                           _raw_spin_lock_irqsave();
+ 0) Backgro-3276122 |                           update_rq_clock();
+ 0) Backgro-3276122 |                           update_rt_rq_load_avg() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           update_dl_rq_load_avg() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           __update_load_avg_se() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           __update_load_avg_se() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           dbs_update_util_handler() {
+ 0) Backgro-3276122 |                             cpufreq_this_cpu_can_update();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           __update_load_avg_se() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                           __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                           __update_load_avg_se() {
+ 0) Backgro-3276122 |                             __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                           __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                           dbs_update_util_handler() {
+ 0) Backgro-3276122 |                             cpufreq_this_cpu_can_update();
+ 0) Backgro-3276122 |                           }
+ 0) Backgro-3276122 |                           _raw_spin_unlock_irqrestore();
+ 0) Backgro-3276122 |                         }
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       idle_cpu();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __msecs_to_jiffies();
+ 0) Backgro-3276122 |                   __rcu_read_unlock();
+ 0) Backgro-3276122 |                   _raw_spin_lock();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               pick_next_task_idle() {
+ 0) Backgro-3276122 |                 put_prev_task_fair() {
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               finish_task_switch() {
+ 0) Backgro-3276122 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |             } /* schedule */
+ 0) Backgro-3276122 |           } /* futex_wait_queue_me */
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |         } /* futex_wait */
+ 0) Backgro-3276122 |       } /* do_futex */
+ 0) Backgro-3276122 |     } /* __arm64_sys_futex */
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | do_notify_resume() {
+ 0) Backgro-3276122 |   fpsimd_restore_current_state() {
+ 0) Backgro-3276122 |     __get_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     task_fpsimd_load() {
+ 0) Backgro-3276122 |       have_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |     fpsimd_bind_task_to_cpu();
+ 0) Backgro-3276122 |     put_cpu_fpsimd_context() {
+ 0) Backgro-3276122 |       __put_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wake() {
+ 0) Backgro-3276122 |           get_futex_key() {
+ 0) Backgro-3276122 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           hash_futex();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |         }
+ 0) Backgro-3276122 |       }
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       get_timespec64();
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wait() {
+ 0) Backgro-3276122 |           hrtimer_init_sleeper() {
+ 0) Backgro-3276122 |             __hrtimer_init();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           ktime_add_safe();
+ 0) Backgro-3276122 |           futex_wait_setup() {
+ 0) Backgro-3276122 |             get_futex_key() {
+ 0) Backgro-3276122 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |             hash_futex();
+ 0) Backgro-3276122 |             _raw_spin_lock();
+ 0) Backgro-3276122 |             get_futex_value_locked();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           futex_wait_queue_me() {
+ 0) Backgro-3276122 |             _raw_spin_unlock();
+ 0) Backgro-3276122 |             hrtimer_sleeper_start_expires() {
+ 0) Backgro-3276122 |               hrtimer_start_range_ns() {
+ 0) Backgro-3276122 |                 lock_hrtimer_base() {
+ 0) Backgro-3276122 |                   _raw_spin_lock_irqsave();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 get_nohz_timer_target();
+ 0) Backgro-3276122 |                 enqueue_hrtimer();
+ 0) Backgro-3276122 |                 hrtimer_reprogram.constprop.0();
+ 0) Backgro-3276122 |                 _raw_spin_unlock_irqrestore();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |             schedule() {
+ 0) Backgro-3276122 |               rcu_note_context_switch() {
+ 0) Backgro-3276122 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3276122 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 rcu_qs();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               _raw_spin_lock();
+ 0) Backgro-3276122 |               update_rq_clock();
+ 0) Backgro-3276122 |               deactivate_task() {
+ 0) Backgro-3276122 |                 psi_task_change() {
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 dequeue_task_fair() {
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                       cpuacct_charge() {
+ 0) Backgro-3276122 |                         __rcu_read_lock();
+ 0) Backgro-3276122 |                         __rcu_read_unlock();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_lock();
+ 0) Backgro-3276122 |                       __cgroup_account_cputime() {
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Backgro-3276122 |                           cgroup_rstat_updated();
+ 0) Backgro-3276122 |                         }
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_unlock();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group();
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   set_next_buddy();
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dbs_update_util_handler() {
+ 0) Backgro-3276122 |                     cpufreq_this_cpu_can_update();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   hrtick_update();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               pick_next_task_fair() {
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 put_prev_entity() {
+ 0) Backgro-3276122 |                   check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 set_next_entity() {
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               fpsimd_thread_switch() {
+ 0) Backgro-3276122 |                 __get_cpu_fpsimd_context();
+ 0) Backgro-3276122 |                 fpsimd_save() {
+ 0) Backgro-3276122 |                   have_cpu_fpsimd_context();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 __put_cpu_fpsimd_context();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               hw_breakpoint_thread_switch();
+ 0) Backgro-3276122 |               uao_thread_switch();
+ 0) Backgro-3276122 |               cpu_have_feature();
+ 0) Backgro-3276122 |               erratum_1418040_thread_switch() {
+ 0) Backgro-3276122 |                 this_cpu_has_cap() {
+ 0) Backgro-3276122 |                   is_affected_midr_range_list();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               finish_task_switch() {
+ 0) Backgro-3276122 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |             } /* schedule */
+ 0) Backgro-3276122 |           } /* futex_wait_queue_me */
+ 0) Backgro-3276122 |           _raw_spin_lock();
+ 0) Backgro-3276122 |           __unqueue_futex();
+ 0) Backgro-3276122 |           _raw_spin_unlock();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           hrtimer_cancel() {
+ 0) Backgro-3276122 |             hrtimer_try_to_cancel() {
+ 0) Backgro-3276122 |               hrtimer_active();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |         } /* futex_wait */
+ 0) Backgro-3276122 |       } /* do_futex */
+ 0) Backgro-3276122 |     } /* __arm64_sys_futex */
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | do_notify_resume() {
+ 0) Backgro-3276122 |   fpsimd_restore_current_state() {
+ 0) Backgro-3276122 |     __get_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     task_fpsimd_load() {
+ 0) Backgro-3276122 |       have_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |     fpsimd_bind_task_to_cpu();
+ 0) Backgro-3276122 |     put_cpu_fpsimd_context() {
+ 0) Backgro-3276122 |       __put_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wake() {
+ 0) Backgro-3276122 |           get_futex_key() {
+ 0) Backgro-3276122 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           hash_futex();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |         }
+ 0) Backgro-3276122 |       }
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       get_timespec64();
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wait() {
+ 0) Backgro-3276122 |           hrtimer_init_sleeper() {
+ 0) Backgro-3276122 |             __hrtimer_init();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           ktime_add_safe();
+ 0) Backgro-3276122 |           futex_wait_setup() {
+ 0) Backgro-3276122 |             get_futex_key() {
+ 0) Backgro-3276122 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |             hash_futex();
+ 0) Backgro-3276122 |             _raw_spin_lock();
+ 0) Backgro-3276122 |             get_futex_value_locked();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           futex_wait_queue_me() {
+ 0) Backgro-3276122 |             _raw_spin_unlock();
+ 0) Backgro-3276122 |             hrtimer_sleeper_start_expires() {
+ 0) Backgro-3276122 |               hrtimer_start_range_ns() {
+ 0) Backgro-3276122 |                 lock_hrtimer_base() {
+ 0) Backgro-3276122 |                   _raw_spin_lock_irqsave();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 get_nohz_timer_target();
+ 0) Backgro-3276122 |                 enqueue_hrtimer();
+ 0) Backgro-3276122 |                 hrtimer_reprogram.constprop.0();
+ 0) Backgro-3276122 |                 _raw_spin_unlock_irqrestore();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |             schedule() {
+ 0) Backgro-3276122 |               rcu_note_context_switch() {
+ 0) Backgro-3276122 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3276122 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 rcu_qs();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               _raw_spin_lock();
+ 0) Backgro-3276122 |               update_rq_clock();
+ 0) Backgro-3276122 |               deactivate_task() {
+ 0) Backgro-3276122 |                 psi_task_change() {
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 dequeue_task_fair() {
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                       cpuacct_charge() {
+ 0) Backgro-3276122 |                         __rcu_read_lock();
+ 0) Backgro-3276122 |                         __rcu_read_unlock();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_lock();
+ 0) Backgro-3276122 |                       __cgroup_account_cputime() {
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Backgro-3276122 |                           cgroup_rstat_updated();
+ 0) Backgro-3276122 |                         }
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_unlock();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se() {
+ 0) Backgro-3276122 |                       __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                       __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group();
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   set_next_buddy();
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dbs_update_util_handler() {
+ 0) Backgro-3276122 |                     cpufreq_this_cpu_can_update();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   update_cfs_group() {
+ 0) Backgro-3276122 |                     reweight_entity() {
+ 0) Backgro-3276122 |                       update_curr() {
+ 0) Backgro-3276122 |                         __calc_delta();
+ 0) Backgro-3276122 |                         update_min_vruntime();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   hrtick_update();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               pick_next_task_fair() {
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 update_curr();
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 pick_next_entity() {
+ 0) Backgro-3276122 |                   clear_buddies();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 put_prev_entity() {
+ 0) Backgro-3276122 |                   check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 set_next_entity() {
+ 0) Backgro-3276122 |                   __update_load_avg_se() {
+ 0) Backgro-3276122 |                     __accumulate_pelt_segments();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               check_and_switch_context();
+ 0) Backgro-3276122 |               fpsimd_thread_switch() {
+ 0) Backgro-3276122 |                 __get_cpu_fpsimd_context();
+ 0) Backgro-3276122 |                 fpsimd_save() {
+ 0) Backgro-3276122 |                   have_cpu_fpsimd_context();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 __put_cpu_fpsimd_context();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               hw_breakpoint_thread_switch();
+ 0) Backgro-3276122 |               uao_thread_switch();
+ 0) Backgro-3276122 |               cpu_have_feature();
+ 0) Backgro-3276122 |               erratum_1418040_thread_switch() {
+ 0) Backgro-3276122 |                 this_cpu_has_cap() {
+ 0) Backgro-3276122 |                   is_affected_midr_range_list();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               finish_task_switch() {
+ 0) Backgro-3276122 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |             } /* schedule */
+ 0) Backgro-3276122 |           } /* futex_wait_queue_me */
+ 0) Backgro-3276122 |           _raw_spin_lock();
+ 0) Backgro-3276122 |           __unqueue_futex();
+ 0) Backgro-3276122 |           _raw_spin_unlock();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           hrtimer_cancel() {
+ 0) Backgro-3276122 |             hrtimer_try_to_cancel() {
+ 0) Backgro-3276122 |               hrtimer_active();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |         } /* futex_wait */
+ 0) Backgro-3276122 |       } /* do_futex */
+ 0) Backgro-3276122 |     } /* __arm64_sys_futex */
+ 0) Backgro-3276122 |   } /* el0_svc_common.constprop.0 */
+ 0) Backgro-3276122 | } /* el0_svc_handler */
+ 0) Backgro-3276122 | do_notify_resume() {
+ 0) Backgro-3276122 |   fpsimd_restore_current_state() {
+ 0) Backgro-3276122 |     __get_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     task_fpsimd_load() {
+ 0) Backgro-3276122 |       have_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |     fpsimd_bind_task_to_cpu();
+ 0) Backgro-3276122 |     put_cpu_fpsimd_context() {
+ 0) Backgro-3276122 |       __put_cpu_fpsimd_context();
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wake() {
+ 0) Backgro-3276122 |           get_futex_key() {
+ 0) Backgro-3276122 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           hash_futex();
+ 0) Backgro-3276122 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |         }
+ 0) Backgro-3276122 |       }
+ 0) Backgro-3276122 |     }
+ 0) Backgro-3276122 |   }
+ 0) Backgro-3276122 | }
+ 0) Backgro-3276122 | post_ttbr_update_workaround();
+ 0) Backgro-3276122 | el0_svc_handler() {
+ 0) Backgro-3276122 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3276122 |     __arm64_sys_futex() {
+ 0) Backgro-3276122 |       do_futex() {
+ 0) Backgro-3276122 |         futex_wait() {
+ 0) Backgro-3276122 |           futex_wait_setup() {
+ 0) Backgro-3276122 |             get_futex_key() {
+ 0) Backgro-3276122 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3276122 |             }
+ 0) Backgro-3276122 |             hash_futex();
+ 0) Backgro-3276122 |             _raw_spin_lock();
+ 0) Backgro-3276122 |             get_futex_value_locked();
+ 0) Backgro-3276122 |           }
+ 0) Backgro-3276122 |           futex_wait_queue_me() {
+ 0) Backgro-3276122 |             _raw_spin_unlock();
+ 0) Backgro-3276122 |             schedule() {
+ 0) Backgro-3276122 |               rcu_note_context_switch() {
+ 0) Backgro-3276122 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3276122 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 rcu_qs();
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               _raw_spin_lock();
+ 0) Backgro-3276122 |               update_rq_clock();
+ 0) Backgro-3276122 |               deactivate_task() {
+ 0) Backgro-3276122 |                 psi_task_change() {
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                   record_times.isra.0();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |                 dequeue_task_fair() {
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                       cpuacct_charge() {
+ 0) Backgro-3276122 |                         __rcu_read_lock();
+ 0) Backgro-3276122 |                         __rcu_read_unlock();
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_lock();
+ 0) Backgro-3276122 |                       __cgroup_account_cputime() {
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Backgro-3276122 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Backgro-3276122 |                           cgroup_rstat_updated();
+ 0) Backgro-3276122 |                         }
+ 0) Backgro-3276122 |                       }
+ 0) Backgro-3276122 |                       __rcu_read_unlock();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group();
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   dequeue_entity() {
+ 0) Backgro-3276122 |                     update_curr() {
+ 0) Backgro-3276122 |                       __calc_delta();
+ 0) Backgro-3276122 |                       update_min_vruntime();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     __update_load_avg_se();
+ 0) Backgro-3276122 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3276122 |                     clear_buddies();
+ 0) Backgro-3276122 |                     update_cfs_group() {
+ 0) Backgro-3276122 |                       reweight_entity();
+ 0) Backgro-3276122 |                     }
+ 0) Backgro-3276122 |                     update_min_vruntime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   hrtick_update();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               pick_next_task_fair() {
+ 0) Backgro-3276122 |                 newidle_balance() {
+ 0) Backgro-3276122 |                   __rcu_read_lock();
+ 0) Backgro-3276122 |                   __msecs_to_jiffies();
+ 0) Backgro-3276122 |                   __rcu_read_unlock();
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }
+ 0) Backgro-3276122 |               pick_next_task_idle() {
+ 0) Backgro-3276122 |                 put_prev_task_fair() {
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                   put_prev_entity() {
+ 0) Backgro-3276122 |                     check_cfs_rq_runtime();
+ 0) Backgro-3276122 |                   }
+ 0) Backgro-3276122 |                 }
+ 0) Backgro-3276122 |               }

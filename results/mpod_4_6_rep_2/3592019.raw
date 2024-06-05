@@ -1,0 +1,1145 @@
+ 0) Backgro-3592019 |               finish_task_switch() {
+ 0) Backgro-3592019 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |             } /* schedule */
+ 0) Backgro-3592019 |           } /* futex_wait_queue_me */
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |         } /* futex_wait */
+ 0) Backgro-3592019 |       } /* do_futex */
+ 0) Backgro-3592019 |     } /* __arm64_sys_futex */
+ 0) Backgro-3592019 |   } /* el0_svc_common.constprop.0 */
+ 0) Backgro-3592019 | } /* el0_svc_handler */
+ 0) Backgro-3592019 | do_notify_resume() {
+ 0) Backgro-3592019 |   fpsimd_restore_current_state() {
+ 0) Backgro-3592019 |     __get_cpu_fpsimd_context();
+ 0) Backgro-3592019 |     task_fpsimd_load() {
+ 0) Backgro-3592019 |       have_cpu_fpsimd_context();
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |     fpsimd_bind_task_to_cpu();
+ 0) Backgro-3592019 |     put_cpu_fpsimd_context() {
+ 0) Backgro-3592019 |       __put_cpu_fpsimd_context();
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wake() {
+ 0) Backgro-3592019 |           get_futex_key() {
+ 0) Backgro-3592019 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           hash_futex();
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |         }
+ 0) Backgro-3592019 |       }
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       get_timespec64() {
+ 0) Backgro-3592019 |       }
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wait() {
+ 0) Backgro-3592019 |           hrtimer_init_sleeper() {
+ 0) Backgro-3592019 |             __hrtimer_init();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           ktime_add_safe();
+ 0) Backgro-3592019 |           futex_wait_setup() {
+ 0) Backgro-3592019 |             get_futex_key() {
+ 0) Backgro-3592019 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |             hash_futex();
+ 0) Backgro-3592019 |             _raw_spin_lock();
+ 0) Backgro-3592019 |             get_futex_value_locked();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           futex_wait_queue_me() {
+ 0) Backgro-3592019 |             _raw_spin_unlock();
+ 0) Backgro-3592019 |             hrtimer_sleeper_start_expires() {
+ 0) Backgro-3592019 |               hrtimer_start_range_ns() {
+ 0) Backgro-3592019 |                 lock_hrtimer_base() {
+ 0) Backgro-3592019 |                   _raw_spin_lock_irqsave();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 get_nohz_timer_target();
+ 0) Backgro-3592019 |                 enqueue_hrtimer();
+ 0) Backgro-3592019 |                 hrtimer_reprogram.constprop.0() {
+ 0) Backgro-3592019 |                   tick_program_event() {
+ 0) Backgro-3592019 |                     clockevents_program_event() {
+ 0) Backgro-3592019 |                       ktime_get() {
+ 0) Backgro-3592019 |                         arch_counter_read();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                       clockevents_program_min_delta() {
+ 0) Backgro-3592019 |                         ktime_get() {
+ 0) Backgro-3592019 |                           arch_counter_read();
+ 0) Backgro-3592019 |                         }
+ 0) Backgro-3592019 |                         arch_timer_set_next_event_phys();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 _raw_spin_unlock_irqrestore() {
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           _raw_spin_lock();
+ 0) Backgro-3592019 |           __unqueue_futex();
+ 0) Backgro-3592019 |           _raw_spin_unlock();
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |           hrtimer_cancel() {
+ 0) Backgro-3592019 |             hrtimer_try_to_cancel() {
+ 0) Backgro-3592019 |               hrtimer_active();
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |         }
+ 0) Backgro-3592019 |       }
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wake() {
+ 0) Backgro-3592019 |           get_futex_key() {
+ 0) Backgro-3592019 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           hash_futex();
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |         }
+ 0) Backgro-3592019 |       }
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       get_timespec64();
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wait() {
+ 0) Backgro-3592019 |           hrtimer_init_sleeper() {
+ 0) Backgro-3592019 |             __hrtimer_init();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           ktime_add_safe();
+ 0) Backgro-3592019 |           futex_wait_setup() {
+ 0) Backgro-3592019 |             get_futex_key() {
+ 0) Backgro-3592019 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |             hash_futex();
+ 0) Backgro-3592019 |             _raw_spin_lock();
+ 0) Backgro-3592019 |             get_futex_value_locked();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           futex_wait_queue_me() {
+ 0) Backgro-3592019 |             _raw_spin_unlock();
+ 0) Backgro-3592019 |             hrtimer_sleeper_start_expires() {
+ 0) Backgro-3592019 |               hrtimer_start_range_ns() {
+ 0) Backgro-3592019 |                 lock_hrtimer_base() {
+ 0) Backgro-3592019 |                   _raw_spin_lock_irqsave();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 get_nohz_timer_target();
+ 0) Backgro-3592019 |                 enqueue_hrtimer();
+ 0) Backgro-3592019 |                 hrtimer_reprogram.constprop.0();
+ 0) Backgro-3592019 |                 _raw_spin_unlock_irqrestore();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |             schedule() {
+ 0) Backgro-3592019 |               rcu_note_context_switch() {
+ 0) Backgro-3592019 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3592019 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 rcu_qs();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               _raw_spin_lock();
+ 0) Backgro-3592019 |               update_rq_clock();
+ 0) Backgro-3592019 |               deactivate_task() {
+ 0) Backgro-3592019 |                 psi_task_change() {
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 dequeue_task_fair() {
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                       cpuacct_charge() {
+ 0) Backgro-3592019 |                         __rcu_read_lock();
+ 0) Backgro-3592019 |                         __rcu_read_unlock();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                       __rcu_read_lock();
+ 0) Backgro-3592019 |                       __cgroup_account_cputime() {
+ 0) Backgro-3592019 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Backgro-3592019 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Backgro-3592019 |                           cgroup_rstat_updated();
+ 0) Backgro-3592019 |                         }
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                       __rcu_read_unlock();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group();
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   set_next_buddy();
+ 0) Backgro-3592019 |                   __update_load_avg_se() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   update_cfs_group() {
+ 0) Backgro-3592019 |                     reweight_entity() {
+ 0) Backgro-3592019 |                       update_curr() {
+ 0) Backgro-3592019 |                         __calc_delta();
+ 0) Backgro-3592019 |                         update_min_vruntime();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_se() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   update_cfs_group() {
+ 0) Backgro-3592019 |                     reweight_entity() {
+ 0) Backgro-3592019 |                       update_curr() {
+ 0) Backgro-3592019 |                         __calc_delta();
+ 0) Backgro-3592019 |                         update_min_vruntime();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_se() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   update_cfs_group() {
+ 0) Backgro-3592019 |                     reweight_entity() {
+ 0) Backgro-3592019 |                       update_curr() {
+ 0) Backgro-3592019 |                         __calc_delta();
+ 0) Backgro-3592019 |                         update_min_vruntime();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_se() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dbs_update_util_handler() {
+ 0) Backgro-3592019 |                     cpufreq_this_cpu_can_update();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   update_cfs_group() {
+ 0) Backgro-3592019 |                     reweight_entity() {
+ 0) Backgro-3592019 |                       update_curr() {
+ 0) Backgro-3592019 |                         __calc_delta();
+ 0) Backgro-3592019 |                         update_min_vruntime();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   hrtick_update();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               pick_next_task_fair() {
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 put_prev_entity() {
+ 0) Backgro-3592019 |                   check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 set_next_entity() {
+ 0) Backgro-3592019 |                   __update_load_avg_se() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               fpsimd_thread_switch() {
+ 0) Backgro-3592019 |                 __get_cpu_fpsimd_context();
+ 0) Backgro-3592019 |                 fpsimd_save() {
+ 0) Backgro-3592019 |                   have_cpu_fpsimd_context();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 __put_cpu_fpsimd_context();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               hw_breakpoint_thread_switch();
+ 0) Backgro-3592019 |               uao_thread_switch();
+ 0) Backgro-3592019 |               cpu_have_feature();
+ 0) Backgro-3592019 |               erratum_1418040_thread_switch() {
+ 0) Backgro-3592019 |                 this_cpu_has_cap() {
+ 0) Backgro-3592019 |                   is_affected_midr_range_list();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               finish_task_switch() {
+ 0) Backgro-3592019 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |             } /* schedule */
+ 0) Backgro-3592019 |           } /* futex_wait_queue_me */
+ 0) Backgro-3592019 |           _raw_spin_lock();
+ 0) Backgro-3592019 |           __unqueue_futex();
+ 0) Backgro-3592019 |           _raw_spin_unlock();
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |           hrtimer_cancel() {
+ 0) Backgro-3592019 |             hrtimer_try_to_cancel() {
+ 0) Backgro-3592019 |               hrtimer_active();
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |         } /* futex_wait */
+ 0) Backgro-3592019 |       } /* do_futex */
+ 0) Backgro-3592019 |     } /* __arm64_sys_futex */
+ 0) Backgro-3592019 |   } /* el0_svc_common.constprop.0 */
+ 0) Backgro-3592019 | } /* el0_svc_handler */
+ 0) Backgro-3592019 | do_notify_resume() {
+ 0) Backgro-3592019 |   fpsimd_restore_current_state() {
+ 0) Backgro-3592019 |     __get_cpu_fpsimd_context();
+ 0) Backgro-3592019 |     task_fpsimd_load() {
+ 0) Backgro-3592019 |       have_cpu_fpsimd_context();
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |     fpsimd_bind_task_to_cpu();
+ 0) Backgro-3592019 |     put_cpu_fpsimd_context() {
+ 0) Backgro-3592019 |       __put_cpu_fpsimd_context();
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wake() {
+ 0) Backgro-3592019 |           get_futex_key() {
+ 0) Backgro-3592019 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           hash_futex();
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |         }
+ 0) Backgro-3592019 |       }
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       get_timespec64();
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wait() {
+ 0) Backgro-3592019 |           hrtimer_init_sleeper() {
+ 0) Backgro-3592019 |             __hrtimer_init();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           ktime_add_safe();
+ 0) Backgro-3592019 |           futex_wait_setup() {
+ 0) Backgro-3592019 |             get_futex_key() {
+ 0) Backgro-3592019 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |             hash_futex();
+ 0) Backgro-3592019 |             _raw_spin_lock();
+ 0) Backgro-3592019 |             get_futex_value_locked();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           futex_wait_queue_me() {
+ 0) Backgro-3592019 |             _raw_spin_unlock();
+ 0) Backgro-3592019 |             hrtimer_sleeper_start_expires() {
+ 0) Backgro-3592019 |               hrtimer_start_range_ns() {
+ 0) Backgro-3592019 |                 lock_hrtimer_base() {
+ 0) Backgro-3592019 |                   _raw_spin_lock_irqsave();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 get_nohz_timer_target();
+ 0) Backgro-3592019 |                 enqueue_hrtimer();
+ 0) Backgro-3592019 |                 hrtimer_reprogram.constprop.0();
+ 0) Backgro-3592019 |                 _raw_spin_unlock_irqrestore();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |             schedule() {
+ 0) Backgro-3592019 |               rcu_note_context_switch() {
+ 0) Backgro-3592019 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3592019 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 rcu_qs();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               _raw_spin_lock();
+ 0) Backgro-3592019 |               update_rq_clock();
+ 0) Backgro-3592019 |               deactivate_task() {
+ 0) Backgro-3592019 |                 psi_task_change() {
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 dequeue_task_fair() {
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                       cpuacct_charge() {
+ 0) Backgro-3592019 |                         __rcu_read_lock();
+ 0) Backgro-3592019 |                         __rcu_read_unlock();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                       __rcu_read_lock();
+ 0) Backgro-3592019 |                       __cgroup_account_cputime() {
+ 0) Backgro-3592019 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Backgro-3592019 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Backgro-3592019 |                           cgroup_rstat_updated();
+ 0) Backgro-3592019 |                         }
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                       __rcu_read_unlock();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group();
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       __calc_delta();
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group() {
+ 0) Backgro-3592019 |                       reweight_entity();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       __calc_delta();
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group() {
+ 0) Backgro-3592019 |                       reweight_entity();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       __calc_delta();
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group() {
+ 0) Backgro-3592019 |                       reweight_entity();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       __calc_delta();
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group() {
+ 0) Backgro-3592019 |                       reweight_entity();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   hrtick_update();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               pick_next_task_fair() {
+ 0) Backgro-3592019 |                 newidle_balance() {
+ 0) Backgro-3592019 |                   _raw_spin_unlock();
+ 0) Backgro-3592019 |                   update_blocked_averages() {
+ 0) Backgro-3592019 |                     _raw_spin_lock_irqsave();
+ 0) Backgro-3592019 |                     update_rq_clock();
+ 0) Backgro-3592019 |                     update_rt_rq_load_avg() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_dl_rq_load_avg() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_se() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_se() {
+ 0) Backgro-3592019 |                       __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     dbs_update_util_handler() {
+ 0) Backgro-3592019 |                       cpufreq_this_cpu_can_update();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     _raw_spin_unlock_irqrestore();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __rcu_read_lock();
+ 0) Backgro-3592019 |                   load_balance() {
+ 0) Backgro-3592019 |                     find_busiest_group() {
+ 0) Backgro-3592019 |                       update_nohz_stats();
+ 0) Backgro-3592019 |                       idle_cpu();
+ 0) Backgro-3592019 |                       update_nohz_stats();
+ 0) Backgro-3592019 |                       update_nohz_stats();
+ 0) Backgro-3592019 |                       idle_cpu();
+ 0) Backgro-3592019 |                       update_nohz_stats();
+ 0) Backgro-3592019 |                       idle_cpu();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __msecs_to_jiffies();
+ 0) Backgro-3592019 |                   __rcu_read_unlock();
+ 0) Backgro-3592019 |                   _raw_spin_lock();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               pick_next_task_idle() {
+ 0) Backgro-3592019 |                 put_prev_task_fair() {
+ 0) Backgro-3592019 |                   put_prev_entity() {
+ 0) Backgro-3592019 |                     check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   put_prev_entity() {
+ 0) Backgro-3592019 |                     check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   put_prev_entity() {
+ 0) Backgro-3592019 |                     check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   put_prev_entity() {
+ 0) Backgro-3592019 |                     check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   put_prev_entity() {
+ 0) Backgro-3592019 |                     check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               finish_task_switch() {
+ 0) Backgro-3592019 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           _raw_spin_lock();
+ 0) Backgro-3592019 |           __unqueue_futex();
+ 0) Backgro-3592019 |           _raw_spin_unlock();
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |           hrtimer_cancel() {
+ 0) Backgro-3592019 |             hrtimer_try_to_cancel() {
+ 0) Backgro-3592019 |               hrtimer_active();
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |         }
+ 0) Backgro-3592019 |       }
+ 0) Backgro-3592019 |     } /* __arm64_sys_futex */
+ 0) Backgro-3592019 |   } /* el0_svc_common.constprop.0 */
+ 0) Backgro-3592019 | } /* el0_svc_handler */
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wake() {
+ 0) Backgro-3592019 |           get_futex_key() {
+ 0) Backgro-3592019 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           hash_futex();
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |         }
+ 0) Backgro-3592019 |       }
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wait() {
+ 0) Backgro-3592019 |           futex_wait_setup() {
+ 0) Backgro-3592019 |             get_futex_key() {
+ 0) Backgro-3592019 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |             hash_futex();
+ 0) Backgro-3592019 |             _raw_spin_lock();
+ 0) Backgro-3592019 |             get_futex_value_locked();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           futex_wait_queue_me() {
+ 0) Backgro-3592019 |             _raw_spin_unlock();
+ 0) Backgro-3592019 |             schedule() {
+ 0) Backgro-3592019 |               rcu_note_context_switch() {
+ 0) Backgro-3592019 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3592019 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 rcu_qs();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               _raw_spin_lock();
+ 0) Backgro-3592019 |               update_rq_clock();
+ 0) Backgro-3592019 |               deactivate_task() {
+ 0) Backgro-3592019 |                 psi_task_change() {
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 dequeue_task_fair() {
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                       cpuacct_charge() {
+ 0) Backgro-3592019 |                         __rcu_read_lock();
+ 0) Backgro-3592019 |                         __rcu_read_unlock();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                       __rcu_read_lock();
+ 0) Backgro-3592019 |                       __cgroup_account_cputime() {
+ 0) Backgro-3592019 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Backgro-3592019 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Backgro-3592019 |                           cgroup_rstat_updated();
+ 0) Backgro-3592019 |                         }
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                       __rcu_read_unlock();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group();
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       __calc_delta();
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group() {
+ 0) Backgro-3592019 |                       reweight_entity();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       __calc_delta();
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group() {
+ 0) Backgro-3592019 |                       reweight_entity();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       __calc_delta();
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group() {
+ 0) Backgro-3592019 |                       reweight_entity();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       __calc_delta();
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group() {
+ 0) Backgro-3592019 |                       reweight_entity();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   hrtick_update();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               pick_next_task_fair() {
+ 0) Backgro-3592019 |                 newidle_balance() {
+ 0) Backgro-3592019 |                   __rcu_read_lock();
+ 0) Backgro-3592019 |                   __msecs_to_jiffies();
+ 0) Backgro-3592019 |                   __rcu_read_unlock();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               pick_next_task_idle() {
+ 0) Backgro-3592019 |                 put_prev_task_fair() {
+ 0) Backgro-3592019 |                   put_prev_entity() {
+ 0) Backgro-3592019 |                     check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   put_prev_entity() {
+ 0) Backgro-3592019 |                     check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   put_prev_entity() {
+ 0) Backgro-3592019 |                     check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   put_prev_entity() {
+ 0) Backgro-3592019 |                     check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   put_prev_entity() {
+ 0) Backgro-3592019 |                     check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               finish_task_switch() {
+ 0) Backgro-3592019 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |             } /* schedule */
+ 0) Backgro-3592019 |           } /* futex_wait_queue_me */
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |         } /* futex_wait */
+ 0) Backgro-3592019 |       } /* do_futex */
+ 0) Backgro-3592019 |     } /* __arm64_sys_futex */
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | do_notify_resume() {
+ 0) Backgro-3592019 |   fpsimd_restore_current_state() {
+ 0) Backgro-3592019 |     __get_cpu_fpsimd_context();
+ 0) Backgro-3592019 |     task_fpsimd_load() {
+ 0) Backgro-3592019 |       have_cpu_fpsimd_context();
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |     fpsimd_bind_task_to_cpu();
+ 0) Backgro-3592019 |     put_cpu_fpsimd_context() {
+ 0) Backgro-3592019 |       __put_cpu_fpsimd_context();
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wake() {
+ 0) Backgro-3592019 |           get_futex_key() {
+ 0) Backgro-3592019 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           hash_futex();
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |         }
+ 0) Backgro-3592019 |       }
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       get_timespec64();
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wait() {
+ 0) Backgro-3592019 |           hrtimer_init_sleeper() {
+ 0) Backgro-3592019 |             __hrtimer_init();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           ktime_add_safe();
+ 0) Backgro-3592019 |           futex_wait_setup() {
+ 0) Backgro-3592019 |             get_futex_key() {
+ 0) Backgro-3592019 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |             hash_futex();
+ 0) Backgro-3592019 |             _raw_spin_lock();
+ 0) Backgro-3592019 |             get_futex_value_locked();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           futex_wait_queue_me() {
+ 0) Backgro-3592019 |             _raw_spin_unlock();
+ 0) Backgro-3592019 |             hrtimer_sleeper_start_expires() {
+ 0) Backgro-3592019 |               hrtimer_start_range_ns() {
+ 0) Backgro-3592019 |                 lock_hrtimer_base() {
+ 0) Backgro-3592019 |                   _raw_spin_lock_irqsave();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 get_nohz_timer_target();
+ 0) Backgro-3592019 |                 enqueue_hrtimer();
+ 0) Backgro-3592019 |                 hrtimer_reprogram.constprop.0() {
+ 0) Backgro-3592019 |                   tick_program_event() {
+ 0) Backgro-3592019 |                     clockevents_program_event() {
+ 0) Backgro-3592019 |                       ktime_get() {
+ 0) Backgro-3592019 |                         arch_counter_read();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                       clockevents_program_min_delta() {
+ 0) Backgro-3592019 |                         ktime_get() {
+ 0) Backgro-3592019 |                           arch_counter_read();
+ 0) Backgro-3592019 |                         }
+ 0) Backgro-3592019 |                         arch_timer_set_next_event_phys();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 _raw_spin_unlock_irqrestore() {
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           _raw_spin_lock();
+ 0) Backgro-3592019 |           __unqueue_futex();
+ 0) Backgro-3592019 |           _raw_spin_unlock();
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |           hrtimer_cancel() {
+ 0) Backgro-3592019 |             hrtimer_try_to_cancel() {
+ 0) Backgro-3592019 |               hrtimer_active();
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |         }
+ 0) Backgro-3592019 |       }
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wake() {
+ 0) Backgro-3592019 |           get_futex_key() {
+ 0) Backgro-3592019 |             get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           hash_futex();
+ 0) Backgro-3592019 |           drop_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |         }
+ 0) Backgro-3592019 |       }
+ 0) Backgro-3592019 |     }
+ 0) Backgro-3592019 |   }
+ 0) Backgro-3592019 | }
+ 0) Backgro-3592019 | post_ttbr_update_workaround();
+ 0) Backgro-3592019 | el0_svc_handler() {
+ 0) Backgro-3592019 |   el0_svc_common.constprop.0() {
+ 0) Backgro-3592019 |     __arm64_sys_futex() {
+ 0) Backgro-3592019 |       get_timespec64();
+ 0) Backgro-3592019 |       do_futex() {
+ 0) Backgro-3592019 |         futex_wait() {
+ 0) Backgro-3592019 |           hrtimer_init_sleeper() {
+ 0) Backgro-3592019 |             __hrtimer_init();
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           ktime_add_safe();
+ 0) Backgro-3592019 |           futex_wait_setup() {
+ 0) Backgro-3592019 |             get_futex_key() {
+ 0) Backgro-3592019 |               get_futex_key_refs.isra.0();
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |             hash_futex();
+ 0) Backgro-3592019 |             _raw_spin_lock();
+ 0) Backgro-3592019 |             get_futex_value_locked() {
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |           }
+ 0) Backgro-3592019 |           futex_wait_queue_me() {
+ 0) Backgro-3592019 |             _raw_spin_unlock() {
+ 0) Backgro-3592019 |               rcu_note_context_switch() {
+ 0) Backgro-3592019 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3592019 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 rcu_qs();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               _raw_spin_lock();
+ 0) Backgro-3592019 |               update_rq_clock();
+ 0) Backgro-3592019 |               pick_next_task_fair() {
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 put_prev_entity() {
+ 0) Backgro-3592019 |                   update_curr();
+ 0) Backgro-3592019 |                   check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   __enqueue_entity();
+ 0) Backgro-3592019 |                   __update_load_avg_se();
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 set_next_entity() {
+ 0) Backgro-3592019 |                   __update_load_avg_se();
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               fpsimd_thread_switch() {
+ 0) Backgro-3592019 |                 __get_cpu_fpsimd_context();
+ 0) Backgro-3592019 |                 fpsimd_save() {
+ 0) Backgro-3592019 |                   have_cpu_fpsimd_context();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 __put_cpu_fpsimd_context();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               hw_breakpoint_thread_switch();
+ 0) Backgro-3592019 |               uao_thread_switch();
+ 0) Backgro-3592019 |               cpu_have_feature();
+ 0) Backgro-3592019 |               erratum_1418040_thread_switch() {
+ 0) Backgro-3592019 |                 this_cpu_has_cap() {
+ 0) Backgro-3592019 |                   is_affected_midr_range_list();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               finish_task_switch() {
+ 0) Backgro-3592019 |                 _raw_spin_unlock_irq();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |             } /* _raw_spin_unlock */
+ 0) Backgro-3592019 |             hrtimer_sleeper_start_expires() {
+ 0) Backgro-3592019 |               hrtimer_start_range_ns() {
+ 0) Backgro-3592019 |                 lock_hrtimer_base() {
+ 0) Backgro-3592019 |                   _raw_spin_lock_irqsave();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 get_nohz_timer_target();
+ 0) Backgro-3592019 |                 enqueue_hrtimer();
+ 0) Backgro-3592019 |                 hrtimer_reprogram.constprop.0();
+ 0) Backgro-3592019 |                 _raw_spin_unlock_irqrestore();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |             }
+ 0) Backgro-3592019 |             schedule() {
+ 0) Backgro-3592019 |               rcu_note_context_switch() {
+ 0) Backgro-3592019 |                 rcu_preempt_deferred_qs() {
+ 0) Backgro-3592019 |                   rcu_preempt_need_deferred_qs();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 rcu_qs();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               _raw_spin_lock();
+ 0) Backgro-3592019 |               update_rq_clock();
+ 0) Backgro-3592019 |               deactivate_task() {
+ 0) Backgro-3592019 |                 psi_task_change() {
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                   record_times.isra.0();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 dequeue_task_fair() {
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                       cpuacct_charge() {
+ 0) Backgro-3592019 |                         __rcu_read_lock();
+ 0) Backgro-3592019 |                         __rcu_read_unlock();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                       __rcu_read_lock();
+ 0) Backgro-3592019 |                       __cgroup_account_cputime() {
+ 0) Backgro-3592019 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Backgro-3592019 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Backgro-3592019 |                           cgroup_rstat_updated();
+ 0) Backgro-3592019 |                         }
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                       __rcu_read_unlock();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group();
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       __calc_delta();
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group() {
+ 0) Backgro-3592019 |                       reweight_entity();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   dequeue_entity() {
+ 0) Backgro-3592019 |                     update_curr() {
+ 0) Backgro-3592019 |                       __calc_delta();
+ 0) Backgro-3592019 |                       update_min_vruntime();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     __update_load_avg_se();
+ 0) Backgro-3592019 |                     __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                     clear_buddies();
+ 0) Backgro-3592019 |                     update_cfs_group() {
+ 0) Backgro-3592019 |                       reweight_entity();
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                     update_min_vruntime();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   set_next_buddy();
+ 0) Backgro-3592019 |                   __update_load_avg_se();
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                   update_cfs_group() {
+ 0) Backgro-3592019 |                     reweight_entity() {
+ 0) Backgro-3592019 |                       update_curr() {
+ 0) Backgro-3592019 |                         __calc_delta();
+ 0) Backgro-3592019 |                         update_min_vruntime();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_se();
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                   update_cfs_group() {
+ 0) Backgro-3592019 |                     reweight_entity() {
+ 0) Backgro-3592019 |                       update_curr() {
+ 0) Backgro-3592019 |                         __calc_delta();
+ 0) Backgro-3592019 |                         update_min_vruntime();
+ 0) Backgro-3592019 |                       }
+ 0) Backgro-3592019 |                     }
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   hrtick_update();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               pick_next_task_fair() {
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 update_curr();
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   wakeup_preempt_entity.isra.0();
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 pick_next_entity() {
+ 0) Backgro-3592019 |                   clear_buddies();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 put_prev_entity() {
+ 0) Backgro-3592019 |                   check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 set_next_entity() {
+ 0) Backgro-3592019 |                   __update_load_avg_se() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 put_prev_entity() {
+ 0) Backgro-3592019 |                   check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 set_next_entity() {
+ 0) Backgro-3592019 |                   __update_load_avg_se() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 put_prev_entity() {
+ 0) Backgro-3592019 |                   check_cfs_rq_runtime();
+ 0) Backgro-3592019 |                   check_spread.isra.0.part.0();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 set_next_entity() {
+ 0) Backgro-3592019 |                   __update_load_avg_se() {
+ 0) Backgro-3592019 |                     __accumulate_pelt_segments();
+ 0) Backgro-3592019 |                   }
+ 0) Backgro-3592019 |                   __update_load_avg_cfs_rq();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               check_and_switch_context();
+ 0) Backgro-3592019 |               fpsimd_thread_switch() {
+ 0) Backgro-3592019 |                 __get_cpu_fpsimd_context();
+ 0) Backgro-3592019 |                 fpsimd_save() {
+ 0) Backgro-3592019 |                   have_cpu_fpsimd_context();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |                 __put_cpu_fpsimd_context();
+ 0) Backgro-3592019 |               }
+ 0) Backgro-3592019 |               hw_breakpoint_thread_switch();
+ 0) Backgro-3592019 |               uao_thread_switch();
+ 0) Backgro-3592019 |               cpu_have_feature();
+ 0) Backgro-3592019 |               erratum_1418040_thread_switch() {
+ 0) Backgro-3592019 |                 this_cpu_has_cap() {
+ 0) Backgro-3592019 |                   is_affected_midr_range_list();
+ 0) Backgro-3592019 |                 }
+ 0) Backgro-3592019 |               }

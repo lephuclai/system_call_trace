@@ -1,132 +1,135 @@
-This is a repository containing the methodology for some experiments
-used to evaluate one aspect of container isolation: the attack surface
-to the host kernel.  More specifically, these experiments measure how
-many kernel functions are accessed by an application as it runs and
-how complex those functions are.
+# system_call_trace
 
-The script `runtest.bash` performs a run of a test on one of the
-Docker containers that we have provided in the
-[nabla-demo-apps](https://github.com/nabla-containers/nabla-demo-apps)
-repository.  Currently this consists of:
+Originally from: https://github.com/nabla-containers/nabla-measurements
 
-* [**node-express**][1]: a node.js express application 
-* [**redis-test**][2]: a redis key/value server
-* [**python-tornado**][3]: a Python tornado web server
+## Ftrace
 
-Each run of `runtest.bash` sets up the kernel `ftrace` facility, runs
-the container, turns on tracing for the relevant `pid`s, offers load,
-cleans up and processes the results.  The raw and processed output
-ends up in a directory for later perusal.
+Bài đo sử dụng `ftrace`, một công cụ có sẵn của Linux kernel. Để kiểm tra xem `ftrace` có sẵn sàng hay không ta sử dụng lệnh:
 
-The easiest way to replicate a test is to run commands of the form
-`./runtest.bash <RUNTIME> <CONTAINER> <OUTPUT_DIR>`.  RUNTIME can
-currently be `runc` (default docker), `runnc` (nabla), `kata` (kata
-containers), `katafc` (kata containers with firecracker), `runsc`
-(gvisor), or `runsck` (gvisor in kvm mode), and CONTAINER is one of
-those specified above.  Here are some examples:
+```bash
+mount | grep tracefs
+#expected results: none on /sys/kernel/tracing type tracefs (rw,relatime,seclabel)
+```
 
-    sudo ./runtest.bash runc nablact/node-express results/docker-node-express
-    sudo ./runtest.bash runnc nablact/node-express results/nabla-node-express
-    sudo ./runtest.bash kata nablact/node-express results/kata-node-express
-    sudo ./runtest.bash katafc nablact/node-express results/katafc-node-express
-    sudo ./runtest.bash runsc nablact/node-express results/gvisor-node-express
-    sudo ./runtest.bash runsck nablact/node-express results/gvisork-node-express
+Để thực hiện các thao tác thiết lập `ftrace`, ta phải chuyển sang root user thông qua lệnh `sudo su` , chuyển tới đường dẫn `/sys/kernel/tracing` :
+
+```bash
+cd /sys/kernel/tracing
+```
+
+Thực hiện thiết lập ftrace bằng cách đọc ghi các file tại `/sys/kernel/tracing` . Ví dụ:
+
+```bash
+#turn tracing on:
+echo 1 > tracing_on
+```
+
+Kết quả trace sẽ được lưu ở trong file `/sys/kernel/tracing/trace`
+
+More on ftrace: [Analyze the Linux kernel with ftrace | Opensource.com](https://opensource.com/article/21/7/linux-kernel-ftrace)
+
+## Các thành phần chính
+
+- `syscall.bash`: Dùng để thiết lập công cụ ftrace và tiến hành bài test đo số lượng kernel system call của 2 service flask-web và mongodb
+- `/filter`: Thư mục chứa các chương trình dùng để xử lý kết quả từ ftrace
+- `/results`: Thư mục chứa kết quả đo
+- `get_results.py`: Chương trình python sử dụng để in kết quả đo
+- `syscall.py`: Chương trình này được chạy ở master node, tự động triển khai các service và lấy PID của các service đó tại node worker
+
+## Thực hiện bài đo
+
+Tại worker node, ta tìm process ID (PID) của các service flask-web và mongo. Sau đó sử dụng lệnh sau để thực hiện bài đo:
+
+```bash
+sudo ./syscall.bash <mongodb PID> <flask-web PID> <result directory>
+
+#example
+sudo ./syscall.bash 1577438 1577499 results/multipod_rep_1
+```
+
+`<result directory>` nên được đặt theo cú pháp: results/<folder chứa kết quả của lần đo>. Ví dụ như là `results/multipod_rep_1` do mỗi lần đo có nhiều file lưu thông tin của process và kết quả trace được tạo ra.
+
+Kết quả đo sẽ được lưu trong đường dẫn `<result directory>` mà ta nhập ở trong lệnh. Danh sách các kernel function call của flask-web sẽ được lưu ở trong file `trace_web.list`, của mongodb sẽ được lưu ở trong file `trace_mongo.list`. Số lượng các kernel function mà service gọi tới chính là số dòng của file.
+
+Ta có thể sử dụng lệnh sau để in ra terminal số dòng của file:
+
+```bash
+wc -l < <result directory>/trace_mongo.list
+
+#example:
+wc -l < results/multipod_rep_1/trace_mongo.list
+```
+
+Tại master node, ta có thể sử dụng chương trình `syscall.py` để tự động thực hiện bài đo. Chương trình sẽ tự động triển khai các service, tìm PID của các service đó và thực hiện lặp lại bài đo:
+
+```bash
+python3 syscall.py <result directory>
+```
+
+## Luồng thực hiện bài đo
+
+Trình tự thực hiện của chương trình `syscall.py` tại master node như sau:
+
+- Delploy các service flask-web và mongodb
+- Thực hiện tìm PID của các service trên woker node
+- Chạy chương trình `syscall.bash` tại worker node
+
+Trình tự thực hiện bài đo của `syscall.bash` gồm có những bước sau:
+
+- Thiết lập ftrace trước khi đo: Chọn tracer function_graph; Thiết lập ẩn/hiện các thông tin cần thiết; Tắt tracing và làm sạch kết quả tracing trước đó
+- Lấy và xử lý các thông tin PID của service, bao gồm
+    - Cây tiến trình của PID
+    - Xử lý kết quả cây tiến trình để chỉ lấy danh sách các PID con của service
+    - Ghi các PID vào trong filter của ftrace
+- Ghim tất cả các PID vào core 0 của CPU để tránh không cho tiến trình chuyển sang core khác trong quá trình đo, có thể gây sai lệch kết quả
+- Tạo load tới service flask-web trong 30s bằng cách sử dụng lệnh curl để gửi request submit form
+- Copy kết quả từ `/sys/kernel/tracing` vào file `trace`. Kết quả từ file `trace` được xử lý chuỗi để chỉ ghi lại tên các function và lọc các function không mong muốn sử dụng các filter:
+    - `filter-errors`: Đôi khi ftrace ghi lại function mà tiến trình không thực sự gọi tới. Ta nhận diện các function này dựa vào việc tên function đó được cách dòng như thế nào. (Lỗi này xuất hiện ít hơn khi ta ghim process vào một core nhất định của cpu)
+    - `filter-interrupts`:  Lọc bỏ những function có liên quan tới ngắt sau:
     
-We inform the Docker daemon of the alternate runtimes by adding them
-to `/etc/docker/daemon.json` (as also described in the [`runnc`
-repository](https://github.com/nabla-containers/runnc)):
+    ```bash
+    smp_irq_work_interrupt
+    smp_apic_timer_interrupt
+    smp_reschedule_interrupt
+    smp_call_function_single_interrupt
+    do_softirq
+    ```
+    
 
-    "runtimes": {
-        "runnc": {
-            "path": "/usr/local/bin/runnc"
-        },
-        "kata": {
-            "path": "/usr/bin/kata-runtime"
-        },
-        "runsc": {
-            "path": "/usr/local/bin/runsc"
-        },
-        "runsck": {
-            "path": "/usr/local/bin/runsc",
-            "runtimeArgs": [
-                "--platform=kvm"
-            ]
-        }
-    }
+## Folder results
 
-Note that in order to use kata with firecracker (`katafc`), there is a
-dependency on devicemapper that requires a particular (old) version of
-Docker.  For more information, see [this
-link](https://github.com/kata-containers/documentation/wiki/Initial-release-of-Kata-Containers-with-Firecracker-support).
-As a result, the above file needs further specification:
+Các file được tạo ra trong thư mục kết quả:
 
-    "runtimes": {
-        "storage-driver": "devicemapper",
-        "runnc": {
-            "path": "/usr/local/bin/runnc"
-        },
-        "kata": {
-            "path": "/usr/bin/kata-runtime"
-        },
-        "katafc": {
-            "path": "/opt/kata/bin/kata-fc"
-        },
-        "runsc": {
-            "path": "/usr/local/bin/runsc"
-        },
-        "runsck": {
-            "path": "/usr/local/bin/runsc",
-            "runtimeArgs": [
-                "--platform=kvm"
-            ]
-        }
-    }
+```bash
+results/mcont_1
+├── 1572590.filt-se
+├── 1572590.filt-sei
+├── 1572590.list
+├── 1572590.raw
+├── 1572639.filt-se
+├── ............
+├── pidinfo_mongo
+├── pidinfo_more
+├── pidinfo_web
+├── pids_mongo
+├── pids_web
+├── trace
+├── trace_mongo.list
+└── trace_web.list
+```
 
+Trong đó:
 
-###  Technical notes
+- pidinfo_mongo và pidinfo_web: chứa thông tin cây tiến trình của service mongo và flask-web
+- pidinfo_more: chứa thông tin của tất cả các tiến trình đang chạy trên node tại thời điểm đo
+- pids:_mongo và pids_web chứa danh sách các tiến trình của service, dùng để ghi vào filter của ftrace
+- trace: kết quả trace kernel function call
+- trace_mongo.list và trace_web.list: chứa danh sách các kernel function mà service gọi tới, số lượng dòng của file chính là số lượng các function được gọi
+- Mỗi PID sẽ được xử lý và tạo ra các file chứa thông tin về kernel function call của process đó:
+    - <pid>.raw: Kết quả trace chỉ của pid đó, được cắt từ file `trace`
+    - <pid>.filt-se và <pid>.filt-sei: Kết quả sau khi được xử lý bởi các filter
+    - <pid>.list: Danh sách các kernel function call của process đó
 
-For ease of measurement, we do not measure the startup coverage of the
-containers, thus we need containers that are long-running enough to
-give the tracing enough time to turn on.  Partially this is because of
-how we gather the relevant pids.  This is done by looking through
-`pstree` for all the children of the `docker-containe` command
-specifying the `-runtime-root`, which is either `runtime-runc` (in the
-default case), `runtime-runnc` (in the nabla case), `runtime-kata` (in
-the kata containers case) or `runtime-runsc` (in the gvisor case).
-During the experiments, we pin all container runtime pids to core 0,
-to avoid confusing the function trace if a pid were to switch cores.
+## Refference
 
-We also process the raw traces primarily to eliminate interrupts,
-which may perform work on behalf of other processes.  There are three
-filtering programs, written in C, in the `filters/` directory to aid
-in removing interrupt-related functions from the raw trace.  See the
-README in that directory for more information.
-
-Once filtering and processing is complete, a list of the unique
-functions called should appear in `OUTPUT_DIR/trace.list`.  Counting
-the lines in this file will give a count of the unique functions.
-Alternately, grepping for functions starting with sys will show the
-system calls (e.g., `grep -i "^sys\_"`)
-
-### Complexity
-
-To get a sense of how complex the unique functions are, we also
-perform a complexity analysis using the GNU `complexity` tool.  We run
-complexity over the kernel version we used (sample output is included
-in this repository in the file named `./complexity`).  Then, we
-use those numbers to compute a total complexity sum for each case.
-
-### Our results
-
-We have included some results for default docker, nabla, kata, and
-gvisor containers that were obtained using the `graphs_generate.bash`
-script.
-
-![functions](https://github.com/nabla-containers/measurements/blob/master/graph-functions.png?raw=true)
-
-![complexity](https://github.com/nabla-containers/measurements/blob/master/graph-complexity.png?raw=true)
-
-
-[1]: https://github.com/nabla-containers/nabla-demo-apps/tree/master/node-express
-[2]: https://github.com/nabla-containers/nabla-demo-apps/tree/master/redis-test
-[3]: https://github.com/nabla-containers/nabla-demo-apps/tree/master/python-tornado
+https://blog.hansenpartnership.com/measuring-the-horizontal-attack-profile-of-nabla-containers/

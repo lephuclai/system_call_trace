@@ -1,0 +1,667 @@
+                 finish_task_switch() {
+                   _raw_spin_unlock_irq();
+                 }
+               } /* schedule */
+               hrtimer_try_to_cancel() {
+                 hrtimer_active();
+               }
+             } /* schedule_hrtimeout_range_clock */
+           } /* schedule_hrtimeout_range */
+           __fdget() {
+             __fget_light();
+           }
+           pipe_poll();
+           poll_freewait() {
+             remove_wait_queue() {
+               _raw_spin_lock_irqsave();
+               _raw_spin_unlock_irqrestore();
+             }
+             fput() {
+               fput_many();
+             }
+           }
+         } /* do_select */
+         __check_object_size() {
+           check_stack_object();
+         }
+         __check_object_size() {
+           check_stack_object();
+         }
+         __check_object_size() {
+           check_stack_object();
+         }
+       } /* core_sys_select */
+       poll_select_finish() {
+         ktime_get_ts64() {
+           arch_counter_read();
+         }
+         set_normalized_timespec64();
+         put_timespec64();
+       }
+     } /* __arm64_sys_pselect6 */
+   } /* el0_svc_common.constprop.0 */
+ } /* el0_svc_handler */
+ do_notify_resume() {
+   fpsimd_restore_current_state() {
+     __get_cpu_fpsimd_context();
+     task_fpsimd_load() {
+       have_cpu_fpsimd_context();
+     }
+     fpsimd_bind_task_to_cpu();
+     put_cpu_fpsimd_context() {
+       __put_cpu_fpsimd_context();
+     }
+   }
+ }
+ post_ttbr_update_workaround();
+ el0_svc_handler() {
+   el0_svc_common.constprop.0() {
+     __arm64_sys_newfstat() {
+       vfs_statx_fd() {
+         __fdget_raw() {
+           __fget_light();
+         }
+         vfs_getattr() {
+           security_inode_getattr() {
+             apparmor_inode_getattr() {
+               common_perm_cond() {
+                 common_perm() {
+                   aa_path_perm() {
+                     aa_label_next_confined();
+                     profile_path_perm.part.0() {
+                       path_name.isra.0() {
+                         aa_path_name() {
+                           d_namespace_path.constprop.0() {
+                             d_absolute_path() {
+                               prepend();
+                               prepend_path.isra.0() {
+                                 __rcu_read_lock();
+                                 __rcu_read_lock();
+                                 prepend_name();
+                                 prepend_name();
+                                 __rcu_read_unlock();
+                                 __rcu_read_unlock();
+                               }
+                             }
+                             our_mnt();
+                             our_mnt();
+                           }
+                         }
+                       }
+                       __aa_path_perm() {
+                         aa_str_perms() {
+                           aa_dfa_match();
+                           aa_compute_fperms() {
+                             map_old_perms();
+                             map_old_perms();
+                             map_old_perms();
+                           }
+                         }
+                         aa_audit_file();
+                       }
+                     }
+                     aa_label_next_confined();
+                   }
+                 }
+               }
+             }
+           }
+           vfs_getattr_nosec() {
+             ovl_getattr [overlay]() {
+               ovl_same_sb [overlay]();
+               ovl_is_metacopy_dentry [overlay]();
+               ovl_path_real [overlay]() {
+                 ovl_path_type [overlay]();
+               }
+               ovl_override_creds [overlay]() {
+                 override_creds();
+               }
+               vfs_getattr() {
+                 security_inode_getattr() {
+                   apparmor_inode_getattr() {
+                     common_perm_cond() {
+                       common_perm();
+                     }
+                   }
+                 }
+                 vfs_getattr_nosec() {
+                   ext4_file_getattr() {
+                     ext4_getattr() {
+                       generic_fillattr();
+                     }
+                   }
+                 }
+               }
+               ovl_same_sb [overlay]();
+               ovl_test_flag [overlay]();
+               revert_creds();
+             }
+           }
+         }
+       }
+       cp_new_stat() {
+         from_kuid_munged() {
+           map_id_up();
+         }
+         from_kgid_munged() {
+           map_id_up();
+         }
+       }
+     }
+   }
+ }
+ post_ttbr_update_workaround();
+ el0_svc_handler() {
+   el0_svc_common.constprop.0() {
+     __arm64_sys_newfstat() {
+       vfs_statx_fd() {
+         __fdget_raw() {
+           __fget_light();
+         }
+         vfs_getattr() {
+           security_inode_getattr() {
+             apparmor_inode_getattr() {
+               common_perm_cond() {
+                 common_perm() {
+                   aa_path_perm() {
+                     aa_label_next_confined();
+                     profile_path_perm.part.0() {
+                       path_name.isra.0() {
+                         aa_path_name() {
+                           d_namespace_path.constprop.0() {
+                             d_absolute_path() {
+                               prepend();
+                               prepend_path.isra.0() {
+                                 __rcu_read_lock();
+                                 __rcu_read_lock();
+                                 prepend_name();
+                                 prepend_name();
+                                 __rcu_read_unlock();
+                                 __rcu_read_unlock();
+                               }
+                             }
+                             our_mnt();
+                             our_mnt();
+                           }
+                         }
+                       }
+                       __aa_path_perm() {
+                         aa_str_perms() {
+                           aa_dfa_match();
+                           aa_compute_fperms() {
+                             map_old_perms();
+                             map_old_perms();
+                             map_old_perms();
+                           }
+                         }
+                         aa_audit_file();
+                       }
+                     }
+                     aa_label_next_confined();
+                   }
+                 }
+               }
+             }
+           }
+           vfs_getattr_nosec() {
+             ovl_getattr [overlay]() {
+               ovl_same_sb [overlay]();
+               ovl_is_metacopy_dentry [overlay]();
+               ovl_path_real [overlay]() {
+                 ovl_path_type [overlay]();
+               }
+               ovl_override_creds [overlay]() {
+                 override_creds();
+               }
+               vfs_getattr() {
+                 security_inode_getattr() {
+                   apparmor_inode_getattr() {
+                     common_perm_cond() {
+                       common_perm();
+                     }
+                   }
+                 }
+                 vfs_getattr_nosec() {
+                   ext4_file_getattr() {
+                     ext4_getattr() {
+                       generic_fillattr();
+                     }
+                   }
+                 }
+               }
+               ovl_same_sb [overlay]();
+               ovl_test_flag [overlay]();
+               revert_creds();
+             }
+           }
+         }
+       }
+       cp_new_stat() {
+         from_kuid_munged() {
+           map_id_up();
+         }
+         from_kgid_munged() {
+           map_id_up();
+         }
+       }
+     }
+   }
+ }
+ post_ttbr_update_workaround();
+ el0_svc_handler() {
+   el0_svc_common.constprop.0() {
+     __arm64_sys_newfstat() {
+       vfs_statx_fd() {
+         __fdget_raw() {
+           __fget_light();
+         }
+         vfs_getattr() {
+           security_inode_getattr() {
+             apparmor_inode_getattr() {
+               common_perm_cond() {
+                 common_perm() {
+                   aa_path_perm() {
+                     aa_label_next_confined();
+                     profile_path_perm.part.0() {
+                       path_name.isra.0() {
+                         aa_path_name() {
+                           d_namespace_path.constprop.0() {
+                             d_absolute_path() {
+                               prepend();
+                               prepend_path.isra.0() {
+                                 __rcu_read_lock();
+                                 __rcu_read_lock();
+                                 prepend_name();
+                                 prepend_name();
+                                 __rcu_read_unlock();
+                                 __rcu_read_unlock();
+                               }
+                             }
+                             our_mnt();
+                             our_mnt();
+                           }
+                         }
+                       }
+                       __aa_path_perm() {
+                         aa_str_perms() {
+                           aa_dfa_match();
+                           aa_compute_fperms() {
+                             map_old_perms();
+                             map_old_perms();
+                             map_old_perms();
+                           }
+                         }
+                         aa_audit_file();
+                       }
+                     }
+                     aa_label_next_confined();
+                   }
+                 }
+               }
+             }
+           }
+           vfs_getattr_nosec() {
+             ovl_getattr [overlay]() {
+               ovl_same_sb [overlay]();
+               ovl_is_metacopy_dentry [overlay]();
+               ovl_path_real [overlay]() {
+                 ovl_path_type [overlay]();
+               }
+               ovl_override_creds [overlay]() {
+                 override_creds();
+               }
+               vfs_getattr() {
+                 security_inode_getattr() {
+                   apparmor_inode_getattr() {
+                     common_perm_cond() {
+                       common_perm();
+                     }
+                   }
+                 }
+                 vfs_getattr_nosec() {
+                   ext4_file_getattr() {
+                     ext4_getattr() {
+                       generic_fillattr();
+                     }
+                   }
+                 }
+               }
+               ovl_same_sb [overlay]();
+               ovl_test_flag [overlay]();
+               revert_creds();
+             }
+           }
+         }
+       }
+       cp_new_stat() {
+         from_kuid_munged() {
+           map_id_up();
+         }
+         from_kgid_munged() {
+           map_id_up();
+         }
+       }
+     }
+   }
+ }
+ post_ttbr_update_workaround();
+ el0_svc_handler() {
+   el0_svc_common.constprop.0() {
+     __arm64_sys_newfstat() {
+       vfs_statx_fd() {
+         __fdget_raw() {
+           __fget_light();
+         }
+         vfs_getattr() {
+           security_inode_getattr() {
+             apparmor_inode_getattr() {
+               common_perm_cond() {
+                 common_perm() {
+                   aa_path_perm() {
+                     aa_label_next_confined();
+                     profile_path_perm.part.0() {
+                       path_name.isra.0() {
+                         aa_path_name() {
+                           d_namespace_path.constprop.0() {
+                             d_absolute_path() {
+                               prepend();
+                               prepend_path.isra.0() {
+                                 __rcu_read_lock();
+                                 __rcu_read_lock();
+                                 prepend_name();
+                                 prepend_name();
+                                 __rcu_read_unlock();
+                                 __rcu_read_unlock();
+                               }
+                             }
+                             our_mnt();
+                             our_mnt();
+                           }
+                         }
+                       }
+                       __aa_path_perm() {
+                         aa_str_perms() {
+                           aa_dfa_match();
+                           aa_compute_fperms() {
+                             map_old_perms();
+                             map_old_perms();
+                             map_old_perms();
+                           }
+                         }
+                         aa_audit_file();
+                       }
+                     }
+                     aa_label_next_confined();
+                   }
+                 }
+               }
+             }
+           }
+           vfs_getattr_nosec() {
+             ovl_getattr [overlay]() {
+               ovl_same_sb [overlay]();
+               ovl_is_metacopy_dentry [overlay]();
+               ovl_path_real [overlay]() {
+                 ovl_path_type [overlay]();
+               }
+               ovl_override_creds [overlay]() {
+                 override_creds();
+               }
+               vfs_getattr() {
+                 security_inode_getattr() {
+                   apparmor_inode_getattr() {
+                     common_perm_cond() {
+                       common_perm();
+                     }
+                   }
+                 }
+                 vfs_getattr_nosec() {
+                   ext4_file_getattr() {
+                     ext4_getattr() {
+                       generic_fillattr();
+                     }
+                   }
+                 }
+               }
+               ovl_same_sb [overlay]();
+               ovl_test_flag [overlay]();
+               revert_creds();
+             }
+           }
+         }
+       }
+       cp_new_stat() {
+         from_kuid_munged() {
+           map_id_up();
+         }
+         from_kgid_munged() {
+           map_id_up();
+         }
+       }
+     }
+   }
+ }
+ post_ttbr_update_workaround();
+ el0_svc_handler() {
+   el0_svc_common.constprop.0() {
+     __arm64_sys_pselect6() {
+       get_timespec64();
+       poll_select_set_timeout() {
+         ktime_get_ts64() {
+           arch_counter_read();
+         }
+         timespec64_add_safe();
+       }
+       set_user_sigmask();
+       core_sys_select() {
+         __rcu_read_lock();
+         __rcu_read_unlock();
+         __check_object_size() {
+           check_stack_object();
+         }
+         __check_object_size() {
+           check_stack_object();
+         }
+         __check_object_size() {
+           check_stack_object();
+         }
+         do_select() {
+           __rcu_read_lock();
+           __rcu_read_unlock();
+           select_estimate_accuracy() {
+             ktime_get_ts64() {
+               arch_counter_read();
+             }
+             set_normalized_timespec64();
+           }
+           __fdget() {
+             __fget_light();
+           }
+           pipe_poll() {
+             __pollwait() {
+               add_wait_queue() {
+                 _raw_spin_lock_irqsave();
+                 _raw_spin_unlock_irqrestore();
+               }
+             }
+           }
+           schedule_hrtimeout_range() {
+             schedule_hrtimeout_range_clock() {
+               hrtimer_init_sleeper() {
+                 __hrtimer_init();
+               }
+               hrtimer_start_range_ns() {
+                 lock_hrtimer_base() {
+                   _raw_spin_lock_irqsave();
+                 }
+                 get_nohz_timer_target();
+                 enqueue_hrtimer();
+                 _raw_spin_unlock_irqrestore();
+               }
+               schedule() {
+                 rcu_note_context_switch() {
+                   rcu_preempt_deferred_qs() {
+                     rcu_preempt_need_deferred_qs();
+                   }
+                   rcu_qs();
+                 }
+                 _raw_spin_lock();
+                 update_rq_clock();
+                 deactivate_task() {
+                   psi_task_change() {
+                     record_times.isra.0();
+                     record_times.isra.0();
+                     record_times.isra.0();
+                     record_times.isra.0();
+                     record_times.isra.0();
+                   }
+                   dequeue_task_fair() {
+                     dequeue_entity() {
+                       update_curr() {
+                         update_min_vruntime();
+                         cpuacct_charge() {
+                           __rcu_read_lock();
+                           __rcu_read_unlock();
+                         }
+                         __rcu_read_lock();
+                         __cgroup_account_cputime() {
+                           cgroup_base_stat_cputime_account_begin();
+                           cgroup_base_stat_cputime_account_end.isra.0() {
+                             cgroup_rstat_updated();
+                           }
+                         }
+                         __rcu_read_unlock();
+                       }
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq() {
+                         __accumulate_pelt_segments();
+                       }
+                       clear_buddies();
+                       update_cfs_group();
+                       update_min_vruntime();
+                     }
+                     dequeue_entity() {
+                       update_curr() {
+                         __calc_delta();
+                         update_min_vruntime();
+                       }
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq() {
+                         __accumulate_pelt_segments();
+                       }
+                       clear_buddies();
+                       update_cfs_group() {
+                         reweight_entity();
+                       }
+                       update_min_vruntime();
+                     }
+                     dequeue_entity() {
+                       update_curr() {
+                         __calc_delta();
+                         update_min_vruntime();
+                       }
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq() {
+                         __accumulate_pelt_segments();
+                       }
+                       clear_buddies();
+                       update_cfs_group() {
+                         reweight_entity();
+                       }
+                       update_min_vruntime();
+                     }
+                     dequeue_entity() {
+                       update_curr() {
+                         __calc_delta();
+                         update_min_vruntime();
+                       }
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq() {
+                         __accumulate_pelt_segments();
+                       }
+                       clear_buddies();
+                       update_cfs_group() {
+                         reweight_entity();
+                       }
+                       update_min_vruntime();
+                     }
+                     dequeue_entity() {
+                       update_curr() {
+                         __calc_delta();
+                         update_min_vruntime();
+                       }
+                       __update_load_avg_se() {
+                         __accumulate_pelt_segments();
+                       }
+                       __update_load_avg_cfs_rq() {
+                         __accumulate_pelt_segments();
+                       }
+                       dbs_update_util_handler() {
+                         cpufreq_this_cpu_can_update();
+                       }
+                       clear_buddies();
+                       update_cfs_group() {
+                         reweight_entity();
+                       }
+                       update_min_vruntime();
+                     }
+                     hrtick_update();
+                   }
+                 }
+                 pick_next_task_fair() {
+                   check_cfs_rq_runtime();
+                   pick_next_entity() {
+                     clear_buddies();
+                   }
+                   pick_next_entity() {
+                     clear_buddies();
+                   }
+                   pick_next_entity() {
+                     clear_buddies();
+                   }
+                   put_prev_entity() {
+                     check_cfs_rq_runtime();
+                   }
+                   put_prev_entity() {
+                     check_cfs_rq_runtime();
+                   }
+                   put_prev_entity() {
+                     check_cfs_rq_runtime();
+                   }
+                   set_next_entity() {
+                     __update_load_avg_se() {
+                       __accumulate_pelt_segments();
+                     }
+                     __update_load_avg_cfs_rq() {
+                       __accumulate_pelt_segments();
+                     }
+                   }
+                   put_prev_entity() {
+                     check_cfs_rq_runtime();
+                   }
+                   set_next_entity() {
+                     __update_load_avg_se() {
+                       __accumulate_pelt_segments();
+                     }
+                     __update_load_avg_cfs_rq() {
+                       __accumulate_pelt_segments();
+                     }
+                   }
+                   put_prev_entity() {
+                     check_cfs_rq_runtime();
+                   }
+                   set_next_entity() {
+                     __update_load_avg_se() {
+                       __accumulate_pelt_segments();
+                     }
+                     __update_load_avg_cfs_rq();
+                   }
+                 }

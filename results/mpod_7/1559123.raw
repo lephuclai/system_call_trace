@@ -1,0 +1,199 @@
+ 0) mongod-1559123 |               finish_task_switch() {
+ 0) mongod-1559123 |                 _raw_spin_unlock_irq();
+ 0) mongod-1559123 |               }
+ 0) mongod-1559123 |             }
+ 0) mongod-1559123 |           }
+ 0) mongod-1559123 |           _raw_spin_lock();
+ 0) mongod-1559123 |           __unqueue_futex();
+ 0) mongod-1559123 |           _raw_spin_unlock();
+ 0) mongod-1559123 |           drop_futex_key_refs.isra.0();
+ 0) mongod-1559123 |           hrtimer_cancel() {
+ 0) mongod-1559123 |             hrtimer_try_to_cancel() {
+ 0) mongod-1559123 |               hrtimer_active();
+ 0) mongod-1559123 |             }
+ 0) mongod-1559123 |           }
+ 0) mongod-1559123 |         }
+ 0) mongod-1559123 |       }
+ 0) mongod-1559123 |     } /* __arm64_sys_futex */
+ 0) mongod-1559123 |   } /* el0_svc_common.constprop.0 */
+ 0) mongod-1559123 | } /* el0_svc_handler */
+ 0) mongod-1559123 | do_notify_resume() {
+ 0) mongod-1559123 |   fpsimd_restore_current_state() {
+ 0) mongod-1559123 |     __get_cpu_fpsimd_context();
+ 0) mongod-1559123 |     task_fpsimd_load() {
+ 0) mongod-1559123 |       have_cpu_fpsimd_context();
+ 0) mongod-1559123 |     }
+ 0) mongod-1559123 |     fpsimd_bind_task_to_cpu();
+ 0) mongod-1559123 |     put_cpu_fpsimd_context() {
+ 0) mongod-1559123 |       __put_cpu_fpsimd_context();
+ 0) mongod-1559123 |     }
+ 0) mongod-1559123 |   }
+ 0) mongod-1559123 | }
+ 0) mongod-1559123 | post_ttbr_update_workaround();
+ 0) mongod-1559123 | el0_svc_handler() {
+ 0) mongod-1559123 |   el0_svc_common.constprop.0() {
+ 0) mongod-1559123 |     __arm64_sys_futex() {
+ 0) mongod-1559123 |       do_futex() {
+ 0) mongod-1559123 |         futex_wake() {
+ 0) mongod-1559123 |           get_futex_key() {
+ 0) mongod-1559123 |             get_futex_key_refs.isra.0();
+ 0) mongod-1559123 |           }
+ 0) mongod-1559123 |           hash_futex();
+ 0) mongod-1559123 |           drop_futex_key_refs.isra.0();
+ 0) mongod-1559123 |         }
+ 0) mongod-1559123 |       }
+ 0) mongod-1559123 |     }
+ 0) mongod-1559123 |   }
+ 0) mongod-1559123 | }
+ 0) mongod-1559123 | post_ttbr_update_workaround();
+ 0) mongod-1559123 | el0_svc_handler() {
+ 0) mongod-1559123 |   el0_svc_common.constprop.0() {
+ 0) mongod-1559123 |     __arm64_sys_futex() {
+ 0) mongod-1559123 |       get_timespec64();
+ 0) mongod-1559123 |       do_futex() {
+ 0) mongod-1559123 |         futex_wait() {
+ 0) mongod-1559123 |           hrtimer_init_sleeper() {
+ 0) mongod-1559123 |             __hrtimer_init();
+ 0) mongod-1559123 |           }
+ 0) mongod-1559123 |           ktime_add_safe();
+ 0) mongod-1559123 |           futex_wait_setup() {
+ 0) mongod-1559123 |             get_futex_key() {
+ 0) mongod-1559123 |               get_futex_key_refs.isra.0();
+ 0) mongod-1559123 |             }
+ 0) mongod-1559123 |             hash_futex();
+ 0) mongod-1559123 |             _raw_spin_lock();
+ 0) mongod-1559123 |             get_futex_value_locked();
+ 0) mongod-1559123 |           }
+ 0) mongod-1559123 |           futex_wait_queue_me() {
+ 0) mongod-1559123 |             _raw_spin_unlock();
+ 0) mongod-1559123 |             hrtimer_sleeper_start_expires() {
+ 0) mongod-1559123 |               hrtimer_start_range_ns() {
+ 0) mongod-1559123 |                 lock_hrtimer_base() {
+ 0) mongod-1559123 |                   _raw_spin_lock_irqsave();
+ 0) mongod-1559123 |                 }
+ 0) mongod-1559123 |                 get_nohz_timer_target();
+ 0) mongod-1559123 |                 enqueue_hrtimer();
+ 0) mongod-1559123 |                 _raw_spin_unlock_irqrestore();
+ 0) mongod-1559123 |               }
+ 0) mongod-1559123 |             }
+ 0) mongod-1559123 |             schedule() {
+ 0) mongod-1559123 |               rcu_note_context_switch() {
+ 0) mongod-1559123 |                 rcu_preempt_deferred_qs() {
+ 0) mongod-1559123 |                   rcu_preempt_need_deferred_qs();
+ 0) mongod-1559123 |                 }
+ 0) mongod-1559123 |                 rcu_qs();
+ 0) mongod-1559123 |               }
+ 0) mongod-1559123 |               _raw_spin_lock();
+ 0) mongod-1559123 |               update_rq_clock();
+ 0) mongod-1559123 |               deactivate_task() {
+ 0) mongod-1559123 |                 psi_task_change() {
+ 0) mongod-1559123 |                   record_times.isra.0();
+ 0) mongod-1559123 |                   record_times.isra.0();
+ 0) mongod-1559123 |                   record_times.isra.0();
+ 0) mongod-1559123 |                   record_times.isra.0();
+ 0) mongod-1559123 |                   record_times.isra.0();
+ 0) mongod-1559123 |                 }
+ 0) mongod-1559123 |                 dequeue_task_fair() {
+ 0) mongod-1559123 |                   dequeue_entity() {
+ 0) mongod-1559123 |                     update_curr() {
+ 0) mongod-1559123 |                       update_min_vruntime();
+ 0) mongod-1559123 |                       cpuacct_charge() {
+ 0) mongod-1559123 |                         __rcu_read_lock();
+ 0) mongod-1559123 |                         __rcu_read_unlock();
+ 0) mongod-1559123 |                       }
+ 0) mongod-1559123 |                       __rcu_read_lock();
+ 0) mongod-1559123 |                       __cgroup_account_cputime() {
+ 0) mongod-1559123 |                         cgroup_base_stat_cputime_account_begin();
+ 0) mongod-1559123 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) mongod-1559123 |                           cgroup_rstat_updated();
+ 0) mongod-1559123 |                         }
+ 0) mongod-1559123 |                       }
+ 0) mongod-1559123 |                       __rcu_read_unlock();
+ 0) mongod-1559123 |                     }
+ 0) mongod-1559123 |                     __update_load_avg_se();
+ 0) mongod-1559123 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1559123 |                     clear_buddies();
+ 0) mongod-1559123 |                     update_cfs_group();
+ 0) mongod-1559123 |                     update_min_vruntime();
+ 0) mongod-1559123 |                   }
+ 0) mongod-1559123 |                   dequeue_entity() {
+ 0) mongod-1559123 |                     update_curr() {
+ 0) mongod-1559123 |                       __calc_delta();
+ 0) mongod-1559123 |                       update_min_vruntime();
+ 0) mongod-1559123 |                     }
+ 0) mongod-1559123 |                     __update_load_avg_se();
+ 0) mongod-1559123 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1559123 |                     clear_buddies();
+ 0) mongod-1559123 |                     update_cfs_group() {
+ 0) mongod-1559123 |                       reweight_entity();
+ 0) mongod-1559123 |                     }
+ 0) mongod-1559123 |                     update_min_vruntime();
+ 0) mongod-1559123 |                   }
+ 0) mongod-1559123 |                   dequeue_entity() {
+ 0) mongod-1559123 |                     update_curr() {
+ 0) mongod-1559123 |                       __calc_delta();
+ 0) mongod-1559123 |                       update_min_vruntime();
+ 0) mongod-1559123 |                     }
+ 0) mongod-1559123 |                     __update_load_avg_se();
+ 0) mongod-1559123 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1559123 |                     clear_buddies();
+ 0) mongod-1559123 |                     update_cfs_group() {
+ 0) mongod-1559123 |                       reweight_entity();
+ 0) mongod-1559123 |                     }
+ 0) mongod-1559123 |                     update_min_vruntime();
+ 0) mongod-1559123 |                   }
+ 0) mongod-1559123 |                   dequeue_entity() {
+ 0) mongod-1559123 |                     update_curr() {
+ 0) mongod-1559123 |                       __calc_delta();
+ 0) mongod-1559123 |                       update_min_vruntime();
+ 0) mongod-1559123 |                     }
+ 0) mongod-1559123 |                     __update_load_avg_se();
+ 0) mongod-1559123 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1559123 |                     clear_buddies();
+ 0) mongod-1559123 |                     update_cfs_group() {
+ 0) mongod-1559123 |                       reweight_entity();
+ 0) mongod-1559123 |                     }
+ 0) mongod-1559123 |                     update_min_vruntime();
+ 0) mongod-1559123 |                   }
+ 0) mongod-1559123 |                   dequeue_entity() {
+ 0) mongod-1559123 |                     update_curr() {
+ 0) mongod-1559123 |                       __calc_delta();
+ 0) mongod-1559123 |                       update_min_vruntime();
+ 0) mongod-1559123 |                     }
+ 0) mongod-1559123 |                     __update_load_avg_se();
+ 0) mongod-1559123 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1559123 |                     clear_buddies();
+ 0) mongod-1559123 |                     update_cfs_group() {
+ 0) mongod-1559123 |                       reweight_entity();
+ 0) mongod-1559123 |                     }
+ 0) mongod-1559123 |                     update_min_vruntime();
+ 0) mongod-1559123 |                   }
+ 0) mongod-1559123 |                   hrtick_update();
+ 0) mongod-1559123 |                 }
+ 0) mongod-1559123 |               }
+ 0) mongod-1559123 |               pick_next_task_fair() {
+ 0) mongod-1559123 |                 newidle_balance() {
+ 0) mongod-1559123 |                   __rcu_read_lock();
+ 0) mongod-1559123 |                   __msecs_to_jiffies();
+ 0) mongod-1559123 |                   __rcu_read_unlock();
+ 0) mongod-1559123 |                 }
+ 0) mongod-1559123 |               }
+ 0) mongod-1559123 |               pick_next_task_idle() {
+ 0) mongod-1559123 |                 put_prev_task_fair() {
+ 0) mongod-1559123 |                   put_prev_entity() {
+ 0) mongod-1559123 |                     check_cfs_rq_runtime();
+ 0) mongod-1559123 |                   }
+ 0) mongod-1559123 |                   put_prev_entity() {
+ 0) mongod-1559123 |                     check_cfs_rq_runtime();
+ 0) mongod-1559123 |                   }
+ 0) mongod-1559123 |                   put_prev_entity() {
+ 0) mongod-1559123 |                     check_cfs_rq_runtime();
+ 0) mongod-1559123 |                   }
+ 0) mongod-1559123 |                   put_prev_entity() {
+ 0) mongod-1559123 |                     check_cfs_rq_runtime();
+ 0) mongod-1559123 |                   }
+ 0) mongod-1559123 |                   put_prev_entity() {
+ 0) mongod-1559123 |                     check_cfs_rq_runtime();
+ 0) mongod-1559123 |                   }
+ 0) mongod-1559123 |                 }
+ 0) mongod-1559123 |               }

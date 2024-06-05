@@ -1,0 +1,2278 @@
+ 0) mongod-1636528 |               finish_task_switch() {
+ 0) mongod-1636528 |                 _raw_spin_unlock_irq();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             } /* schedule */
+ 0) mongod-1636528 |           } /* futex_wait_queue_me */
+ 0) mongod-1636528 |           _raw_spin_lock();
+ 0) mongod-1636528 |           __unqueue_futex();
+ 0) mongod-1636528 |           _raw_spin_unlock();
+ 0) mongod-1636528 |           drop_futex_key_refs.isra.0();
+ 0) mongod-1636528 |           hrtimer_cancel() {
+ 0) mongod-1636528 |             hrtimer_try_to_cancel() {
+ 0) mongod-1636528 |               hrtimer_active();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         } /* futex_wait */
+ 0) mongod-1636528 |       } /* do_futex */
+ 0) mongod-1636528 |     } /* __arm64_sys_futex */
+ 0) mongod-1636528 |   } /* el0_svc_common.constprop.0 */
+ 0) mongod-1636528 | } /* el0_svc_handler */
+ 0) mongod-1636528 | do_notify_resume() {
+ 0) mongod-1636528 |   fpsimd_restore_current_state() {
+ 0) mongod-1636528 |     __get_cpu_fpsimd_context();
+ 0) mongod-1636528 |     task_fpsimd_load() {
+ 0) mongod-1636528 |       have_cpu_fpsimd_context();
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |     fpsimd_bind_task_to_cpu();
+ 0) mongod-1636528 |     put_cpu_fpsimd_context() {
+ 0) mongod-1636528 |       __put_cpu_fpsimd_context();
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_futex() {
+ 0) mongod-1636528 |       do_futex() {
+ 0) mongod-1636528 |         futex_wake() {
+ 0) mongod-1636528 |           get_futex_key() {
+ 0) mongod-1636528 |             get_futex_key_refs.isra.0();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           hash_futex();
+ 0) mongod-1636528 |           _raw_spin_lock();
+ 0) mongod-1636528 |           _raw_spin_unlock();
+ 0) mongod-1636528 |           wake_up_q();
+ 0) mongod-1636528 |           drop_futex_key_refs.isra.0();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_openat() {
+ 0) mongod-1636528 |       do_sys_open() {
+ 0) mongod-1636528 |         getname() {
+ 0) mongod-1636528 |           getname_flags() {
+ 0) mongod-1636528 |             kmem_cache_alloc() {
+ 0) mongod-1636528 |               should_failslab();
+ 0) mongod-1636528 |               memcg_kmem_put_cache();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             __check_object_size() {
+ 0) mongod-1636528 |               check_stack_object();
+ 0) mongod-1636528 |               pfn_valid() {
+ 0) mongod-1636528 |                 memblock_is_map_memory();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               __check_heap_object();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         get_unused_fd_flags() {
+ 0) mongod-1636528 |           __alloc_fd() {
+ 0) mongod-1636528 |             _raw_spin_lock();
+ 0) mongod-1636528 |             expand_files();
+ 0) mongod-1636528 |             _raw_spin_unlock();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         do_filp_open() {
+ 0) mongod-1636528 |           path_openat() {
+ 0) mongod-1636528 |             alloc_empty_file() {
+ 0) mongod-1636528 |               __alloc_file() {
+ 0) mongod-1636528 |                 kmem_cache_alloc() {
+ 0) mongod-1636528 |                   should_failslab();
+ 0) mongod-1636528 |                   memcg_kmem_get_cache() {
+ 0) mongod-1636528 |                     __rcu_read_lock();
+ 0) mongod-1636528 |                     __rcu_read_unlock();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   memcg_kmem_put_cache();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 security_file_alloc() {
+ 0) mongod-1636528 |                   kmem_cache_alloc() {
+ 0) mongod-1636528 |                     should_failslab();
+ 0) mongod-1636528 |                     memcg_kmem_put_cache();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   apparmor_file_alloc_security();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 __mutex_init();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             path_init() {
+ 0) mongod-1636528 |               __rcu_read_lock();
+ 0) mongod-1636528 |               set_root();
+ 0) mongod-1636528 |               nd_jump_root();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             link_path_walk.part.0() {
+ 0) mongod-1636528 |               inode_permission() {
+ 0) mongod-1636528 |                 ovl_permission [overlay]() {
+ 0) mongod-1636528 |                   ovl_inode_upper [overlay]();
+ 0) mongod-1636528 |                   generic_permission();
+ 0) mongod-1636528 |                   ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                     override_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   inode_permission() {
+ 0) mongod-1636528 |                     generic_permission();
+ 0) mongod-1636528 |                     security_inode_permission();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   revert_creds();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 security_inode_permission();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               walk_component() {
+ 0) mongod-1636528 |                 lookup_fast() {
+ 0) mongod-1636528 |                   __d_lookup_rcu();
+ 0) mongod-1636528 |                   __follow_mount_rcu.isra.0();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               inode_permission() {
+ 0) mongod-1636528 |                 ovl_permission [overlay]() {
+ 0) mongod-1636528 |                   ovl_inode_upper [overlay]();
+ 0) mongod-1636528 |                   generic_permission();
+ 0) mongod-1636528 |                   ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                     override_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   inode_permission() {
+ 0) mongod-1636528 |                     generic_permission();
+ 0) mongod-1636528 |                     security_inode_permission();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   revert_creds();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 security_inode_permission();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               walk_component() {
+ 0) mongod-1636528 |                 lookup_fast() {
+ 0) mongod-1636528 |                   __d_lookup_rcu();
+ 0) mongod-1636528 |                   __follow_mount_rcu.isra.0();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               inode_permission() {
+ 0) mongod-1636528 |                 ovl_permission [overlay]() {
+ 0) mongod-1636528 |                   ovl_inode_upper [overlay]();
+ 0) mongod-1636528 |                   generic_permission();
+ 0) mongod-1636528 |                   ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                     override_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   inode_permission() {
+ 0) mongod-1636528 |                     generic_permission();
+ 0) mongod-1636528 |                     security_inode_permission();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   revert_creds();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 security_inode_permission();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             do_last() {
+ 0) mongod-1636528 |               lookup_fast() {
+ 0) mongod-1636528 |                 __d_lookup_rcu();
+ 0) mongod-1636528 |                 __follow_mount_rcu.isra.0();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               complete_walk() {
+ 0) mongod-1636528 |                 unlazy_walk() {
+ 0) mongod-1636528 |                   legitimize_links();
+ 0) mongod-1636528 |                   legitimize_path.isra.0() {
+ 0) mongod-1636528 |                     __legitimize_mnt() {
+ 0) mongod-1636528 |                       __legitimize_mnt.part.0();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   legitimize_root();
+ 0) mongod-1636528 |                   __rcu_read_unlock();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               may_open.isra.0() {
+ 0) mongod-1636528 |                 inode_permission() {
+ 0) mongod-1636528 |                   ovl_permission [overlay]() {
+ 0) mongod-1636528 |                     ovl_inode_upper [overlay]();
+ 0) mongod-1636528 |                     generic_permission();
+ 0) mongod-1636528 |                     ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                       override_creds();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     inode_permission() {
+ 0) mongod-1636528 |                       generic_permission();
+ 0) mongod-1636528 |                       security_inode_permission();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     revert_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   security_inode_permission();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               vfs_open() {
+ 0) mongod-1636528 |                 do_dentry_open() {
+ 0) mongod-1636528 |                   path_get() {
+ 0) mongod-1636528 |                     mntget();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   try_module_get();
+ 0) mongod-1636528 |                   security_file_open() {
+ 0) mongod-1636528 |                     apparmor_file_open() {
+ 0) mongod-1636528 |                       aa_path_perm() {
+ 0) mongod-1636528 |                         aa_label_next_confined();
+ 0) mongod-1636528 |                         profile_path_perm.part.0() {
+ 0) mongod-1636528 |                           path_name.isra.0() {
+ 0) mongod-1636528 |                             aa_path_name() {
+ 0) mongod-1636528 |                               d_namespace_path.constprop.0() {
+ 0) mongod-1636528 |                                 d_absolute_path() {
+ 0) mongod-1636528 |                                   prepend();
+ 0) mongod-1636528 |                                   prepend_path.isra.0() {
+ 0) mongod-1636528 |                                     __rcu_read_lock();
+ 0) mongod-1636528 |                                     __rcu_read_lock();
+ 0) mongod-1636528 |                                     prepend_name();
+ 0) mongod-1636528 |                                     prepend_name();
+ 0) mongod-1636528 |                                     prepend_name();
+ 0) mongod-1636528 |                                     __rcu_read_unlock();
+ 0) mongod-1636528 |                                     __rcu_read_unlock();
+ 0) mongod-1636528 |                                   }
+ 0) mongod-1636528 |                                 }
+ 0) mongod-1636528 |                                 our_mnt();
+ 0) mongod-1636528 |                                 our_mnt();
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                           __aa_path_perm() {
+ 0) mongod-1636528 |                             aa_str_perms() {
+ 0) mongod-1636528 |                               aa_dfa_match();
+ 0) mongod-1636528 |                               aa_compute_fperms() {
+ 0) mongod-1636528 |                                 map_old_perms();
+ 0) mongod-1636528 |                                 map_old_perms();
+ 0) mongod-1636528 |                                 map_old_perms();
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             aa_audit_file();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         aa_label_next_confined();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     __fsnotify_parent();
+ 0) mongod-1636528 |                     fsnotify();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   ovl_dir_open [overlay]() {
+ 0) mongod-1636528 |                     kmem_cache_alloc_trace() {
+ 0) mongod-1636528 |                       should_failslab();
+ 0) mongod-1636528 |                       memcg_kmem_put_cache();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_path_real [overlay]() {
+ 0) mongod-1636528 |                       ovl_path_type [overlay]();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                       override_creds();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_path_open [overlay]() {
+ 0) mongod-1636528 |                       inode_permission() {
+ 0) mongod-1636528 |                         generic_permission();
+ 0) mongod-1636528 |                         security_inode_permission();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       inode_owner_or_capable();
+ 0) mongod-1636528 |                       dentry_open() {
+ 0) mongod-1636528 |                         alloc_empty_file() {
+ 0) mongod-1636528 |                           __alloc_file() {
+ 0) mongod-1636528 |                             kmem_cache_alloc() {
+ 0) mongod-1636528 |                               should_failslab();
+ 0) mongod-1636528 |                               memcg_kmem_get_cache() {
+ 0) mongod-1636528 |                                 __rcu_read_lock();
+ 0) mongod-1636528 |                                 __rcu_read_unlock();
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                               memcg_kmem_put_cache();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             security_file_alloc() {
+ 0) mongod-1636528 |                               kmem_cache_alloc() {
+ 0) mongod-1636528 |                                 should_failslab();
+ 0) mongod-1636528 |                                 memcg_kmem_put_cache();
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                               apparmor_file_alloc_security();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __mutex_init();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         do_dentry_open() {
+ 0) mongod-1636528 |                           path_get() {
+ 0) mongod-1636528 |                             mntget();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                           try_module_get();
+ 0) mongod-1636528 |                           security_file_open() {
+ 0) mongod-1636528 |                             apparmor_file_open();
+ 0) mongod-1636528 |                             __fsnotify_parent();
+ 0) mongod-1636528 |                             fsnotify();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                           ext4_dir_open();
+ 0) mongod-1636528 |                           file_ra_state_init();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     revert_creds();
+ 0) mongod-1636528 |                     ovl_test_flag [overlay]();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   file_ra_state_init();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               ima_file_check() {
+ 0) mongod-1636528 |                 security_task_getsecid();
+ 0) mongod-1636528 |                 process_measurement();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             terminate_walk() {
+ 0) mongod-1636528 |               dput() {
+ 0) mongod-1636528 |                 __rcu_read_lock();
+ 0) mongod-1636528 |                 __rcu_read_unlock();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               mntput() {
+ 0) mongod-1636528 |                 mntput_no_expire() {
+ 0) mongod-1636528 |                   __rcu_read_lock();
+ 0) mongod-1636528 |                   __rcu_read_unlock();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           restore_nameidata();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         __fsnotify_parent();
+ 0) mongod-1636528 |         fsnotify();
+ 0) mongod-1636528 |         fd_install() {
+ 0) mongod-1636528 |           __fd_install();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         putname() {
+ 0) mongod-1636528 |           kmem_cache_free() {
+ 0) mongod-1636528 |             arm64_preempt_schedule_irq() {
+ 0) mongod-1636528 |               preempt_schedule_irq() {
+ 0) mongod-1636528 |                 rcu_note_context_switch() {
+ 0) mongod-1636528 |                   rcu_preempt_deferred_qs() {
+ 0) mongod-1636528 |                     rcu_preempt_need_deferred_qs();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   rcu_qs();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 _raw_spin_lock();
+ 0) mongod-1636528 |                 update_rq_clock();
+ 0) mongod-1636528 |                 pick_next_task_fair() {
+ 0) mongod-1636528 |                   update_curr();
+ 0) mongod-1636528 |                   check_cfs_rq_runtime();
+ 0) mongod-1636528 |                   pick_next_entity() {
+ 0) mongod-1636528 |                     wakeup_preempt_entity.isra.0();
+ 0) mongod-1636528 |                     clear_buddies();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   put_prev_entity() {
+ 0) mongod-1636528 |                     update_curr() {
+ 0) mongod-1636528 |                       update_min_vruntime();
+ 0) mongod-1636528 |                       cpuacct_charge() {
+ 0) mongod-1636528 |                         __rcu_read_lock();
+ 0) mongod-1636528 |                         __rcu_read_unlock();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       __rcu_read_lock();
+ 0) mongod-1636528 |                       __cgroup_account_cputime() {
+ 0) mongod-1636528 |                         cgroup_base_stat_cputime_account_begin();
+ 0) mongod-1636528 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) mongod-1636528 |                           cgroup_rstat_updated();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       __rcu_read_unlock();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     check_cfs_rq_runtime();
+ 0) mongod-1636528 |                     __enqueue_entity();
+ 0) mongod-1636528 |                     __update_load_avg_se();
+ 0) mongod-1636528 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   put_prev_entity() {
+ 0) mongod-1636528 |                     update_curr() {
+ 0) mongod-1636528 |                       __calc_delta();
+ 0) mongod-1636528 |                       update_min_vruntime();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     check_cfs_rq_runtime();
+ 0) mongod-1636528 |                     __enqueue_entity();
+ 0) mongod-1636528 |                     __update_load_avg_se();
+ 0) mongod-1636528 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   put_prev_entity() {
+ 0) mongod-1636528 |                     update_curr() {
+ 0) mongod-1636528 |                       __calc_delta();
+ 0) mongod-1636528 |                       update_min_vruntime();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     check_cfs_rq_runtime();
+ 0) mongod-1636528 |                     __enqueue_entity();
+ 0) mongod-1636528 |                     __update_load_avg_se();
+ 0) mongod-1636528 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   put_prev_entity() {
+ 0) mongod-1636528 |                     update_curr() {
+ 0) mongod-1636528 |                       __calc_delta();
+ 0) mongod-1636528 |                       update_min_vruntime();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     check_cfs_rq_runtime();
+ 0) mongod-1636528 |                     __enqueue_entity();
+ 0) mongod-1636528 |                     __update_load_avg_se();
+ 0) mongod-1636528 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   put_prev_entity() {
+ 0) mongod-1636528 |                     update_curr();
+ 0) mongod-1636528 |                     check_cfs_rq_runtime();
+ 0) mongod-1636528 |                     __enqueue_entity();
+ 0) mongod-1636528 |                     __update_load_avg_se();
+ 0) mongod-1636528 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   set_next_entity() {
+ 0) mongod-1636528 |                     __update_load_avg_se();
+ 0) mongod-1636528 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 finish_task_switch() {
+ 0) mongod-1636528 |                   _raw_spin_unlock_irq();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               } /* preempt_schedule_irq */
+ 0) mongod-1636528 |             } /* arm64_preempt_schedule_irq */
+ 0) mongod-1636528 |           } /* kmem_cache_free */
+ 0) mongod-1636528 |         } /* putname */
+ 0) mongod-1636528 |       } /* do_sys_open */
+ 0) mongod-1636528 |     } /* __arm64_sys_openat */
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | do_notify_resume() {
+ 0) mongod-1636528 |   fpsimd_restore_current_state() {
+ 0) mongod-1636528 |     __get_cpu_fpsimd_context();
+ 0) mongod-1636528 |     task_fpsimd_load() {
+ 0) mongod-1636528 |       have_cpu_fpsimd_context();
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |     fpsimd_bind_task_to_cpu();
+ 0) mongod-1636528 |     put_cpu_fpsimd_context() {
+ 0) mongod-1636528 |       __put_cpu_fpsimd_context();
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_newfstat() {
+ 0) mongod-1636528 |       vfs_statx_fd() {
+ 0) mongod-1636528 |         __fdget_raw() {
+ 0) mongod-1636528 |           __fget_light() {
+ 0) mongod-1636528 |             __fget() {
+ 0) mongod-1636528 |               __rcu_read_lock();
+ 0) mongod-1636528 |               __rcu_read_unlock();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         vfs_getattr() {
+ 0) mongod-1636528 |           security_inode_getattr() {
+ 0) mongod-1636528 |             apparmor_inode_getattr() {
+ 0) mongod-1636528 |               common_perm_cond() {
+ 0) mongod-1636528 |                 common_perm() {
+ 0) mongod-1636528 |                   aa_path_perm() {
+ 0) mongod-1636528 |                     aa_label_next_confined();
+ 0) mongod-1636528 |                     profile_path_perm.part.0() {
+ 0) mongod-1636528 |                       path_name.isra.0() {
+ 0) mongod-1636528 |                         aa_path_name() {
+ 0) mongod-1636528 |                           d_namespace_path.constprop.0() {
+ 0) mongod-1636528 |                             d_absolute_path() {
+ 0) mongod-1636528 |                               prepend();
+ 0) mongod-1636528 |                               prepend_path.isra.0() {
+ 0) mongod-1636528 |                                 __rcu_read_lock();
+ 0) mongod-1636528 |                                 __rcu_read_lock();
+ 0) mongod-1636528 |                                 prepend_name();
+ 0) mongod-1636528 |                                 prepend_name();
+ 0) mongod-1636528 |                                 prepend_name();
+ 0) mongod-1636528 |                                 __rcu_read_unlock();
+ 0) mongod-1636528 |                                 __rcu_read_unlock();
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             our_mnt();
+ 0) mongod-1636528 |                             our_mnt();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       __aa_path_perm() {
+ 0) mongod-1636528 |                         aa_str_perms() {
+ 0) mongod-1636528 |                           aa_dfa_match();
+ 0) mongod-1636528 |                           aa_compute_fperms() {
+ 0) mongod-1636528 |                             map_old_perms();
+ 0) mongod-1636528 |                             map_old_perms();
+ 0) mongod-1636528 |                             map_old_perms();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         aa_audit_file();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     aa_label_next_confined();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           vfs_getattr_nosec() {
+ 0) mongod-1636528 |             ovl_getattr [overlay]() {
+ 0) mongod-1636528 |               ovl_same_sb [overlay]();
+ 0) mongod-1636528 |               ovl_is_metacopy_dentry [overlay]();
+ 0) mongod-1636528 |               ovl_path_real [overlay]() {
+ 0) mongod-1636528 |                 ovl_path_type [overlay]();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                 override_creds();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               vfs_getattr() {
+ 0) mongod-1636528 |                 security_inode_getattr() {
+ 0) mongod-1636528 |                   apparmor_inode_getattr() {
+ 0) mongod-1636528 |                     common_perm_cond() {
+ 0) mongod-1636528 |                       common_perm();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 vfs_getattr_nosec() {
+ 0) mongod-1636528 |                   ext4_getattr() {
+ 0) mongod-1636528 |                     generic_fillattr();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               ovl_same_sb [overlay]();
+ 0) mongod-1636528 |               revert_creds();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         fput() {
+ 0) mongod-1636528 |           fput_many();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |       cp_new_stat() {
+ 0) mongod-1636528 |         from_kuid_munged() {
+ 0) mongod-1636528 |           map_id_up();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         from_kgid_munged() {
+ 0) mongod-1636528 |           map_id_up();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_getdents64() {
+ 0) mongod-1636528 |       ksys_getdents64() {
+ 0) mongod-1636528 |         __fdget_pos() {
+ 0) mongod-1636528 |           __fget_light() {
+ 0) mongod-1636528 |             __fget() {
+ 0) mongod-1636528 |               __rcu_read_lock();
+ 0) mongod-1636528 |               __rcu_read_unlock();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           mutex_lock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         iterate_dir() {
+ 0) mongod-1636528 |           security_file_permission() {
+ 0) mongod-1636528 |             apparmor_file_permission() {
+ 0) mongod-1636528 |               common_file_perm() {
+ 0) mongod-1636528 |                 aa_file_perm() {
+ 0) mongod-1636528 |                   __rcu_read_lock();
+ 0) mongod-1636528 |                   aa_label_is_subset();
+ 0) mongod-1636528 |                   __rcu_read_unlock();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             __fsnotify_parent();
+ 0) mongod-1636528 |             fsnotify();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           down_write_killable();
+ 0) mongod-1636528 |           ovl_iterate [overlay]() {
+ 0) mongod-1636528 |             ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |               override_creds();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             ovl_dir_reset.isra.0 [overlay]() {
+ 0) mongod-1636528 |               ovl_test_flag [overlay]();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             ovl_same_sb [overlay]();
+ 0) mongod-1636528 |             ovl_test_flag [overlay]();
+ 0) mongod-1636528 |             ovl_path_type [overlay]();
+ 0) mongod-1636528 |             ovl_iterate_real [overlay]() {
+ 0) mongod-1636528 |               ovl_layer_lower [overlay]();
+ 0) mongod-1636528 |               ovl_path_type [overlay]();
+ 0) mongod-1636528 |               vfs_getattr() {
+ 0) mongod-1636528 |                 security_inode_getattr() {
+ 0) mongod-1636528 |                   apparmor_inode_getattr() {
+ 0) mongod-1636528 |                     common_perm_cond() {
+ 0) mongod-1636528 |                       common_perm();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 vfs_getattr_nosec() {
+ 0) mongod-1636528 |                   ovl_getattr [overlay]() {
+ 0) mongod-1636528 |                     ovl_same_sb [overlay]();
+ 0) mongod-1636528 |                     ovl_is_metacopy_dentry [overlay]();
+ 0) mongod-1636528 |                     ovl_path_real [overlay]() {
+ 0) mongod-1636528 |                       ovl_path_type [overlay]();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                       override_creds();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     vfs_getattr() {
+ 0) mongod-1636528 |                       security_inode_getattr() {
+ 0) mongod-1636528 |                         apparmor_inode_getattr() {
+ 0) mongod-1636528 |                           common_perm_cond() {
+ 0) mongod-1636528 |                             common_perm();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       vfs_getattr_nosec() {
+ 0) mongod-1636528 |                         ext4_getattr() {
+ 0) mongod-1636528 |                           generic_fillattr();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_path_lower [overlay]();
+ 0) mongod-1636528 |                     vfs_getattr() {
+ 0) mongod-1636528 |                       security_inode_getattr() {
+ 0) mongod-1636528 |                         apparmor_inode_getattr() {
+ 0) mongod-1636528 |                           common_perm_cond() {
+ 0) mongod-1636528 |                             common_perm();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       vfs_getattr_nosec() {
+ 0) mongod-1636528 |                         ext4_getattr() {
+ 0) mongod-1636528 |                           generic_fillattr();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_test_flag [overlay]();
+ 0) mongod-1636528 |                     ovl_verify_lower [overlay]() {
+ 0) mongod-1636528 |                       ovl_index_all [overlay]();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_layer_lower [overlay]();
+ 0) mongod-1636528 |                     ovl_same_sb [overlay]();
+ 0) mongod-1636528 |                     revert_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               ovl_test_flag [overlay]();
+ 0) mongod-1636528 |               iterate_dir() {
+ 0) mongod-1636528 |                 security_file_permission() {
+ 0) mongod-1636528 |                   apparmor_file_permission() {
+ 0) mongod-1636528 |                     common_file_perm() {
+ 0) mongod-1636528 |                       aa_file_perm() {
+ 0) mongod-1636528 |                         __rcu_read_lock();
+ 0) mongod-1636528 |                         __rcu_read_unlock();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   __fsnotify_parent();
+ 0) mongod-1636528 |                   fsnotify();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 down_read_killable();
+ 0) mongod-1636528 |                 ext4_readdir() {
+ 0) mongod-1636528 |                   is_dx_dir();
+ 0) mongod-1636528 |                   ext4_dx_readdir() {
+ 0) mongod-1636528 |                     kmem_cache_alloc_trace() {
+ 0) mongod-1636528 |                       should_failslab();
+ 0) mongod-1636528 |                       memcg_kmem_put_cache();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     free_rb_tree_fname();
+ 0) mongod-1636528 |                     ext4_htree_fill_tree() {
+ 0) mongod-1636528 |                       htree_dirblock_to_tree() {
+ 0) mongod-1636528 |                         __ext4_read_dirblock() {
+ 0) mongod-1636528 |                           __ext4_read_dirblock.part.0() {
+ 0) mongod-1636528 |                             ext4_bread() {
+ 0) mongod-1636528 |                               ext4_getblk() {
+ 0) mongod-1636528 |                                 ext4_map_blocks() {
+ 0) mongod-1636528 |                                   ext4_es_lookup_extent() {
+ 0) mongod-1636528 |                                     _raw_read_lock();
+ 0) mongod-1636528 |                                     _raw_read_unlock();
+ 0) mongod-1636528 |                                   }
+ 0) mongod-1636528 |                                   __check_block_validity.constprop.0() {
+ 0) mongod-1636528 |                                     ext4_inode_block_valid() {
+ 0) mongod-1636528 |                                       __rcu_read_lock();
+ 0) mongod-1636528 |                                       __rcu_read_unlock();
+ 0) mongod-1636528 |                                     }
+ 0) mongod-1636528 |                                   }
+ 0) mongod-1636528 |                                 }
+ 0) mongod-1636528 |                                 __getblk_gfp() {
+ 0) mongod-1636528 |                                   __find_get_block() {
+ 0) mongod-1636528 |                                     mark_page_accessed();
+ 0) mongod-1636528 |                                   }
+ 0) mongod-1636528 |                                 }
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __ext4_check_dir_entry();
+ 0) mongod-1636528 |                         ext4fs_dirhash() {
+ 0) mongod-1636528 |                           __ext4fs_dirhash() {
+ 0) mongod-1636528 |                             str2hashbuf_unsigned();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         ext4_htree_store_dirent() {
+ 0) mongod-1636528 |                           __kmalloc() {
+ 0) mongod-1636528 |                             kmalloc_slab();
+ 0) mongod-1636528 |                             should_failslab();
+ 0) mongod-1636528 |                             memcg_kmem_put_cache();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __ext4_check_dir_entry();
+ 0) mongod-1636528 |                         ext4fs_dirhash() {
+ 0) mongod-1636528 |                           __ext4fs_dirhash() {
+ 0) mongod-1636528 |                             str2hashbuf_unsigned();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         ext4_htree_store_dirent() {
+ 0) mongod-1636528 |                           __kmalloc() {
+ 0) mongod-1636528 |                             kmalloc_slab();
+ 0) mongod-1636528 |                             should_failslab();
+ 0) mongod-1636528 |                             memcg_kmem_put_cache();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __ext4_check_dir_entry();
+ 0) mongod-1636528 |                         ext4fs_dirhash() {
+ 0) mongod-1636528 |                           __ext4fs_dirhash() {
+ 0) mongod-1636528 |                             str2hashbuf_unsigned();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         ext4_htree_store_dirent() {
+ 0) mongod-1636528 |                           __kmalloc() {
+ 0) mongod-1636528 |                             kmalloc_slab();
+ 0) mongod-1636528 |                             should_failslab();
+ 0) mongod-1636528 |                             memcg_kmem_put_cache();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __ext4_check_dir_entry();
+ 0) mongod-1636528 |                         ext4fs_dirhash() {
+ 0) mongod-1636528 |                           __ext4fs_dirhash() {
+ 0) mongod-1636528 |                             str2hashbuf_unsigned();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         ext4_htree_store_dirent() {
+ 0) mongod-1636528 |                           __kmalloc() {
+ 0) mongod-1636528 |                             kmalloc_slab();
+ 0) mongod-1636528 |                             should_failslab();
+ 0) mongod-1636528 |                             memcg_kmem_put_cache();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __ext4_check_dir_entry();
+ 0) mongod-1636528 |                         ext4fs_dirhash() {
+ 0) mongod-1636528 |                           __ext4fs_dirhash() {
+ 0) mongod-1636528 |                             str2hashbuf_unsigned();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         ext4_htree_store_dirent() {
+ 0) mongod-1636528 |                           __kmalloc() {
+ 0) mongod-1636528 |                             kmalloc_slab();
+ 0) mongod-1636528 |                             should_failslab();
+ 0) mongod-1636528 |                             memcg_kmem_put_cache();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __brelse();
+ 0) mongod-1636528 |                         fscrypt_fname_free_buffer() {
+ 0) mongod-1636528 |                           kfree();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     call_filldir() {
+ 0) mongod-1636528 |                       ovl_fill_real [overlay]() {
+ 0) mongod-1636528 |                         filldir64() {
+ 0) mongod-1636528 |                           verify_dirent_name();
+ 0) mongod-1636528 |                           __check_object_size() {
+ 0) mongod-1636528 |                             check_stack_object();
+ 0) mongod-1636528 |                             pfn_valid() {
+ 0) mongod-1636528 |                               memblock_is_map_memory();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __check_heap_object();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     call_filldir() {
+ 0) mongod-1636528 |                       ovl_fill_real [overlay]() {
+ 0) mongod-1636528 |                         filldir64() {
+ 0) mongod-1636528 |                           verify_dirent_name();
+ 0) mongod-1636528 |                           __check_object_size() {
+ 0) mongod-1636528 |                             check_stack_object();
+ 0) mongod-1636528 |                             pfn_valid() {
+ 0) mongod-1636528 |                               memblock_is_map_memory();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __check_heap_object();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     call_filldir() {
+ 0) mongod-1636528 |                       ovl_fill_real [overlay]() {
+ 0) mongod-1636528 |                         filldir64() {
+ 0) mongod-1636528 |                           verify_dirent_name();
+ 0) mongod-1636528 |                           __check_object_size() {
+ 0) mongod-1636528 |                             check_stack_object();
+ 0) mongod-1636528 |                             pfn_valid() {
+ 0) mongod-1636528 |                               memblock_is_map_memory();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __check_heap_object();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     call_filldir() {
+ 0) mongod-1636528 |                       ovl_fill_real [overlay]() {
+ 0) mongod-1636528 |                         filldir64() {
+ 0) mongod-1636528 |                           verify_dirent_name();
+ 0) mongod-1636528 |                           __check_object_size() {
+ 0) mongod-1636528 |                             check_stack_object();
+ 0) mongod-1636528 |                             pfn_valid() {
+ 0) mongod-1636528 |                               memblock_is_map_memory();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __check_heap_object();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     call_filldir() {
+ 0) mongod-1636528 |                       ovl_fill_real [overlay]() {
+ 0) mongod-1636528 |                         filldir64() {
+ 0) mongod-1636528 |                           verify_dirent_name();
+ 0) mongod-1636528 |                           __check_object_size() {
+ 0) mongod-1636528 |                             check_stack_object();
+ 0) mongod-1636528 |                             pfn_valid() {
+ 0) mongod-1636528 |                               memblock_is_map_memory();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __check_heap_object();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 __fsnotify_parent();
+ 0) mongod-1636528 |                 fsnotify();
+ 0) mongod-1636528 |                 up_read();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             revert_creds();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           __fsnotify_parent();
+ 0) mongod-1636528 |           fsnotify();
+ 0) mongod-1636528 |           touch_atime() {
+ 0) mongod-1636528 |             atime_needs_update() {
+ 0) mongod-1636528 |               current_time() {
+ 0) mongod-1636528 |                 ktime_get_coarse_real_ts64();
+ 0) mongod-1636528 |                 timestamp_truncate();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           up_write();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         __f_unlock_pos() {
+ 0) mongod-1636528 |           mutex_unlock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         fput() {
+ 0) mongod-1636528 |           fput_many();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_getdents64() {
+ 0) mongod-1636528 |       ksys_getdents64() {
+ 0) mongod-1636528 |         __fdget_pos() {
+ 0) mongod-1636528 |           __fget_light() {
+ 0) mongod-1636528 |             __fget() {
+ 0) mongod-1636528 |               __rcu_read_lock();
+ 0) mongod-1636528 |               __rcu_read_unlock();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           mutex_lock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         iterate_dir() {
+ 0) mongod-1636528 |           security_file_permission() {
+ 0) mongod-1636528 |             apparmor_file_permission() {
+ 0) mongod-1636528 |               common_file_perm() {
+ 0) mongod-1636528 |                 aa_file_perm() {
+ 0) mongod-1636528 |                   __rcu_read_lock();
+ 0) mongod-1636528 |                   aa_label_is_subset();
+ 0) mongod-1636528 |                   __rcu_read_unlock();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             __fsnotify_parent();
+ 0) mongod-1636528 |             fsnotify();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           down_write_killable();
+ 0) mongod-1636528 |           ovl_iterate [overlay]() {
+ 0) mongod-1636528 |             ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |               override_creds();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             ovl_same_sb [overlay]();
+ 0) mongod-1636528 |             ovl_test_flag [overlay]();
+ 0) mongod-1636528 |             ovl_path_type [overlay]();
+ 0) mongod-1636528 |             ovl_iterate_real [overlay]() {
+ 0) mongod-1636528 |               ovl_layer_lower [overlay]();
+ 0) mongod-1636528 |               ovl_path_type [overlay]();
+ 0) mongod-1636528 |               vfs_getattr() {
+ 0) mongod-1636528 |                 security_inode_getattr() {
+ 0) mongod-1636528 |                   apparmor_inode_getattr() {
+ 0) mongod-1636528 |                     common_perm_cond() {
+ 0) mongod-1636528 |                       common_perm();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 vfs_getattr_nosec() {
+ 0) mongod-1636528 |                   ovl_getattr [overlay]() {
+ 0) mongod-1636528 |                     ovl_same_sb [overlay]();
+ 0) mongod-1636528 |                     ovl_is_metacopy_dentry [overlay]();
+ 0) mongod-1636528 |                     ovl_path_real [overlay]() {
+ 0) mongod-1636528 |                       ovl_path_type [overlay]();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                       override_creds();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     vfs_getattr() {
+ 0) mongod-1636528 |                       security_inode_getattr() {
+ 0) mongod-1636528 |                         apparmor_inode_getattr() {
+ 0) mongod-1636528 |                           common_perm_cond() {
+ 0) mongod-1636528 |                             common_perm();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       vfs_getattr_nosec() {
+ 0) mongod-1636528 |                         ext4_getattr() {
+ 0) mongod-1636528 |                           generic_fillattr();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_path_lower [overlay]();
+ 0) mongod-1636528 |                     vfs_getattr() {
+ 0) mongod-1636528 |                       security_inode_getattr() {
+ 0) mongod-1636528 |                         apparmor_inode_getattr() {
+ 0) mongod-1636528 |                           common_perm_cond() {
+ 0) mongod-1636528 |                             common_perm();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       vfs_getattr_nosec() {
+ 0) mongod-1636528 |                         ext4_getattr() {
+ 0) mongod-1636528 |                           generic_fillattr();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_test_flag [overlay]();
+ 0) mongod-1636528 |                     ovl_verify_lower [overlay]() {
+ 0) mongod-1636528 |                       ovl_index_all [overlay]();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_layer_lower [overlay]();
+ 0) mongod-1636528 |                     ovl_same_sb [overlay]();
+ 0) mongod-1636528 |                     revert_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               ovl_test_flag [overlay]();
+ 0) mongod-1636528 |               iterate_dir() {
+ 0) mongod-1636528 |                 security_file_permission() {
+ 0) mongod-1636528 |                   apparmor_file_permission() {
+ 0) mongod-1636528 |                     common_file_perm() {
+ 0) mongod-1636528 |                       aa_file_perm() {
+ 0) mongod-1636528 |                         __rcu_read_lock();
+ 0) mongod-1636528 |                         __rcu_read_unlock();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   __fsnotify_parent();
+ 0) mongod-1636528 |                   fsnotify();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 down_read_killable();
+ 0) mongod-1636528 |                 ext4_readdir() {
+ 0) mongod-1636528 |                   is_dx_dir();
+ 0) mongod-1636528 |                   ext4_dx_readdir();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 __fsnotify_parent();
+ 0) mongod-1636528 |                 fsnotify();
+ 0) mongod-1636528 |                 up_read();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             revert_creds();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           __fsnotify_parent();
+ 0) mongod-1636528 |           fsnotify();
+ 0) mongod-1636528 |           touch_atime() {
+ 0) mongod-1636528 |             atime_needs_update() {
+ 0) mongod-1636528 |               current_time() {
+ 0) mongod-1636528 |                 ktime_get_coarse_real_ts64();
+ 0) mongod-1636528 |                 timestamp_truncate();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           up_write();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         __f_unlock_pos() {
+ 0) mongod-1636528 |           mutex_unlock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         fput() {
+ 0) mongod-1636528 |           fput_many();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_close() {
+ 0) mongod-1636528 |       __close_fd() {
+ 0) mongod-1636528 |         _raw_spin_lock();
+ 0) mongod-1636528 |         _raw_spin_unlock();
+ 0) mongod-1636528 |         filp_close() {
+ 0) mongod-1636528 |           dnotify_flush() {
+ 0) mongod-1636528 |             fsnotify_find_mark() {
+ 0) mongod-1636528 |               fsnotify_grab_connector() {
+ 0) mongod-1636528 |                 __srcu_read_lock();
+ 0) mongod-1636528 |                 __srcu_read_unlock();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           locks_remove_posix();
+ 0) mongod-1636528 |           fput() {
+ 0) mongod-1636528 |             fput_many() {
+ 0) mongod-1636528 |               task_work_add() {
+ 0) mongod-1636528 |                 kick_process();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | do_notify_resume() {
+ 0) mongod-1636528 |   task_work_run() {
+ 0) mongod-1636528 |     _raw_spin_lock_irq();
+ 0) mongod-1636528 |     _raw_spin_unlock_irq();
+ 0) mongod-1636528 |     ____fput() {
+ 0) mongod-1636528 |       __fput() {
+ 0) mongod-1636528 |         __fsnotify_parent();
+ 0) mongod-1636528 |         fsnotify();
+ 0) mongod-1636528 |         locks_remove_file();
+ 0) mongod-1636528 |         ima_file_free();
+ 0) mongod-1636528 |         ovl_dir_release [overlay]() {
+ 0) mongod-1636528 |           fput() {
+ 0) mongod-1636528 |             fput_many() {
+ 0) mongod-1636528 |               task_work_add() {
+ 0) mongod-1636528 |                 kick_process();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           kfree();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         module_put();
+ 0) mongod-1636528 |         put_pid();
+ 0) mongod-1636528 |         dput() {
+ 0) mongod-1636528 |           __rcu_read_lock();
+ 0) mongod-1636528 |           __rcu_read_unlock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         mntput() {
+ 0) mongod-1636528 |           mntput_no_expire() {
+ 0) mongod-1636528 |             __rcu_read_lock();
+ 0) mongod-1636528 |             __rcu_read_unlock();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         security_file_free() {
+ 0) mongod-1636528 |           apparmor_file_free_security();
+ 0) mongod-1636528 |           kmem_cache_free();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         call_rcu() {
+ 0) mongod-1636528 |           __call_rcu() {
+ 0) mongod-1636528 |             rcu_segcblist_enqueue();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |     _raw_spin_lock_irq();
+ 0) mongod-1636528 |     _raw_spin_unlock_irq();
+ 0) mongod-1636528 |     ____fput() {
+ 0) mongod-1636528 |       __fput() {
+ 0) mongod-1636528 |         __fsnotify_parent();
+ 0) mongod-1636528 |         fsnotify();
+ 0) mongod-1636528 |         locks_remove_file();
+ 0) mongod-1636528 |         ima_file_free();
+ 0) mongod-1636528 |         ext4_release_dir() {
+ 0) mongod-1636528 |           free_rb_tree_fname() {
+ 0) mongod-1636528 |             kfree();
+ 0) mongod-1636528 |             kfree();
+ 0) mongod-1636528 |             kfree();
+ 0) mongod-1636528 |             kfree();
+ 0) mongod-1636528 |             kfree();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           kfree();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         module_put();
+ 0) mongod-1636528 |         put_pid();
+ 0) mongod-1636528 |         dput() {
+ 0) mongod-1636528 |           __rcu_read_lock();
+ 0) mongod-1636528 |           __rcu_read_unlock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         mntput() {
+ 0) mongod-1636528 |           mntput_no_expire() {
+ 0) mongod-1636528 |             __rcu_read_lock();
+ 0) mongod-1636528 |             _raw_spin_lock();
+ 0) mongod-1636528 |             mnt_get_count();
+ 0) mongod-1636528 |             __rcu_read_unlock();
+ 0) mongod-1636528 |             _raw_spin_unlock();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         security_file_free() {
+ 0) mongod-1636528 |           apparmor_file_free_security();
+ 0) mongod-1636528 |           kmem_cache_free();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         call_rcu() {
+ 0) mongod-1636528 |           __call_rcu() {
+ 0) mongod-1636528 |             rcu_segcblist_enqueue();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |     _raw_spin_lock_irq();
+ 0) mongod-1636528 |     _raw_spin_unlock_irq();
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 |   mem_cgroup_handle_over_high();
+ 0) mongod-1636528 |   blkcg_maybe_throttle_current();
+ 0) mongod-1636528 |   mem_cgroup_handle_over_high();
+ 0) mongod-1636528 |   blkcg_maybe_throttle_current();
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_openat() {
+ 0) mongod-1636528 |       do_sys_open() {
+ 0) mongod-1636528 |         getname() {
+ 0) mongod-1636528 |           getname_flags() {
+ 0) mongod-1636528 |             kmem_cache_alloc() {
+ 0) mongod-1636528 |               should_failslab();
+ 0) mongod-1636528 |               memcg_kmem_put_cache();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             __check_object_size() {
+ 0) mongod-1636528 |               check_stack_object();
+ 0) mongod-1636528 |               pfn_valid() {
+ 0) mongod-1636528 |                 memblock_is_map_memory();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               __check_heap_object();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         get_unused_fd_flags() {
+ 0) mongod-1636528 |           __alloc_fd() {
+ 0) mongod-1636528 |             _raw_spin_lock();
+ 0) mongod-1636528 |             expand_files();
+ 0) mongod-1636528 |             _raw_spin_unlock();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         do_filp_open() {
+ 0) mongod-1636528 |           path_openat() {
+ 0) mongod-1636528 |             alloc_empty_file() {
+ 0) mongod-1636528 |               __alloc_file() {
+ 0) mongod-1636528 |                 kmem_cache_alloc() {
+ 0) mongod-1636528 |                   should_failslab();
+ 0) mongod-1636528 |                   memcg_kmem_get_cache() {
+ 0) mongod-1636528 |                     __rcu_read_lock();
+ 0) mongod-1636528 |                     __rcu_read_unlock();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   memcg_kmem_put_cache();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 security_file_alloc() {
+ 0) mongod-1636528 |                   kmem_cache_alloc() {
+ 0) mongod-1636528 |                     should_failslab();
+ 0) mongod-1636528 |                     memcg_kmem_put_cache();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   apparmor_file_alloc_security();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 __mutex_init();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             path_init() {
+ 0) mongod-1636528 |               __rcu_read_lock();
+ 0) mongod-1636528 |               set_root();
+ 0) mongod-1636528 |               nd_jump_root();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             link_path_walk.part.0() {
+ 0) mongod-1636528 |               inode_permission() {
+ 0) mongod-1636528 |                 ovl_permission [overlay]() {
+ 0) mongod-1636528 |                   ovl_inode_upper [overlay]();
+ 0) mongod-1636528 |                   generic_permission();
+ 0) mongod-1636528 |                   ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                     override_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   inode_permission() {
+ 0) mongod-1636528 |                     generic_permission();
+ 0) mongod-1636528 |                     security_inode_permission();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   revert_creds();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 security_inode_permission();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               walk_component() {
+ 0) mongod-1636528 |                 lookup_fast() {
+ 0) mongod-1636528 |                   __d_lookup_rcu();
+ 0) mongod-1636528 |                   __follow_mount_rcu.isra.0();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               inode_permission() {
+ 0) mongod-1636528 |                 ovl_permission [overlay]() {
+ 0) mongod-1636528 |                   ovl_inode_upper [overlay]();
+ 0) mongod-1636528 |                   generic_permission();
+ 0) mongod-1636528 |                   ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                     override_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   inode_permission() {
+ 0) mongod-1636528 |                     generic_permission();
+ 0) mongod-1636528 |                     security_inode_permission();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   revert_creds();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 security_inode_permission();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               walk_component() {
+ 0) mongod-1636528 |                 lookup_fast() {
+ 0) mongod-1636528 |                   __d_lookup_rcu();
+ 0) mongod-1636528 |                   __follow_mount_rcu.isra.0();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               inode_permission() {
+ 0) mongod-1636528 |                 ovl_permission [overlay]() {
+ 0) mongod-1636528 |                   ovl_inode_upper [overlay]();
+ 0) mongod-1636528 |                   generic_permission();
+ 0) mongod-1636528 |                   ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                     override_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   inode_permission() {
+ 0) mongod-1636528 |                     generic_permission();
+ 0) mongod-1636528 |                     security_inode_permission();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   revert_creds();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 security_inode_permission();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             do_last() {
+ 0) mongod-1636528 |               lookup_fast() {
+ 0) mongod-1636528 |                 __d_lookup_rcu();
+ 0) mongod-1636528 |                 __follow_mount_rcu.isra.0();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               complete_walk() {
+ 0) mongod-1636528 |                 unlazy_walk() {
+ 0) mongod-1636528 |                   legitimize_links();
+ 0) mongod-1636528 |                   legitimize_path.isra.0() {
+ 0) mongod-1636528 |                     __legitimize_mnt() {
+ 0) mongod-1636528 |                       __legitimize_mnt.part.0();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   legitimize_root();
+ 0) mongod-1636528 |                   __rcu_read_unlock();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               may_open.isra.0() {
+ 0) mongod-1636528 |                 inode_permission() {
+ 0) mongod-1636528 |                   ovl_permission [overlay]() {
+ 0) mongod-1636528 |                     ovl_inode_upper [overlay]();
+ 0) mongod-1636528 |                     generic_permission();
+ 0) mongod-1636528 |                     ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                       override_creds();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     inode_permission() {
+ 0) mongod-1636528 |                       generic_permission();
+ 0) mongod-1636528 |                       security_inode_permission();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     revert_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   security_inode_permission();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               vfs_open() {
+ 0) mongod-1636528 |                 do_dentry_open() {
+ 0) mongod-1636528 |                   path_get() {
+ 0) mongod-1636528 |                     mntget();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   try_module_get();
+ 0) mongod-1636528 |                   security_file_open() {
+ 0) mongod-1636528 |                     apparmor_file_open() {
+ 0) mongod-1636528 |                       aa_path_perm() {
+ 0) mongod-1636528 |                         aa_label_next_confined();
+ 0) mongod-1636528 |                         profile_path_perm.part.0() {
+ 0) mongod-1636528 |                           path_name.isra.0() {
+ 0) mongod-1636528 |                             aa_path_name() {
+ 0) mongod-1636528 |                               d_namespace_path.constprop.0() {
+ 0) mongod-1636528 |                                 d_absolute_path() {
+ 0) mongod-1636528 |                                   prepend();
+ 0) mongod-1636528 |                                   prepend_path.isra.0() {
+ 0) mongod-1636528 |                                     __rcu_read_lock();
+ 0) mongod-1636528 |                                     __rcu_read_lock();
+ 0) mongod-1636528 |                                     prepend_name();
+ 0) mongod-1636528 |                                     prepend_name();
+ 0) mongod-1636528 |                                     prepend_name();
+ 0) mongod-1636528 |                                     __rcu_read_unlock();
+ 0) mongod-1636528 |                                     __rcu_read_unlock();
+ 0) mongod-1636528 |                                   }
+ 0) mongod-1636528 |                                 }
+ 0) mongod-1636528 |                                 our_mnt();
+ 0) mongod-1636528 |                                 our_mnt();
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                           __aa_path_perm() {
+ 0) mongod-1636528 |                             aa_str_perms() {
+ 0) mongod-1636528 |                               aa_dfa_match();
+ 0) mongod-1636528 |                               aa_compute_fperms() {
+ 0) mongod-1636528 |                                 map_old_perms();
+ 0) mongod-1636528 |                                 map_old_perms();
+ 0) mongod-1636528 |                                 map_old_perms();
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             aa_audit_file();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         aa_label_next_confined();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     __fsnotify_parent();
+ 0) mongod-1636528 |                     fsnotify();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   ovl_dir_open [overlay]() {
+ 0) mongod-1636528 |                     kmem_cache_alloc_trace() {
+ 0) mongod-1636528 |                       should_failslab();
+ 0) mongod-1636528 |                       memcg_kmem_put_cache();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_path_real [overlay]() {
+ 0) mongod-1636528 |                       ovl_path_type [overlay]();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                       override_creds();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_path_open [overlay]() {
+ 0) mongod-1636528 |                       inode_permission() {
+ 0) mongod-1636528 |                         generic_permission();
+ 0) mongod-1636528 |                         security_inode_permission();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       inode_owner_or_capable();
+ 0) mongod-1636528 |                       dentry_open() {
+ 0) mongod-1636528 |                         alloc_empty_file() {
+ 0) mongod-1636528 |                           __alloc_file() {
+ 0) mongod-1636528 |                             kmem_cache_alloc() {
+ 0) mongod-1636528 |                               should_failslab();
+ 0) mongod-1636528 |                               memcg_kmem_get_cache() {
+ 0) mongod-1636528 |                                 __rcu_read_lock();
+ 0) mongod-1636528 |                                 __rcu_read_unlock();
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                               memcg_kmem_put_cache();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             security_file_alloc() {
+ 0) mongod-1636528 |                               kmem_cache_alloc() {
+ 0) mongod-1636528 |                                 should_failslab();
+ 0) mongod-1636528 |                                 memcg_kmem_put_cache();
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                               apparmor_file_alloc_security();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __mutex_init();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         do_dentry_open() {
+ 0) mongod-1636528 |                           path_get() {
+ 0) mongod-1636528 |                             mntget();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                           try_module_get();
+ 0) mongod-1636528 |                           security_file_open() {
+ 0) mongod-1636528 |                             apparmor_file_open();
+ 0) mongod-1636528 |                             __fsnotify_parent();
+ 0) mongod-1636528 |                             fsnotify();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                           ext4_dir_open();
+ 0) mongod-1636528 |                           file_ra_state_init();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     revert_creds();
+ 0) mongod-1636528 |                     ovl_test_flag [overlay]();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   file_ra_state_init();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               ima_file_check() {
+ 0) mongod-1636528 |                 security_task_getsecid();
+ 0) mongod-1636528 |                 process_measurement();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             terminate_walk() {
+ 0) mongod-1636528 |               dput() {
+ 0) mongod-1636528 |                 __rcu_read_lock();
+ 0) mongod-1636528 |                 __rcu_read_unlock();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               mntput() {
+ 0) mongod-1636528 |                 mntput_no_expire() {
+ 0) mongod-1636528 |                   __rcu_read_lock();
+ 0) mongod-1636528 |                   __rcu_read_unlock();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           restore_nameidata();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         __fsnotify_parent();
+ 0) mongod-1636528 |         fsnotify();
+ 0) mongod-1636528 |         fd_install() {
+ 0) mongod-1636528 |           __fd_install();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         putname() {
+ 0) mongod-1636528 |           kmem_cache_free();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_newfstat() {
+ 0) mongod-1636528 |       vfs_statx_fd() {
+ 0) mongod-1636528 |         __fdget_raw() {
+ 0) mongod-1636528 |           __fget_light() {
+ 0) mongod-1636528 |             __fget() {
+ 0) mongod-1636528 |               __rcu_read_lock();
+ 0) mongod-1636528 |               __rcu_read_unlock();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         vfs_getattr() {
+ 0) mongod-1636528 |           security_inode_getattr() {
+ 0) mongod-1636528 |             apparmor_inode_getattr() {
+ 0) mongod-1636528 |               common_perm_cond() {
+ 0) mongod-1636528 |                 common_perm() {
+ 0) mongod-1636528 |                   aa_path_perm() {
+ 0) mongod-1636528 |                     aa_label_next_confined();
+ 0) mongod-1636528 |                     profile_path_perm.part.0() {
+ 0) mongod-1636528 |                       path_name.isra.0() {
+ 0) mongod-1636528 |                         aa_path_name() {
+ 0) mongod-1636528 |                           d_namespace_path.constprop.0() {
+ 0) mongod-1636528 |                             d_absolute_path() {
+ 0) mongod-1636528 |                               prepend();
+ 0) mongod-1636528 |                               prepend_path.isra.0() {
+ 0) mongod-1636528 |                                 __rcu_read_lock();
+ 0) mongod-1636528 |                                 __rcu_read_lock();
+ 0) mongod-1636528 |                                 prepend_name();
+ 0) mongod-1636528 |                                 prepend_name();
+ 0) mongod-1636528 |                                 prepend_name();
+ 0) mongod-1636528 |                                 __rcu_read_unlock();
+ 0) mongod-1636528 |                                 __rcu_read_unlock();
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             our_mnt();
+ 0) mongod-1636528 |                             our_mnt();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       __aa_path_perm() {
+ 0) mongod-1636528 |                         aa_str_perms() {
+ 0) mongod-1636528 |                           aa_dfa_match();
+ 0) mongod-1636528 |                           aa_compute_fperms() {
+ 0) mongod-1636528 |                             map_old_perms();
+ 0) mongod-1636528 |                             map_old_perms();
+ 0) mongod-1636528 |                             map_old_perms();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         aa_audit_file();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     aa_label_next_confined();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           vfs_getattr_nosec() {
+ 0) mongod-1636528 |             ovl_getattr [overlay]() {
+ 0) mongod-1636528 |               ovl_same_sb [overlay]();
+ 0) mongod-1636528 |               ovl_is_metacopy_dentry [overlay]();
+ 0) mongod-1636528 |               ovl_path_real [overlay]() {
+ 0) mongod-1636528 |                 ovl_path_type [overlay]();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                 override_creds();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               vfs_getattr() {
+ 0) mongod-1636528 |                 security_inode_getattr() {
+ 0) mongod-1636528 |                   apparmor_inode_getattr() {
+ 0) mongod-1636528 |                     common_perm_cond() {
+ 0) mongod-1636528 |                       common_perm();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 vfs_getattr_nosec() {
+ 0) mongod-1636528 |                   ext4_getattr() {
+ 0) mongod-1636528 |                     generic_fillattr();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               ovl_same_sb [overlay]();
+ 0) mongod-1636528 |               revert_creds();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         fput() {
+ 0) mongod-1636528 |           fput_many();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |       cp_new_stat() {
+ 0) mongod-1636528 |         from_kuid_munged() {
+ 0) mongod-1636528 |           map_id_up();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         from_kgid_munged() {
+ 0) mongod-1636528 |           map_id_up();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_getdents64() {
+ 0) mongod-1636528 |       ksys_getdents64() {
+ 0) mongod-1636528 |         __fdget_pos() {
+ 0) mongod-1636528 |           __fget_light() {
+ 0) mongod-1636528 |             __fget() {
+ 0) mongod-1636528 |               __rcu_read_lock();
+ 0) mongod-1636528 |               __rcu_read_unlock();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           mutex_lock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         iterate_dir() {
+ 0) mongod-1636528 |           security_file_permission() {
+ 0) mongod-1636528 |             apparmor_file_permission() {
+ 0) mongod-1636528 |               common_file_perm() {
+ 0) mongod-1636528 |                 aa_file_perm() {
+ 0) mongod-1636528 |                   __rcu_read_lock();
+ 0) mongod-1636528 |                   aa_label_is_subset();
+ 0) mongod-1636528 |                   __rcu_read_unlock();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             __fsnotify_parent();
+ 0) mongod-1636528 |             fsnotify();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           down_write_killable();
+ 0) mongod-1636528 |           ovl_iterate [overlay]() {
+ 0) mongod-1636528 |             ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |               override_creds();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             ovl_dir_reset.isra.0 [overlay]() {
+ 0) mongod-1636528 |               ovl_test_flag [overlay]();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             ovl_same_sb [overlay]();
+ 0) mongod-1636528 |             ovl_test_flag [overlay]();
+ 0) mongod-1636528 |             ovl_path_type [overlay]();
+ 0) mongod-1636528 |             ovl_iterate_real [overlay]() {
+ 0) mongod-1636528 |               ovl_layer_lower [overlay]();
+ 0) mongod-1636528 |               ovl_path_type [overlay]();
+ 0) mongod-1636528 |               vfs_getattr() {
+ 0) mongod-1636528 |                 security_inode_getattr() {
+ 0) mongod-1636528 |                   apparmor_inode_getattr() {
+ 0) mongod-1636528 |                     common_perm_cond() {
+ 0) mongod-1636528 |                       common_perm();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 vfs_getattr_nosec() {
+ 0) mongod-1636528 |                   ovl_getattr [overlay]() {
+ 0) mongod-1636528 |                     ovl_same_sb [overlay]();
+ 0) mongod-1636528 |                     ovl_is_metacopy_dentry [overlay]();
+ 0) mongod-1636528 |                     ovl_path_real [overlay]() {
+ 0) mongod-1636528 |                       ovl_path_type [overlay]();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                       override_creds();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     vfs_getattr() {
+ 0) mongod-1636528 |                       security_inode_getattr() {
+ 0) mongod-1636528 |                         apparmor_inode_getattr() {
+ 0) mongod-1636528 |                           common_perm_cond() {
+ 0) mongod-1636528 |                             common_perm();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       vfs_getattr_nosec() {
+ 0) mongod-1636528 |                         ext4_getattr() {
+ 0) mongod-1636528 |                           generic_fillattr();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_path_lower [overlay]();
+ 0) mongod-1636528 |                     vfs_getattr() {
+ 0) mongod-1636528 |                       security_inode_getattr() {
+ 0) mongod-1636528 |                         apparmor_inode_getattr() {
+ 0) mongod-1636528 |                           common_perm_cond() {
+ 0) mongod-1636528 |                             common_perm();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       vfs_getattr_nosec() {
+ 0) mongod-1636528 |                         ext4_getattr() {
+ 0) mongod-1636528 |                           generic_fillattr();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_test_flag [overlay]();
+ 0) mongod-1636528 |                     ovl_verify_lower [overlay]() {
+ 0) mongod-1636528 |                       ovl_index_all [overlay]();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_layer_lower [overlay]();
+ 0) mongod-1636528 |                     ovl_same_sb [overlay]();
+ 0) mongod-1636528 |                     revert_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               ovl_test_flag [overlay]();
+ 0) mongod-1636528 |               iterate_dir() {
+ 0) mongod-1636528 |                 security_file_permission() {
+ 0) mongod-1636528 |                   apparmor_file_permission() {
+ 0) mongod-1636528 |                     common_file_perm() {
+ 0) mongod-1636528 |                       aa_file_perm() {
+ 0) mongod-1636528 |                         __rcu_read_lock();
+ 0) mongod-1636528 |                         __rcu_read_unlock();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   __fsnotify_parent();
+ 0) mongod-1636528 |                   fsnotify();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 down_read_killable();
+ 0) mongod-1636528 |                 ext4_readdir() {
+ 0) mongod-1636528 |                   is_dx_dir();
+ 0) mongod-1636528 |                   ext4_dx_readdir() {
+ 0) mongod-1636528 |                     kmem_cache_alloc_trace() {
+ 0) mongod-1636528 |                       should_failslab();
+ 0) mongod-1636528 |                       memcg_kmem_put_cache();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     free_rb_tree_fname();
+ 0) mongod-1636528 |                     ext4_htree_fill_tree() {
+ 0) mongod-1636528 |                       htree_dirblock_to_tree() {
+ 0) mongod-1636528 |                         __ext4_read_dirblock() {
+ 0) mongod-1636528 |                           __ext4_read_dirblock.part.0() {
+ 0) mongod-1636528 |                             ext4_bread() {
+ 0) mongod-1636528 |                               ext4_getblk() {
+ 0) mongod-1636528 |                                 ext4_map_blocks() {
+ 0) mongod-1636528 |                                   ext4_es_lookup_extent() {
+ 0) mongod-1636528 |                                     _raw_read_lock();
+ 0) mongod-1636528 |                                     _raw_read_unlock();
+ 0) mongod-1636528 |                                   }
+ 0) mongod-1636528 |                                   __check_block_validity.constprop.0() {
+ 0) mongod-1636528 |                                     ext4_inode_block_valid() {
+ 0) mongod-1636528 |                                       __rcu_read_lock();
+ 0) mongod-1636528 |                                       __rcu_read_unlock();
+ 0) mongod-1636528 |                                     }
+ 0) mongod-1636528 |                                   }
+ 0) mongod-1636528 |                                 }
+ 0) mongod-1636528 |                                 __getblk_gfp() {
+ 0) mongod-1636528 |                                   __find_get_block() {
+ 0) mongod-1636528 |                                     mark_page_accessed();
+ 0) mongod-1636528 |                                   }
+ 0) mongod-1636528 |                                 }
+ 0) mongod-1636528 |                               }
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __ext4_check_dir_entry();
+ 0) mongod-1636528 |                         ext4fs_dirhash() {
+ 0) mongod-1636528 |                           __ext4fs_dirhash() {
+ 0) mongod-1636528 |                             str2hashbuf_unsigned();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         ext4_htree_store_dirent() {
+ 0) mongod-1636528 |                           __kmalloc() {
+ 0) mongod-1636528 |                             kmalloc_slab();
+ 0) mongod-1636528 |                             should_failslab();
+ 0) mongod-1636528 |                             memcg_kmem_put_cache();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __ext4_check_dir_entry();
+ 0) mongod-1636528 |                         ext4fs_dirhash() {
+ 0) mongod-1636528 |                           __ext4fs_dirhash() {
+ 0) mongod-1636528 |                             str2hashbuf_unsigned();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         ext4_htree_store_dirent() {
+ 0) mongod-1636528 |                           __kmalloc() {
+ 0) mongod-1636528 |                             kmalloc_slab();
+ 0) mongod-1636528 |                             should_failslab();
+ 0) mongod-1636528 |                             memcg_kmem_put_cache();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __ext4_check_dir_entry();
+ 0) mongod-1636528 |                         ext4fs_dirhash() {
+ 0) mongod-1636528 |                           __ext4fs_dirhash() {
+ 0) mongod-1636528 |                             str2hashbuf_unsigned();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         ext4_htree_store_dirent() {
+ 0) mongod-1636528 |                           __kmalloc() {
+ 0) mongod-1636528 |                             kmalloc_slab();
+ 0) mongod-1636528 |                             should_failslab();
+ 0) mongod-1636528 |                             memcg_kmem_put_cache();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __ext4_check_dir_entry();
+ 0) mongod-1636528 |                         ext4fs_dirhash() {
+ 0) mongod-1636528 |                           __ext4fs_dirhash() {
+ 0) mongod-1636528 |                             str2hashbuf_unsigned();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         ext4_htree_store_dirent() {
+ 0) mongod-1636528 |                           __kmalloc() {
+ 0) mongod-1636528 |                             kmalloc_slab();
+ 0) mongod-1636528 |                             should_failslab();
+ 0) mongod-1636528 |                             memcg_kmem_put_cache();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __ext4_check_dir_entry();
+ 0) mongod-1636528 |                         ext4fs_dirhash() {
+ 0) mongod-1636528 |                           __ext4fs_dirhash() {
+ 0) mongod-1636528 |                             str2hashbuf_unsigned();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         ext4_htree_store_dirent() {
+ 0) mongod-1636528 |                           __kmalloc() {
+ 0) mongod-1636528 |                             kmalloc_slab();
+ 0) mongod-1636528 |                             should_failslab();
+ 0) mongod-1636528 |                             memcg_kmem_put_cache();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                         __brelse();
+ 0) mongod-1636528 |                         fscrypt_fname_free_buffer() {
+ 0) mongod-1636528 |                           kfree();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     call_filldir() {
+ 0) mongod-1636528 |                       ovl_fill_real [overlay]() {
+ 0) mongod-1636528 |                         filldir64() {
+ 0) mongod-1636528 |                           verify_dirent_name();
+ 0) mongod-1636528 |                           __check_object_size() {
+ 0) mongod-1636528 |                             check_stack_object();
+ 0) mongod-1636528 |                             pfn_valid() {
+ 0) mongod-1636528 |                               memblock_is_map_memory();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __check_heap_object();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     call_filldir() {
+ 0) mongod-1636528 |                       ovl_fill_real [overlay]() {
+ 0) mongod-1636528 |                         filldir64() {
+ 0) mongod-1636528 |                           verify_dirent_name();
+ 0) mongod-1636528 |                           __check_object_size() {
+ 0) mongod-1636528 |                             check_stack_object();
+ 0) mongod-1636528 |                             pfn_valid() {
+ 0) mongod-1636528 |                               memblock_is_map_memory();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __check_heap_object();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     call_filldir() {
+ 0) mongod-1636528 |                       ovl_fill_real [overlay]() {
+ 0) mongod-1636528 |                         filldir64() {
+ 0) mongod-1636528 |                           verify_dirent_name();
+ 0) mongod-1636528 |                           __check_object_size() {
+ 0) mongod-1636528 |                             check_stack_object();
+ 0) mongod-1636528 |                             pfn_valid() {
+ 0) mongod-1636528 |                               memblock_is_map_memory();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __check_heap_object();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     call_filldir() {
+ 0) mongod-1636528 |                       ovl_fill_real [overlay]() {
+ 0) mongod-1636528 |                         filldir64() {
+ 0) mongod-1636528 |                           verify_dirent_name();
+ 0) mongod-1636528 |                           __check_object_size() {
+ 0) mongod-1636528 |                             check_stack_object();
+ 0) mongod-1636528 |                             pfn_valid() {
+ 0) mongod-1636528 |                               memblock_is_map_memory();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __check_heap_object();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     call_filldir() {
+ 0) mongod-1636528 |                       ovl_fill_real [overlay]() {
+ 0) mongod-1636528 |                         filldir64() {
+ 0) mongod-1636528 |                           verify_dirent_name();
+ 0) mongod-1636528 |                           __check_object_size() {
+ 0) mongod-1636528 |                             check_stack_object();
+ 0) mongod-1636528 |                             pfn_valid() {
+ 0) mongod-1636528 |                               memblock_is_map_memory();
+ 0) mongod-1636528 |                             }
+ 0) mongod-1636528 |                             __check_heap_object();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 __fsnotify_parent();
+ 0) mongod-1636528 |                 fsnotify();
+ 0) mongod-1636528 |                 up_read();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             revert_creds();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           __fsnotify_parent();
+ 0) mongod-1636528 |           fsnotify();
+ 0) mongod-1636528 |           touch_atime() {
+ 0) mongod-1636528 |             atime_needs_update() {
+ 0) mongod-1636528 |               current_time() {
+ 0) mongod-1636528 |                 ktime_get_coarse_real_ts64();
+ 0) mongod-1636528 |                 timestamp_truncate() {
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           up_write();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         __f_unlock_pos() {
+ 0) mongod-1636528 |           mutex_unlock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         fput() {
+ 0) mongod-1636528 |           fput_many();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_getdents64() {
+ 0) mongod-1636528 |       ksys_getdents64() {
+ 0) mongod-1636528 |         __fdget_pos() {
+ 0) mongod-1636528 |           __fget_light() {
+ 0) mongod-1636528 |             __fget() {
+ 0) mongod-1636528 |               __rcu_read_lock();
+ 0) mongod-1636528 |               __rcu_read_unlock();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           mutex_lock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         iterate_dir() {
+ 0) mongod-1636528 |           security_file_permission() {
+ 0) mongod-1636528 |             apparmor_file_permission() {
+ 0) mongod-1636528 |               common_file_perm() {
+ 0) mongod-1636528 |                 aa_file_perm() {
+ 0) mongod-1636528 |                   __rcu_read_lock();
+ 0) mongod-1636528 |                   aa_label_is_subset();
+ 0) mongod-1636528 |                   __rcu_read_unlock();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             __fsnotify_parent();
+ 0) mongod-1636528 |             fsnotify();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           down_write_killable();
+ 0) mongod-1636528 |           ovl_iterate [overlay]() {
+ 0) mongod-1636528 |             ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |               override_creds();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             ovl_same_sb [overlay]();
+ 0) mongod-1636528 |             ovl_test_flag [overlay]();
+ 0) mongod-1636528 |             ovl_path_type [overlay]();
+ 0) mongod-1636528 |             ovl_iterate_real [overlay]() {
+ 0) mongod-1636528 |               ovl_layer_lower [overlay]();
+ 0) mongod-1636528 |               ovl_path_type [overlay]();
+ 0) mongod-1636528 |               vfs_getattr() {
+ 0) mongod-1636528 |                 security_inode_getattr() {
+ 0) mongod-1636528 |                   apparmor_inode_getattr() {
+ 0) mongod-1636528 |                     common_perm_cond() {
+ 0) mongod-1636528 |                       common_perm();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 vfs_getattr_nosec() {
+ 0) mongod-1636528 |                   ovl_getattr [overlay]() {
+ 0) mongod-1636528 |                     ovl_same_sb [overlay]();
+ 0) mongod-1636528 |                     ovl_is_metacopy_dentry [overlay]();
+ 0) mongod-1636528 |                     ovl_path_real [overlay]() {
+ 0) mongod-1636528 |                       ovl_path_type [overlay]();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_override_creds [overlay]() {
+ 0) mongod-1636528 |                       override_creds();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     vfs_getattr() {
+ 0) mongod-1636528 |                       security_inode_getattr() {
+ 0) mongod-1636528 |                         apparmor_inode_getattr() {
+ 0) mongod-1636528 |                           common_perm_cond() {
+ 0) mongod-1636528 |                             common_perm();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       vfs_getattr_nosec() {
+ 0) mongod-1636528 |                         ext4_getattr() {
+ 0) mongod-1636528 |                           generic_fillattr();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_path_lower [overlay]();
+ 0) mongod-1636528 |                     vfs_getattr() {
+ 0) mongod-1636528 |                       security_inode_getattr() {
+ 0) mongod-1636528 |                         apparmor_inode_getattr() {
+ 0) mongod-1636528 |                           common_perm_cond() {
+ 0) mongod-1636528 |                             common_perm();
+ 0) mongod-1636528 |                           }
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       vfs_getattr_nosec() {
+ 0) mongod-1636528 |                         ext4_getattr() {
+ 0) mongod-1636528 |                           generic_fillattr();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_test_flag [overlay]();
+ 0) mongod-1636528 |                     ovl_verify_lower [overlay]() {
+ 0) mongod-1636528 |                       ovl_index_all [overlay]();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     ovl_layer_lower [overlay]();
+ 0) mongod-1636528 |                     ovl_same_sb [overlay]();
+ 0) mongod-1636528 |                     revert_creds();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               ovl_test_flag [overlay]();
+ 0) mongod-1636528 |               iterate_dir() {
+ 0) mongod-1636528 |                 security_file_permission() {
+ 0) mongod-1636528 |                   apparmor_file_permission() {
+ 0) mongod-1636528 |                     common_file_perm() {
+ 0) mongod-1636528 |                       aa_file_perm() {
+ 0) mongod-1636528 |                         __rcu_read_lock();
+ 0) mongod-1636528 |                         __rcu_read_unlock();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   __fsnotify_parent();
+ 0) mongod-1636528 |                   fsnotify();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 down_read_killable();
+ 0) mongod-1636528 |                 ext4_readdir() {
+ 0) mongod-1636528 |                   is_dx_dir();
+ 0) mongod-1636528 |                   ext4_dx_readdir();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 __fsnotify_parent();
+ 0) mongod-1636528 |                 fsnotify();
+ 0) mongod-1636528 |                 up_read();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             revert_creds();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           __fsnotify_parent();
+ 0) mongod-1636528 |           fsnotify();
+ 0) mongod-1636528 |           touch_atime() {
+ 0) mongod-1636528 |             atime_needs_update() {
+ 0) mongod-1636528 |               current_time() {
+ 0) mongod-1636528 |                 ktime_get_coarse_real_ts64();
+ 0) mongod-1636528 |                 timestamp_truncate();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           up_write();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         __f_unlock_pos() {
+ 0) mongod-1636528 |           mutex_unlock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         fput() {
+ 0) mongod-1636528 |           fput_many();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_close() {
+ 0) mongod-1636528 |       __close_fd() {
+ 0) mongod-1636528 |         _raw_spin_lock();
+ 0) mongod-1636528 |         _raw_spin_unlock();
+ 0) mongod-1636528 |         filp_close() {
+ 0) mongod-1636528 |           dnotify_flush() {
+ 0) mongod-1636528 |             fsnotify_find_mark() {
+ 0) mongod-1636528 |               fsnotify_grab_connector() {
+ 0) mongod-1636528 |                 __srcu_read_lock();
+ 0) mongod-1636528 |                 __srcu_read_unlock();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           locks_remove_posix();
+ 0) mongod-1636528 |           fput() {
+ 0) mongod-1636528 |             fput_many() {
+ 0) mongod-1636528 |               task_work_add() {
+ 0) mongod-1636528 |                 kick_process();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | do_notify_resume() {
+ 0) mongod-1636528 |   task_work_run() {
+ 0) mongod-1636528 |     _raw_spin_lock_irq();
+ 0) mongod-1636528 |     _raw_spin_unlock_irq();
+ 0) mongod-1636528 |     ____fput() {
+ 0) mongod-1636528 |       __fput() {
+ 0) mongod-1636528 |         __fsnotify_parent();
+ 0) mongod-1636528 |         fsnotify();
+ 0) mongod-1636528 |         locks_remove_file();
+ 0) mongod-1636528 |         ima_file_free();
+ 0) mongod-1636528 |         ovl_dir_release [overlay]() {
+ 0) mongod-1636528 |           fput() {
+ 0) mongod-1636528 |             fput_many() {
+ 0) mongod-1636528 |               task_work_add() {
+ 0) mongod-1636528 |                 kick_process();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           kfree();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         module_put();
+ 0) mongod-1636528 |         put_pid();
+ 0) mongod-1636528 |         dput() {
+ 0) mongod-1636528 |           __rcu_read_lock();
+ 0) mongod-1636528 |           __rcu_read_unlock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         mntput() {
+ 0) mongod-1636528 |           mntput_no_expire() {
+ 0) mongod-1636528 |             __rcu_read_lock();
+ 0) mongod-1636528 |             __rcu_read_unlock();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         security_file_free() {
+ 0) mongod-1636528 |           apparmor_file_free_security();
+ 0) mongod-1636528 |           kmem_cache_free();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         call_rcu() {
+ 0) mongod-1636528 |           __call_rcu() {
+ 0) mongod-1636528 |             rcu_segcblist_enqueue();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |     _raw_spin_lock_irq();
+ 0) mongod-1636528 |     _raw_spin_unlock_irq();
+ 0) mongod-1636528 |     ____fput() {
+ 0) mongod-1636528 |       __fput() {
+ 0) mongod-1636528 |         __fsnotify_parent();
+ 0) mongod-1636528 |         fsnotify();
+ 0) mongod-1636528 |         locks_remove_file();
+ 0) mongod-1636528 |         ima_file_free();
+ 0) mongod-1636528 |         ext4_release_dir() {
+ 0) mongod-1636528 |           free_rb_tree_fname() {
+ 0) mongod-1636528 |             kfree();
+ 0) mongod-1636528 |             kfree();
+ 0) mongod-1636528 |             kfree();
+ 0) mongod-1636528 |             kfree();
+ 0) mongod-1636528 |             kfree();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           kfree();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         module_put();
+ 0) mongod-1636528 |         put_pid();
+ 0) mongod-1636528 |         dput() {
+ 0) mongod-1636528 |           __rcu_read_lock();
+ 0) mongod-1636528 |           __rcu_read_unlock();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         mntput() {
+ 0) mongod-1636528 |           mntput_no_expire() {
+ 0) mongod-1636528 |             __rcu_read_lock();
+ 0) mongod-1636528 |             _raw_spin_lock();
+ 0) mongod-1636528 |             mnt_get_count();
+ 0) mongod-1636528 |             __rcu_read_unlock();
+ 0) mongod-1636528 |             _raw_spin_unlock();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         security_file_free() {
+ 0) mongod-1636528 |           apparmor_file_free_security();
+ 0) mongod-1636528 |           kmem_cache_free();
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |         call_rcu() {
+ 0) mongod-1636528 |           __call_rcu() {
+ 0) mongod-1636528 |             rcu_segcblist_enqueue();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |         }
+ 0) mongod-1636528 |       }
+ 0) mongod-1636528 |     }
+ 0) mongod-1636528 |     _raw_spin_lock_irq();
+ 0) mongod-1636528 |     _raw_spin_unlock_irq();
+ 0) mongod-1636528 |   }
+ 0) mongod-1636528 |   mem_cgroup_handle_over_high();
+ 0) mongod-1636528 |   blkcg_maybe_throttle_current();
+ 0) mongod-1636528 |   mem_cgroup_handle_over_high();
+ 0) mongod-1636528 |   blkcg_maybe_throttle_current();
+ 0) mongod-1636528 | }
+ 0) mongod-1636528 | post_ttbr_update_workaround();
+ 0) mongod-1636528 | el0_svc_handler() {
+ 0) mongod-1636528 |   el0_svc_common.constprop.0() {
+ 0) mongod-1636528 |     __arm64_sys_futex() {
+ 0) mongod-1636528 |       get_timespec64();
+ 0) mongod-1636528 |       do_futex() {
+ 0) mongod-1636528 |         futex_wait() {
+ 0) mongod-1636528 |           hrtimer_init_sleeper() {
+ 0) mongod-1636528 |             __hrtimer_init();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           ktime_add_safe();
+ 0) mongod-1636528 |           futex_wait_setup() {
+ 0) mongod-1636528 |             get_futex_key() {
+ 0) mongod-1636528 |               get_futex_key_refs.isra.0();
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             hash_futex();
+ 0) mongod-1636528 |             _raw_spin_lock();
+ 0) mongod-1636528 |             get_futex_value_locked();
+ 0) mongod-1636528 |           }
+ 0) mongod-1636528 |           futex_wait_queue_me() {
+ 0) mongod-1636528 |             _raw_spin_unlock();
+ 0) mongod-1636528 |             hrtimer_sleeper_start_expires() {
+ 0) mongod-1636528 |               hrtimer_start_range_ns() {
+ 0) mongod-1636528 |                 lock_hrtimer_base() {
+ 0) mongod-1636528 |                   _raw_spin_lock_irqsave();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 get_nohz_timer_target();
+ 0) mongod-1636528 |                 enqueue_hrtimer();
+ 0) mongod-1636528 |                 _raw_spin_unlock_irqrestore();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |             }
+ 0) mongod-1636528 |             schedule() {
+ 0) mongod-1636528 |               rcu_note_context_switch() {
+ 0) mongod-1636528 |                 rcu_preempt_deferred_qs() {
+ 0) mongod-1636528 |                   rcu_preempt_need_deferred_qs();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 rcu_qs();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               _raw_spin_lock();
+ 0) mongod-1636528 |               update_rq_clock();
+ 0) mongod-1636528 |               deactivate_task() {
+ 0) mongod-1636528 |                 psi_task_change() {
+ 0) mongod-1636528 |                   record_times.isra.0();
+ 0) mongod-1636528 |                   record_times.isra.0();
+ 0) mongod-1636528 |                   record_times.isra.0();
+ 0) mongod-1636528 |                   record_times.isra.0();
+ 0) mongod-1636528 |                   record_times.isra.0();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 dequeue_task_fair() {
+ 0) mongod-1636528 |                   dequeue_entity() {
+ 0) mongod-1636528 |                     update_curr() {
+ 0) mongod-1636528 |                       update_min_vruntime();
+ 0) mongod-1636528 |                       cpuacct_charge() {
+ 0) mongod-1636528 |                         __rcu_read_lock();
+ 0) mongod-1636528 |                         __rcu_read_unlock();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       __rcu_read_lock();
+ 0) mongod-1636528 |                       __cgroup_account_cputime() {
+ 0) mongod-1636528 |                         cgroup_base_stat_cputime_account_begin();
+ 0) mongod-1636528 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) mongod-1636528 |                           cgroup_rstat_updated();
+ 0) mongod-1636528 |                         }
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                       __rcu_read_unlock();
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                     __update_load_avg_se();
+ 0) mongod-1636528 |                     __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                     clear_buddies();
+ 0) mongod-1636528 |                     update_cfs_group();
+ 0) mongod-1636528 |                     update_min_vruntime();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   set_next_buddy();
+ 0) mongod-1636528 |                   __update_load_avg_se();
+ 0) mongod-1636528 |                   __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                   update_cfs_group() {
+ 0) mongod-1636528 |                     reweight_entity() {
+ 0) mongod-1636528 |                       update_curr() {
+ 0) mongod-1636528 |                         __calc_delta();
+ 0) mongod-1636528 |                         update_min_vruntime();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   __update_load_avg_se();
+ 0) mongod-1636528 |                   __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                   update_cfs_group() {
+ 0) mongod-1636528 |                     reweight_entity() {
+ 0) mongod-1636528 |                       update_curr() {
+ 0) mongod-1636528 |                         __calc_delta();
+ 0) mongod-1636528 |                         update_min_vruntime();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   __update_load_avg_se();
+ 0) mongod-1636528 |                   __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                   update_cfs_group() {
+ 0) mongod-1636528 |                     reweight_entity() {
+ 0) mongod-1636528 |                       update_curr() {
+ 0) mongod-1636528 |                         __calc_delta();
+ 0) mongod-1636528 |                         update_min_vruntime();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   __update_load_avg_se();
+ 0) mongod-1636528 |                   __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                   update_cfs_group() {
+ 0) mongod-1636528 |                     reweight_entity() {
+ 0) mongod-1636528 |                       update_curr() {
+ 0) mongod-1636528 |                         __calc_delta();
+ 0) mongod-1636528 |                         update_min_vruntime();
+ 0) mongod-1636528 |                       }
+ 0) mongod-1636528 |                     }
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   hrtick_update();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               pick_next_task_fair() {
+ 0) mongod-1636528 |                 update_curr();
+ 0) mongod-1636528 |                 check_cfs_rq_runtime();
+ 0) mongod-1636528 |                 pick_next_entity() {
+ 0) mongod-1636528 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-1636528 |                   clear_buddies();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 update_curr();
+ 0) mongod-1636528 |                 check_cfs_rq_runtime();
+ 0) mongod-1636528 |                 pick_next_entity() {
+ 0) mongod-1636528 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-1636528 |                   clear_buddies();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 update_curr();
+ 0) mongod-1636528 |                 check_cfs_rq_runtime();
+ 0) mongod-1636528 |                 pick_next_entity() {
+ 0) mongod-1636528 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-1636528 |                   clear_buddies();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 update_curr();
+ 0) mongod-1636528 |                 check_cfs_rq_runtime();
+ 0) mongod-1636528 |                 pick_next_entity() {
+ 0) mongod-1636528 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-1636528 |                   clear_buddies();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 check_cfs_rq_runtime();
+ 0) mongod-1636528 |                 pick_next_entity() {
+ 0) mongod-1636528 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-1636528 |                   clear_buddies();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 put_prev_entity() {
+ 0) mongod-1636528 |                   check_cfs_rq_runtime();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 set_next_entity() {
+ 0) mongod-1636528 |                   __update_load_avg_se() {
+ 0) mongod-1636528 |                     __accumulate_pelt_segments();
+ 0) mongod-1636528 |                   }
+ 0) mongod-1636528 |                   __update_load_avg_cfs_rq();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               check_and_switch_context();
+ 0) mongod-1636528 |               fpsimd_thread_switch() {
+ 0) mongod-1636528 |                 __get_cpu_fpsimd_context();
+ 0) mongod-1636528 |                 fpsimd_save() {
+ 0) mongod-1636528 |                   have_cpu_fpsimd_context();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |                 __put_cpu_fpsimd_context();
+ 0) mongod-1636528 |               }
+ 0) mongod-1636528 |               hw_breakpoint_thread_switch();
+ 0) mongod-1636528 |               uao_thread_switch();
+ 0) mongod-1636528 |               cpu_have_feature();
+ 0) mongod-1636528 |               erratum_1418040_thread_switch() {
+ 0) mongod-1636528 |                 this_cpu_has_cap() {
+ 0) mongod-1636528 |                   is_affected_midr_range_list();
+ 0) mongod-1636528 |                 }
+ 0) mongod-1636528 |               }

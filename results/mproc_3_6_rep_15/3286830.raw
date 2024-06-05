@@ -1,0 +1,1072 @@
+ 0) <...>-3286830  |                 finish_task_switch() {
+ 0) <...>-3286830  |                   _raw_spin_unlock_irq();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               } /* schedule */
+ 0) <...>-3286830  |               hrtimer_try_to_cancel() {
+ 0) <...>-3286830  |                 hrtimer_active();
+ 0) <...>-3286830  |                 lock_hrtimer_base() {
+ 0) <...>-3286830  |                   _raw_spin_lock_irqsave();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 __remove_hrtimer();
+ 0) <...>-3286830  |                 _raw_spin_unlock_irqrestore();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             } /* schedule_hrtimeout_range_clock */
+ 0) <...>-3286830  |           } /* schedule_hrtimeout_range */
+ 0) <...>-3286830  |           __fdget() {
+ 0) <...>-3286830  |             __fget_light() {
+ 0) <...>-3286830  |               __fget() {
+ 0) <...>-3286830  |                 __rcu_read_lock();
+ 0) <...>-3286830  |                 __rcu_read_unlock();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           sock_poll() {
+ 0) <...>-3286830  |             tcp_poll();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           fput() {
+ 0) <...>-3286830  |             fput_many();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           __fdget() {
+ 0) <...>-3286830  |             __fget_light() {
+ 0) <...>-3286830  |               __fget() {
+ 0) <...>-3286830  |                 __rcu_read_lock();
+ 0) <...>-3286830  |                 __rcu_read_unlock();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           arm64_preempt_schedule_irq() {
+ 0) <...>-3286830  |             preempt_schedule_irq() {
+ 0) <...>-3286830  |               rcu_note_context_switch() {
+ 0) <...>-3286830  |                 rcu_preempt_deferred_qs() {
+ 0) <...>-3286830  |                   rcu_preempt_need_deferred_qs();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 rcu_qs();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               _raw_spin_lock();
+ 0) <...>-3286830  |               update_rq_clock();
+ 0) <...>-3286830  |               pick_next_task_fair() {
+ 0) <...>-3286830  |                 update_curr();
+ 0) <...>-3286830  |                 check_cfs_rq_runtime();
+ 0) <...>-3286830  |                 pick_next_entity() {
+ 0) <...>-3286830  |                   wakeup_preempt_entity.isra.0();
+ 0) <...>-3286830  |                   clear_buddies();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 put_prev_entity() {
+ 0) <...>-3286830  |                   update_curr() {
+ 0) <...>-3286830  |                     update_min_vruntime();
+ 0) <...>-3286830  |                     cpuacct_charge() {
+ 0) <...>-3286830  |                       __rcu_read_lock();
+ 0) <...>-3286830  |                       __rcu_read_unlock();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     __rcu_read_lock();
+ 0) <...>-3286830  |                     __cgroup_account_cputime() {
+ 0) <...>-3286830  |                       cgroup_base_stat_cputime_account_begin();
+ 0) <...>-3286830  |                       cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) <...>-3286830  |                         cgroup_rstat_updated();
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     __rcu_read_unlock();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   __enqueue_entity();
+ 0) <...>-3286830  |                   __update_load_avg_se() {
+ 0) <...>-3286830  |                     __accumulate_pelt_segments();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   __update_load_avg_cfs_rq() {
+ 0) <...>-3286830  |                     __accumulate_pelt_segments();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 put_prev_entity() {
+ 0) <...>-3286830  |                   update_curr() {
+ 0) <...>-3286830  |                     __calc_delta();
+ 0) <...>-3286830  |                     update_min_vruntime();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   __enqueue_entity();
+ 0) <...>-3286830  |                   __update_load_avg_se() {
+ 0) <...>-3286830  |                     __accumulate_pelt_segments();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   __update_load_avg_cfs_rq() {
+ 0) <...>-3286830  |                     __accumulate_pelt_segments();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 put_prev_entity() {
+ 0) <...>-3286830  |                   update_curr() {
+ 0) <...>-3286830  |                     __calc_delta();
+ 0) <...>-3286830  |                     update_min_vruntime();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   __enqueue_entity();
+ 0) <...>-3286830  |                   __update_load_avg_se() {
+ 0) <...>-3286830  |                     __accumulate_pelt_segments();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   __update_load_avg_cfs_rq() {
+ 0) <...>-3286830  |                     __accumulate_pelt_segments();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 put_prev_entity() {
+ 0) <...>-3286830  |                   update_curr() {
+ 0) <...>-3286830  |                     __calc_delta();
+ 0) <...>-3286830  |                     update_min_vruntime();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   __enqueue_entity();
+ 0) <...>-3286830  |                   __update_load_avg_se() {
+ 0) <...>-3286830  |                     __accumulate_pelt_segments();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   __update_load_avg_cfs_rq() {
+ 0) <...>-3286830  |                     __accumulate_pelt_segments();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 put_prev_entity() {
+ 0) <...>-3286830  |                   update_curr();
+ 0) <...>-3286830  |                   check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   __enqueue_entity();
+ 0) <...>-3286830  |                   __update_load_avg_se() {
+ 0) <...>-3286830  |                     __accumulate_pelt_segments();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   __update_load_avg_cfs_rq();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 set_next_entity() {
+ 0) <...>-3286830  |                   __update_load_avg_se();
+ 0) <...>-3286830  |                   __update_load_avg_cfs_rq();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               finish_task_switch() {
+ 0) <...>-3286830  |                 _raw_spin_unlock_irq();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             } /* preempt_schedule_irq */
+ 0) <...>-3286830  |           } /* arm64_preempt_schedule_irq */
+ 0) <...>-3286830  |           pipe_poll();
+ 0) <...>-3286830  |           fput() {
+ 0) <...>-3286830  |             fput_many();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           poll_freewait() {
+ 0) <...>-3286830  |             remove_wait_queue() {
+ 0) <...>-3286830  |               _raw_spin_lock_irqsave();
+ 0) <...>-3286830  |               _raw_spin_unlock_irqrestore();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             fput() {
+ 0) <...>-3286830  |               fput_many();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             remove_wait_queue() {
+ 0) <...>-3286830  |               _raw_spin_lock_irqsave();
+ 0) <...>-3286830  |               _raw_spin_unlock_irqrestore();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             fput() {
+ 0) <...>-3286830  |               fput_many();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         } /* do_select */
+ 0) <...>-3286830  |         __check_object_size() {
+ 0) <...>-3286830  |           check_stack_object();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         __check_object_size() {
+ 0) <...>-3286830  |           check_stack_object();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         __check_object_size() {
+ 0) <...>-3286830  |           check_stack_object();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |       } /* core_sys_select */
+ 0) <...>-3286830  |       poll_select_finish() {
+ 0) <...>-3286830  |         ktime_get_ts64() {
+ 0) <...>-3286830  |           arch_counter_read();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         set_normalized_timespec64();
+ 0) <...>-3286830  |         put_timespec64();
+ 0) <...>-3286830  |       }
+ 0) <...>-3286830  |     } /* __arm64_sys_pselect6 */
+ 0) <...>-3286830  |   } /* el0_svc_common.constprop.0 */
+ 0) <...>-3286830  | } /* el0_svc_handler */
+ 0) <...>-3286830  | do_notify_resume() {
+ 0) <...>-3286830  |   fpsimd_restore_current_state() {
+ 0) <...>-3286830  |     __get_cpu_fpsimd_context();
+ 0) <...>-3286830  |     task_fpsimd_load() {
+ 0) <...>-3286830  |       have_cpu_fpsimd_context();
+ 0) <...>-3286830  |     }
+ 0) <...>-3286830  |     fpsimd_bind_task_to_cpu();
+ 0) <...>-3286830  |     put_cpu_fpsimd_context() {
+ 0) <...>-3286830  |       __put_cpu_fpsimd_context();
+ 0) <...>-3286830  |     }
+ 0) <...>-3286830  |   }
+ 0) <...>-3286830  | }
+ 0) <...>-3286830  | post_ttbr_update_workaround();
+ 0) <...>-3286830  | el0_svc_handler() {
+ 0) <...>-3286830  |   el0_svc_common.constprop.0() {
+ 0) <...>-3286830  |     __arm64_sys_utimensat() {
+ 0) <...>-3286830  |       get_timespec64();
+ 0) <...>-3286830  |       get_timespec64();
+ 0) <...>-3286830  |       do_utimes() {
+ 0) <...>-3286830  |         __fdget() {
+ 0) <...>-3286830  |           __fget_light() {
+ 0) <...>-3286830  |             __fget() {
+ 0) <...>-3286830  |               __rcu_read_lock();
+ 0) <...>-3286830  |               __rcu_read_unlock();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         utimes_common.isra.0() {
+ 0) <...>-3286830  |           mnt_want_write() {
+ 0) <...>-3286830  |             __sb_start_write();
+ 0) <...>-3286830  |             __mnt_want_write();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           down_write();
+ 0) <...>-3286830  |           notify_change() {
+ 0) <...>-3286830  |             current_time() {
+ 0) <...>-3286830  |               ktime_get_coarse_real_ts64();
+ 0) <...>-3286830  |               timestamp_truncate();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             timestamp_truncate();
+ 0) <...>-3286830  |             timestamp_truncate();
+ 0) <...>-3286830  |             security_inode_setattr() {
+ 0) <...>-3286830  |               evm_inode_setattr();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             ovl_setattr [overlay]() {
+ 0) <...>-3286830  |               setattr_prepare() {
+ 0) <...>-3286830  |                 inode_owner_or_capable();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               ovl_want_write [overlay]() {
+ 0) <...>-3286830  |                 mnt_want_write() {
+ 0) <...>-3286830  |                   __sb_start_write();
+ 0) <...>-3286830  |                   __mnt_want_write();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               ovl_copy_up [overlay]() {
+ 0) <...>-3286830  |                 ovl_copy_up_flags [overlay]() {
+ 0) <...>-3286830  |                   ovl_override_creds [overlay]() {
+ 0) <...>-3286830  |                     override_creds();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   ovl_already_copied_up [overlay]() {
+ 0) <...>-3286830  |                     ovl_dentry_needs_data_copy_up [overlay]();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   revert_creds();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               ovl_dentry_upper [overlay]();
+ 0) <...>-3286830  |               down_write();
+ 0) <...>-3286830  |               ovl_override_creds [overlay]() {
+ 0) <...>-3286830  |                 override_creds();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               notify_change() {
+ 0) <...>-3286830  |                 current_time() {
+ 0) <...>-3286830  |                   ktime_get_coarse_real_ts64();
+ 0) <...>-3286830  |                   timestamp_truncate();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 timestamp_truncate();
+ 0) <...>-3286830  |                 timestamp_truncate();
+ 0) <...>-3286830  |                 security_inode_setattr() {
+ 0) <...>-3286830  |                   evm_inode_setattr();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 ext4_setattr() {
+ 0) <...>-3286830  |                   setattr_prepare() {
+ 0) <...>-3286830  |                     inode_owner_or_capable();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   setattr_copy();
+ 0) <...>-3286830  |                   __mark_inode_dirty() {
+ 0) <...>-3286830  |                     ext4_dirty_inode() {
+ 0) <...>-3286830  |                       __ext4_journal_start_sb() {
+ 0) <...>-3286830  |                         ext4_journal_check_start();
+ 0) <...>-3286830  |                         jbd2__journal_start() {
+ 0) <...>-3286830  |                           kmem_cache_alloc() {
+ 0) <...>-3286830  |                             should_failslab();
+ 0) <...>-3286830  |                             memcg_kmem_put_cache();
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                           start_this_handle() {
+ 0) <...>-3286830  |                             _raw_read_lock();
+ 0) <...>-3286830  |                             add_transaction_credits();
+ 0) <...>-3286830  |                             _raw_read_unlock();
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                       ext4_mark_inode_dirty() {
+ 0) <...>-3286830  |                         ext4_reserve_inode_write() {
+ 0) <...>-3286830  |                           __ext4_get_inode_loc() {
+ 0) <...>-3286830  |                             ext4_get_group_desc() {
+ 0) <...>-3286830  |                               __rcu_read_lock();
+ 0) <...>-3286830  |                               __rcu_read_unlock();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                             ext4_inode_table();
+ 0) <...>-3286830  |                             __getblk_gfp() {
+ 0) <...>-3286830  |                               __find_get_block() {
+ 0) <...>-3286830  |                                 mark_page_accessed();
+ 0) <...>-3286830  |                               }
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                           __ext4_journal_get_write_access() {
+ 0) <...>-3286830  |                             jbd2_journal_get_write_access() {
+ 0) <...>-3286830  |                               jbd2_write_access_granted.isra.0.part.0() {
+ 0) <...>-3286830  |                                 __rcu_read_lock();
+ 0) <...>-3286830  |                                 __rcu_read_unlock();
+ 0) <...>-3286830  |                               }
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                         ext4_mark_iloc_dirty() {
+ 0) <...>-3286830  |                           ext4_do_update_inode() {
+ 0) <...>-3286830  |                             _raw_spin_lock();
+ 0) <...>-3286830  |                             from_kuid() {
+ 0) <...>-3286830  |                               map_id_up();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                             from_kgid() {
+ 0) <...>-3286830  |                               map_id_up();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                             from_kprojid() {
+ 0) <...>-3286830  |                               map_id_up();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                             ext4_inode_csum_set();
+ 0) <...>-3286830  |                             _raw_spin_unlock();
+ 0) <...>-3286830  |                             __ext4_handle_dirty_metadata() {
+ 0) <...>-3286830  |                               jbd2_journal_dirty_metadata();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                             __brelse();
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                       __ext4_journal_stop() {
+ 0) <...>-3286830  |                         jbd2_journal_stop() {
+ 0) <...>-3286830  |                           __wake_up() {
+ 0) <...>-3286830  |                             __wake_up_common_lock() {
+ 0) <...>-3286830  |                               _raw_spin_lock_irqsave();
+ 0) <...>-3286830  |                               __wake_up_common();
+ 0) <...>-3286830  |                               _raw_spin_unlock_irqrestore();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                           kmem_cache_free();
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 __fsnotify_parent();
+ 0) <...>-3286830  |                 fsnotify();
+ 0) <...>-3286830  |                 ima_inode_post_setattr();
+ 0) <...>-3286830  |                 evm_inode_post_setattr();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               revert_creds();
+ 0) <...>-3286830  |               up_write();
+ 0) <...>-3286830  |               ovl_drop_write [overlay]() {
+ 0) <...>-3286830  |                 mnt_drop_write() {
+ 0) <...>-3286830  |                   __mnt_drop_write();
+ 0) <...>-3286830  |                   __sb_end_write();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             __fsnotify_parent();
+ 0) <...>-3286830  |             fsnotify();
+ 0) <...>-3286830  |             ima_inode_post_setattr();
+ 0) <...>-3286830  |             evm_inode_post_setattr();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           up_write();
+ 0) <...>-3286830  |           mnt_drop_write() {
+ 0) <...>-3286830  |             __mnt_drop_write();
+ 0) <...>-3286830  |             __sb_end_write();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         fput() {
+ 0) <...>-3286830  |           fput_many();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |       }
+ 0) <...>-3286830  |     }
+ 0) <...>-3286830  |   }
+ 0) <...>-3286830  | }
+ 0) <...>-3286830  | post_ttbr_update_workaround();
+ 0) <...>-3286830  | el0_svc_handler() {
+ 0) <...>-3286830  |   el0_svc_common.constprop.0() {
+ 0) <...>-3286830  |     __arm64_sys_accept4() {
+ 0) <...>-3286830  |       __sys_accept4() {
+ 0) <...>-3286830  |         sockfd_lookup_light() {
+ 0) <...>-3286830  |           __fdget() {
+ 0) <...>-3286830  |             __fget_light() {
+ 0) <...>-3286830  |               __fget() {
+ 0) <...>-3286830  |                 __rcu_read_lock();
+ 0) <...>-3286830  |                 __rcu_read_unlock();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         sock_alloc() {
+ 0) <...>-3286830  |           new_inode_pseudo() {
+ 0) <...>-3286830  |             alloc_inode() {
+ 0) <...>-3286830  |               sock_alloc_inode() {
+ 0) <...>-3286830  |                 kmem_cache_alloc() {
+ 0) <...>-3286830  |                   should_failslab();
+ 0) <...>-3286830  |                   memcg_kmem_get_cache() {
+ 0) <...>-3286830  |                     __rcu_read_lock();
+ 0) <...>-3286830  |                     __rcu_read_unlock();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   memcg_kmem_put_cache();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 __init_waitqueue_head();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               inode_init_always() {
+ 0) <...>-3286830  |                 make_kuid() {
+ 0) <...>-3286830  |                   map_id_range_down();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 make_kgid() {
+ 0) <...>-3286830  |                   map_id_range_down();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 __init_rwsem();
+ 0) <...>-3286830  |                 security_inode_alloc();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             _raw_spin_lock();
+ 0) <...>-3286830  |             _raw_spin_unlock();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           get_next_ino();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         __module_get();
+ 0) <...>-3286830  |         get_unused_fd_flags() {
+ 0) <...>-3286830  |           __alloc_fd() {
+ 0) <...>-3286830  |             _raw_spin_lock();
+ 0) <...>-3286830  |             expand_files();
+ 0) <...>-3286830  |             _raw_spin_unlock();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         sock_alloc_file() {
+ 0) <...>-3286830  |           alloc_file_pseudo() {
+ 0) <...>-3286830  |             d_alloc_pseudo() {
+ 0) <...>-3286830  |               __d_alloc() {
+ 0) <...>-3286830  |                 kmem_cache_alloc() {
+ 0) <...>-3286830  |                   should_failslab();
+ 0) <...>-3286830  |                   memcg_kmem_get_cache() {
+ 0) <...>-3286830  |                     __rcu_read_lock();
+ 0) <...>-3286830  |                     __rcu_read_unlock();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   memcg_kmem_put_cache();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 d_set_d_op();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             mntget();
+ 0) <...>-3286830  |             d_instantiate() {
+ 0) <...>-3286830  |               security_d_instantiate();
+ 0) <...>-3286830  |               _raw_spin_lock();
+ 0) <...>-3286830  |               __d_instantiate() {
+ 0) <...>-3286830  |                 d_flags_for_inode();
+ 0) <...>-3286830  |                 _raw_spin_lock();
+ 0) <...>-3286830  |                 _raw_spin_unlock();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               _raw_spin_unlock();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             alloc_file() {
+ 0) <...>-3286830  |               alloc_empty_file() {
+ 0) <...>-3286830  |                 __alloc_file() {
+ 0) <...>-3286830  |                   kmem_cache_alloc() {
+ 0) <...>-3286830  |                     should_failslab();
+ 0) <...>-3286830  |                     memcg_kmem_get_cache() {
+ 0) <...>-3286830  |                       __rcu_read_lock();
+ 0) <...>-3286830  |                       __rcu_read_unlock();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     memcg_kmem_put_cache();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   security_file_alloc() {
+ 0) <...>-3286830  |                     kmem_cache_alloc() {
+ 0) <...>-3286830  |                       should_failslab();
+ 0) <...>-3286830  |                       memcg_kmem_put_cache();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     apparmor_file_alloc_security();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   __mutex_init();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         security_socket_accept() {
+ 0) <...>-3286830  |           apparmor_socket_accept() {
+ 0) <...>-3286830  |             aa_sk_perm() {
+ 0) <...>-3286830  |               aa_label_sk_perm.part.0() {
+ 0) <...>-3286830  |                 aa_label_next_confined();
+ 0) <...>-3286830  |                 aa_profile_af_perm() {
+ 0) <...>-3286830  |                   aa_apply_modes_to_perms();
+ 0) <...>-3286830  |                   aa_check_perms();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 aa_label_next_confined();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         inet_accept() {
+ 0) <...>-3286830  |           inet_csk_accept() {
+ 0) <...>-3286830  |             lock_sock_nested() {
+ 0) <...>-3286830  |               _raw_spin_lock_bh() {
+ 0) <...>-3286830  |                 __local_bh_disable_ip();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               _raw_spin_unlock();
+ 0) <...>-3286830  |               __local_bh_enable_ip();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             release_sock() {
+ 0) <...>-3286830  |               _raw_spin_lock_bh() {
+ 0) <...>-3286830  |                 __local_bh_disable_ip();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               tcp_release_cb();
+ 0) <...>-3286830  |               _raw_spin_unlock_bh() {
+ 0) <...>-3286830  |                 __local_bh_enable_ip();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         fput() {
+ 0) <...>-3286830  |           fput_many() {
+ 0) <...>-3286830  |             task_work_add() {
+ 0) <...>-3286830  |               kick_process();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         put_unused_fd() {
+ 0) <...>-3286830  |           _raw_spin_lock();
+ 0) <...>-3286830  |           _raw_spin_unlock();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         fput() {
+ 0) <...>-3286830  |           fput_many();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |       }
+ 0) <...>-3286830  |     }
+ 0) <...>-3286830  |   }
+ 0) <...>-3286830  | }
+ 0) <...>-3286830  | do_notify_resume() {
+ 0) <...>-3286830  |   task_work_run() {
+ 0) <...>-3286830  |     _raw_spin_lock_irq();
+ 0) <...>-3286830  |     _raw_spin_unlock_irq();
+ 0) <...>-3286830  |     ____fput() {
+ 0) <...>-3286830  |       __fput() {
+ 0) <...>-3286830  |         __fsnotify_parent();
+ 0) <...>-3286830  |         fsnotify();
+ 0) <...>-3286830  |         locks_remove_file();
+ 0) <...>-3286830  |         ima_file_free();
+ 0) <...>-3286830  |         sock_close() {
+ 0) <...>-3286830  |           __sock_release() {
+ 0) <...>-3286830  |             down_write();
+ 0) <...>-3286830  |             inet_release();
+ 0) <...>-3286830  |             up_write();
+ 0) <...>-3286830  |             module_put();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         module_put();
+ 0) <...>-3286830  |         put_pid();
+ 0) <...>-3286830  |         dput() {
+ 0) <...>-3286830  |           __rcu_read_lock();
+ 0) <...>-3286830  |           _raw_spin_lock();
+ 0) <...>-3286830  |           __rcu_read_unlock();
+ 0) <...>-3286830  |           _raw_spin_trylock();
+ 0) <...>-3286830  |           __dentry_kill() {
+ 0) <...>-3286830  |             dentry_unlink_inode() {
+ 0) <...>-3286830  |               _raw_spin_unlock();
+ 0) <...>-3286830  |               _raw_spin_unlock();
+ 0) <...>-3286830  |               iput() {
+ 0) <...>-3286830  |                 _raw_spin_lock();
+ 0) <...>-3286830  |                 _raw_spin_unlock();
+ 0) <...>-3286830  |                 evict() {
+ 0) <...>-3286830  |                   inode_wait_for_writeback() {
+ 0) <...>-3286830  |                     _raw_spin_lock();
+ 0) <...>-3286830  |                     __inode_wait_for_writeback() {
+ 0) <...>-3286830  |                       bit_waitqueue();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     _raw_spin_unlock();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   truncate_inode_pages_final() {
+ 0) <...>-3286830  |                     truncate_inode_pages_range();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   clear_inode() {
+ 0) <...>-3286830  |                     _raw_spin_lock_irq();
+ 0) <...>-3286830  |                     _raw_spin_unlock_irq();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   _raw_spin_lock();
+ 0) <...>-3286830  |                   wake_up_bit();
+ 0) <...>-3286830  |                   _raw_spin_unlock();
+ 0) <...>-3286830  |                   destroy_inode() {
+ 0) <...>-3286830  |                     __destroy_inode() {
+ 0) <...>-3286830  |                       inode_has_buffers();
+ 0) <...>-3286830  |                       security_inode_free() {
+ 0) <...>-3286830  |                         integrity_inode_free();
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                       __fsnotify_inode_delete() {
+ 0) <...>-3286830  |                         fsnotify_destroy_marks() {
+ 0) <...>-3286830  |                           fsnotify_grab_connector() {
+ 0) <...>-3286830  |                             __srcu_read_lock();
+ 0) <...>-3286830  |                             __srcu_read_unlock();
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                       locks_free_lock_context();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     call_rcu() {
+ 0) <...>-3286830  |                       __call_rcu() {
+ 0) <...>-3286830  |                         rcu_segcblist_enqueue();
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             _raw_spin_lock();
+ 0) <...>-3286830  |             _raw_spin_unlock();
+ 0) <...>-3286830  |             dentry_free() {
+ 0) <...>-3286830  |               kmem_cache_free();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         mntput() {
+ 0) <...>-3286830  |           mntput_no_expire() {
+ 0) <...>-3286830  |             __rcu_read_lock();
+ 0) <...>-3286830  |             __rcu_read_unlock();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         security_file_free() {
+ 0) <...>-3286830  |           apparmor_file_free_security();
+ 0) <...>-3286830  |           kmem_cache_free();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         call_rcu() {
+ 0) <...>-3286830  |           __call_rcu() {
+ 0) <...>-3286830  |             rcu_segcblist_enqueue();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |       }
+ 0) <...>-3286830  |     }
+ 0) <...>-3286830  |     _raw_spin_lock_irq();
+ 0) <...>-3286830  |     _raw_spin_unlock_irq();
+ 0) <...>-3286830  |   }
+ 0) <...>-3286830  |   mem_cgroup_handle_over_high();
+ 0) <...>-3286830  |   blkcg_maybe_throttle_current();
+ 0) <...>-3286830  | }
+ 0) <...>-3286830  | post_ttbr_update_workaround();
+ 0) <...>-3286830  | el0_svc_handler() {
+ 0) <...>-3286830  |   el0_svc_common.constprop.0() {
+ 0) <...>-3286830  |     __arm64_sys_getppid() {
+ 0) <...>-3286830  |       __rcu_read_lock();
+ 0) <...>-3286830  |       __task_pid_nr_ns() {
+ 0) <...>-3286830  |         __rcu_read_lock();
+ 0) <...>-3286830  |         __rcu_read_unlock();
+ 0) <...>-3286830  |       }
+ 0) <...>-3286830  |       __rcu_read_unlock();
+ 0) <...>-3286830  |     }
+ 0) <...>-3286830  |   }
+ 0) <...>-3286830  | }
+ 0) <...>-3286830  | post_ttbr_update_workaround();
+ 0) <...>-3286830  | el0_svc_handler() {
+ 0) <...>-3286830  |   el0_svc_common.constprop.0() {
+ 0) <...>-3286830  |     __arm64_sys_utimensat() {
+ 0) <...>-3286830  |       get_timespec64();
+ 0) <...>-3286830  |       get_timespec64();
+ 0) <...>-3286830  |       do_utimes() {
+ 0) <...>-3286830  |         __fdget() {
+ 0) <...>-3286830  |           __fget_light() {
+ 0) <...>-3286830  |             __fget() {
+ 0) <...>-3286830  |               __rcu_read_lock();
+ 0) <...>-3286830  |               __rcu_read_unlock();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         utimes_common.isra.0() {
+ 0) <...>-3286830  |           mnt_want_write() {
+ 0) <...>-3286830  |             __sb_start_write();
+ 0) <...>-3286830  |             __mnt_want_write();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           down_write();
+ 0) <...>-3286830  |           notify_change() {
+ 0) <...>-3286830  |             current_time() {
+ 0) <...>-3286830  |               ktime_get_coarse_real_ts64();
+ 0) <...>-3286830  |               timestamp_truncate();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             timestamp_truncate();
+ 0) <...>-3286830  |             timestamp_truncate();
+ 0) <...>-3286830  |             security_inode_setattr() {
+ 0) <...>-3286830  |               evm_inode_setattr();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             ovl_setattr [overlay]() {
+ 0) <...>-3286830  |               setattr_prepare() {
+ 0) <...>-3286830  |                 inode_owner_or_capable();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               ovl_want_write [overlay]() {
+ 0) <...>-3286830  |                 mnt_want_write() {
+ 0) <...>-3286830  |                   __sb_start_write();
+ 0) <...>-3286830  |                   __mnt_want_write();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               ovl_copy_up [overlay]() {
+ 0) <...>-3286830  |                 ovl_copy_up_flags [overlay]() {
+ 0) <...>-3286830  |                   ovl_override_creds [overlay]() {
+ 0) <...>-3286830  |                     override_creds();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   ovl_already_copied_up [overlay]() {
+ 0) <...>-3286830  |                     ovl_dentry_needs_data_copy_up [overlay]();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   revert_creds();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               ovl_dentry_upper [overlay]();
+ 0) <...>-3286830  |               down_write();
+ 0) <...>-3286830  |               ovl_override_creds [overlay]() {
+ 0) <...>-3286830  |                 override_creds();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               notify_change() {
+ 0) <...>-3286830  |                 current_time() {
+ 0) <...>-3286830  |                   ktime_get_coarse_real_ts64();
+ 0) <...>-3286830  |                   timestamp_truncate();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 timestamp_truncate();
+ 0) <...>-3286830  |                 timestamp_truncate();
+ 0) <...>-3286830  |                 security_inode_setattr() {
+ 0) <...>-3286830  |                   evm_inode_setattr();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 ext4_setattr() {
+ 0) <...>-3286830  |                   setattr_prepare() {
+ 0) <...>-3286830  |                     inode_owner_or_capable();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   setattr_copy();
+ 0) <...>-3286830  |                   __mark_inode_dirty() {
+ 0) <...>-3286830  |                     ext4_dirty_inode() {
+ 0) <...>-3286830  |                       __ext4_journal_start_sb() {
+ 0) <...>-3286830  |                         ext4_journal_check_start();
+ 0) <...>-3286830  |                         jbd2__journal_start() {
+ 0) <...>-3286830  |                           kmem_cache_alloc() {
+ 0) <...>-3286830  |                             should_failslab();
+ 0) <...>-3286830  |                             memcg_kmem_put_cache();
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                           start_this_handle() {
+ 0) <...>-3286830  |                             _raw_read_lock();
+ 0) <...>-3286830  |                             add_transaction_credits();
+ 0) <...>-3286830  |                             _raw_read_unlock();
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                       ext4_mark_inode_dirty() {
+ 0) <...>-3286830  |                         ext4_reserve_inode_write() {
+ 0) <...>-3286830  |                           __ext4_get_inode_loc() {
+ 0) <...>-3286830  |                             ext4_get_group_desc() {
+ 0) <...>-3286830  |                               __rcu_read_lock();
+ 0) <...>-3286830  |                               __rcu_read_unlock();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                             ext4_inode_table();
+ 0) <...>-3286830  |                             __getblk_gfp() {
+ 0) <...>-3286830  |                               __find_get_block() {
+ 0) <...>-3286830  |                                 mark_page_accessed();
+ 0) <...>-3286830  |                               }
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                           __ext4_journal_get_write_access() {
+ 0) <...>-3286830  |                             jbd2_journal_get_write_access() {
+ 0) <...>-3286830  |                               jbd2_write_access_granted.isra.0.part.0() {
+ 0) <...>-3286830  |                                 __rcu_read_lock();
+ 0) <...>-3286830  |                                 __rcu_read_unlock();
+ 0) <...>-3286830  |                               }
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                         ext4_mark_iloc_dirty() {
+ 0) <...>-3286830  |                           ext4_do_update_inode() {
+ 0) <...>-3286830  |                             _raw_spin_lock();
+ 0) <...>-3286830  |                             from_kuid() {
+ 0) <...>-3286830  |                               map_id_up();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                             from_kgid() {
+ 0) <...>-3286830  |                               map_id_up();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                             from_kprojid() {
+ 0) <...>-3286830  |                               map_id_up();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                             ext4_inode_csum_set();
+ 0) <...>-3286830  |                             _raw_spin_unlock();
+ 0) <...>-3286830  |                             __ext4_handle_dirty_metadata() {
+ 0) <...>-3286830  |                               jbd2_journal_dirty_metadata();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                             __brelse();
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                       __ext4_journal_stop() {
+ 0) <...>-3286830  |                         jbd2_journal_stop() {
+ 0) <...>-3286830  |                           __wake_up() {
+ 0) <...>-3286830  |                             __wake_up_common_lock() {
+ 0) <...>-3286830  |                               _raw_spin_lock_irqsave();
+ 0) <...>-3286830  |                               __wake_up_common();
+ 0) <...>-3286830  |                               _raw_spin_unlock_irqrestore();
+ 0) <...>-3286830  |                             }
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                           kmem_cache_free();
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 __fsnotify_parent();
+ 0) <...>-3286830  |                 fsnotify();
+ 0) <...>-3286830  |                 ima_inode_post_setattr();
+ 0) <...>-3286830  |                 evm_inode_post_setattr();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               revert_creds();
+ 0) <...>-3286830  |               up_write();
+ 0) <...>-3286830  |               ovl_drop_write [overlay]() {
+ 0) <...>-3286830  |                 mnt_drop_write() {
+ 0) <...>-3286830  |                   __mnt_drop_write();
+ 0) <...>-3286830  |                   __sb_end_write();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             __fsnotify_parent();
+ 0) <...>-3286830  |             fsnotify();
+ 0) <...>-3286830  |             ima_inode_post_setattr();
+ 0) <...>-3286830  |             evm_inode_post_setattr();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           up_write();
+ 0) <...>-3286830  |           mnt_drop_write() {
+ 0) <...>-3286830  |             __mnt_drop_write();
+ 0) <...>-3286830  |             __sb_end_write();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         fput() {
+ 0) <...>-3286830  |           fput_many();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |       }
+ 0) <...>-3286830  |     }
+ 0) <...>-3286830  |   }
+ 0) <...>-3286830  | }
+ 0) <...>-3286830  | post_ttbr_update_workaround();
+ 0) <...>-3286830  | el0_svc_handler() {
+ 0) <...>-3286830  |   el0_svc_common.constprop.0() {
+ 0) <...>-3286830  |     __arm64_sys_pselect6() {
+ 0) <...>-3286830  |       get_timespec64();
+ 0) <...>-3286830  |       poll_select_set_timeout() {
+ 0) <...>-3286830  |         ktime_get_ts64() {
+ 0) <...>-3286830  |           arch_counter_read();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         timespec64_add_safe();
+ 0) <...>-3286830  |       }
+ 0) <...>-3286830  |       set_user_sigmask();
+ 0) <...>-3286830  |       core_sys_select() {
+ 0) <...>-3286830  |         __rcu_read_lock();
+ 0) <...>-3286830  |         __rcu_read_unlock();
+ 0) <...>-3286830  |         __check_object_size() {
+ 0) <...>-3286830  |           check_stack_object();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         __check_object_size() {
+ 0) <...>-3286830  |           check_stack_object();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         __check_object_size() {
+ 0) <...>-3286830  |           check_stack_object();
+ 0) <...>-3286830  |         }
+ 0) <...>-3286830  |         do_select() {
+ 0) <...>-3286830  |           __rcu_read_lock();
+ 0) <...>-3286830  |           __rcu_read_unlock();
+ 0) <...>-3286830  |           select_estimate_accuracy() {
+ 0) <...>-3286830  |             ktime_get_ts64() {
+ 0) <...>-3286830  |               arch_counter_read();
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |             set_normalized_timespec64();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           __fdget() {
+ 0) <...>-3286830  |             __fget_light() {
+ 0) <...>-3286830  |               __fget() {
+ 0) <...>-3286830  |                 __rcu_read_lock();
+ 0) <...>-3286830  |                 __rcu_read_unlock();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           sock_poll() {
+ 0) <...>-3286830  |             tcp_poll() {
+ 0) <...>-3286830  |               __pollwait() {
+ 0) <...>-3286830  |                 add_wait_queue() {
+ 0) <...>-3286830  |                   _raw_spin_lock_irqsave();
+ 0) <...>-3286830  |                   _raw_spin_unlock_irqrestore();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           fput() {
+ 0) <...>-3286830  |             fput_many();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           __fdget() {
+ 0) <...>-3286830  |             __fget_light() {
+ 0) <...>-3286830  |               __fget() {
+ 0) <...>-3286830  |                 __rcu_read_lock();
+ 0) <...>-3286830  |                 __rcu_read_unlock();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           pipe_poll() {
+ 0) <...>-3286830  |             __pollwait() {
+ 0) <...>-3286830  |               add_wait_queue() {
+ 0) <...>-3286830  |                 _raw_spin_lock_irqsave();
+ 0) <...>-3286830  |                 _raw_spin_unlock_irqrestore();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |             }
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           fput() {
+ 0) <...>-3286830  |             fput_many();
+ 0) <...>-3286830  |           }
+ 0) <...>-3286830  |           schedule_hrtimeout_range() {
+ 0) <...>-3286830  |             schedule_hrtimeout_range_clock() {
+ 0) <...>-3286830  |               hrtimer_init_sleeper() {
+ 0) <...>-3286830  |                 __hrtimer_init();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               hrtimer_start_range_ns() {
+ 0) <...>-3286830  |                 lock_hrtimer_base() {
+ 0) <...>-3286830  |                   _raw_spin_lock_irqsave();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 get_nohz_timer_target();
+ 0) <...>-3286830  |                 enqueue_hrtimer();
+ 0) <...>-3286830  |                 _raw_spin_unlock_irqrestore();
+ 0) <...>-3286830  |               }
+ 0) <...>-3286830  |               schedule() {
+ 0) <...>-3286830  |                 rcu_note_context_switch() {
+ 0) <...>-3286830  |                   rcu_preempt_deferred_qs() {
+ 0) <...>-3286830  |                     rcu_preempt_need_deferred_qs();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   rcu_qs();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 _raw_spin_lock();
+ 0) <...>-3286830  |                 update_rq_clock();
+ 0) <...>-3286830  |                 deactivate_task() {
+ 0) <...>-3286830  |                   psi_task_change() {
+ 0) <...>-3286830  |                     record_times.isra.0();
+ 0) <...>-3286830  |                     record_times.isra.0();
+ 0) <...>-3286830  |                     record_times.isra.0();
+ 0) <...>-3286830  |                     record_times.isra.0();
+ 0) <...>-3286830  |                     record_times.isra.0();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   dequeue_task_fair() {
+ 0) <...>-3286830  |                     dequeue_entity() {
+ 0) <...>-3286830  |                       update_curr() {
+ 0) <...>-3286830  |                         update_min_vruntime();
+ 0) <...>-3286830  |                         cpuacct_charge() {
+ 0) <...>-3286830  |                           __rcu_read_lock();
+ 0) <...>-3286830  |                           __rcu_read_unlock();
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                         __rcu_read_lock();
+ 0) <...>-3286830  |                         __cgroup_account_cputime() {
+ 0) <...>-3286830  |                           cgroup_base_stat_cputime_account_begin();
+ 0) <...>-3286830  |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) <...>-3286830  |                             cgroup_rstat_updated();
+ 0) <...>-3286830  |                           }
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                         __rcu_read_unlock();
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                       __update_load_avg_se() {
+ 0) <...>-3286830  |                         __accumulate_pelt_segments();
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                       __update_load_avg_cfs_rq() {
+ 0) <...>-3286830  |                         __accumulate_pelt_segments();
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                       clear_buddies();
+ 0) <...>-3286830  |                       update_cfs_group();
+ 0) <...>-3286830  |                       update_min_vruntime();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     set_next_buddy();
+ 0) <...>-3286830  |                     __update_load_avg_se() {
+ 0) <...>-3286830  |                       __accumulate_pelt_segments();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     __update_load_avg_cfs_rq() {
+ 0) <...>-3286830  |                       __accumulate_pelt_segments();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     update_cfs_group() {
+ 0) <...>-3286830  |                       reweight_entity() {
+ 0) <...>-3286830  |                         update_curr() {
+ 0) <...>-3286830  |                           __calc_delta();
+ 0) <...>-3286830  |                           update_min_vruntime();
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     __update_load_avg_se() {
+ 0) <...>-3286830  |                       __accumulate_pelt_segments();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     __update_load_avg_cfs_rq() {
+ 0) <...>-3286830  |                       __accumulate_pelt_segments();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     update_cfs_group() {
+ 0) <...>-3286830  |                       reweight_entity() {
+ 0) <...>-3286830  |                         update_curr() {
+ 0) <...>-3286830  |                           __calc_delta();
+ 0) <...>-3286830  |                           update_min_vruntime();
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     __update_load_avg_se() {
+ 0) <...>-3286830  |                       __accumulate_pelt_segments();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     __update_load_avg_cfs_rq() {
+ 0) <...>-3286830  |                       __accumulate_pelt_segments();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     update_cfs_group() {
+ 0) <...>-3286830  |                       reweight_entity() {
+ 0) <...>-3286830  |                         update_curr() {
+ 0) <...>-3286830  |                           __calc_delta();
+ 0) <...>-3286830  |                           update_min_vruntime();
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     __update_load_avg_se() {
+ 0) <...>-3286830  |                       __accumulate_pelt_segments();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     __update_load_avg_cfs_rq() {
+ 0) <...>-3286830  |                       __accumulate_pelt_segments();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     dbs_update_util_handler() {
+ 0) <...>-3286830  |                       cpufreq_this_cpu_can_update();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     update_cfs_group() {
+ 0) <...>-3286830  |                       reweight_entity() {
+ 0) <...>-3286830  |                         update_curr() {
+ 0) <...>-3286830  |                           __calc_delta();
+ 0) <...>-3286830  |                           update_min_vruntime();
+ 0) <...>-3286830  |                         }
+ 0) <...>-3286830  |                       }
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     hrtick_update();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 pick_next_task_fair() {
+ 0) <...>-3286830  |                   update_curr();
+ 0) <...>-3286830  |                   check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   pick_next_entity() {
+ 0) <...>-3286830  |                     wakeup_preempt_entity.isra.0();
+ 0) <...>-3286830  |                     clear_buddies();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   update_curr();
+ 0) <...>-3286830  |                   check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   pick_next_entity() {
+ 0) <...>-3286830  |                     wakeup_preempt_entity.isra.0();
+ 0) <...>-3286830  |                     clear_buddies();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   update_curr();
+ 0) <...>-3286830  |                   check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   pick_next_entity() {
+ 0) <...>-3286830  |                     wakeup_preempt_entity.isra.0();
+ 0) <...>-3286830  |                     clear_buddies();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   update_curr();
+ 0) <...>-3286830  |                   check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   pick_next_entity() {
+ 0) <...>-3286830  |                     wakeup_preempt_entity.isra.0();
+ 0) <...>-3286830  |                     clear_buddies();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   pick_next_entity() {
+ 0) <...>-3286830  |                     wakeup_preempt_entity.isra.0();
+ 0) <...>-3286830  |                     clear_buddies();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   put_prev_entity() {
+ 0) <...>-3286830  |                     check_cfs_rq_runtime();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   set_next_entity() {
+ 0) <...>-3286830  |                     __update_load_avg_se() {
+ 0) <...>-3286830  |                       __accumulate_pelt_segments();
+ 0) <...>-3286830  |                     }
+ 0) <...>-3286830  |                     __update_load_avg_cfs_rq();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 check_and_switch_context();
+ 0) <...>-3286830  |                 fpsimd_thread_switch() {
+ 0) <...>-3286830  |                   __get_cpu_fpsimd_context();
+ 0) <...>-3286830  |                   fpsimd_save() {
+ 0) <...>-3286830  |                     have_cpu_fpsimd_context();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                   __put_cpu_fpsimd_context();
+ 0) <...>-3286830  |                 }
+ 0) <...>-3286830  |                 hw_breakpoint_thread_switch();
+ 0) <...>-3286830  |                 uao_thread_switch();
+ 0) <...>-3286830  |                 cpu_have_feature();
+ 0) <...>-3286830  |                 erratum_1418040_thread_switch() {
+ 0) <...>-3286830  |                   this_cpu_has_cap() {
+ 0) <...>-3286830  |                     is_affected_midr_range_list();
+ 0) <...>-3286830  |                   }
+ 0) <...>-3286830  |                 }

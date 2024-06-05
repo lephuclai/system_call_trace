@@ -1,0 +1,749 @@
+ 0) mongod-3673615 |               finish_task_switch() {
+ 0) mongod-3673615 |                 _raw_spin_unlock_irq();
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |             } /* schedule */
+ 0) mongod-3673615 |           } /* futex_wait_queue_me */
+ 0) mongod-3673615 |           _raw_spin_lock();
+ 0) mongod-3673615 |           __unqueue_futex();
+ 0) mongod-3673615 |           _raw_spin_unlock();
+ 0) mongod-3673615 |           drop_futex_key_refs.isra.0();
+ 0) mongod-3673615 |           hrtimer_cancel() {
+ 0) mongod-3673615 |             hrtimer_try_to_cancel() {
+ 0) mongod-3673615 |               hrtimer_active();
+ 0) mongod-3673615 |             }
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |         } /* futex_wait */
+ 0) mongod-3673615 |       } /* do_futex */
+ 0) mongod-3673615 |     } /* __arm64_sys_futex */
+ 0) mongod-3673615 |   } /* el0_svc_common.constprop.0 */
+ 0) mongod-3673615 | } /* el0_svc_handler */
+ 0) mongod-3673615 | do_notify_resume() {
+ 0) mongod-3673615 |   fpsimd_restore_current_state() {
+ 0) mongod-3673615 |     __get_cpu_fpsimd_context();
+ 0) mongod-3673615 |     task_fpsimd_load() {
+ 0) mongod-3673615 |       have_cpu_fpsimd_context();
+ 0) mongod-3673615 |     }
+ 0) mongod-3673615 |     fpsimd_bind_task_to_cpu();
+ 0) mongod-3673615 |     put_cpu_fpsimd_context() {
+ 0) mongod-3673615 |       __put_cpu_fpsimd_context();
+ 0) mongod-3673615 |     }
+ 0) mongod-3673615 |   }
+ 0) mongod-3673615 | }
+ 0) mongod-3673615 | post_ttbr_update_workaround();
+ 0) mongod-3673615 | el0_svc_handler() {
+ 0) mongod-3673615 |   el0_svc_common.constprop.0() {
+ 0) mongod-3673615 |     __arm64_sys_futex() {
+ 0) mongod-3673615 |       do_futex() {
+ 0) mongod-3673615 |         futex_wake() {
+ 0) mongod-3673615 |           get_futex_key() {
+ 0) mongod-3673615 |             get_futex_key_refs.isra.0();
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |           hash_futex();
+ 0) mongod-3673615 |           drop_futex_key_refs.isra.0();
+ 0) mongod-3673615 |         }
+ 0) mongod-3673615 |       }
+ 0) mongod-3673615 |     }
+ 0) mongod-3673615 |   }
+ 0) mongod-3673615 | }
+ 0) mongod-3673615 | post_ttbr_update_workaround();
+ 0) mongod-3673615 | el0_svc_handler() {
+ 0) mongod-3673615 |   el0_svc_common.constprop.0() {
+ 0) mongod-3673615 |     __arm64_sys_pwrite64() {
+ 0) mongod-3673615 |       ksys_pwrite64() {
+ 0) mongod-3673615 |         __fdget() {
+ 0) mongod-3673615 |           __fget_light() {
+ 0) mongod-3673615 |             __fget() {
+ 0) mongod-3673615 |               __rcu_read_lock();
+ 0) mongod-3673615 |               __rcu_read_unlock();
+ 0) mongod-3673615 |             }
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |         }
+ 0) mongod-3673615 |         vfs_write() {
+ 0) mongod-3673615 |           rw_verify_area() {
+ 0) mongod-3673615 |             security_file_permission() {
+ 0) mongod-3673615 |               apparmor_file_permission() {
+ 0) mongod-3673615 |                 common_file_perm() {
+ 0) mongod-3673615 |                   aa_file_perm() {
+ 0) mongod-3673615 |                     __rcu_read_lock();
+ 0) mongod-3673615 |                     aa_label_is_subset();
+ 0) mongod-3673615 |                     __rcu_read_unlock();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |             }
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |           __sb_start_write();
+ 0) mongod-3673615 |           __vfs_write() {
+ 0) mongod-3673615 |             new_sync_write() {
+ 0) mongod-3673615 |               ovl_write_iter [overlay]() {
+ 0) mongod-3673615 |                 down_write();
+ 0) mongod-3673615 |                 ovl_inode_real [overlay]();
+ 0) mongod-3673615 |                 file_remove_privs() {
+ 0) mongod-3673615 |                   ovl_d_real [overlay]();
+ 0) mongod-3673615 |                   dentry_needs_remove_privs.part.0() {
+ 0) mongod-3673615 |                     should_remove_suid();
+ 0) mongod-3673615 |                     security_inode_need_killpriv() {
+ 0) mongod-3673615 |                       cap_inode_need_killpriv() {
+ 0) mongod-3673615 |                         __vfs_getxattr() {
+ 0) mongod-3673615 |                           xattr_resolve_name();
+ 0) mongod-3673615 |                           ovl_other_xattr_get [overlay]() {
+ 0) mongod-3673615 |                             ovl_xattr_get [overlay]() {
+ 0) mongod-3673615 |                               ovl_i_dentry_upper [overlay]();
+ 0) mongod-3673615 |                               ovl_override_creds [overlay]() {
+ 0) mongod-3673615 |                                 override_creds();
+ 0) mongod-3673615 |                               }
+ 0) mongod-3673615 |                               vfs_getxattr() {
+ 0) mongod-3673615 |                                 xattr_permission();
+ 0) mongod-3673615 |                                 security_inode_getxattr();
+ 0) mongod-3673615 |                                 security_inode_getsecurity() {
+ 0) mongod-3673615 |                                   cap_inode_getsecurity() {
+ 0) mongod-3673615 |                                     d_find_any_alias() {
+ 0) mongod-3673615 |                                       _raw_spin_lock();
+ 0) mongod-3673615 |                                       _raw_spin_unlock();
+ 0) mongod-3673615 |                                     }
+ 0) mongod-3673615 |                                     vfs_getxattr_alloc() {
+ 0) mongod-3673615 |                                       xattr_permission();
+ 0) mongod-3673615 |                                       xattr_resolve_name();
+ 0) mongod-3673615 |                                       ext4_xattr_security_get() {
+ 0) mongod-3673615 |                                         ext4_xattr_get() {
+ 0) mongod-3673615 |                                           down_read();
+ 0) mongod-3673615 |                                           ext4_xattr_ibody_get();
+ 0) mongod-3673615 |                                           up_read();
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                       }
+ 0) mongod-3673615 |                                     }
+ 0) mongod-3673615 |                                     dput() {
+ 0) mongod-3673615 |                                       __rcu_read_lock();
+ 0) mongod-3673615 |                                       __rcu_read_unlock();
+ 0) mongod-3673615 |                                     }
+ 0) mongod-3673615 |                                     kfree();
+ 0) mongod-3673615 |                                   }
+ 0) mongod-3673615 |                                 }
+ 0) mongod-3673615 |                               }
+ 0) mongod-3673615 |                               revert_creds();
+ 0) mongod-3673615 |                             }
+ 0) mongod-3673615 |                           }
+ 0) mongod-3673615 |                         }
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 ovl_real_fdget_meta.isra.0 [overlay]() {
+ 0) mongod-3673615 |                   ovl_inode_realdata [overlay]();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 ovl_override_creds [overlay]() {
+ 0) mongod-3673615 |                   override_creds();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 __sb_start_write();
+ 0) mongod-3673615 |                 vfs_iter_write() {
+ 0) mongod-3673615 |                   do_iter_write() {
+ 0) mongod-3673615 |                     rw_verify_area() {
+ 0) mongod-3673615 |                       security_file_permission() {
+ 0) mongod-3673615 |                         apparmor_file_permission() {
+ 0) mongod-3673615 |                           common_file_perm() {
+ 0) mongod-3673615 |                             aa_file_perm() {
+ 0) mongod-3673615 |                               __rcu_read_lock();
+ 0) mongod-3673615 |                               __rcu_read_unlock();
+ 0) mongod-3673615 |                             }
+ 0) mongod-3673615 |                           }
+ 0) mongod-3673615 |                         }
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     do_iter_readv_writev() {
+ 0) mongod-3673615 |                       ext4_file_write_iter() {
+ 0) mongod-3673615 |                         down_write_trylock();
+ 0) mongod-3673615 |                         ext4_write_checks() {
+ 0) mongod-3673615 |                           generic_write_check_limits.isra.0();
+ 0) mongod-3673615 |                         }
+ 0) mongod-3673615 |                         __generic_file_write_iter() {
+ 0) mongod-3673615 |                           file_remove_privs();
+ 0) mongod-3673615 |                           file_update_time() {
+ 0) mongod-3673615 |                             current_time() {
+ 0) mongod-3673615 |                               ktime_get_coarse_real_ts64();
+ 0) mongod-3673615 |                               timestamp_truncate();
+ 0) mongod-3673615 |                             }
+ 0) mongod-3673615 |                             __mnt_want_write_file() {
+ 0) mongod-3673615 |                               mnt_clone_write();
+ 0) mongod-3673615 |                             }
+ 0) mongod-3673615 |                             generic_update_time() {
+ 0) mongod-3673615 |                               __mark_inode_dirty() {
+ 0) mongod-3673615 |                                 ext4_dirty_inode() {
+ 0) mongod-3673615 |                                   __ext4_journal_start_sb() {
+ 0) mongod-3673615 |                                     ext4_journal_check_start();
+ 0) mongod-3673615 |                                     jbd2__journal_start() {
+ 0) mongod-3673615 |                                       kmem_cache_alloc() {
+ 0) mongod-3673615 |                                         should_failslab();
+ 0) mongod-3673615 |                                         memcg_kmem_put_cache();
+ 0) mongod-3673615 |                                       }
+ 0) mongod-3673615 |                                       start_this_handle() {
+ 0) mongod-3673615 |                                         _raw_read_lock();
+ 0) mongod-3673615 |                                         add_transaction_credits();
+ 0) mongod-3673615 |                                         _raw_read_unlock();
+ 0) mongod-3673615 |                                       }
+ 0) mongod-3673615 |                                     }
+ 0) mongod-3673615 |                                   }
+ 0) mongod-3673615 |                                   ext4_mark_inode_dirty() {
+ 0) mongod-3673615 |                                     ext4_reserve_inode_write() {
+ 0) mongod-3673615 |                                       __ext4_get_inode_loc() {
+ 0) mongod-3673615 |                                         ext4_get_group_desc() {
+ 0) mongod-3673615 |                                           __rcu_read_lock();
+ 0) mongod-3673615 |                                           __rcu_read_unlock();
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                         ext4_inode_table();
+ 0) mongod-3673615 |                                         __getblk_gfp() {
+ 0) mongod-3673615 |                                           __find_get_block() {
+ 0) mongod-3673615 |                                             mark_page_accessed();
+ 0) mongod-3673615 |                                           }
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                       }
+ 0) mongod-3673615 |                                       __ext4_journal_get_write_access() {
+ 0) mongod-3673615 |                                         jbd2_journal_get_write_access() {
+ 0) mongod-3673615 |                                           jbd2_write_access_granted.isra.0.part.0() {
+ 0) mongod-3673615 |                                             __rcu_read_lock();
+ 0) mongod-3673615 |                                             __rcu_read_unlock();
+ 0) mongod-3673615 |                                           }
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                       }
+ 0) mongod-3673615 |                                     }
+ 0) mongod-3673615 |                                     ext4_mark_iloc_dirty() {
+ 0) mongod-3673615 |                                       ext4_do_update_inode() {
+ 0) mongod-3673615 |                                         _raw_spin_lock();
+ 0) mongod-3673615 |                                         from_kuid() {
+ 0) mongod-3673615 |                                           map_id_up();
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                         from_kgid() {
+ 0) mongod-3673615 |                                           map_id_up();
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                         from_kprojid() {
+ 0) mongod-3673615 |                                           map_id_up();
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                         ext4_inode_csum_set();
+ 0) mongod-3673615 |                                         _raw_spin_unlock();
+ 0) mongod-3673615 |                                         __ext4_handle_dirty_metadata() {
+ 0) mongod-3673615 |                                           jbd2_journal_dirty_metadata();
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                         __brelse();
+ 0) mongod-3673615 |                                       }
+ 0) mongod-3673615 |                                     }
+ 0) mongod-3673615 |                                   }
+ 0) mongod-3673615 |                                   __ext4_journal_stop() {
+ 0) mongod-3673615 |                                     jbd2_journal_stop() {
+ 0) mongod-3673615 |                                       __wake_up() {
+ 0) mongod-3673615 |                                         __wake_up_common_lock() {
+ 0) mongod-3673615 |                                           _raw_spin_lock_irqsave();
+ 0) mongod-3673615 |                                           __wake_up_common();
+ 0) mongod-3673615 |                                           _raw_spin_unlock_irqrestore();
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                       }
+ 0) mongod-3673615 |                                       kmem_cache_free();
+ 0) mongod-3673615 |                                     }
+ 0) mongod-3673615 |                                   }
+ 0) mongod-3673615 |                                 }
+ 0) mongod-3673615 |                               }
+ 0) mongod-3673615 |                             }
+ 0) mongod-3673615 |                             __mnt_drop_write_file() {
+ 0) mongod-3673615 |                               __mnt_drop_write();
+ 0) mongod-3673615 |                             }
+ 0) mongod-3673615 |                           }
+ 0) mongod-3673615 |                           generic_perform_write() {
+ 0) mongod-3673615 |                             ext4_da_write_begin() {
+ 0) mongod-3673615 |                               ext4_nonda_switch();
+ 0) mongod-3673615 |                               grab_cache_page_write_begin() {
+ 0) mongod-3673615 |                                 pagecache_get_page() {
+ 0) mongod-3673615 |                                   find_get_entry() {
+ 0) mongod-3673615 |                                     __rcu_read_lock();
+ 0) mongod-3673615 |                                     PageHuge();
+ 0) mongod-3673615 |                                     __rcu_read_unlock();
+ 0) mongod-3673615 |                                   }
+ 0) mongod-3673615 |                                 }
+ 0) mongod-3673615 |                                 wait_for_stable_page();
+ 0) mongod-3673615 |                               }
+ 0) mongod-3673615 |                               unlock_page();
+ 0) mongod-3673615 |                               __ext4_journal_start_sb() {
+ 0) mongod-3673615 |                                 ext4_journal_check_start();
+ 0) mongod-3673615 |                                 jbd2__journal_start() {
+ 0) mongod-3673615 |                                   kmem_cache_alloc() {
+ 0) mongod-3673615 |                                     should_failslab();
+ 0) mongod-3673615 |                                     memcg_kmem_put_cache();
+ 0) mongod-3673615 |                                   }
+ 0) mongod-3673615 |                                   start_this_handle() {
+ 0) mongod-3673615 |                                     _raw_read_lock();
+ 0) mongod-3673615 |                                     add_transaction_credits();
+ 0) mongod-3673615 |                                     _raw_read_unlock();
+ 0) mongod-3673615 |                                   }
+ 0) mongod-3673615 |                                 }
+ 0) mongod-3673615 |                               }
+ 0) mongod-3673615 |                               wait_for_stable_page();
+ 0) mongod-3673615 |                               ext4_block_write_begin();
+ 0) mongod-3673615 |                             }
+ 0) mongod-3673615 |                             flush_dcache_page();
+ 0) mongod-3673615 |                             ext4_da_write_end() {
+ 0) mongod-3673615 |                               generic_write_end() {
+ 0) mongod-3673615 |                                 block_write_end() {
+ 0) mongod-3673615 |                                   flush_dcache_page();
+ 0) mongod-3673615 |                                   __block_commit_write.isra.0() {
+ 0) mongod-3673615 |                                     mark_buffer_dirty() {
+ 0) mongod-3673615 |                                       lock_page_memcg() {
+ 0) mongod-3673615 |                                         __rcu_read_lock();
+ 0) mongod-3673615 |                                       }
+ 0) mongod-3673615 |                                       page_mapping();
+ 0) mongod-3673615 |                                       __set_page_dirty() {
+ 0) mongod-3673615 |                                         _raw_spin_lock_irqsave();
+ 0) mongod-3673615 |                                         account_page_dirtied() {
+ 0) mongod-3673615 |                                           __mod_lruvec_state() {
+ 0) mongod-3673615 |                                             __mod_node_page_state();
+ 0) mongod-3673615 |                                             __mod_memcg_state();
+ 0) mongod-3673615 |                                           }
+ 0) mongod-3673615 |                                           __inc_zone_page_state() {
+ 0) mongod-3673615 |                                             __inc_zone_state();
+ 0) mongod-3673615 |                                           }
+ 0) mongod-3673615 |                                           __inc_node_page_state() {
+ 0) mongod-3673615 |                                             __inc_node_state();
+ 0) mongod-3673615 |                                           }
+ 0) mongod-3673615 |                                           mem_cgroup_track_foreign_dirty_slowpath() {
+ 0) mongod-3673615 |                                             __msecs_to_jiffies();
+ 0) mongod-3673615 |                                           }
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                         _raw_spin_unlock_irqrestore();
+ 0) mongod-3673615 |                                       }
+ 0) mongod-3673615 |                                       unlock_page_memcg() {
+ 0) mongod-3673615 |                                         __unlock_page_memcg() {
+ 0) mongod-3673615 |                                           __rcu_read_unlock();
+ 0) mongod-3673615 |                                         }
+ 0) mongod-3673615 |                                       }
+ 0) mongod-3673615 |                                       __mark_inode_dirty();
+ 0) mongod-3673615 |                                     }
+ 0) mongod-3673615 |                                   }
+ 0) mongod-3673615 |                                 }
+ 0) mongod-3673615 |                                 unlock_page();
+ 0) mongod-3673615 |                               }
+ 0) mongod-3673615 |                               __ext4_journal_stop() {
+ 0) mongod-3673615 |                                 jbd2_journal_stop() {
+ 0) mongod-3673615 |                                   __wake_up() {
+ 0) mongod-3673615 |                                     __wake_up_common_lock() {
+ 0) mongod-3673615 |                                       _raw_spin_lock_irqsave();
+ 0) mongod-3673615 |                                       __wake_up_common();
+ 0) mongod-3673615 |                                       _raw_spin_unlock_irqrestore();
+ 0) mongod-3673615 |                                     }
+ 0) mongod-3673615 |                                   }
+ 0) mongod-3673615 |                                   kmem_cache_free();
+ 0) mongod-3673615 |                                 }
+ 0) mongod-3673615 |                               }
+ 0) mongod-3673615 |                             }
+ 0) mongod-3673615 |                             balance_dirty_pages_ratelimited();
+ 0) mongod-3673615 |                           }
+ 0) mongod-3673615 |                         }
+ 0) mongod-3673615 |                         up_write();
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 __sb_end_write();
+ 0) mongod-3673615 |                 revert_creds();
+ 0) mongod-3673615 |                 ovl_inode_real [overlay]();
+ 0) mongod-3673615 |                 up_write();
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |             }
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |           __fsnotify_parent();
+ 0) mongod-3673615 |           fsnotify();
+ 0) mongod-3673615 |           __sb_end_write();
+ 0) mongod-3673615 |         }
+ 0) mongod-3673615 |         fput() {
+ 0) mongod-3673615 |           fput_many();
+ 0) mongod-3673615 |         }
+ 0) mongod-3673615 |       }
+ 0) mongod-3673615 |     }
+ 0) mongod-3673615 |   }
+ 0) mongod-3673615 | }
+ 0) mongod-3673615 | post_ttbr_update_workaround();
+ 0) mongod-3673615 | el0_svc_handler() {
+ 0) mongod-3673615 |   el0_svc_common.constprop.0() {
+ 0) mongod-3673615 |     __arm64_sys_futex() {
+ 0) mongod-3673615 |       get_timespec64();
+ 0) mongod-3673615 |       do_futex() {
+ 0) mongod-3673615 |         futex_wait() {
+ 0) mongod-3673615 |           hrtimer_init_sleeper() {
+ 0) mongod-3673615 |             __hrtimer_init();
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |           ktime_add_safe();
+ 0) mongod-3673615 |           futex_wait_setup() {
+ 0) mongod-3673615 |             get_futex_key() {
+ 0) mongod-3673615 |               get_futex_key_refs.isra.0();
+ 0) mongod-3673615 |             }
+ 0) mongod-3673615 |             hash_futex();
+ 0) mongod-3673615 |             _raw_spin_lock();
+ 0) mongod-3673615 |             get_futex_value_locked();
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |           futex_wait_queue_me() {
+ 0) mongod-3673615 |             _raw_spin_unlock();
+ 0) mongod-3673615 |             hrtimer_sleeper_start_expires() {
+ 0) mongod-3673615 |               hrtimer_start_range_ns() {
+ 0) mongod-3673615 |                 lock_hrtimer_base() {
+ 0) mongod-3673615 |                   _raw_spin_lock_irqsave();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 get_nohz_timer_target();
+ 0) mongod-3673615 |                 enqueue_hrtimer();
+ 0) mongod-3673615 |                 _raw_spin_unlock_irqrestore();
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |             }
+ 0) mongod-3673615 |             schedule() {
+ 0) mongod-3673615 |               rcu_note_context_switch() {
+ 0) mongod-3673615 |                 rcu_preempt_deferred_qs() {
+ 0) mongod-3673615 |                   rcu_preempt_need_deferred_qs();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 rcu_qs();
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |               _raw_spin_lock();
+ 0) mongod-3673615 |               update_rq_clock();
+ 0) mongod-3673615 |               deactivate_task() {
+ 0) mongod-3673615 |                 psi_task_change() {
+ 0) mongod-3673615 |                   record_times.isra.0();
+ 0) mongod-3673615 |                   record_times.isra.0();
+ 0) mongod-3673615 |                   record_times.isra.0();
+ 0) mongod-3673615 |                   record_times.isra.0();
+ 0) mongod-3673615 |                   record_times.isra.0();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 dequeue_task_fair() {
+ 0) mongod-3673615 |                   dequeue_entity() {
+ 0) mongod-3673615 |                     update_curr() {
+ 0) mongod-3673615 |                       update_min_vruntime();
+ 0) mongod-3673615 |                       cpuacct_charge() {
+ 0) mongod-3673615 |                         __rcu_read_lock();
+ 0) mongod-3673615 |                         __rcu_read_unlock();
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                       __rcu_read_lock();
+ 0) mongod-3673615 |                       __cgroup_account_cputime() {
+ 0) mongod-3673615 |                         cgroup_base_stat_cputime_account_begin();
+ 0) mongod-3673615 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) mongod-3673615 |                           cgroup_rstat_updated();
+ 0) mongod-3673615 |                         }
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                       __rcu_read_unlock();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     __update_load_avg_se() {
+ 0) mongod-3673615 |                       __accumulate_pelt_segments();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3673615 |                       __accumulate_pelt_segments();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     clear_buddies();
+ 0) mongod-3673615 |                     update_cfs_group();
+ 0) mongod-3673615 |                     update_min_vruntime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   set_next_buddy();
+ 0) mongod-3673615 |                   __update_load_avg_se() {
+ 0) mongod-3673615 |                     __accumulate_pelt_segments();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   __update_load_avg_cfs_rq() {
+ 0) mongod-3673615 |                     __accumulate_pelt_segments();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   update_cfs_group() {
+ 0) mongod-3673615 |                     reweight_entity() {
+ 0) mongod-3673615 |                       update_curr() {
+ 0) mongod-3673615 |                         __calc_delta();
+ 0) mongod-3673615 |                         update_min_vruntime();
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   __update_load_avg_se() {
+ 0) mongod-3673615 |                     __accumulate_pelt_segments();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   __update_load_avg_cfs_rq() {
+ 0) mongod-3673615 |                     __accumulate_pelt_segments();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   update_cfs_group() {
+ 0) mongod-3673615 |                     reweight_entity() {
+ 0) mongod-3673615 |                       update_curr() {
+ 0) mongod-3673615 |                         __calc_delta();
+ 0) mongod-3673615 |                         update_min_vruntime();
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   __update_load_avg_se() {
+ 0) mongod-3673615 |                     __accumulate_pelt_segments();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   __update_load_avg_cfs_rq() {
+ 0) mongod-3673615 |                     __accumulate_pelt_segments();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   update_cfs_group() {
+ 0) mongod-3673615 |                     reweight_entity() {
+ 0) mongod-3673615 |                       update_curr() {
+ 0) mongod-3673615 |                         __calc_delta();
+ 0) mongod-3673615 |                         update_min_vruntime();
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   __update_load_avg_se() {
+ 0) mongod-3673615 |                     __accumulate_pelt_segments();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   __update_load_avg_cfs_rq() {
+ 0) mongod-3673615 |                     __accumulate_pelt_segments();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   dbs_update_util_handler() {
+ 0) mongod-3673615 |                     cpufreq_this_cpu_can_update();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   update_cfs_group() {
+ 0) mongod-3673615 |                     reweight_entity() {
+ 0) mongod-3673615 |                       update_curr() {
+ 0) mongod-3673615 |                         __calc_delta();
+ 0) mongod-3673615 |                         update_min_vruntime();
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   hrtick_update();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |               pick_next_task_fair() {
+ 0) mongod-3673615 |                 update_curr();
+ 0) mongod-3673615 |                 check_cfs_rq_runtime();
+ 0) mongod-3673615 |                 pick_next_entity() {
+ 0) mongod-3673615 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-3673615 |                   clear_buddies();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 update_curr();
+ 0) mongod-3673615 |                 check_cfs_rq_runtime();
+ 0) mongod-3673615 |                 pick_next_entity() {
+ 0) mongod-3673615 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-3673615 |                   clear_buddies();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 update_curr();
+ 0) mongod-3673615 |                 check_cfs_rq_runtime();
+ 0) mongod-3673615 |                 pick_next_entity() {
+ 0) mongod-3673615 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-3673615 |                   clear_buddies();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 update_curr();
+ 0) mongod-3673615 |                 check_cfs_rq_runtime();
+ 0) mongod-3673615 |                 pick_next_entity() {
+ 0) mongod-3673615 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-3673615 |                   clear_buddies();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 check_cfs_rq_runtime();
+ 0) mongod-3673615 |                 pick_next_entity() {
+ 0) mongod-3673615 |                   clear_buddies();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 put_prev_entity() {
+ 0) mongod-3673615 |                   check_cfs_rq_runtime();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 set_next_entity() {
+ 0) mongod-3673615 |                   __update_load_avg_se() {
+ 0) mongod-3673615 |                     __accumulate_pelt_segments();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   __update_load_avg_cfs_rq();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |               fpsimd_thread_switch() {
+ 0) mongod-3673615 |                 __get_cpu_fpsimd_context();
+ 0) mongod-3673615 |                 fpsimd_save() {
+ 0) mongod-3673615 |                   have_cpu_fpsimd_context();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 __put_cpu_fpsimd_context();
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |               hw_breakpoint_thread_switch();
+ 0) mongod-3673615 |               uao_thread_switch();
+ 0) mongod-3673615 |               cpu_have_feature();
+ 0) mongod-3673615 |               erratum_1418040_thread_switch() {
+ 0) mongod-3673615 |                 this_cpu_has_cap() {
+ 0) mongod-3673615 |                   is_affected_midr_range_list();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |               finish_task_switch() {
+ 0) mongod-3673615 |                 _raw_spin_unlock_irq();
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |             } /* schedule */
+ 0) mongod-3673615 |           } /* futex_wait_queue_me */
+ 0) mongod-3673615 |           _raw_spin_lock();
+ 0) mongod-3673615 |           __unqueue_futex();
+ 0) mongod-3673615 |           _raw_spin_unlock();
+ 0) mongod-3673615 |           drop_futex_key_refs.isra.0();
+ 0) mongod-3673615 |           hrtimer_cancel() {
+ 0) mongod-3673615 |             hrtimer_try_to_cancel() {
+ 0) mongod-3673615 |               hrtimer_active();
+ 0) mongod-3673615 |             }
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |         } /* futex_wait */
+ 0) mongod-3673615 |       } /* do_futex */
+ 0) mongod-3673615 |     } /* __arm64_sys_futex */
+ 0) mongod-3673615 |   } /* el0_svc_common.constprop.0 */
+ 0) mongod-3673615 | } /* el0_svc_handler */
+ 0) mongod-3673615 | do_notify_resume() {
+ 0) mongod-3673615 |   fpsimd_restore_current_state() {
+ 0) mongod-3673615 |     __get_cpu_fpsimd_context();
+ 0) mongod-3673615 |     task_fpsimd_load() {
+ 0) mongod-3673615 |       have_cpu_fpsimd_context();
+ 0) mongod-3673615 |     }
+ 0) mongod-3673615 |     fpsimd_bind_task_to_cpu();
+ 0) mongod-3673615 |     put_cpu_fpsimd_context() {
+ 0) mongod-3673615 |       __put_cpu_fpsimd_context();
+ 0) mongod-3673615 |     }
+ 0) mongod-3673615 |   }
+ 0) mongod-3673615 | }
+ 0) mongod-3673615 | post_ttbr_update_workaround();
+ 0) mongod-3673615 | el0_svc_handler() {
+ 0) mongod-3673615 |   el0_svc_common.constprop.0() {
+ 0) mongod-3673615 |     __arm64_sys_futex() {
+ 0) mongod-3673615 |       do_futex() {
+ 0) mongod-3673615 |         futex_wake() {
+ 0) mongod-3673615 |           get_futex_key() {
+ 0) mongod-3673615 |             get_futex_key_refs.isra.0();
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |           hash_futex();
+ 0) mongod-3673615 |           drop_futex_key_refs.isra.0();
+ 0) mongod-3673615 |         }
+ 0) mongod-3673615 |       }
+ 0) mongod-3673615 |     }
+ 0) mongod-3673615 |   }
+ 0) mongod-3673615 | }
+ 0) mongod-3673615 | post_ttbr_update_workaround();
+ 0) mongod-3673615 | el0_svc_handler() {
+ 0) mongod-3673615 |   el0_svc_common.constprop.0() {
+ 0) mongod-3673615 |     __arm64_sys_futex() {
+ 0) mongod-3673615 |       get_timespec64();
+ 0) mongod-3673615 |       do_futex() {
+ 0) mongod-3673615 |         futex_wait() {
+ 0) mongod-3673615 |           hrtimer_init_sleeper() {
+ 0) mongod-3673615 |             __hrtimer_init();
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |           ktime_add_safe();
+ 0) mongod-3673615 |           futex_wait_setup() {
+ 0) mongod-3673615 |             get_futex_key() {
+ 0) mongod-3673615 |               get_futex_key_refs.isra.0();
+ 0) mongod-3673615 |             }
+ 0) mongod-3673615 |             hash_futex();
+ 0) mongod-3673615 |             _raw_spin_lock();
+ 0) mongod-3673615 |             get_futex_value_locked();
+ 0) mongod-3673615 |           }
+ 0) mongod-3673615 |           futex_wait_queue_me() {
+ 0) mongod-3673615 |             _raw_spin_unlock();
+ 0) mongod-3673615 |             hrtimer_sleeper_start_expires() {
+ 0) mongod-3673615 |               hrtimer_start_range_ns() {
+ 0) mongod-3673615 |                 lock_hrtimer_base() {
+ 0) mongod-3673615 |                   _raw_spin_lock_irqsave();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 get_nohz_timer_target();
+ 0) mongod-3673615 |                 enqueue_hrtimer();
+ 0) mongod-3673615 |                 _raw_spin_unlock_irqrestore();
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |             }
+ 0) mongod-3673615 |             schedule() {
+ 0) mongod-3673615 |               rcu_note_context_switch() {
+ 0) mongod-3673615 |                 rcu_preempt_deferred_qs() {
+ 0) mongod-3673615 |                   rcu_preempt_need_deferred_qs();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 rcu_qs();
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |               _raw_spin_lock();
+ 0) mongod-3673615 |               update_rq_clock();
+ 0) mongod-3673615 |               deactivate_task() {
+ 0) mongod-3673615 |                 psi_task_change() {
+ 0) mongod-3673615 |                   record_times.isra.0();
+ 0) mongod-3673615 |                   record_times.isra.0();
+ 0) mongod-3673615 |                   record_times.isra.0();
+ 0) mongod-3673615 |                   record_times.isra.0();
+ 0) mongod-3673615 |                   record_times.isra.0();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |                 dequeue_task_fair() {
+ 0) mongod-3673615 |                   dequeue_entity() {
+ 0) mongod-3673615 |                     update_curr() {
+ 0) mongod-3673615 |                       update_min_vruntime();
+ 0) mongod-3673615 |                       cpuacct_charge() {
+ 0) mongod-3673615 |                         __rcu_read_lock();
+ 0) mongod-3673615 |                         __rcu_read_unlock();
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                       __rcu_read_lock();
+ 0) mongod-3673615 |                       __cgroup_account_cputime() {
+ 0) mongod-3673615 |                         cgroup_base_stat_cputime_account_begin();
+ 0) mongod-3673615 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) mongod-3673615 |                           cgroup_rstat_updated();
+ 0) mongod-3673615 |                         }
+ 0) mongod-3673615 |                       }
+ 0) mongod-3673615 |                       __rcu_read_unlock();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     __update_load_avg_se();
+ 0) mongod-3673615 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3673615 |                     clear_buddies();
+ 0) mongod-3673615 |                     update_cfs_group();
+ 0) mongod-3673615 |                     update_min_vruntime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   dequeue_entity() {
+ 0) mongod-3673615 |                     update_curr() {
+ 0) mongod-3673615 |                       __calc_delta();
+ 0) mongod-3673615 |                       update_min_vruntime();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     __update_load_avg_se();
+ 0) mongod-3673615 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3673615 |                     clear_buddies();
+ 0) mongod-3673615 |                     update_cfs_group() {
+ 0) mongod-3673615 |                       reweight_entity();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     update_min_vruntime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   dequeue_entity() {
+ 0) mongod-3673615 |                     update_curr() {
+ 0) mongod-3673615 |                       __calc_delta();
+ 0) mongod-3673615 |                       update_min_vruntime();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     __update_load_avg_se();
+ 0) mongod-3673615 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3673615 |                     clear_buddies();
+ 0) mongod-3673615 |                     update_cfs_group() {
+ 0) mongod-3673615 |                       reweight_entity();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     update_min_vruntime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   dequeue_entity() {
+ 0) mongod-3673615 |                     update_curr() {
+ 0) mongod-3673615 |                       __calc_delta();
+ 0) mongod-3673615 |                       update_min_vruntime();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     __update_load_avg_se();
+ 0) mongod-3673615 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3673615 |                     clear_buddies();
+ 0) mongod-3673615 |                     update_cfs_group() {
+ 0) mongod-3673615 |                       reweight_entity();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     update_min_vruntime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   dequeue_entity() {
+ 0) mongod-3673615 |                     update_curr() {
+ 0) mongod-3673615 |                       __calc_delta();
+ 0) mongod-3673615 |                       update_min_vruntime();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     __update_load_avg_se();
+ 0) mongod-3673615 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3673615 |                     clear_buddies();
+ 0) mongod-3673615 |                     update_cfs_group() {
+ 0) mongod-3673615 |                       reweight_entity();
+ 0) mongod-3673615 |                     }
+ 0) mongod-3673615 |                     update_min_vruntime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   hrtick_update();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |               pick_next_task_fair() {
+ 0) mongod-3673615 |                 newidle_balance() {
+ 0) mongod-3673615 |                   __rcu_read_lock();
+ 0) mongod-3673615 |                   __msecs_to_jiffies();
+ 0) mongod-3673615 |                   __rcu_read_unlock();
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |               }
+ 0) mongod-3673615 |               pick_next_task_idle() {
+ 0) mongod-3673615 |                 put_prev_task_fair() {
+ 0) mongod-3673615 |                   put_prev_entity() {
+ 0) mongod-3673615 |                     check_cfs_rq_runtime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   put_prev_entity() {
+ 0) mongod-3673615 |                     check_cfs_rq_runtime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   put_prev_entity() {
+ 0) mongod-3673615 |                     check_cfs_rq_runtime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   put_prev_entity() {
+ 0) mongod-3673615 |                     check_cfs_rq_runtime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                   put_prev_entity() {
+ 0) mongod-3673615 |                     check_cfs_rq_runtime();
+ 0) mongod-3673615 |                   }
+ 0) mongod-3673615 |                 }
+ 0) mongod-3673615 |               }

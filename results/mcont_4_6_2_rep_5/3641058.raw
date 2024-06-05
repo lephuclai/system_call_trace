@@ -1,0 +1,434 @@
+ 0) Timesta-3641058 |               finish_task_switch() {
+ 0) Timesta-3641058 |                 _raw_spin_unlock_irq();
+ 0) Timesta-3641058 |                 __mmdrop() {
+ 0) Timesta-3641058 |                   pgd_free() {
+ 0) Timesta-3641058 |                     free_pages() {
+ 0) Timesta-3641058 |                       free_pages.part.0() {
+ 0) Timesta-3641058 |                         __free_pages() {
+ 0) Timesta-3641058 |                           free_unref_page() {
+ 0) Timesta-3641058 |                             free_pcp_prepare() {
+ 0) Timesta-3641058 |                               __memcg_kmem_uncharge() {
+ 0) Timesta-3641058 |                                 __memcg_kmem_uncharge_memcg() {
+ 0) Timesta-3641058 |                                   page_counter_uncharge() {
+ 0) Timesta-3641058 |                                     page_counter_cancel() {
+ 0) Timesta-3641058 |                                       propagate_protected_usage();
+ 0) Timesta-3641058 |                                     }
+ 0) Timesta-3641058 |                                     page_counter_cancel() {
+ 0) Timesta-3641058 |                                       propagate_protected_usage();
+ 0) Timesta-3641058 |                                     }
+ 0) Timesta-3641058 |                                     page_counter_cancel() {
+ 0) Timesta-3641058 |                                       propagate_protected_usage();
+ 0) Timesta-3641058 |                                     }
+ 0) Timesta-3641058 |                                     page_counter_cancel() {
+ 0) Timesta-3641058 |                                       propagate_protected_usage();
+ 0) Timesta-3641058 |                                     }
+ 0) Timesta-3641058 |                                   }
+ 0) Timesta-3641058 |                                   page_counter_uncharge() {
+ 0) Timesta-3641058 |                                     page_counter_cancel() {
+ 0) Timesta-3641058 |                                       propagate_protected_usage();
+ 0) Timesta-3641058 |                                     }
+ 0) Timesta-3641058 |                                     page_counter_cancel() {
+ 0) Timesta-3641058 |                                       propagate_protected_usage();
+ 0) Timesta-3641058 |                                     }
+ 0) Timesta-3641058 |                                     page_counter_cancel() {
+ 0) Timesta-3641058 |                                       propagate_protected_usage();
+ 0) Timesta-3641058 |                                     }
+ 0) Timesta-3641058 |                                     page_counter_cancel() {
+ 0) Timesta-3641058 |                                       propagate_protected_usage();
+ 0) Timesta-3641058 |                                     }
+ 0) Timesta-3641058 |                                   }
+ 0) Timesta-3641058 |                                 }
+ 0) Timesta-3641058 |                               }
+ 0) Timesta-3641058 |                               kernel_poison_pages();
+ 0) Timesta-3641058 |                             }
+ 0) Timesta-3641058 |                             free_unref_page_prepare.part.0();
+ 0) Timesta-3641058 |                             free_unref_page_commit();
+ 0) Timesta-3641058 |                           }
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   kmem_cache_free() {
+ 0) Timesta-3641058 |                     __slab_free();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |                 task_dead_fair() {
+ 0) Timesta-3641058 |                   remove_entity_load_avg() {
+ 0) Timesta-3641058 |                     __update_load_avg_blocked_se();
+ 0) Timesta-3641058 |                     _raw_spin_lock_irqsave();
+ 0) Timesta-3641058 |                     _raw_spin_unlock_irqrestore();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |                 kprobe_flush_task() {
+ 0) Timesta-3641058 |                   kprobe_busy_begin();
+ 0) Timesta-3641058 |                   _raw_spin_lock_irqsave();
+ 0) Timesta-3641058 |                   _raw_spin_unlock_irqrestore();
+ 0) Timesta-3641058 |                   kprobe_busy_end();
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |                 put_task_stack() {
+ 0) Timesta-3641058 |                   account_kernel_stack() {
+ 0) Timesta-3641058 |                     mod_zone_page_state();
+ 0) Timesta-3641058 |                     mod_zone_page_state();
+ 0) Timesta-3641058 |                     mod_zone_page_state();
+ 0) Timesta-3641058 |                     mod_zone_page_state();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   __mod_memcg_state();
+ 0) Timesta-3641058 |                   __memcg_kmem_uncharge() {
+ 0) Timesta-3641058 |                     __memcg_kmem_uncharge_memcg() {
+ 0) Timesta-3641058 |                       page_counter_uncharge() {
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                       page_counter_uncharge() {
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   __mod_memcg_state();
+ 0) Timesta-3641058 |                   __memcg_kmem_uncharge() {
+ 0) Timesta-3641058 |                     __memcg_kmem_uncharge_memcg() {
+ 0) Timesta-3641058 |                       page_counter_uncharge() {
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                       page_counter_uncharge() {
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   __mod_memcg_state();
+ 0) Timesta-3641058 |                   __memcg_kmem_uncharge() {
+ 0) Timesta-3641058 |                     __memcg_kmem_uncharge_memcg() {
+ 0) Timesta-3641058 |                       page_counter_uncharge() {
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                       page_counter_uncharge() {
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   __mod_memcg_state();
+ 0) Timesta-3641058 |                   __memcg_kmem_uncharge() {
+ 0) Timesta-3641058 |                     __memcg_kmem_uncharge_memcg() {
+ 0) Timesta-3641058 |                       page_counter_uncharge() {
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                       page_counter_uncharge() {
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                         page_counter_cancel() {
+ 0) Timesta-3641058 |                           propagate_protected_usage();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |                 put_task_struct_rcu_user() {
+ 0) Timesta-3641058 |                   call_rcu() {
+ 0) Timesta-3641058 |                     __call_rcu() {
+ 0) Timesta-3641058 |                       rcu_segcblist_enqueue();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |               }
+ 0) Timesta-3641058 |             } /* schedule */
+ 0) Timesta-3641058 |           } /* futex_wait_queue_me */
+ 0) Timesta-3641058 |           _raw_spin_lock();
+ 0) Timesta-3641058 |           __unqueue_futex();
+ 0) Timesta-3641058 |           _raw_spin_unlock();
+ 0) Timesta-3641058 |           drop_futex_key_refs.isra.0();
+ 0) Timesta-3641058 |           hrtimer_cancel() {
+ 0) Timesta-3641058 |             hrtimer_try_to_cancel() {
+ 0) Timesta-3641058 |               hrtimer_active();
+ 0) Timesta-3641058 |             }
+ 0) Timesta-3641058 |           }
+ 0) Timesta-3641058 |         } /* futex_wait */
+ 0) Timesta-3641058 |       } /* do_futex */
+ 0) Timesta-3641058 |     } /* __arm64_sys_futex */
+ 0) Timesta-3641058 |   } /* el0_svc_common.constprop.0 */
+ 0) Timesta-3641058 | } /* el0_svc_handler */
+ 0) Timesta-3641058 | do_notify_resume() {
+ 0) Timesta-3641058 |   fpsimd_restore_current_state() {
+ 0) Timesta-3641058 |     __get_cpu_fpsimd_context();
+ 0) Timesta-3641058 |     task_fpsimd_load() {
+ 0) Timesta-3641058 |       have_cpu_fpsimd_context();
+ 0) Timesta-3641058 |     }
+ 0) Timesta-3641058 |     fpsimd_bind_task_to_cpu();
+ 0) Timesta-3641058 |     put_cpu_fpsimd_context() {
+ 0) Timesta-3641058 |       __put_cpu_fpsimd_context();
+ 0) Timesta-3641058 |     }
+ 0) Timesta-3641058 |   }
+ 0) Timesta-3641058 | }
+ 0) Timesta-3641058 | post_ttbr_update_workaround();
+ 0) Timesta-3641058 | el0_svc_handler() {
+ 0) Timesta-3641058 |   el0_svc_common.constprop.0() {
+ 0) Timesta-3641058 |     __arm64_sys_futex() {
+ 0) Timesta-3641058 |       do_futex() {
+ 0) Timesta-3641058 |         futex_wake() {
+ 0) Timesta-3641058 |           get_futex_key() {
+ 0) Timesta-3641058 |             get_futex_key_refs.isra.0();
+ 0) Timesta-3641058 |           }
+ 0) Timesta-3641058 |           hash_futex();
+ 0) Timesta-3641058 |           drop_futex_key_refs.isra.0();
+ 0) Timesta-3641058 |         }
+ 0) Timesta-3641058 |       }
+ 0) Timesta-3641058 |     }
+ 0) Timesta-3641058 |   }
+ 0) Timesta-3641058 | }
+ 0) Timesta-3641058 | post_ttbr_update_workaround();
+ 0) Timesta-3641058 | el0_svc_handler() {
+ 0) Timesta-3641058 |   el0_svc_common.constprop.0() {
+ 0) Timesta-3641058 |     __arm64_sys_futex() {
+ 0) Timesta-3641058 |       get_timespec64();
+ 0) Timesta-3641058 |       do_futex() {
+ 0) Timesta-3641058 |         futex_wait() {
+ 0) Timesta-3641058 |           hrtimer_init_sleeper() {
+ 0) Timesta-3641058 |             __hrtimer_init();
+ 0) Timesta-3641058 |           }
+ 0) Timesta-3641058 |           ktime_add_safe();
+ 0) Timesta-3641058 |           futex_wait_setup() {
+ 0) Timesta-3641058 |             get_futex_key() {
+ 0) Timesta-3641058 |               get_futex_key_refs.isra.0();
+ 0) Timesta-3641058 |             }
+ 0) Timesta-3641058 |             hash_futex();
+ 0) Timesta-3641058 |             _raw_spin_lock();
+ 0) Timesta-3641058 |             get_futex_value_locked();
+ 0) Timesta-3641058 |           }
+ 0) Timesta-3641058 |           futex_wait_queue_me() {
+ 0) Timesta-3641058 |             _raw_spin_unlock();
+ 0) Timesta-3641058 |             hrtimer_sleeper_start_expires() {
+ 0) Timesta-3641058 |               hrtimer_start_range_ns() {
+ 0) Timesta-3641058 |                 lock_hrtimer_base() {
+ 0) Timesta-3641058 |                   _raw_spin_lock_irqsave();
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |                 get_nohz_timer_target();
+ 0) Timesta-3641058 |                 enqueue_hrtimer();
+ 0) Timesta-3641058 |                 _raw_spin_unlock_irqrestore();
+ 0) Timesta-3641058 |               }
+ 0) Timesta-3641058 |             }
+ 0) Timesta-3641058 |             schedule() {
+ 0) Timesta-3641058 |               rcu_note_context_switch() {
+ 0) Timesta-3641058 |                 rcu_preempt_deferred_qs() {
+ 0) Timesta-3641058 |                   rcu_preempt_need_deferred_qs();
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |                 rcu_qs();
+ 0) Timesta-3641058 |               }
+ 0) Timesta-3641058 |               _raw_spin_lock();
+ 0) Timesta-3641058 |               update_rq_clock();
+ 0) Timesta-3641058 |               deactivate_task() {
+ 0) Timesta-3641058 |                 psi_task_change() {
+ 0) Timesta-3641058 |                   record_times.isra.0();
+ 0) Timesta-3641058 |                   record_times.isra.0();
+ 0) Timesta-3641058 |                   record_times.isra.0();
+ 0) Timesta-3641058 |                   record_times.isra.0();
+ 0) Timesta-3641058 |                   record_times.isra.0();
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |                 dequeue_task_fair() {
+ 0) Timesta-3641058 |                   dequeue_entity() {
+ 0) Timesta-3641058 |                     update_curr() {
+ 0) Timesta-3641058 |                       update_min_vruntime();
+ 0) Timesta-3641058 |                       cpuacct_charge() {
+ 0) Timesta-3641058 |                         __rcu_read_lock();
+ 0) Timesta-3641058 |                         __rcu_read_unlock();
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                       __rcu_read_lock();
+ 0) Timesta-3641058 |                       __cgroup_account_cputime() {
+ 0) Timesta-3641058 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Timesta-3641058 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Timesta-3641058 |                           cgroup_rstat_updated();
+ 0) Timesta-3641058 |                         }
+ 0) Timesta-3641058 |                       }
+ 0) Timesta-3641058 |                       __rcu_read_unlock();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     __update_load_avg_se() {
+ 0) Timesta-3641058 |                       __accumulate_pelt_segments();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     __update_load_avg_cfs_rq() {
+ 0) Timesta-3641058 |                       __accumulate_pelt_segments();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     clear_buddies();
+ 0) Timesta-3641058 |                     update_cfs_group();
+ 0) Timesta-3641058 |                     update_min_vruntime();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   dequeue_entity() {
+ 0) Timesta-3641058 |                     update_curr() {
+ 0) Timesta-3641058 |                       __calc_delta();
+ 0) Timesta-3641058 |                       update_min_vruntime();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     __update_load_avg_se() {
+ 0) Timesta-3641058 |                       __accumulate_pelt_segments();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     __update_load_avg_cfs_rq() {
+ 0) Timesta-3641058 |                       __accumulate_pelt_segments();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     clear_buddies();
+ 0) Timesta-3641058 |                     update_cfs_group() {
+ 0) Timesta-3641058 |                       reweight_entity();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     update_min_vruntime();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   dequeue_entity() {
+ 0) Timesta-3641058 |                     update_curr() {
+ 0) Timesta-3641058 |                       __calc_delta();
+ 0) Timesta-3641058 |                       update_min_vruntime();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     __update_load_avg_se() {
+ 0) Timesta-3641058 |                       __accumulate_pelt_segments();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     __update_load_avg_cfs_rq() {
+ 0) Timesta-3641058 |                       __accumulate_pelt_segments();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     clear_buddies();
+ 0) Timesta-3641058 |                     update_cfs_group() {
+ 0) Timesta-3641058 |                       reweight_entity();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     update_min_vruntime();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   dequeue_entity() {
+ 0) Timesta-3641058 |                     update_curr() {
+ 0) Timesta-3641058 |                       __calc_delta();
+ 0) Timesta-3641058 |                       update_min_vruntime();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     __update_load_avg_se() {
+ 0) Timesta-3641058 |                       __accumulate_pelt_segments();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     __update_load_avg_cfs_rq() {
+ 0) Timesta-3641058 |                       __accumulate_pelt_segments();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     clear_buddies();
+ 0) Timesta-3641058 |                     update_cfs_group() {
+ 0) Timesta-3641058 |                       reweight_entity();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     update_min_vruntime();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   dequeue_entity() {
+ 0) Timesta-3641058 |                     update_curr() {
+ 0) Timesta-3641058 |                       __calc_delta();
+ 0) Timesta-3641058 |                       update_min_vruntime();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     __update_load_avg_se() {
+ 0) Timesta-3641058 |                       __accumulate_pelt_segments();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     __update_load_avg_cfs_rq() {
+ 0) Timesta-3641058 |                       __accumulate_pelt_segments();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     dbs_update_util_handler() {
+ 0) Timesta-3641058 |                       cpufreq_this_cpu_can_update();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     clear_buddies();
+ 0) Timesta-3641058 |                     update_cfs_group() {
+ 0) Timesta-3641058 |                       reweight_entity();
+ 0) Timesta-3641058 |                     }
+ 0) Timesta-3641058 |                     update_min_vruntime();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   hrtick_update();
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |               }
+ 0) Timesta-3641058 |               pick_next_task_fair() {
+ 0) Timesta-3641058 |                 newidle_balance() {
+ 0) Timesta-3641058 |                   __rcu_read_lock();
+ 0) Timesta-3641058 |                   __msecs_to_jiffies();
+ 0) Timesta-3641058 |                   __rcu_read_unlock();
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |               }
+ 0) Timesta-3641058 |               pick_next_task_idle() {
+ 0) Timesta-3641058 |                 put_prev_task_fair() {
+ 0) Timesta-3641058 |                   put_prev_entity() {
+ 0) Timesta-3641058 |                     check_cfs_rq_runtime();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   put_prev_entity() {
+ 0) Timesta-3641058 |                     check_cfs_rq_runtime();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   put_prev_entity() {
+ 0) Timesta-3641058 |                     check_cfs_rq_runtime();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   put_prev_entity() {
+ 0) Timesta-3641058 |                     check_cfs_rq_runtime();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                   put_prev_entity() {
+ 0) Timesta-3641058 |                     check_cfs_rq_runtime();
+ 0) Timesta-3641058 |                   }
+ 0) Timesta-3641058 |                 }
+ 0) Timesta-3641058 |               }

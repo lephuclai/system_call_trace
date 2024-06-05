@@ -1,0 +1,13 @@
+_raw_spin_unlock_irq
+finish_task_switch
+hrtimer_active
+hrtimer_try_to_cancel
+__put_cpu_fpsimd_context
+have_cpu_fpsimd_context
+__get_cpu_fpsimd_context
+fpsimd_bind_task_to_cpu
+put_cpu_fpsimd_context
+task_fpsimd_load
+fpsimd_restore_current_state
+do_notify_resume
+post_ttbr_update_workaround

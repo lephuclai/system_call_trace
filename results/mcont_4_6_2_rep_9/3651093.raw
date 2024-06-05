@@ -1,0 +1,486 @@
+ 0) Journal-3651093 |                         finish_task_switch() {
+ 0) Journal-3651093 |                           _raw_spin_unlock_irq();
+ 0) Journal-3651093 |                         }
+ 0) Journal-3651093 |                       } /* schedule */
+ 0) Journal-3651093 |                     } /* io_schedule */
+ 0) Journal-3651093 |                     finish_wait();
+ 0) Journal-3651093 |                   } /* wait_on_page_bit */
+ 0) Journal-3651093 |                 } /* wait_on_page_writeback */
+ 0) Journal-3651093 |                 __pagevec_release() {
+ 0) Journal-3651093 |                   lru_add_drain() {
+ 0) Journal-3651093 |                     lru_add_drain_cpu();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   release_pages() {
+ 0) Journal-3651093 |                     mem_cgroup_uncharge_list();
+ 0) Journal-3651093 |                     free_unref_page_list();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |               } /* __filemap_fdatawait_range */
+ 0) Journal-3651093 |               file_check_and_advance_wb_err();
+ 0) Journal-3651093 |             } /* file_write_and_wait_range */
+ 0) Journal-3651093 |             jbd2_trans_will_send_data_barrier() {
+ 0) Journal-3651093 |               _raw_read_lock();
+ 0) Journal-3651093 |               _raw_read_unlock();
+ 0) Journal-3651093 |             }
+ 0) Journal-3651093 |             jbd2_complete_transaction() {
+ 0) Journal-3651093 |               _raw_read_lock();
+ 0) Journal-3651093 |               _raw_read_unlock();
+ 0) Journal-3651093 |             }
+ 0) Journal-3651093 |             blkdev_issue_flush() {
+ 0) Journal-3651093 |               bio_alloc_bioset() {
+ 0) Journal-3651093 |                 mempool_alloc() {
+ 0) Journal-3651093 |                   mempool_alloc_slab() {
+ 0) Journal-3651093 |                     kmem_cache_alloc() {
+ 0) Journal-3651093 |                       should_failslab();
+ 0) Journal-3651093 |                       memcg_kmem_put_cache();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 bio_init();
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               bio_associate_blkg() {
+ 0) Journal-3651093 |                 __rcu_read_lock();
+ 0) Journal-3651093 |                 kthread_blkcg();
+ 0) Journal-3651093 |                 bio_associate_blkg_from_css() {
+ 0) Journal-3651093 |                   __rcu_read_lock();
+ 0) Journal-3651093 |                   blkg_lookup_create() {
+ 0) Journal-3651093 |                     blkg_lookup_slowpath();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   __rcu_read_unlock();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 __rcu_read_unlock();
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               submit_bio_wait() {
+ 0) Journal-3651093 |                 submit_bio() {
+ 0) Journal-3651093 |                   generic_make_request() {
+ 0) Journal-3651093 |                     generic_make_request_checks() {
+ 0) Journal-3651093 |                       should_fail_bio();
+ 0) Journal-3651093 |                       __rcu_read_lock();
+ 0) Journal-3651093 |                       __disk_get_part();
+ 0) Journal-3651093 |                       __rcu_read_unlock();
+ 0) Journal-3651093 |                       bio_endio() {
+ 0) Journal-3651093 |                         __rq_qos_done_bio();
+ 0) Journal-3651093 |                         bio_uninit();
+ 0) Journal-3651093 |                         submit_bio_wait_endio() {
+ 0) Journal-3651093 |                           complete() {
+ 0) Journal-3651093 |                             _raw_spin_lock_irqsave();
+ 0) Journal-3651093 |                             __wake_up_locked() {
+ 0) Journal-3651093 |                               __wake_up_common();
+ 0) Journal-3651093 |                             }
+ 0) Journal-3651093 |                             _raw_spin_unlock_irqrestore();
+ 0) Journal-3651093 |                           }
+ 0) Journal-3651093 |                         }
+ 0) Journal-3651093 |                       }
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 wait_for_completion_io() {
+ 0) Journal-3651093 |                   _raw_spin_lock_irq();
+ 0) Journal-3651093 |                   _raw_spin_unlock_irq();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 blk_status_to_errno();
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               bio_put() {
+ 0) Journal-3651093 |                 bio_free() {
+ 0) Journal-3651093 |                   bio_uninit();
+ 0) Journal-3651093 |                   bvec_free();
+ 0) Journal-3651093 |                   mempool_free() {
+ 0) Journal-3651093 |                     mempool_free_slab() {
+ 0) Journal-3651093 |                       kmem_cache_free();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |             }
+ 0) Journal-3651093 |             file_check_and_advance_wb_err();
+ 0) Journal-3651093 |           } /* ext4_sync_file */
+ 0) Journal-3651093 |         } /* vfs_fsync_range */
+ 0) Journal-3651093 |         fput() {
+ 0) Journal-3651093 |           fput_many();
+ 0) Journal-3651093 |         }
+ 0) Journal-3651093 |       } /* do_fsync */
+ 0) Journal-3651093 |     } /* __arm64_sys_fdatasync */
+ 0) Journal-3651093 |   }
+ 0) Journal-3651093 | }
+ 0) Journal-3651093 | do_notify_resume() {
+ 0) Journal-3651093 |   fpsimd_restore_current_state() {
+ 0) Journal-3651093 |     __get_cpu_fpsimd_context();
+ 0) Journal-3651093 |     task_fpsimd_load() {
+ 0) Journal-3651093 |       have_cpu_fpsimd_context();
+ 0) Journal-3651093 |     }
+ 0) Journal-3651093 |     fpsimd_bind_task_to_cpu();
+ 0) Journal-3651093 |     put_cpu_fpsimd_context() {
+ 0) Journal-3651093 |       __put_cpu_fpsimd_context();
+ 0) Journal-3651093 |     }
+ 0) Journal-3651093 |   }
+ 0) Journal-3651093 | }
+ 0) Journal-3651093 | post_ttbr_update_workaround();
+ 0) Journal-3651093 | el0_svc_handler() {
+ 0) Journal-3651093 |   el0_svc_common.constprop.0() {
+ 0) Journal-3651093 |     __arm64_sys_futex() {
+ 0) Journal-3651093 |       get_timespec64();
+ 0) Journal-3651093 |       do_futex() {
+ 0) Journal-3651093 |         futex_wait() {
+ 0) Journal-3651093 |           hrtimer_init_sleeper() {
+ 0) Journal-3651093 |             __hrtimer_init();
+ 0) Journal-3651093 |           }
+ 0) Journal-3651093 |           ktime_add_safe();
+ 0) Journal-3651093 |           futex_wait_setup() {
+ 0) Journal-3651093 |             get_futex_key() {
+ 0) Journal-3651093 |               get_futex_key_refs.isra.0();
+ 0) Journal-3651093 |             }
+ 0) Journal-3651093 |             hash_futex();
+ 0) Journal-3651093 |             _raw_spin_lock();
+ 0) Journal-3651093 |             get_futex_value_locked();
+ 0) Journal-3651093 |           }
+ 0) Journal-3651093 |           futex_wait_queue_me() {
+ 0) Journal-3651093 |             _raw_spin_unlock();
+ 0) Journal-3651093 |             hrtimer_sleeper_start_expires() {
+ 0) Journal-3651093 |               hrtimer_start_range_ns() {
+ 0) Journal-3651093 |                 lock_hrtimer_base() {
+ 0) Journal-3651093 |                   _raw_spin_lock_irqsave();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 get_nohz_timer_target();
+ 0) Journal-3651093 |                 enqueue_hrtimer();
+ 0) Journal-3651093 |                 hrtimer_reprogram.constprop.0();
+ 0) Journal-3651093 |                 _raw_spin_unlock_irqrestore();
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |             }
+ 0) Journal-3651093 |             schedule() {
+ 0) Journal-3651093 |               rcu_note_context_switch() {
+ 0) Journal-3651093 |                 rcu_preempt_deferred_qs() {
+ 0) Journal-3651093 |                   rcu_preempt_need_deferred_qs();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 rcu_qs();
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               _raw_spin_lock();
+ 0) Journal-3651093 |               update_rq_clock();
+ 0) Journal-3651093 |               deactivate_task() {
+ 0) Journal-3651093 |                 psi_task_change() {
+ 0) Journal-3651093 |                   record_times.isra.0();
+ 0) Journal-3651093 |                   record_times.isra.0();
+ 0) Journal-3651093 |                   record_times.isra.0();
+ 0) Journal-3651093 |                   record_times.isra.0();
+ 0) Journal-3651093 |                   record_times.isra.0();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 dequeue_task_fair() {
+ 0) Journal-3651093 |                   dequeue_entity() {
+ 0) Journal-3651093 |                     update_curr() {
+ 0) Journal-3651093 |                       update_min_vruntime();
+ 0) Journal-3651093 |                       cpuacct_charge() {
+ 0) Journal-3651093 |                         __rcu_read_lock();
+ 0) Journal-3651093 |                         __rcu_read_unlock();
+ 0) Journal-3651093 |                       }
+ 0) Journal-3651093 |                       __rcu_read_lock();
+ 0) Journal-3651093 |                       __cgroup_account_cputime() {
+ 0) Journal-3651093 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Journal-3651093 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Journal-3651093 |                           cgroup_rstat_updated();
+ 0) Journal-3651093 |                         }
+ 0) Journal-3651093 |                       }
+ 0) Journal-3651093 |                       __rcu_read_unlock();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                     __update_load_avg_se();
+ 0) Journal-3651093 |                     __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                     clear_buddies();
+ 0) Journal-3651093 |                     update_cfs_group();
+ 0) Journal-3651093 |                     update_min_vruntime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   set_next_buddy();
+ 0) Journal-3651093 |                   __update_load_avg_se();
+ 0) Journal-3651093 |                   __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                   update_cfs_group() {
+ 0) Journal-3651093 |                     reweight_entity() {
+ 0) Journal-3651093 |                       update_curr() {
+ 0) Journal-3651093 |                         __calc_delta();
+ 0) Journal-3651093 |                         update_min_vruntime();
+ 0) Journal-3651093 |                       }
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   __update_load_avg_se();
+ 0) Journal-3651093 |                   __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                   update_cfs_group() {
+ 0) Journal-3651093 |                     reweight_entity() {
+ 0) Journal-3651093 |                       update_curr() {
+ 0) Journal-3651093 |                         __calc_delta();
+ 0) Journal-3651093 |                         update_min_vruntime();
+ 0) Journal-3651093 |                       }
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   __update_load_avg_se();
+ 0) Journal-3651093 |                   __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                   update_cfs_group() {
+ 0) Journal-3651093 |                     reweight_entity() {
+ 0) Journal-3651093 |                       update_curr() {
+ 0) Journal-3651093 |                         __calc_delta();
+ 0) Journal-3651093 |                         update_min_vruntime();
+ 0) Journal-3651093 |                       }
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   __update_load_avg_se();
+ 0) Journal-3651093 |                   __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                   update_cfs_group() {
+ 0) Journal-3651093 |                     reweight_entity() {
+ 0) Journal-3651093 |                       update_curr() {
+ 0) Journal-3651093 |                         __calc_delta();
+ 0) Journal-3651093 |                         update_min_vruntime();
+ 0) Journal-3651093 |                       }
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   hrtick_update();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               pick_next_task_fair() {
+ 0) Journal-3651093 |                 update_curr();
+ 0) Journal-3651093 |                 check_cfs_rq_runtime();
+ 0) Journal-3651093 |                 pick_next_entity() {
+ 0) Journal-3651093 |                   wakeup_preempt_entity.isra.0();
+ 0) Journal-3651093 |                   clear_buddies();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 update_curr();
+ 0) Journal-3651093 |                 check_cfs_rq_runtime();
+ 0) Journal-3651093 |                 pick_next_entity() {
+ 0) Journal-3651093 |                   wakeup_preempt_entity.isra.0();
+ 0) Journal-3651093 |                   clear_buddies();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 update_curr();
+ 0) Journal-3651093 |                 check_cfs_rq_runtime();
+ 0) Journal-3651093 |                 pick_next_entity() {
+ 0) Journal-3651093 |                   wakeup_preempt_entity.isra.0();
+ 0) Journal-3651093 |                   clear_buddies();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 update_curr();
+ 0) Journal-3651093 |                 check_cfs_rq_runtime();
+ 0) Journal-3651093 |                 pick_next_entity() {
+ 0) Journal-3651093 |                   wakeup_preempt_entity.isra.0();
+ 0) Journal-3651093 |                   clear_buddies();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 check_cfs_rq_runtime();
+ 0) Journal-3651093 |                 pick_next_entity() {
+ 0) Journal-3651093 |                   clear_buddies();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 put_prev_entity() {
+ 0) Journal-3651093 |                   check_cfs_rq_runtime();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 set_next_entity() {
+ 0) Journal-3651093 |                   __update_load_avg_se() {
+ 0) Journal-3651093 |                     __accumulate_pelt_segments();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               fpsimd_thread_switch() {
+ 0) Journal-3651093 |                 __get_cpu_fpsimd_context();
+ 0) Journal-3651093 |                 fpsimd_save() {
+ 0) Journal-3651093 |                   have_cpu_fpsimd_context();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 __put_cpu_fpsimd_context();
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               hw_breakpoint_thread_switch();
+ 0) Journal-3651093 |               uao_thread_switch();
+ 0) Journal-3651093 |               cpu_have_feature();
+ 0) Journal-3651093 |               erratum_1418040_thread_switch() {
+ 0) Journal-3651093 |                 this_cpu_has_cap() {
+ 0) Journal-3651093 |                   is_affected_midr_range_list();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               finish_task_switch() {
+ 0) Journal-3651093 |                 _raw_spin_unlock_irq();
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |             } /* schedule */
+ 0) Journal-3651093 |           } /* futex_wait_queue_me */
+ 0) Journal-3651093 |           _raw_spin_lock();
+ 0) Journal-3651093 |           __unqueue_futex();
+ 0) Journal-3651093 |           _raw_spin_unlock();
+ 0) Journal-3651093 |           drop_futex_key_refs.isra.0();
+ 0) Journal-3651093 |           hrtimer_cancel() {
+ 0) Journal-3651093 |             hrtimer_try_to_cancel() {
+ 0) Journal-3651093 |               hrtimer_active();
+ 0) Journal-3651093 |             }
+ 0) Journal-3651093 |           }
+ 0) Journal-3651093 |         } /* futex_wait */
+ 0) Journal-3651093 |       } /* do_futex */
+ 0) Journal-3651093 |     } /* __arm64_sys_futex */
+ 0) Journal-3651093 |   } /* el0_svc_common.constprop.0 */
+ 0) Journal-3651093 | } /* el0_svc_handler */
+ 0) Journal-3651093 | do_notify_resume() {
+ 0) Journal-3651093 |   fpsimd_restore_current_state() {
+ 0) Journal-3651093 |     __get_cpu_fpsimd_context();
+ 0) Journal-3651093 |     task_fpsimd_load() {
+ 0) Journal-3651093 |       have_cpu_fpsimd_context();
+ 0) Journal-3651093 |     }
+ 0) Journal-3651093 |     fpsimd_bind_task_to_cpu();
+ 0) Journal-3651093 |     put_cpu_fpsimd_context() {
+ 0) Journal-3651093 |       __put_cpu_fpsimd_context();
+ 0) Journal-3651093 |     }
+ 0) Journal-3651093 |   }
+ 0) Journal-3651093 | }
+ 0) Journal-3651093 | post_ttbr_update_workaround();
+ 0) Journal-3651093 | el0_svc_handler() {
+ 0) Journal-3651093 |   el0_svc_common.constprop.0() {
+ 0) Journal-3651093 |     __arm64_sys_futex() {
+ 0) Journal-3651093 |       do_futex() {
+ 0) Journal-3651093 |         futex_wake() {
+ 0) Journal-3651093 |           get_futex_key() {
+ 0) Journal-3651093 |             get_futex_key_refs.isra.0();
+ 0) Journal-3651093 |           }
+ 0) Journal-3651093 |           hash_futex();
+ 0) Journal-3651093 |           drop_futex_key_refs.isra.0();
+ 0) Journal-3651093 |         }
+ 0) Journal-3651093 |       }
+ 0) Journal-3651093 |     }
+ 0) Journal-3651093 |   }
+ 0) Journal-3651093 | }
+ 0) Journal-3651093 | post_ttbr_update_workaround();
+ 0) Journal-3651093 | el0_svc_handler() {
+ 0) Journal-3651093 |   el0_svc_common.constprop.0() {
+ 0) Journal-3651093 |     __arm64_sys_futex() {
+ 0) Journal-3651093 |       get_timespec64();
+ 0) Journal-3651093 |       do_futex() {
+ 0) Journal-3651093 |         futex_wait() {
+ 0) Journal-3651093 |           hrtimer_init_sleeper() {
+ 0) Journal-3651093 |             __hrtimer_init();
+ 0) Journal-3651093 |           }
+ 0) Journal-3651093 |           ktime_add_safe();
+ 0) Journal-3651093 |           futex_wait_setup() {
+ 0) Journal-3651093 |             get_futex_key() {
+ 0) Journal-3651093 |               get_futex_key_refs.isra.0();
+ 0) Journal-3651093 |             }
+ 0) Journal-3651093 |             hash_futex();
+ 0) Journal-3651093 |             _raw_spin_lock();
+ 0) Journal-3651093 |             get_futex_value_locked();
+ 0) Journal-3651093 |           }
+ 0) Journal-3651093 |           futex_wait_queue_me() {
+ 0) Journal-3651093 |             _raw_spin_unlock();
+ 0) Journal-3651093 |             hrtimer_sleeper_start_expires() {
+ 0) Journal-3651093 |               hrtimer_start_range_ns() {
+ 0) Journal-3651093 |                 lock_hrtimer_base() {
+ 0) Journal-3651093 |                   _raw_spin_lock_irqsave();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 get_nohz_timer_target();
+ 0) Journal-3651093 |                 enqueue_hrtimer();
+ 0) Journal-3651093 |                 hrtimer_reprogram.constprop.0();
+ 0) Journal-3651093 |                 _raw_spin_unlock_irqrestore();
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |             }
+ 0) Journal-3651093 |             schedule() {
+ 0) Journal-3651093 |               rcu_note_context_switch() {
+ 0) Journal-3651093 |                 rcu_preempt_deferred_qs() {
+ 0) Journal-3651093 |                   rcu_preempt_need_deferred_qs();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 rcu_qs();
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               _raw_spin_lock();
+ 0) Journal-3651093 |               update_rq_clock();
+ 0) Journal-3651093 |               deactivate_task() {
+ 0) Journal-3651093 |                 psi_task_change() {
+ 0) Journal-3651093 |                   record_times.isra.0();
+ 0) Journal-3651093 |                   record_times.isra.0();
+ 0) Journal-3651093 |                   record_times.isra.0();
+ 0) Journal-3651093 |                   record_times.isra.0();
+ 0) Journal-3651093 |                   record_times.isra.0();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |                 dequeue_task_fair() {
+ 0) Journal-3651093 |                   dequeue_entity() {
+ 0) Journal-3651093 |                     update_curr() {
+ 0) Journal-3651093 |                       update_min_vruntime();
+ 0) Journal-3651093 |                       cpuacct_charge() {
+ 0) Journal-3651093 |                         __rcu_read_lock();
+ 0) Journal-3651093 |                         __rcu_read_unlock();
+ 0) Journal-3651093 |                       }
+ 0) Journal-3651093 |                       __rcu_read_lock();
+ 0) Journal-3651093 |                       __cgroup_account_cputime() {
+ 0) Journal-3651093 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Journal-3651093 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Journal-3651093 |                           cgroup_rstat_updated();
+ 0) Journal-3651093 |                         }
+ 0) Journal-3651093 |                       }
+ 0) Journal-3651093 |                       __rcu_read_unlock();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                     __update_load_avg_se();
+ 0) Journal-3651093 |                     __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                     clear_buddies();
+ 0) Journal-3651093 |                     update_cfs_group();
+ 0) Journal-3651093 |                     update_min_vruntime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   dequeue_entity() {
+ 0) Journal-3651093 |                     update_curr() {
+ 0) Journal-3651093 |                       __calc_delta();
+ 0) Journal-3651093 |                       update_min_vruntime();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                     __update_load_avg_se();
+ 0) Journal-3651093 |                     __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                     clear_buddies();
+ 0) Journal-3651093 |                     update_cfs_group() {
+ 0) Journal-3651093 |                       reweight_entity();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                     update_min_vruntime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   dequeue_entity() {
+ 0) Journal-3651093 |                     update_curr() {
+ 0) Journal-3651093 |                       __calc_delta();
+ 0) Journal-3651093 |                       update_min_vruntime();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                     __update_load_avg_se();
+ 0) Journal-3651093 |                     __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                     clear_buddies();
+ 0) Journal-3651093 |                     update_cfs_group() {
+ 0) Journal-3651093 |                       reweight_entity();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                     update_min_vruntime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   dequeue_entity() {
+ 0) Journal-3651093 |                     update_curr() {
+ 0) Journal-3651093 |                       __calc_delta();
+ 0) Journal-3651093 |                       update_min_vruntime();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                     __update_load_avg_se();
+ 0) Journal-3651093 |                     __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                     clear_buddies();
+ 0) Journal-3651093 |                     update_cfs_group() {
+ 0) Journal-3651093 |                       reweight_entity();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                     update_min_vruntime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   dequeue_entity() {
+ 0) Journal-3651093 |                     update_curr() {
+ 0) Journal-3651093 |                       __calc_delta();
+ 0) Journal-3651093 |                       update_min_vruntime();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                     __update_load_avg_se();
+ 0) Journal-3651093 |                     __update_load_avg_cfs_rq();
+ 0) Journal-3651093 |                     clear_buddies();
+ 0) Journal-3651093 |                     update_cfs_group() {
+ 0) Journal-3651093 |                       reweight_entity();
+ 0) Journal-3651093 |                     }
+ 0) Journal-3651093 |                     update_min_vruntime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   hrtick_update();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               pick_next_task_fair() {
+ 0) Journal-3651093 |                 newidle_balance() {
+ 0) Journal-3651093 |                   __rcu_read_lock();
+ 0) Journal-3651093 |                   __msecs_to_jiffies();
+ 0) Journal-3651093 |                   __rcu_read_unlock();
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |               }
+ 0) Journal-3651093 |               pick_next_task_idle() {
+ 0) Journal-3651093 |                 put_prev_task_fair() {
+ 0) Journal-3651093 |                   put_prev_entity() {
+ 0) Journal-3651093 |                     check_cfs_rq_runtime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   put_prev_entity() {
+ 0) Journal-3651093 |                     check_cfs_rq_runtime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   put_prev_entity() {
+ 0) Journal-3651093 |                     check_cfs_rq_runtime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   put_prev_entity() {
+ 0) Journal-3651093 |                     check_cfs_rq_runtime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                   put_prev_entity() {
+ 0) Journal-3651093 |                     check_cfs_rq_runtime();
+ 0) Journal-3651093 |                   }
+ 0) Journal-3651093 |                 }
+ 0) Journal-3651093 |               }

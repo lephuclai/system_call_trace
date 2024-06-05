@@ -1,0 +1,186 @@
+ 0) clientc-3707261 |               finish_task_switch() {
+ 0) clientc-3707261 |                 _raw_spin_unlock_irq();
+ 0) clientc-3707261 |               }
+ 0) clientc-3707261 |             } /* schedule */
+ 0) clientc-3707261 |             hrtimer_try_to_cancel() {
+ 0) clientc-3707261 |               hrtimer_active();
+ 0) clientc-3707261 |             }
+ 0) clientc-3707261 |           } /* do_nanosleep */
+ 0) clientc-3707261 |         } /* hrtimer_nanosleep */
+ 0) clientc-3707261 |       } /* common_nsleep */
+ 0) clientc-3707261 |     } /* __arm64_sys_clock_nanosleep */
+ 0) clientc-3707261 |   } /* el0_svc_common.constprop.0 */
+ 0) clientc-3707261 | } /* el0_svc_handler */
+ 0) clientc-3707261 | do_notify_resume() {
+ 0) clientc-3707261 |   fpsimd_restore_current_state() {
+ 0) clientc-3707261 |     __get_cpu_fpsimd_context();
+ 0) clientc-3707261 |     task_fpsimd_load() {
+ 0) clientc-3707261 |       have_cpu_fpsimd_context();
+ 0) clientc-3707261 |     }
+ 0) clientc-3707261 |     fpsimd_bind_task_to_cpu();
+ 0) clientc-3707261 |     put_cpu_fpsimd_context() {
+ 0) clientc-3707261 |       __put_cpu_fpsimd_context();
+ 0) clientc-3707261 |     }
+ 0) clientc-3707261 |   }
+ 0) clientc-3707261 | }
+ 0) clientc-3707261 | post_ttbr_update_workaround();
+ 0) clientc-3707261 | el0_svc_handler() {
+ 0) clientc-3707261 |   el0_svc_common.constprop.0() {
+ 0) clientc-3707261 |     __arm64_sys_clock_nanosleep() {
+ 0) clientc-3707261 |       get_timespec64();
+ 0) clientc-3707261 |       common_nsleep() {
+ 0) clientc-3707261 |         hrtimer_nanosleep() {
+ 0) clientc-3707261 |           hrtimer_init_sleeper() {
+ 0) clientc-3707261 |             __hrtimer_init();
+ 0) clientc-3707261 |           }
+ 0) clientc-3707261 |           do_nanosleep() {
+ 0) clientc-3707261 |             hrtimer_start_range_ns() {
+ 0) clientc-3707261 |               lock_hrtimer_base() {
+ 0) clientc-3707261 |                 _raw_spin_lock_irqsave();
+ 0) clientc-3707261 |               }
+ 0) clientc-3707261 |               ktime_get() {
+ 0) clientc-3707261 |                 arch_counter_read();
+ 0) clientc-3707261 |               }
+ 0) clientc-3707261 |               get_nohz_timer_target();
+ 0) clientc-3707261 |               enqueue_hrtimer();
+ 0) clientc-3707261 |               _raw_spin_unlock_irqrestore();
+ 0) clientc-3707261 |             }
+ 0) clientc-3707261 |             schedule() {
+ 0) clientc-3707261 |               rcu_note_context_switch() {
+ 0) clientc-3707261 |                 rcu_preempt_deferred_qs() {
+ 0) clientc-3707261 |                   rcu_preempt_need_deferred_qs();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |                 rcu_qs();
+ 0) clientc-3707261 |               }
+ 0) clientc-3707261 |               _raw_spin_lock();
+ 0) clientc-3707261 |               update_rq_clock();
+ 0) clientc-3707261 |               deactivate_task() {
+ 0) clientc-3707261 |                 psi_task_change() {
+ 0) clientc-3707261 |                   record_times.isra.0();
+ 0) clientc-3707261 |                   record_times.isra.0();
+ 0) clientc-3707261 |                   record_times.isra.0();
+ 0) clientc-3707261 |                   record_times.isra.0();
+ 0) clientc-3707261 |                   record_times.isra.0();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |                 dequeue_task_fair() {
+ 0) clientc-3707261 |                   dequeue_entity() {
+ 0) clientc-3707261 |                     update_curr() {
+ 0) clientc-3707261 |                       update_min_vruntime();
+ 0) clientc-3707261 |                       cpuacct_charge() {
+ 0) clientc-3707261 |                         __rcu_read_lock();
+ 0) clientc-3707261 |                         __rcu_read_unlock();
+ 0) clientc-3707261 |                       }
+ 0) clientc-3707261 |                       __rcu_read_lock();
+ 0) clientc-3707261 |                       __cgroup_account_cputime() {
+ 0) clientc-3707261 |                         cgroup_base_stat_cputime_account_begin();
+ 0) clientc-3707261 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) clientc-3707261 |                           cgroup_rstat_updated();
+ 0) clientc-3707261 |                         }
+ 0) clientc-3707261 |                       }
+ 0) clientc-3707261 |                       __rcu_read_unlock();
+ 0) clientc-3707261 |                     }
+ 0) clientc-3707261 |                     __update_load_avg_se();
+ 0) clientc-3707261 |                     __update_load_avg_cfs_rq();
+ 0) clientc-3707261 |                     clear_buddies();
+ 0) clientc-3707261 |                     update_cfs_group();
+ 0) clientc-3707261 |                     update_min_vruntime();
+ 0) clientc-3707261 |                   }
+ 0) clientc-3707261 |                   set_next_buddy();
+ 0) clientc-3707261 |                   __update_load_avg_se();
+ 0) clientc-3707261 |                   __update_load_avg_cfs_rq();
+ 0) clientc-3707261 |                   update_cfs_group() {
+ 0) clientc-3707261 |                     reweight_entity() {
+ 0) clientc-3707261 |                       update_curr() {
+ 0) clientc-3707261 |                         __calc_delta();
+ 0) clientc-3707261 |                         update_min_vruntime();
+ 0) clientc-3707261 |                       }
+ 0) clientc-3707261 |                     }
+ 0) clientc-3707261 |                   }
+ 0) clientc-3707261 |                   __update_load_avg_se();
+ 0) clientc-3707261 |                   __update_load_avg_cfs_rq();
+ 0) clientc-3707261 |                   update_cfs_group() {
+ 0) clientc-3707261 |                     reweight_entity() {
+ 0) clientc-3707261 |                       update_curr() {
+ 0) clientc-3707261 |                         __calc_delta();
+ 0) clientc-3707261 |                         update_min_vruntime();
+ 0) clientc-3707261 |                       }
+ 0) clientc-3707261 |                     }
+ 0) clientc-3707261 |                   }
+ 0) clientc-3707261 |                   __update_load_avg_se();
+ 0) clientc-3707261 |                   __update_load_avg_cfs_rq();
+ 0) clientc-3707261 |                   update_cfs_group() {
+ 0) clientc-3707261 |                     reweight_entity() {
+ 0) clientc-3707261 |                       update_curr() {
+ 0) clientc-3707261 |                         __calc_delta();
+ 0) clientc-3707261 |                         update_min_vruntime();
+ 0) clientc-3707261 |                       }
+ 0) clientc-3707261 |                     }
+ 0) clientc-3707261 |                   }
+ 0) clientc-3707261 |                   __update_load_avg_se();
+ 0) clientc-3707261 |                   __update_load_avg_cfs_rq();
+ 0) clientc-3707261 |                   update_cfs_group() {
+ 0) clientc-3707261 |                     reweight_entity() {
+ 0) clientc-3707261 |                       update_curr() {
+ 0) clientc-3707261 |                         __calc_delta();
+ 0) clientc-3707261 |                         update_min_vruntime();
+ 0) clientc-3707261 |                       }
+ 0) clientc-3707261 |                     }
+ 0) clientc-3707261 |                   }
+ 0) clientc-3707261 |                   hrtick_update();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |               }
+ 0) clientc-3707261 |               pick_next_task_fair() {
+ 0) clientc-3707261 |                 update_curr();
+ 0) clientc-3707261 |                 check_cfs_rq_runtime();
+ 0) clientc-3707261 |                 pick_next_entity() {
+ 0) clientc-3707261 |                   wakeup_preempt_entity.isra.0();
+ 0) clientc-3707261 |                   clear_buddies();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |                 update_curr();
+ 0) clientc-3707261 |                 check_cfs_rq_runtime();
+ 0) clientc-3707261 |                 pick_next_entity() {
+ 0) clientc-3707261 |                   wakeup_preempt_entity.isra.0();
+ 0) clientc-3707261 |                   clear_buddies();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |                 update_curr();
+ 0) clientc-3707261 |                 check_cfs_rq_runtime();
+ 0) clientc-3707261 |                 pick_next_entity() {
+ 0) clientc-3707261 |                   wakeup_preempt_entity.isra.0();
+ 0) clientc-3707261 |                   clear_buddies();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |                 update_curr();
+ 0) clientc-3707261 |                 check_cfs_rq_runtime();
+ 0) clientc-3707261 |                 pick_next_entity() {
+ 0) clientc-3707261 |                   wakeup_preempt_entity.isra.0();
+ 0) clientc-3707261 |                   clear_buddies();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |                 check_cfs_rq_runtime();
+ 0) clientc-3707261 |                 pick_next_entity() {
+ 0) clientc-3707261 |                   clear_buddies();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |                 put_prev_entity() {
+ 0) clientc-3707261 |                   check_cfs_rq_runtime();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |                 set_next_entity() {
+ 0) clientc-3707261 |                   __update_load_avg_se() {
+ 0) clientc-3707261 |                     __accumulate_pelt_segments();
+ 0) clientc-3707261 |                   }
+ 0) clientc-3707261 |                   __update_load_avg_cfs_rq();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |               }
+ 0) clientc-3707261 |               check_and_switch_context();
+ 0) clientc-3707261 |               fpsimd_thread_switch() {
+ 0) clientc-3707261 |                 __get_cpu_fpsimd_context();
+ 0) clientc-3707261 |                 fpsimd_save() {
+ 0) clientc-3707261 |                   have_cpu_fpsimd_context();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |                 __put_cpu_fpsimd_context();
+ 0) clientc-3707261 |               }
+ 0) clientc-3707261 |               hw_breakpoint_thread_switch();
+ 0) clientc-3707261 |               uao_thread_switch();
+ 0) clientc-3707261 |               cpu_have_feature();
+ 0) clientc-3707261 |               erratum_1418040_thread_switch() {
+ 0) clientc-3707261 |                 this_cpu_has_cap() {
+ 0) clientc-3707261 |                   is_affected_midr_range_list();
+ 0) clientc-3707261 |                 }
+ 0) clientc-3707261 |               }

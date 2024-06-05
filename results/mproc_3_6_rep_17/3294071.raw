@@ -1,0 +1,276 @@
+ 0) gunicor-3294071 |                 finish_task_switch() {
+ 0) gunicor-3294071 |                   _raw_spin_unlock_irq();
+ 0) gunicor-3294071 |                 }
+ 0) gunicor-3294071 |               }
+ 0) gunicor-3294071 |               hrtimer_try_to_cancel() {
+ 0) gunicor-3294071 |                 hrtimer_active();
+ 0) gunicor-3294071 |                 lock_hrtimer_base() {
+ 0) gunicor-3294071 |                   _raw_spin_lock_irqsave();
+ 0) gunicor-3294071 |                 }
+ 0) gunicor-3294071 |                 __remove_hrtimer();
+ 0) gunicor-3294071 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-3294071 |               }
+ 0) gunicor-3294071 |             }
+ 0) gunicor-3294071 |           }
+ 0) gunicor-3294071 |           __fdget() {
+ 0) gunicor-3294071 |             __fget_light() {
+ 0) gunicor-3294071 |               __fget() {
+ 0) gunicor-3294071 |                 __rcu_read_lock();
+ 0) gunicor-3294071 |                 __rcu_read_unlock();
+ 0) gunicor-3294071 |               }
+ 0) gunicor-3294071 |             }
+ 0) gunicor-3294071 |           }
+ 0) gunicor-3294071 |           sock_poll() {
+ 0) gunicor-3294071 |             tcp_poll();
+ 0) gunicor-3294071 |           }
+ 0) gunicor-3294071 |           fput() {
+ 0) gunicor-3294071 |             fput_many();
+ 0) gunicor-3294071 |           }
+ 0) gunicor-3294071 |           __fdget() {
+ 0) gunicor-3294071 |             __fget_light() {
+ 0) gunicor-3294071 |               __fget() {
+ 0) gunicor-3294071 |                 __rcu_read_lock();
+ 0) gunicor-3294071 |                 __rcu_read_unlock();
+ 0) gunicor-3294071 |               }
+ 0) gunicor-3294071 |             }
+ 0) gunicor-3294071 |           }
+ 0) gunicor-3294071 |           pipe_poll();
+ 0) gunicor-3294071 |           fput() {
+ 0) gunicor-3294071 |             fput_many();
+ 0) gunicor-3294071 |           }
+ 0) gunicor-3294071 |           schedule_hrtimeout_range() {
+ 0) gunicor-3294071 |             schedule_hrtimeout_range_clock() {
+ 0) gunicor-3294071 |               hrtimer_init_sleeper() {
+ 0) gunicor-3294071 |                 __hrtimer_init();
+ 0) gunicor-3294071 |               }
+ 0) gunicor-3294071 |               hrtimer_start_range_ns() {
+ 0) gunicor-3294071 |                 lock_hrtimer_base() {
+ 0) gunicor-3294071 |                   _raw_spin_lock_irqsave();
+ 0) gunicor-3294071 |                 }
+ 0) gunicor-3294071 |                 get_nohz_timer_target();
+ 0) gunicor-3294071 |                 enqueue_hrtimer();
+ 0) gunicor-3294071 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-3294071 |               }
+ 0) gunicor-3294071 |               schedule() {
+ 0) gunicor-3294071 |                 rcu_note_context_switch() {
+ 0) gunicor-3294071 |                   rcu_preempt_deferred_qs() {
+ 0) gunicor-3294071 |                     rcu_preempt_need_deferred_qs();
+ 0) gunicor-3294071 |                   }
+ 0) gunicor-3294071 |                   rcu_qs();
+ 0) gunicor-3294071 |                 }
+ 0) gunicor-3294071 |                 _raw_spin_lock();
+ 0) gunicor-3294071 |                 update_rq_clock();
+ 0) gunicor-3294071 |                 deactivate_task() {
+ 0) gunicor-3294071 |                   psi_task_change() {
+ 0) gunicor-3294071 |                     record_times.isra.0();
+ 0) gunicor-3294071 |                     record_times.isra.0();
+ 0) gunicor-3294071 |                     record_times.isra.0();
+ 0) gunicor-3294071 |                     record_times.isra.0();
+ 0) gunicor-3294071 |                     record_times.isra.0();
+ 0) gunicor-3294071 |                   }
+ 0) gunicor-3294071 |                   dequeue_task_fair() {
+ 0) gunicor-3294071 |                     dequeue_entity() {
+ 0) gunicor-3294071 |                       update_curr() {
+ 0) gunicor-3294071 |                         update_min_vruntime();
+ 0) gunicor-3294071 |                         cpuacct_charge() {
+ 0) gunicor-3294071 |                           __rcu_read_lock();
+ 0) gunicor-3294071 |                           __rcu_read_unlock();
+ 0) gunicor-3294071 |                         }
+ 0) gunicor-3294071 |                         __rcu_read_lock();
+ 0) gunicor-3294071 |                         __cgroup_account_cputime() {
+ 0) gunicor-3294071 |                           cgroup_base_stat_cputime_account_begin();
+ 0) gunicor-3294071 |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) gunicor-3294071 |                             cgroup_rstat_updated();
+ 0) gunicor-3294071 |                           }
+ 0) gunicor-3294071 |                         }
+ 0) gunicor-3294071 |                         __rcu_read_unlock();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_se() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       clear_buddies();
+ 0) gunicor-3294071 |                       update_cfs_group();
+ 0) gunicor-3294071 |                       update_min_vruntime();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     dequeue_entity() {
+ 0) gunicor-3294071 |                       update_curr() {
+ 0) gunicor-3294071 |                         __calc_delta();
+ 0) gunicor-3294071 |                         update_min_vruntime();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_se() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       clear_buddies();
+ 0) gunicor-3294071 |                       update_cfs_group() {
+ 0) gunicor-3294071 |                         reweight_entity();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       update_min_vruntime();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     dequeue_entity() {
+ 0) gunicor-3294071 |                       update_curr() {
+ 0) gunicor-3294071 |                         __calc_delta();
+ 0) gunicor-3294071 |                         update_min_vruntime();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_se() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       clear_buddies();
+ 0) gunicor-3294071 |                       update_cfs_group() {
+ 0) gunicor-3294071 |                         reweight_entity();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       update_min_vruntime();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     dequeue_entity() {
+ 0) gunicor-3294071 |                       update_curr() {
+ 0) gunicor-3294071 |                         __calc_delta();
+ 0) gunicor-3294071 |                         update_min_vruntime();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_se() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       clear_buddies();
+ 0) gunicor-3294071 |                       update_cfs_group() {
+ 0) gunicor-3294071 |                         reweight_entity();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       update_min_vruntime();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     dequeue_entity() {
+ 0) gunicor-3294071 |                       update_curr() {
+ 0) gunicor-3294071 |                         __calc_delta();
+ 0) gunicor-3294071 |                         update_min_vruntime();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_se() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       dbs_update_util_handler() {
+ 0) gunicor-3294071 |                         cpufreq_this_cpu_can_update();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       clear_buddies();
+ 0) gunicor-3294071 |                       update_cfs_group() {
+ 0) gunicor-3294071 |                         reweight_entity();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       update_min_vruntime();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     hrtick_update();
+ 0) gunicor-3294071 |                   }
+ 0) gunicor-3294071 |                 }
+ 0) gunicor-3294071 |                 pick_next_task_fair() {
+ 0) gunicor-3294071 |                   newidle_balance() {
+ 0) gunicor-3294071 |                     _raw_spin_unlock();
+ 0) gunicor-3294071 |                     update_blocked_averages() {
+ 0) gunicor-3294071 |                       _raw_spin_lock_irqsave();
+ 0) gunicor-3294071 |                       update_rq_clock();
+ 0) gunicor-3294071 |                       update_rt_rq_load_avg() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       update_dl_rq_load_avg() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       _raw_spin_lock();
+ 0) gunicor-3294071 |                       _raw_spin_unlock();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_se() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       __update_load_avg_se();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       __update_load_avg_se();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       __update_load_avg_se();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       __update_load_avg_se();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       _raw_spin_lock();
+ 0) gunicor-3294071 |                       _raw_spin_unlock();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_se() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       __update_load_avg_se() {
+ 0) gunicor-3294071 |                         __accumulate_pelt_segments();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       dbs_update_util_handler() {
+ 0) gunicor-3294071 |                         cpufreq_this_cpu_can_update();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3294071 |                       dbs_update_util_handler() {
+ 0) gunicor-3294071 |                         cpufreq_this_cpu_can_update();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                       _raw_spin_unlock_irqrestore();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     __rcu_read_lock();
+ 0) gunicor-3294071 |                     load_balance() {
+ 0) gunicor-3294071 |                       find_busiest_group() {
+ 0) gunicor-3294071 |                         update_nohz_stats();
+ 0) gunicor-3294071 |                         idle_cpu();
+ 0) gunicor-3294071 |                         update_nohz_stats();
+ 0) gunicor-3294071 |                         update_nohz_stats();
+ 0) gunicor-3294071 |                         idle_cpu();
+ 0) gunicor-3294071 |                         update_nohz_stats();
+ 0) gunicor-3294071 |                       }
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     __msecs_to_jiffies();
+ 0) gunicor-3294071 |                     __rcu_read_unlock();
+ 0) gunicor-3294071 |                     _raw_spin_lock();
+ 0) gunicor-3294071 |                   }
+ 0) gunicor-3294071 |                 }
+ 0) gunicor-3294071 |                 pick_next_task_idle() {
+ 0) gunicor-3294071 |                   put_prev_task_fair() {
+ 0) gunicor-3294071 |                     put_prev_entity() {
+ 0) gunicor-3294071 |                       check_cfs_rq_runtime();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     put_prev_entity() {
+ 0) gunicor-3294071 |                       check_cfs_rq_runtime();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     put_prev_entity() {
+ 0) gunicor-3294071 |                       check_cfs_rq_runtime();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     put_prev_entity() {
+ 0) gunicor-3294071 |                       check_cfs_rq_runtime();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                     put_prev_entity() {
+ 0) gunicor-3294071 |                       check_cfs_rq_runtime();
+ 0) gunicor-3294071 |                     }
+ 0) gunicor-3294071 |                   }
+ 0) gunicor-3294071 |                 }

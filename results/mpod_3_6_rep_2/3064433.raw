@@ -1,0 +1,1133 @@
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 } /* vmstat_show */
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_show() {
+ 0)  ftdc-3064433  |                   seq_puts();
+ 0)  ftdc-3064433  |                   seq_put_decimal_ull() {
+ 0)  ftdc-3064433  |                     seq_put_decimal_ull_width();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   seq_putc();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 vmstat_next();
+ 0)  ftdc-3064433  |                 vmstat_stop() {
+ 0)  ftdc-3064433  |                   kfree();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 __check_object_size() {
+ 0)  ftdc-3064433  |                   check_stack_object();
+ 0)  ftdc-3064433  |                   pfn_valid() {
+ 0)  ftdc-3064433  |                     memblock_is_map_memory();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   __check_heap_object();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 mutex_unlock();
+ 0)  ftdc-3064433  |               } /* seq_read */
+ 0)  ftdc-3064433  |               unuse_pde();
+ 0)  ftdc-3064433  |             } /* proc_reg_read */
+ 0)  ftdc-3064433  |           } /* __vfs_read */
+ 0)  ftdc-3064433  |           __fsnotify_parent();
+ 0)  ftdc-3064433  |           fsnotify();
+ 0)  ftdc-3064433  |         } /* vfs_read */
+ 0)  ftdc-3064433  |         __f_unlock_pos() {
+ 0)  ftdc-3064433  |           mutex_unlock();
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |         fput() {
+ 0)  ftdc-3064433  |           fput_many();
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |       } /* ksys_read */
+ 0)  ftdc-3064433  |     } /* __arm64_sys_read */
+ 0)  ftdc-3064433  |   } /* el0_svc_common.constprop.0 */
+ 0)  ftdc-3064433  | } /* el0_svc_handler */
+ 0)  ftdc-3064433  | post_ttbr_update_workaround();
+ 0)  ftdc-3064433  | el0_svc_handler() {
+ 0)  ftdc-3064433  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3064433  |     __arm64_sys_read() {
+ 0)  ftdc-3064433  |       ksys_read() {
+ 0)  ftdc-3064433  |         __fdget_pos() {
+ 0)  ftdc-3064433  |           __fget_light() {
+ 0)  ftdc-3064433  |             __fget() {
+ 0)  ftdc-3064433  |               __rcu_read_lock();
+ 0)  ftdc-3064433  |               __rcu_read_unlock();
+ 0)  ftdc-3064433  |             }
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |           mutex_lock();
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |         vfs_read() {
+ 0)  ftdc-3064433  |           rw_verify_area() {
+ 0)  ftdc-3064433  |             security_file_permission() {
+ 0)  ftdc-3064433  |               apparmor_file_permission() {
+ 0)  ftdc-3064433  |                 common_file_perm() {
+ 0)  ftdc-3064433  |                   aa_file_perm() {
+ 0)  ftdc-3064433  |                     __rcu_read_lock();
+ 0)  ftdc-3064433  |                     aa_label_is_subset();
+ 0)  ftdc-3064433  |                     __rcu_read_unlock();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               __fsnotify_parent();
+ 0)  ftdc-3064433  |               fsnotify();
+ 0)  ftdc-3064433  |             }
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |           __vfs_read() {
+ 0)  ftdc-3064433  |             proc_reg_read() {
+ 0)  ftdc-3064433  |               seq_read() {
+ 0)  ftdc-3064433  |                 mutex_lock();
+ 0)  ftdc-3064433  |                 vmstat_start();
+ 0)  ftdc-3064433  |                 vmstat_stop() {
+ 0)  ftdc-3064433  |                   kfree();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 mutex_unlock();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               unuse_pde();
+ 0)  ftdc-3064433  |             }
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |         __f_unlock_pos() {
+ 0)  ftdc-3064433  |           mutex_unlock();
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |         fput() {
+ 0)  ftdc-3064433  |           fput_many();
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |       }
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |   }
+ 0)  ftdc-3064433  | }
+ 0)  ftdc-3064433  | post_ttbr_update_workaround();
+ 0)  ftdc-3064433  | el0_svc_handler() {
+ 0)  ftdc-3064433  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3064433  |     __arm64_sys_close() {
+ 0)  ftdc-3064433  |       __close_fd() {
+ 0)  ftdc-3064433  |         _raw_spin_lock();
+ 0)  ftdc-3064433  |         _raw_spin_unlock();
+ 0)  ftdc-3064433  |         filp_close() {
+ 0)  ftdc-3064433  |           dnotify_flush();
+ 0)  ftdc-3064433  |           locks_remove_posix();
+ 0)  ftdc-3064433  |           fput() {
+ 0)  ftdc-3064433  |             fput_many() {
+ 0)  ftdc-3064433  |               task_work_add() {
+ 0)  ftdc-3064433  |                 kick_process();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |             }
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |       }
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |   }
+ 0)  ftdc-3064433  | }
+ 0)  ftdc-3064433  | do_notify_resume() {
+ 0)  ftdc-3064433  |   task_work_run() {
+ 0)  ftdc-3064433  |     _raw_spin_lock_irq();
+ 0)  ftdc-3064433  |     _raw_spin_unlock_irq();
+ 0)  ftdc-3064433  |     ____fput() {
+ 0)  ftdc-3064433  |       __fput() {
+ 0)  ftdc-3064433  |         __fsnotify_parent();
+ 0)  ftdc-3064433  |         fsnotify();
+ 0)  ftdc-3064433  |         locks_remove_file();
+ 0)  ftdc-3064433  |         ima_file_free();
+ 0)  ftdc-3064433  |         proc_reg_release() {
+ 0)  ftdc-3064433  |           _raw_spin_lock();
+ 0)  ftdc-3064433  |           close_pdeo() {
+ 0)  ftdc-3064433  |             _raw_spin_unlock();
+ 0)  ftdc-3064433  |             proc_seq_release() {
+ 0)  ftdc-3064433  |               seq_release() {
+ 0)  ftdc-3064433  |                 kvfree() {
+ 0)  ftdc-3064433  |                   kfree();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 kmem_cache_free();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |             }
+ 0)  ftdc-3064433  |             _raw_spin_lock();
+ 0)  ftdc-3064433  |             _raw_spin_unlock();
+ 0)  ftdc-3064433  |             kmem_cache_free();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |         module_put();
+ 0)  ftdc-3064433  |         put_pid();
+ 0)  ftdc-3064433  |         dput() {
+ 0)  ftdc-3064433  |           __rcu_read_lock();
+ 0)  ftdc-3064433  |           _raw_spin_lock();
+ 0)  ftdc-3064433  |           __rcu_read_unlock();
+ 0)  ftdc-3064433  |           proc_misc_d_delete();
+ 0)  ftdc-3064433  |           _raw_spin_unlock();
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |         mntput() {
+ 0)  ftdc-3064433  |           mntput_no_expire() {
+ 0)  ftdc-3064433  |             __rcu_read_lock();
+ 0)  ftdc-3064433  |             __rcu_read_unlock();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |         security_file_free() {
+ 0)  ftdc-3064433  |           apparmor_file_free_security();
+ 0)  ftdc-3064433  |           kmem_cache_free();
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |         call_rcu() {
+ 0)  ftdc-3064433  |           __call_rcu() {
+ 0)  ftdc-3064433  |             rcu_segcblist_enqueue();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |         }
+ 0)  ftdc-3064433  |       }
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |     _raw_spin_lock_irq();
+ 0)  ftdc-3064433  |     _raw_spin_unlock_irq();
+ 0)  ftdc-3064433  |   }
+ 0)  ftdc-3064433  |   mem_cgroup_handle_over_high();
+ 0)  ftdc-3064433  |   blkcg_maybe_throttle_current();
+ 0)  ftdc-3064433  | }
+ 0)  ftdc-3064433  | post_ttbr_update_workaround();
+ 0)  ftdc-3064433  | el0_svc_handler() {
+ 0)  ftdc-3064433  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3064433  |     __arm64_sys_futex() {
+ 0)  ftdc-3064433  |       do_futex() {
+ 0)  ftdc-3064433  |         futex_wake() {
+ 0)  ftdc-3064433  |           get_futex_key() {
+ 0)  ftdc-3064433  |             get_futex_key_refs.isra.0();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |           hash_futex();
+ 0)  ftdc-3064433  |           _raw_spin_lock();
+ 0)  ftdc-3064433  |           mark_wake_futex() {
+ 0)  ftdc-3064433  |             __unqueue_futex();
+ 0)  ftdc-3064433  |             wake_q_add_safe();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |           _raw_spin_unlock();
+ 0)  ftdc-3064433  |           wake_up_q() {
+ 0)  ftdc-3064433  |             try_to_wake_up() {
+ 0)  ftdc-3064433  |               _raw_spin_lock_irqsave();
+ 0)  ftdc-3064433  |               _raw_spin_lock();
+ 0)  ftdc-3064433  |               update_rq_clock();
+ 0)  ftdc-3064433  |               ttwu_do_activate() {
+ 0)  ftdc-3064433  |                 activate_task() {
+ 0)  ftdc-3064433  |                   psi_task_change() {
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   enqueue_task_fair() {
+ 0)  ftdc-3064433  |                     enqueue_entity() {
+ 0)  ftdc-3064433  |                       update_curr() {
+ 0)  ftdc-3064433  |                         update_min_vruntime();
+ 0)  ftdc-3064433  |                         cpuacct_charge() {
+ 0)  ftdc-3064433  |                           __rcu_read_lock();
+ 0)  ftdc-3064433  |                           __rcu_read_unlock();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                         __rcu_read_lock();
+ 0)  ftdc-3064433  |                         __cgroup_account_cputime() {
+ 0)  ftdc-3064433  |                           cgroup_base_stat_cputime_account_begin();
+ 0)  ftdc-3064433  |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0)  ftdc-3064433  |                             cgroup_rstat_updated();
+ 0)  ftdc-3064433  |                           }
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                         __rcu_read_unlock();
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                       __update_load_avg_se() {
+ 0)  ftdc-3064433  |                         __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                       __update_load_avg_cfs_rq() {
+ 0)  ftdc-3064433  |                         __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                       update_cfs_group();
+ 0)  ftdc-3064433  |                       place_entity();
+ 0)  ftdc-3064433  |                       __enqueue_entity();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     dbs_update_util_handler() {
+ 0)  ftdc-3064433  |                       cpufreq_this_cpu_can_update();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     hrtick_update();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 ttwu_do_wakeup() {
+ 0)  ftdc-3064433  |                   check_preempt_curr() {
+ 0)  ftdc-3064433  |                     check_preempt_wakeup() {
+ 0)  ftdc-3064433  |                       update_curr();
+ 0)  ftdc-3064433  |                       wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                       set_next_buddy();
+ 0)  ftdc-3064433  |                       resched_curr();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               _raw_spin_unlock();
+ 0)  ftdc-3064433  |               _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3064433  |               rcu_note_context_switch() {
+ 0)  ftdc-3064433  |                 rcu_preempt_deferred_qs() {
+ 0)  ftdc-3064433  |                   rcu_preempt_need_deferred_qs();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 rcu_qs();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               _raw_spin_lock();
+ 0)  ftdc-3064433  |               update_rq_clock();
+ 0)  ftdc-3064433  |               pick_next_task_fair() {
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 put_prev_entity() {
+ 0)  ftdc-3064433  |                   update_curr();
+ 0)  ftdc-3064433  |                   check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                   __enqueue_entity();
+ 0)  ftdc-3064433  |                   __update_load_avg_se() {
+ 0)  ftdc-3064433  |                     __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 set_next_entity() {
+ 0)  ftdc-3064433  |                   __update_load_avg_se();
+ 0)  ftdc-3064433  |                   __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               fpsimd_thread_switch() {
+ 0)  ftdc-3064433  |                 __get_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |                 fpsimd_save() {
+ 0)  ftdc-3064433  |                   have_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 __put_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               hw_breakpoint_thread_switch();
+ 0)  ftdc-3064433  |               uao_thread_switch();
+ 0)  ftdc-3064433  |               cpu_have_feature();
+ 0)  ftdc-3064433  |               erratum_1418040_thread_switch() {
+ 0)  ftdc-3064433  |                 this_cpu_has_cap() {
+ 0)  ftdc-3064433  |                   is_affected_midr_range_list();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               finish_task_switch() {
+ 0)  ftdc-3064433  |                 _raw_spin_unlock_irq();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |             } /* try_to_wake_up */
+ 0)  ftdc-3064433  |           } /* wake_up_q */
+ 0)  ftdc-3064433  |           drop_futex_key_refs.isra.0();
+ 0)  ftdc-3064433  |         } /* futex_wake */
+ 0)  ftdc-3064433  |       }
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |   }
+ 0)  ftdc-3064433  | }
+ 0)  ftdc-3064433  | do_notify_resume() {
+ 0)  ftdc-3064433  |   fpsimd_restore_current_state() {
+ 0)  ftdc-3064433  |     __get_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |     task_fpsimd_load() {
+ 0)  ftdc-3064433  |       have_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |     fpsimd_bind_task_to_cpu();
+ 0)  ftdc-3064433  |     put_cpu_fpsimd_context() {
+ 0)  ftdc-3064433  |       __put_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |   }
+ 0)  ftdc-3064433  | }
+ 0)  ftdc-3064433  | post_ttbr_update_workaround();
+ 0)  ftdc-3064433  | el0_svc_handler() {
+ 0)  ftdc-3064433  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3064433  |     __arm64_sys_futex() {
+ 0)  ftdc-3064433  |       do_futex() {
+ 0)  ftdc-3064433  |         futex_wake() {
+ 0)  ftdc-3064433  |           get_futex_key() {
+ 0)  ftdc-3064433  |             get_futex_key_refs.isra.0();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |           hash_futex();
+ 0)  ftdc-3064433  |           _raw_spin_lock();
+ 0)  ftdc-3064433  |           mark_wake_futex() {
+ 0)  ftdc-3064433  |             __unqueue_futex();
+ 0)  ftdc-3064433  |             wake_q_add_safe();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |           _raw_spin_unlock();
+ 0)  ftdc-3064433  |           wake_up_q() {
+ 0)  ftdc-3064433  |             try_to_wake_up() {
+ 0)  ftdc-3064433  |               _raw_spin_lock_irqsave();
+ 0)  ftdc-3064433  |               _raw_spin_lock();
+ 0)  ftdc-3064433  |               update_rq_clock();
+ 0)  ftdc-3064433  |               ttwu_do_activate() {
+ 0)  ftdc-3064433  |                 activate_task() {
+ 0)  ftdc-3064433  |                   psi_task_change() {
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   enqueue_task_fair() {
+ 0)  ftdc-3064433  |                     enqueue_entity() {
+ 0)  ftdc-3064433  |                       update_curr() {
+ 0)  ftdc-3064433  |                         update_min_vruntime();
+ 0)  ftdc-3064433  |                         cpuacct_charge() {
+ 0)  ftdc-3064433  |                           __rcu_read_lock();
+ 0)  ftdc-3064433  |                           __rcu_read_unlock();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                         __rcu_read_lock();
+ 0)  ftdc-3064433  |                         __cgroup_account_cputime() {
+ 0)  ftdc-3064433  |                           cgroup_base_stat_cputime_account_begin();
+ 0)  ftdc-3064433  |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0)  ftdc-3064433  |                             cgroup_rstat_updated();
+ 0)  ftdc-3064433  |                           }
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                         __rcu_read_unlock();
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                       __update_load_avg_se();
+ 0)  ftdc-3064433  |                       __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                       update_cfs_group();
+ 0)  ftdc-3064433  |                       place_entity();
+ 0)  ftdc-3064433  |                       __enqueue_entity();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se();
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se();
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se();
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se();
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     hrtick_update();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 ttwu_do_wakeup() {
+ 0)  ftdc-3064433  |                   check_preempt_curr() {
+ 0)  ftdc-3064433  |                     check_preempt_wakeup() {
+ 0)  ftdc-3064433  |                       update_curr();
+ 0)  ftdc-3064433  |                       wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                       set_next_buddy();
+ 0)  ftdc-3064433  |                       resched_curr();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               _raw_spin_unlock();
+ 0)  ftdc-3064433  |               _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3064433  |               rcu_note_context_switch() {
+ 0)  ftdc-3064433  |                 rcu_preempt_deferred_qs() {
+ 0)  ftdc-3064433  |                   rcu_preempt_need_deferred_qs();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 rcu_qs();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               _raw_spin_lock();
+ 0)  ftdc-3064433  |               update_rq_clock();
+ 0)  ftdc-3064433  |               pick_next_task_fair() {
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 put_prev_entity() {
+ 0)  ftdc-3064433  |                   update_curr();
+ 0)  ftdc-3064433  |                   check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                   __enqueue_entity();
+ 0)  ftdc-3064433  |                   __update_load_avg_se();
+ 0)  ftdc-3064433  |                   __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 set_next_entity() {
+ 0)  ftdc-3064433  |                   __update_load_avg_se();
+ 0)  ftdc-3064433  |                   __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               fpsimd_thread_switch() {
+ 0)  ftdc-3064433  |                 __get_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |                 fpsimd_save() {
+ 0)  ftdc-3064433  |                   have_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 __put_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               hw_breakpoint_thread_switch();
+ 0)  ftdc-3064433  |               uao_thread_switch();
+ 0)  ftdc-3064433  |               cpu_have_feature();
+ 0)  ftdc-3064433  |               erratum_1418040_thread_switch() {
+ 0)  ftdc-3064433  |                 this_cpu_has_cap() {
+ 0)  ftdc-3064433  |                   is_affected_midr_range_list();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               finish_task_switch() {
+ 0)  ftdc-3064433  |                 _raw_spin_unlock_irq();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |             } /* try_to_wake_up */
+ 0)  ftdc-3064433  |           } /* wake_up_q */
+ 0)  ftdc-3064433  |           drop_futex_key_refs.isra.0();
+ 0)  ftdc-3064433  |         } /* futex_wake */
+ 0)  ftdc-3064433  |       }
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |   }
+ 0)  ftdc-3064433  | }
+ 0)  ftdc-3064433  | do_notify_resume() {
+ 0)  ftdc-3064433  |   fpsimd_restore_current_state() {
+ 0)  ftdc-3064433  |     __get_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |     task_fpsimd_load() {
+ 0)  ftdc-3064433  |       have_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |     fpsimd_bind_task_to_cpu();
+ 0)  ftdc-3064433  |     put_cpu_fpsimd_context() {
+ 0)  ftdc-3064433  |       __put_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |   }
+ 0)  ftdc-3064433  | }
+ 0)  ftdc-3064433  | post_ttbr_update_workaround();
+ 0)  ftdc-3064433  | el0_svc_handler() {
+ 0)  ftdc-3064433  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3064433  |     __arm64_sys_futex() {
+ 0)  ftdc-3064433  |       do_futex() {
+ 0)  ftdc-3064433  |         futex_wake() {
+ 0)  ftdc-3064433  |           get_futex_key() {
+ 0)  ftdc-3064433  |             get_futex_key_refs.isra.0();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |           hash_futex();
+ 0)  ftdc-3064433  |           _raw_spin_lock();
+ 0)  ftdc-3064433  |           mark_wake_futex() {
+ 0)  ftdc-3064433  |             __unqueue_futex();
+ 0)  ftdc-3064433  |             wake_q_add_safe();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |           _raw_spin_unlock();
+ 0)  ftdc-3064433  |           wake_up_q() {
+ 0)  ftdc-3064433  |             try_to_wake_up() {
+ 0)  ftdc-3064433  |               _raw_spin_lock_irqsave();
+ 0)  ftdc-3064433  |               _raw_spin_lock();
+ 0)  ftdc-3064433  |               update_rq_clock();
+ 0)  ftdc-3064433  |               ttwu_do_activate() {
+ 0)  ftdc-3064433  |                 activate_task() {
+ 0)  ftdc-3064433  |                   psi_task_change() {
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                     record_times.isra.0();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   enqueue_task_fair() {
+ 0)  ftdc-3064433  |                     enqueue_entity() {
+ 0)  ftdc-3064433  |                       update_curr() {
+ 0)  ftdc-3064433  |                         update_min_vruntime();
+ 0)  ftdc-3064433  |                         cpuacct_charge() {
+ 0)  ftdc-3064433  |                           __rcu_read_lock();
+ 0)  ftdc-3064433  |                           __rcu_read_unlock();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                         __rcu_read_lock();
+ 0)  ftdc-3064433  |                         __cgroup_account_cputime() {
+ 0)  ftdc-3064433  |                           cgroup_base_stat_cputime_account_begin();
+ 0)  ftdc-3064433  |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0)  ftdc-3064433  |                             cgroup_rstat_updated();
+ 0)  ftdc-3064433  |                           }
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                         __rcu_read_unlock();
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                       __update_load_avg_se();
+ 0)  ftdc-3064433  |                       __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                       update_cfs_group();
+ 0)  ftdc-3064433  |                       place_entity();
+ 0)  ftdc-3064433  |                       __enqueue_entity();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se();
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se();
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se();
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se();
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity() {
+ 0)  ftdc-3064433  |                         update_curr() {
+ 0)  ftdc-3064433  |                           __calc_delta();
+ 0)  ftdc-3064433  |                           update_min_vruntime();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     hrtick_update();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 ttwu_do_wakeup() {
+ 0)  ftdc-3064433  |                   check_preempt_curr() {
+ 0)  ftdc-3064433  |                     check_preempt_wakeup() {
+ 0)  ftdc-3064433  |                       update_curr();
+ 0)  ftdc-3064433  |                       wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                       set_next_buddy();
+ 0)  ftdc-3064433  |                       resched_curr();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               _raw_spin_unlock();
+ 0)  ftdc-3064433  |               _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3064433  |               rcu_note_context_switch() {
+ 0)  ftdc-3064433  |                 rcu_preempt_deferred_qs() {
+ 0)  ftdc-3064433  |                   rcu_preempt_need_deferred_qs();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 rcu_qs();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               _raw_spin_lock();
+ 0)  ftdc-3064433  |               update_rq_clock();
+ 0)  ftdc-3064433  |               pick_next_task_fair() {
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 update_curr();
+ 0)  ftdc-3064433  |                 check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                 pick_next_entity() {
+ 0)  ftdc-3064433  |                   wakeup_preempt_entity.isra.0();
+ 0)  ftdc-3064433  |                   clear_buddies();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 put_prev_entity() {
+ 0)  ftdc-3064433  |                   update_curr();
+ 0)  ftdc-3064433  |                   check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                   __enqueue_entity();
+ 0)  ftdc-3064433  |                   __update_load_avg_se();
+ 0)  ftdc-3064433  |                   __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 set_next_entity() {
+ 0)  ftdc-3064433  |                   __update_load_avg_se();
+ 0)  ftdc-3064433  |                   __update_load_avg_cfs_rq();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               fpsimd_thread_switch() {
+ 0)  ftdc-3064433  |                 __get_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |                 fpsimd_save() {
+ 0)  ftdc-3064433  |                   have_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 __put_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               hw_breakpoint_thread_switch();
+ 0)  ftdc-3064433  |               uao_thread_switch();
+ 0)  ftdc-3064433  |               cpu_have_feature();
+ 0)  ftdc-3064433  |               erratum_1418040_thread_switch() {
+ 0)  ftdc-3064433  |                 this_cpu_has_cap() {
+ 0)  ftdc-3064433  |                   is_affected_midr_range_list();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               finish_task_switch() {
+ 0)  ftdc-3064433  |                 _raw_spin_unlock_irq();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |             } /* try_to_wake_up */
+ 0)  ftdc-3064433  |           } /* wake_up_q */
+ 0)  ftdc-3064433  |           drop_futex_key_refs.isra.0();
+ 0)  ftdc-3064433  |         } /* futex_wake */
+ 0)  ftdc-3064433  |       }
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |   }
+ 0)  ftdc-3064433  | }
+ 0)  ftdc-3064433  | do_notify_resume() {
+ 0)  ftdc-3064433  |   fpsimd_restore_current_state() {
+ 0)  ftdc-3064433  |     __get_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |     task_fpsimd_load() {
+ 0)  ftdc-3064433  |       have_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |     fpsimd_bind_task_to_cpu();
+ 0)  ftdc-3064433  |     put_cpu_fpsimd_context() {
+ 0)  ftdc-3064433  |       __put_cpu_fpsimd_context();
+ 0)  ftdc-3064433  |     }
+ 0)  ftdc-3064433  |   }
+ 0)  ftdc-3064433  | }
+ 0)  ftdc-3064433  | post_ttbr_update_workaround();
+ 0)  ftdc-3064433  | post_ttbr_update_workaround();
+ 0)  ftdc-3064433  | el0_svc_handler() {
+ 0)  ftdc-3064433  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3064433  |     __arm64_sys_futex() {
+ 0)  ftdc-3064433  |       get_timespec64();
+ 0)  ftdc-3064433  |       do_futex() {
+ 0)  ftdc-3064433  |         futex_wait() {
+ 0)  ftdc-3064433  |           hrtimer_init_sleeper() {
+ 0)  ftdc-3064433  |             __hrtimer_init();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |           ktime_add_safe();
+ 0)  ftdc-3064433  |           futex_wait_setup() {
+ 0)  ftdc-3064433  |             get_futex_key() {
+ 0)  ftdc-3064433  |               get_futex_key_refs.isra.0();
+ 0)  ftdc-3064433  |             }
+ 0)  ftdc-3064433  |             hash_futex();
+ 0)  ftdc-3064433  |             _raw_spin_lock();
+ 0)  ftdc-3064433  |             get_futex_value_locked();
+ 0)  ftdc-3064433  |           }
+ 0)  ftdc-3064433  |           futex_wait_queue_me() {
+ 0)  ftdc-3064433  |             _raw_spin_unlock();
+ 0)  ftdc-3064433  |             hrtimer_sleeper_start_expires() {
+ 0)  ftdc-3064433  |               hrtimer_start_range_ns() {
+ 0)  ftdc-3064433  |                 lock_hrtimer_base() {
+ 0)  ftdc-3064433  |                   _raw_spin_lock_irqsave();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 get_nohz_timer_target();
+ 0)  ftdc-3064433  |                 enqueue_hrtimer();
+ 0)  ftdc-3064433  |                 _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |             }
+ 0)  ftdc-3064433  |             schedule() {
+ 0)  ftdc-3064433  |               rcu_note_context_switch() {
+ 0)  ftdc-3064433  |                 rcu_preempt_deferred_qs() {
+ 0)  ftdc-3064433  |                   rcu_preempt_need_deferred_qs();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 rcu_qs();
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               _raw_spin_lock();
+ 0)  ftdc-3064433  |               update_rq_clock();
+ 0)  ftdc-3064433  |               deactivate_task() {
+ 0)  ftdc-3064433  |                 psi_task_change() {
+ 0)  ftdc-3064433  |                   record_times.isra.0();
+ 0)  ftdc-3064433  |                   record_times.isra.0();
+ 0)  ftdc-3064433  |                   record_times.isra.0();
+ 0)  ftdc-3064433  |                   record_times.isra.0();
+ 0)  ftdc-3064433  |                   record_times.isra.0();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |                 dequeue_task_fair() {
+ 0)  ftdc-3064433  |                   dequeue_entity() {
+ 0)  ftdc-3064433  |                     update_curr() {
+ 0)  ftdc-3064433  |                       update_min_vruntime();
+ 0)  ftdc-3064433  |                       cpuacct_charge() {
+ 0)  ftdc-3064433  |                         __rcu_read_lock();
+ 0)  ftdc-3064433  |                         __rcu_read_unlock();
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                       __rcu_read_lock();
+ 0)  ftdc-3064433  |                       __cgroup_account_cputime() {
+ 0)  ftdc-3064433  |                         cgroup_base_stat_cputime_account_begin();
+ 0)  ftdc-3064433  |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0)  ftdc-3064433  |                           cgroup_rstat_updated();
+ 0)  ftdc-3064433  |                         }
+ 0)  ftdc-3064433  |                       }
+ 0)  ftdc-3064433  |                       __rcu_read_unlock();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     clear_buddies();
+ 0)  ftdc-3064433  |                     update_cfs_group();
+ 0)  ftdc-3064433  |                     update_min_vruntime();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   dequeue_entity() {
+ 0)  ftdc-3064433  |                     update_curr() {
+ 0)  ftdc-3064433  |                       __calc_delta();
+ 0)  ftdc-3064433  |                       update_min_vruntime();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     clear_buddies();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     update_min_vruntime();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   dequeue_entity() {
+ 0)  ftdc-3064433  |                     update_curr() {
+ 0)  ftdc-3064433  |                       __calc_delta();
+ 0)  ftdc-3064433  |                       update_min_vruntime();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     clear_buddies();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     update_min_vruntime();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   dequeue_entity() {
+ 0)  ftdc-3064433  |                     update_curr() {
+ 0)  ftdc-3064433  |                       __calc_delta();
+ 0)  ftdc-3064433  |                       update_min_vruntime();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     clear_buddies();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     update_min_vruntime();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   dequeue_entity() {
+ 0)  ftdc-3064433  |                     update_curr() {
+ 0)  ftdc-3064433  |                       __calc_delta();
+ 0)  ftdc-3064433  |                       update_min_vruntime();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_se() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     __update_load_avg_cfs_rq() {
+ 0)  ftdc-3064433  |                       __accumulate_pelt_segments();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     dbs_update_util_handler() {
+ 0)  ftdc-3064433  |                       cpufreq_this_cpu_can_update();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     clear_buddies();
+ 0)  ftdc-3064433  |                     update_cfs_group() {
+ 0)  ftdc-3064433  |                       reweight_entity();
+ 0)  ftdc-3064433  |                     }
+ 0)  ftdc-3064433  |                     update_min_vruntime();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   hrtick_update();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               pick_next_task_fair() {
+ 0)  ftdc-3064433  |                 newidle_balance() {
+ 0)  ftdc-3064433  |                   __rcu_read_lock();
+ 0)  ftdc-3064433  |                   __msecs_to_jiffies();
+ 0)  ftdc-3064433  |                   __rcu_read_unlock();
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }
+ 0)  ftdc-3064433  |               pick_next_task_idle() {
+ 0)  ftdc-3064433  |                 put_prev_task_fair() {
+ 0)  ftdc-3064433  |                   put_prev_entity() {
+ 0)  ftdc-3064433  |                     check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   put_prev_entity() {
+ 0)  ftdc-3064433  |                     check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   put_prev_entity() {
+ 0)  ftdc-3064433  |                     check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   put_prev_entity() {
+ 0)  ftdc-3064433  |                     check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                   put_prev_entity() {
+ 0)  ftdc-3064433  |                     check_cfs_rq_runtime();
+ 0)  ftdc-3064433  |                   }
+ 0)  ftdc-3064433  |                 }
+ 0)  ftdc-3064433  |               }

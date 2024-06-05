@@ -1,0 +1,1745 @@
+ 0)  ftdc-3089447  |               finish_task_switch() {
+ 0)  ftdc-3089447  |                 _raw_spin_unlock_irq();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             } /* schedule */
+ 0)  ftdc-3089447  |           } /* futex_wait_queue_me */
+ 0)  ftdc-3089447  |           _raw_spin_lock();
+ 0)  ftdc-3089447  |           __unqueue_futex();
+ 0)  ftdc-3089447  |           _raw_spin_unlock();
+ 0)  ftdc-3089447  |           drop_futex_key_refs.isra.0();
+ 0)  ftdc-3089447  |           hrtimer_cancel() {
+ 0)  ftdc-3089447  |             hrtimer_try_to_cancel() {
+ 0)  ftdc-3089447  |               hrtimer_active();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         } /* futex_wait */
+ 0)  ftdc-3089447  |       } /* do_futex */
+ 0)  ftdc-3089447  |     } /* __arm64_sys_futex */
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | do_notify_resume() {
+ 0)  ftdc-3089447  |   fpsimd_restore_current_state() {
+ 0)  ftdc-3089447  |     __get_cpu_fpsimd_context();
+ 0)  ftdc-3089447  |     task_fpsimd_load() {
+ 0)  ftdc-3089447  |       have_cpu_fpsimd_context();
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |     fpsimd_bind_task_to_cpu();
+ 0)  ftdc-3089447  |     put_cpu_fpsimd_context() {
+ 0)  ftdc-3089447  |       __put_cpu_fpsimd_context();
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_futex() {
+ 0)  ftdc-3089447  |       do_futex() {
+ 0)  ftdc-3089447  |         futex_wake() {
+ 0)  ftdc-3089447  |           get_futex_key() {
+ 0)  ftdc-3089447  |             get_futex_key_refs.isra.0();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           hash_futex();
+ 0)  ftdc-3089447  |           drop_futex_key_refs.isra.0();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_getpid() {
+ 0)  ftdc-3089447  |       __task_pid_nr_ns() {
+ 0)  ftdc-3089447  |         __rcu_read_lock();
+ 0)  ftdc-3089447  |         __rcu_read_unlock();
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_getpid() {
+ 0)  ftdc-3089447  |       __task_pid_nr_ns() {
+ 0)  ftdc-3089447  |         __rcu_read_lock();
+ 0)  ftdc-3089447  |         __rcu_read_unlock();
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_getrusage() {
+ 0)  ftdc-3089447  |       getrusage() {
+ 0)  ftdc-3089447  |         __lock_task_sighand() {
+ 0)  ftdc-3089447  |           __rcu_read_lock();
+ 0)  ftdc-3089447  |           _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |           __rcu_read_unlock();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         thread_group_cputime_adjusted() {
+ 0)  ftdc-3089447  |           thread_group_cputime() {
+ 0)  ftdc-3089447  |             task_sched_runtime() {
+ 0)  ftdc-3089447  |               task_rq_lock() {
+ 0)  ftdc-3089447  |                 _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |                 _raw_spin_lock();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               update_rq_clock();
+ 0)  ftdc-3089447  |               update_curr_fair() {
+ 0)  ftdc-3089447  |                 update_curr() {
+ 0)  ftdc-3089447  |                   update_min_vruntime();
+ 0)  ftdc-3089447  |                   cpuacct_charge() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __cgroup_account_cputime() {
+ 0)  ftdc-3089447  |                     cgroup_base_stat_cputime_account_begin();
+ 0)  ftdc-3089447  |                     cgroup_base_stat_cputime_account_end.isra.0() {
+ 0)  ftdc-3089447  |                       cgroup_rstat_updated();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               _raw_spin_unlock();
+ 0)  ftdc-3089447  |               _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             __rcu_read_lock();
+ 0)  ftdc-3089447  |             __rcu_read_unlock();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           cputime_adjust() {
+ 0)  ftdc-3089447  |             _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |             _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |         ns_to_timeval();
+ 0)  ftdc-3089447  |         ns_to_timeval();
+ 0)  ftdc-3089447  |         get_task_mm() {
+ 0)  ftdc-3089447  |           _raw_spin_lock();
+ 0)  ftdc-3089447  |           _raw_spin_unlock();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         mmput();
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_getpid() {
+ 0)  ftdc-3089447  |       __task_pid_nr_ns() {
+ 0)  ftdc-3089447  |         __rcu_read_lock();
+ 0)  ftdc-3089447  |         __rcu_read_unlock();
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_openat() {
+ 0)  ftdc-3089447  |       do_sys_open() {
+ 0)  ftdc-3089447  |         getname() {
+ 0)  ftdc-3089447  |           getname_flags() {
+ 0)  ftdc-3089447  |             kmem_cache_alloc() {
+ 0)  ftdc-3089447  |               should_failslab();
+ 0)  ftdc-3089447  |               memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             __check_object_size() {
+ 0)  ftdc-3089447  |               check_stack_object();
+ 0)  ftdc-3089447  |               pfn_valid() {
+ 0)  ftdc-3089447  |                 memblock_is_map_memory();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               __check_heap_object();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         get_unused_fd_flags() {
+ 0)  ftdc-3089447  |           __alloc_fd() {
+ 0)  ftdc-3089447  |             _raw_spin_lock();
+ 0)  ftdc-3089447  |             expand_files();
+ 0)  ftdc-3089447  |             _raw_spin_unlock();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         do_filp_open() {
+ 0)  ftdc-3089447  |           path_openat() {
+ 0)  ftdc-3089447  |             alloc_empty_file() {
+ 0)  ftdc-3089447  |               __alloc_file() {
+ 0)  ftdc-3089447  |                 kmem_cache_alloc() {
+ 0)  ftdc-3089447  |                   should_failslab();
+ 0)  ftdc-3089447  |                   memcg_kmem_get_cache() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 security_file_alloc() {
+ 0)  ftdc-3089447  |                   kmem_cache_alloc() {
+ 0)  ftdc-3089447  |                     should_failslab();
+ 0)  ftdc-3089447  |                     memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   apparmor_file_alloc_security();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 __mutex_init();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             path_init() {
+ 0)  ftdc-3089447  |               __rcu_read_lock();
+ 0)  ftdc-3089447  |               set_root();
+ 0)  ftdc-3089447  |               nd_jump_root();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             link_path_walk.part.0() {
+ 0)  ftdc-3089447  |               inode_permission() {
+ 0)  ftdc-3089447  |                 ovl_permission [overlay]() {
+ 0)  ftdc-3089447  |                   ovl_inode_upper [overlay]();
+ 0)  ftdc-3089447  |                   generic_permission() {
+ 0)  ftdc-3089447  |                     get_cached_acl_rcu();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               unlazy_walk() {
+ 0)  ftdc-3089447  |                 legitimize_links();
+ 0)  ftdc-3089447  |                 legitimize_path.isra.0() {
+ 0)  ftdc-3089447  |                   __legitimize_mnt() {
+ 0)  ftdc-3089447  |                     __legitimize_mnt.part.0();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 legitimize_root() {
+ 0)  ftdc-3089447  |                   legitimize_path.isra.0() {
+ 0)  ftdc-3089447  |                     __legitimize_mnt() {
+ 0)  ftdc-3089447  |                       __legitimize_mnt.part.0();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               inode_permission() {
+ 0)  ftdc-3089447  |                 ovl_permission [overlay]() {
+ 0)  ftdc-3089447  |                   ovl_inode_upper [overlay]();
+ 0)  ftdc-3089447  |                   generic_permission() {
+ 0)  ftdc-3089447  |                     get_acl() {
+ 0)  ftdc-3089447  |                       get_cached_acl() {
+ 0)  ftdc-3089447  |                         __rcu_read_lock();
+ 0)  ftdc-3089447  |                         __rcu_read_unlock();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       ovl_get_acl [overlay]() {
+ 0)  ftdc-3089447  |                         ovl_inode_real [overlay]();
+ 0)  ftdc-3089447  |                         ovl_override_creds [overlay]() {
+ 0)  ftdc-3089447  |                           override_creds();
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         get_acl() {
+ 0)  ftdc-3089447  |                           get_cached_acl() {
+ 0)  ftdc-3089447  |                             __rcu_read_lock();
+ 0)  ftdc-3089447  |                             __rcu_read_unlock();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         revert_creds();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     in_group_p();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   ovl_override_creds [overlay]() {
+ 0)  ftdc-3089447  |                     override_creds();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   inode_permission() {
+ 0)  ftdc-3089447  |                     generic_permission();
+ 0)  ftdc-3089447  |                     security_inode_permission();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   revert_creds();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 security_inode_permission();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               walk_component() {
+ 0)  ftdc-3089447  |                 lookup_fast() {
+ 0)  ftdc-3089447  |                   __d_lookup() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     _raw_spin_lock();
+ 0)  ftdc-3089447  |                     _raw_spin_unlock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   follow_managed() {
+ 0)  ftdc-3089447  |                     lookup_mnt() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __lookup_mnt();
+ 0)  ftdc-3089447  |                       legitimize_mnt() {
+ 0)  ftdc-3089447  |                         __legitimize_mnt.part.0();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     dput() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 dput() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 mntput() {
+ 0)  ftdc-3089447  |                   mntput_no_expire() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               inode_permission() {
+ 0)  ftdc-3089447  |                 generic_permission() {
+ 0)  ftdc-3089447  |                   in_group_p();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 security_inode_permission();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               walk_component() {
+ 0)  ftdc-3089447  |                 lookup_fast() {
+ 0)  ftdc-3089447  |                   __d_lookup() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     _raw_spin_lock();
+ 0)  ftdc-3089447  |                     _raw_spin_unlock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   pid_revalidate() {
+ 0)  ftdc-3089447  |                     get_pid_task() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     pid_update_inode() {
+ 0)  ftdc-3089447  |                       task_dump_owner() {
+ 0)  ftdc-3089447  |                         __rcu_read_lock();
+ 0)  ftdc-3089447  |                         __rcu_read_unlock();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       security_task_to_inode();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   follow_managed();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 dput() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               inode_permission() {
+ 0)  ftdc-3089447  |                 proc_pid_permission() {
+ 0)  ftdc-3089447  |                   get_pid_task() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   generic_permission();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 security_inode_permission();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             do_last() {
+ 0)  ftdc-3089447  |               lookup_fast() {
+ 0)  ftdc-3089447  |                 __d_lookup() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   _raw_spin_lock();
+ 0)  ftdc-3089447  |                   _raw_spin_unlock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 pid_revalidate() {
+ 0)  ftdc-3089447  |                   get_pid_task() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   pid_update_inode() {
+ 0)  ftdc-3089447  |                     task_dump_owner() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                       _raw_spin_lock();
+ 0)  ftdc-3089447  |                       _raw_spin_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     security_task_to_inode();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 follow_managed();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               dput() {
+ 0)  ftdc-3089447  |                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               complete_walk();
+ 0)  ftdc-3089447  |               may_open.isra.0() {
+ 0)  ftdc-3089447  |                 inode_permission() {
+ 0)  ftdc-3089447  |                   generic_permission();
+ 0)  ftdc-3089447  |                   security_inode_permission();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               vfs_open() {
+ 0)  ftdc-3089447  |                 do_dentry_open() {
+ 0)  ftdc-3089447  |                   path_get() {
+ 0)  ftdc-3089447  |                     mntget();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   try_module_get();
+ 0)  ftdc-3089447  |                   security_file_open() {
+ 0)  ftdc-3089447  |                     apparmor_file_open() {
+ 0)  ftdc-3089447  |                       aa_path_perm() {
+ 0)  ftdc-3089447  |                         aa_label_next_confined();
+ 0)  ftdc-3089447  |                         profile_path_perm.part.0() {
+ 0)  ftdc-3089447  |                           path_name.isra.0() {
+ 0)  ftdc-3089447  |                             aa_path_name() {
+ 0)  ftdc-3089447  |                               d_namespace_path.constprop.0() {
+ 0)  ftdc-3089447  |                                 d_absolute_path() {
+ 0)  ftdc-3089447  |                                   prepend();
+ 0)  ftdc-3089447  |                                   prepend_path.isra.0() {
+ 0)  ftdc-3089447  |                                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                                     prepend_name();
+ 0)  ftdc-3089447  |                                     prepend_name();
+ 0)  ftdc-3089447  |                                     prepend_name();
+ 0)  ftdc-3089447  |                                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                                   }
+ 0)  ftdc-3089447  |                                 }
+ 0)  ftdc-3089447  |                                 our_mnt();
+ 0)  ftdc-3089447  |                                 our_mnt();
+ 0)  ftdc-3089447  |                               }
+ 0)  ftdc-3089447  |                             }
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                           __aa_path_perm() {
+ 0)  ftdc-3089447  |                             aa_str_perms() {
+ 0)  ftdc-3089447  |                               aa_dfa_match();
+ 0)  ftdc-3089447  |                               aa_compute_fperms() {
+ 0)  ftdc-3089447  |                                 map_old_perms();
+ 0)  ftdc-3089447  |                                 map_old_perms();
+ 0)  ftdc-3089447  |                                 map_old_perms();
+ 0)  ftdc-3089447  |                               }
+ 0)  ftdc-3089447  |                             }
+ 0)  ftdc-3089447  |                             aa_audit_file();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         aa_label_next_confined();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     __fsnotify_parent();
+ 0)  ftdc-3089447  |                     fsnotify();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   proc_single_open() {
+ 0)  ftdc-3089447  |                     single_open() {
+ 0)  ftdc-3089447  |                       kmem_cache_alloc_trace() {
+ 0)  ftdc-3089447  |                         should_failslab();
+ 0)  ftdc-3089447  |                         memcg_kmem_get_cache() {
+ 0)  ftdc-3089447  |                           __rcu_read_lock();
+ 0)  ftdc-3089447  |                           __rcu_read_unlock();
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       seq_open() {
+ 0)  ftdc-3089447  |                         kmem_cache_alloc() {
+ 0)  ftdc-3089447  |                           should_failslab();
+ 0)  ftdc-3089447  |                           memcg_kmem_get_cache() {
+ 0)  ftdc-3089447  |                             __rcu_read_lock();
+ 0)  ftdc-3089447  |                             __rcu_read_unlock();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                           memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         __mutex_init();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   file_ra_state_init();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               ima_file_check() {
+ 0)  ftdc-3089447  |                 security_task_getsecid();
+ 0)  ftdc-3089447  |                 process_measurement();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             terminate_walk() {
+ 0)  ftdc-3089447  |               dput() {
+ 0)  ftdc-3089447  |                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               mntput() {
+ 0)  ftdc-3089447  |                 mntput_no_expire() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               dput() {
+ 0)  ftdc-3089447  |                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               mntput() {
+ 0)  ftdc-3089447  |                 mntput_no_expire() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           restore_nameidata();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         __fsnotify_parent();
+ 0)  ftdc-3089447  |         fsnotify();
+ 0)  ftdc-3089447  |         fd_install() {
+ 0)  ftdc-3089447  |           __fd_install();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         putname() {
+ 0)  ftdc-3089447  |           kmem_cache_free();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_newfstat() {
+ 0)  ftdc-3089447  |       vfs_statx_fd() {
+ 0)  ftdc-3089447  |         __fdget_raw() {
+ 0)  ftdc-3089447  |           __fget_light() {
+ 0)  ftdc-3089447  |             __fget() {
+ 0)  ftdc-3089447  |               __rcu_read_lock();
+ 0)  ftdc-3089447  |               __rcu_read_unlock();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         vfs_getattr() {
+ 0)  ftdc-3089447  |           security_inode_getattr() {
+ 0)  ftdc-3089447  |             apparmor_inode_getattr() {
+ 0)  ftdc-3089447  |               common_perm_cond() {
+ 0)  ftdc-3089447  |                 common_perm() {
+ 0)  ftdc-3089447  |                   aa_path_perm() {
+ 0)  ftdc-3089447  |                     aa_label_next_confined();
+ 0)  ftdc-3089447  |                     profile_path_perm.part.0() {
+ 0)  ftdc-3089447  |                       path_name.isra.0() {
+ 0)  ftdc-3089447  |                         aa_path_name() {
+ 0)  ftdc-3089447  |                           d_namespace_path.constprop.0() {
+ 0)  ftdc-3089447  |                             d_absolute_path() {
+ 0)  ftdc-3089447  |                               prepend();
+ 0)  ftdc-3089447  |                               prepend_path.isra.0() {
+ 0)  ftdc-3089447  |                                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                                 prepend_name();
+ 0)  ftdc-3089447  |                                 prepend_name();
+ 0)  ftdc-3089447  |                                 prepend_name();
+ 0)  ftdc-3089447  |                                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |                                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |                               }
+ 0)  ftdc-3089447  |                             }
+ 0)  ftdc-3089447  |                             our_mnt();
+ 0)  ftdc-3089447  |                             our_mnt();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       __aa_path_perm() {
+ 0)  ftdc-3089447  |                         aa_str_perms() {
+ 0)  ftdc-3089447  |                           aa_dfa_match();
+ 0)  ftdc-3089447  |                           aa_compute_fperms() {
+ 0)  ftdc-3089447  |                             map_old_perms();
+ 0)  ftdc-3089447  |                             map_old_perms();
+ 0)  ftdc-3089447  |                             map_old_perms();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         aa_audit_file();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     aa_label_next_confined();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           vfs_getattr_nosec();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         fput() {
+ 0)  ftdc-3089447  |           fput_many();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |       cp_new_stat() {
+ 0)  ftdc-3089447  |         from_kuid_munged() {
+ 0)  ftdc-3089447  |           map_id_up();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         from_kgid_munged() {
+ 0)  ftdc-3089447  |           map_id_up();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_read() {
+ 0)  ftdc-3089447  |       ksys_read() {
+ 0)  ftdc-3089447  |         __fdget_pos() {
+ 0)  ftdc-3089447  |           __fget_light() {
+ 0)  ftdc-3089447  |             __fget() {
+ 0)  ftdc-3089447  |               __rcu_read_lock();
+ 0)  ftdc-3089447  |               __rcu_read_unlock();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           mutex_lock();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         vfs_read() {
+ 0)  ftdc-3089447  |           rw_verify_area() {
+ 0)  ftdc-3089447  |             security_file_permission() {
+ 0)  ftdc-3089447  |               apparmor_file_permission() {
+ 0)  ftdc-3089447  |                 common_file_perm() {
+ 0)  ftdc-3089447  |                   aa_file_perm() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     aa_label_is_subset();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               __fsnotify_parent();
+ 0)  ftdc-3089447  |               fsnotify();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           __vfs_read() {
+ 0)  ftdc-3089447  |             seq_read() {
+ 0)  ftdc-3089447  |               mutex_lock();
+ 0)  ftdc-3089447  |               kvmalloc_node() {
+ 0)  ftdc-3089447  |                 __kmalloc() {
+ 0)  ftdc-3089447  |                   kmalloc_slab();
+ 0)  ftdc-3089447  |                   should_failslab();
+ 0)  ftdc-3089447  |                   memcg_kmem_get_cache() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               single_start();
+ 0)  ftdc-3089447  |               proc_single_show() {
+ 0)  ftdc-3089447  |                 get_pid_task() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 proc_tgid_stat() {
+ 0)  ftdc-3089447  |                   do_task_stat() {
+ 0)  ftdc-3089447  |                     ptrace_may_access() {
+ 0)  ftdc-3089447  |                       _raw_spin_lock();
+ 0)  ftdc-3089447  |                       __ptrace_may_access();
+ 0)  ftdc-3089447  |                       _raw_spin_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     get_task_mm() {
+ 0)  ftdc-3089447  |                       _raw_spin_lock();
+ 0)  ftdc-3089447  |                       _raw_spin_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     task_vsize();
+ 0)  ftdc-3089447  |                     __lock_task_sighand() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     thread_group_cputime_adjusted() {
+ 0)  ftdc-3089447  |                       thread_group_cputime() {
+ 0)  ftdc-3089447  |                         task_sched_runtime() {
+ 0)  ftdc-3089447  |                           task_rq_lock() {
+ 0)  ftdc-3089447  |                             _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |                             _raw_spin_lock();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                           update_rq_clock();
+ 0)  ftdc-3089447  |                           update_curr_fair() {
+ 0)  ftdc-3089447  |                             update_curr() {
+ 0)  ftdc-3089447  |                               update_min_vruntime();
+ 0)  ftdc-3089447  |                               cpuacct_charge() {
+ 0)  ftdc-3089447  |                                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |                               }
+ 0)  ftdc-3089447  |                               __rcu_read_lock();
+ 0)  ftdc-3089447  |                               __cgroup_account_cputime() {
+ 0)  ftdc-3089447  |                                 cgroup_base_stat_cputime_account_begin();
+ 0)  ftdc-3089447  |                                 cgroup_base_stat_cputime_account_end.isra.0() {
+ 0)  ftdc-3089447  |                                   cgroup_rstat_updated();
+ 0)  ftdc-3089447  |                                 }
+ 0)  ftdc-3089447  |                               }
+ 0)  ftdc-3089447  |                               __rcu_read_unlock();
+ 0)  ftdc-3089447  |                             }
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                           _raw_spin_unlock();
+ 0)  ftdc-3089447  |                           _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         __rcu_read_lock();
+ 0)  ftdc-3089447  |                         __rcu_read_unlock();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       cputime_adjust() {
+ 0)  ftdc-3089447  |                         _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |                         _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     __task_pid_nr_ns() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     __task_pid_nr_ns() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     __task_pid_nr_ns() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |                     task_prio();
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     pid_nr_ns();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_puts();
+ 0)  ftdc-3089447  |                     proc_task_name() {
+ 0)  ftdc-3089447  |                       __get_task_comm() {
+ 0)  ftdc-3089447  |                         _raw_spin_lock();
+ 0)  ftdc-3089447  |                         _raw_spin_unlock();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_puts();
+ 0)  ftdc-3089447  |                     seq_putc();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_puts();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     __delayacct_blkio_ticks() {
+ 0)  ftdc-3089447  |                       _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |                       nsec_to_clock_t();
+ 0)  ftdc-3089447  |                       _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_putc();
+ 0)  ftdc-3089447  |                     mmput();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               single_next();
+ 0)  ftdc-3089447  |               single_stop();
+ 0)  ftdc-3089447  |               __check_object_size() {
+ 0)  ftdc-3089447  |                 check_stack_object();
+ 0)  ftdc-3089447  |                 pfn_valid() {
+ 0)  ftdc-3089447  |                   memblock_is_map_memory();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 __check_heap_object();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               mutex_unlock();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           __fsnotify_parent();
+ 0)  ftdc-3089447  |           fsnotify();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         __f_unlock_pos() {
+ 0)  ftdc-3089447  |           mutex_unlock();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         fput() {
+ 0)  ftdc-3089447  |           fput_many();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_close() {
+ 0)  ftdc-3089447  |       __close_fd() {
+ 0)  ftdc-3089447  |         _raw_spin_lock();
+ 0)  ftdc-3089447  |         _raw_spin_unlock();
+ 0)  ftdc-3089447  |         filp_close() {
+ 0)  ftdc-3089447  |           dnotify_flush();
+ 0)  ftdc-3089447  |           locks_remove_posix();
+ 0)  ftdc-3089447  |           fput() {
+ 0)  ftdc-3089447  |             fput_many() {
+ 0)  ftdc-3089447  |               task_work_add() {
+ 0)  ftdc-3089447  |                 kick_process();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | do_notify_resume() {
+ 0)  ftdc-3089447  |   task_work_run() {
+ 0)  ftdc-3089447  |     _raw_spin_lock_irq();
+ 0)  ftdc-3089447  |     _raw_spin_unlock_irq();
+ 0)  ftdc-3089447  |     ____fput() {
+ 0)  ftdc-3089447  |       __fput() {
+ 0)  ftdc-3089447  |         __fsnotify_parent();
+ 0)  ftdc-3089447  |         fsnotify();
+ 0)  ftdc-3089447  |         locks_remove_file();
+ 0)  ftdc-3089447  |         ima_file_free();
+ 0)  ftdc-3089447  |         single_release() {
+ 0)  ftdc-3089447  |           kvfree() {
+ 0)  ftdc-3089447  |             kfree();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           kmem_cache_free();
+ 0)  ftdc-3089447  |           kfree();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         module_put();
+ 0)  ftdc-3089447  |         put_pid();
+ 0)  ftdc-3089447  |         dput() {
+ 0)  ftdc-3089447  |           __rcu_read_lock();
+ 0)  ftdc-3089447  |           _raw_spin_lock();
+ 0)  ftdc-3089447  |           __rcu_read_unlock();
+ 0)  ftdc-3089447  |           pid_delete_dentry();
+ 0)  ftdc-3089447  |           _raw_spin_unlock();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         mntput() {
+ 0)  ftdc-3089447  |           mntput_no_expire() {
+ 0)  ftdc-3089447  |             __rcu_read_lock();
+ 0)  ftdc-3089447  |             __rcu_read_unlock();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         security_file_free() {
+ 0)  ftdc-3089447  |           apparmor_file_free_security();
+ 0)  ftdc-3089447  |           kmem_cache_free();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         call_rcu() {
+ 0)  ftdc-3089447  |           __call_rcu() {
+ 0)  ftdc-3089447  |             rcu_segcblist_enqueue();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |     _raw_spin_lock_irq();
+ 0)  ftdc-3089447  |     _raw_spin_unlock_irq();
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  |   mem_cgroup_handle_over_high();
+ 0)  ftdc-3089447  |   blkcg_maybe_throttle_current();
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_openat() {
+ 0)  ftdc-3089447  |       do_sys_open() {
+ 0)  ftdc-3089447  |         getname() {
+ 0)  ftdc-3089447  |           getname_flags() {
+ 0)  ftdc-3089447  |             kmem_cache_alloc() {
+ 0)  ftdc-3089447  |               should_failslab();
+ 0)  ftdc-3089447  |               memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             __check_object_size() {
+ 0)  ftdc-3089447  |               check_stack_object();
+ 0)  ftdc-3089447  |               pfn_valid() {
+ 0)  ftdc-3089447  |                 memblock_is_map_memory();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               __check_heap_object();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         get_unused_fd_flags() {
+ 0)  ftdc-3089447  |           __alloc_fd() {
+ 0)  ftdc-3089447  |             _raw_spin_lock();
+ 0)  ftdc-3089447  |             expand_files();
+ 0)  ftdc-3089447  |             _raw_spin_unlock();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         do_filp_open() {
+ 0)  ftdc-3089447  |           path_openat() {
+ 0)  ftdc-3089447  |             alloc_empty_file() {
+ 0)  ftdc-3089447  |               __alloc_file() {
+ 0)  ftdc-3089447  |                 kmem_cache_alloc() {
+ 0)  ftdc-3089447  |                   should_failslab();
+ 0)  ftdc-3089447  |                   memcg_kmem_get_cache() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 security_file_alloc() {
+ 0)  ftdc-3089447  |                   kmem_cache_alloc() {
+ 0)  ftdc-3089447  |                     should_failslab();
+ 0)  ftdc-3089447  |                     memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   apparmor_file_alloc_security();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 __mutex_init();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             path_init() {
+ 0)  ftdc-3089447  |               __rcu_read_lock();
+ 0)  ftdc-3089447  |               set_root();
+ 0)  ftdc-3089447  |               nd_jump_root();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             link_path_walk.part.0() {
+ 0)  ftdc-3089447  |               inode_permission() {
+ 0)  ftdc-3089447  |                 ovl_permission [overlay]() {
+ 0)  ftdc-3089447  |                   ovl_inode_upper [overlay]();
+ 0)  ftdc-3089447  |                   generic_permission() {
+ 0)  ftdc-3089447  |                     get_cached_acl_rcu();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               unlazy_walk() {
+ 0)  ftdc-3089447  |                 legitimize_links();
+ 0)  ftdc-3089447  |                 legitimize_path.isra.0() {
+ 0)  ftdc-3089447  |                   __legitimize_mnt() {
+ 0)  ftdc-3089447  |                     __legitimize_mnt.part.0();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 legitimize_root() {
+ 0)  ftdc-3089447  |                   legitimize_path.isra.0() {
+ 0)  ftdc-3089447  |                     __legitimize_mnt() {
+ 0)  ftdc-3089447  |                       __legitimize_mnt.part.0();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               inode_permission() {
+ 0)  ftdc-3089447  |                 ovl_permission [overlay]() {
+ 0)  ftdc-3089447  |                   ovl_inode_upper [overlay]();
+ 0)  ftdc-3089447  |                   generic_permission() {
+ 0)  ftdc-3089447  |                     get_acl() {
+ 0)  ftdc-3089447  |                       get_cached_acl() {
+ 0)  ftdc-3089447  |                         __rcu_read_lock();
+ 0)  ftdc-3089447  |                         __rcu_read_unlock();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       ovl_get_acl [overlay]() {
+ 0)  ftdc-3089447  |                         ovl_inode_real [overlay]();
+ 0)  ftdc-3089447  |                         ovl_override_creds [overlay]() {
+ 0)  ftdc-3089447  |                           override_creds();
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         get_acl() {
+ 0)  ftdc-3089447  |                           get_cached_acl() {
+ 0)  ftdc-3089447  |                             __rcu_read_lock();
+ 0)  ftdc-3089447  |                             __rcu_read_unlock();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         revert_creds();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     in_group_p();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   ovl_override_creds [overlay]() {
+ 0)  ftdc-3089447  |                     override_creds();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   inode_permission() {
+ 0)  ftdc-3089447  |                     generic_permission();
+ 0)  ftdc-3089447  |                     security_inode_permission();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   revert_creds();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 security_inode_permission();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               walk_component() {
+ 0)  ftdc-3089447  |                 lookup_fast() {
+ 0)  ftdc-3089447  |                   __d_lookup() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     _raw_spin_lock();
+ 0)  ftdc-3089447  |                     _raw_spin_unlock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   follow_managed() {
+ 0)  ftdc-3089447  |                     lookup_mnt() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __lookup_mnt();
+ 0)  ftdc-3089447  |                       legitimize_mnt() {
+ 0)  ftdc-3089447  |                         __legitimize_mnt.part.0();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     dput() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 dput() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 mntput() {
+ 0)  ftdc-3089447  |                   mntput_no_expire() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               inode_permission() {
+ 0)  ftdc-3089447  |                 generic_permission() {
+ 0)  ftdc-3089447  |                   in_group_p();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 security_inode_permission();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               walk_component() {
+ 0)  ftdc-3089447  |                 lookup_fast() {
+ 0)  ftdc-3089447  |                   __d_lookup() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     _raw_spin_lock();
+ 0)  ftdc-3089447  |                     _raw_spin_unlock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   pid_revalidate() {
+ 0)  ftdc-3089447  |                     get_pid_task() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     pid_update_inode() {
+ 0)  ftdc-3089447  |                       task_dump_owner() {
+ 0)  ftdc-3089447  |                         __rcu_read_lock();
+ 0)  ftdc-3089447  |                         __rcu_read_unlock();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       security_task_to_inode();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   follow_managed();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 dput() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               inode_permission() {
+ 0)  ftdc-3089447  |                 proc_pid_permission() {
+ 0)  ftdc-3089447  |                   get_pid_task() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   generic_permission();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 security_inode_permission();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             do_last() {
+ 0)  ftdc-3089447  |               lookup_fast() {
+ 0)  ftdc-3089447  |                 __d_lookup() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   _raw_spin_lock();
+ 0)  ftdc-3089447  |                   _raw_spin_unlock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 pid_revalidate() {
+ 0)  ftdc-3089447  |                   get_pid_task() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   pid_update_inode() {
+ 0)  ftdc-3089447  |                     task_dump_owner() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                       _raw_spin_lock();
+ 0)  ftdc-3089447  |                       _raw_spin_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     security_task_to_inode();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 follow_managed();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               dput() {
+ 0)  ftdc-3089447  |                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               complete_walk();
+ 0)  ftdc-3089447  |               may_open.isra.0() {
+ 0)  ftdc-3089447  |                 inode_permission() {
+ 0)  ftdc-3089447  |                   generic_permission();
+ 0)  ftdc-3089447  |                   security_inode_permission();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               vfs_open() {
+ 0)  ftdc-3089447  |                 do_dentry_open() {
+ 0)  ftdc-3089447  |                   path_get() {
+ 0)  ftdc-3089447  |                     mntget();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   try_module_get();
+ 0)  ftdc-3089447  |                   security_file_open() {
+ 0)  ftdc-3089447  |                     apparmor_file_open() {
+ 0)  ftdc-3089447  |                       aa_path_perm() {
+ 0)  ftdc-3089447  |                         aa_label_next_confined();
+ 0)  ftdc-3089447  |                         profile_path_perm.part.0() {
+ 0)  ftdc-3089447  |                           path_name.isra.0() {
+ 0)  ftdc-3089447  |                             aa_path_name() {
+ 0)  ftdc-3089447  |                               d_namespace_path.constprop.0() {
+ 0)  ftdc-3089447  |                                 d_absolute_path() {
+ 0)  ftdc-3089447  |                                   prepend();
+ 0)  ftdc-3089447  |                                   prepend_path.isra.0() {
+ 0)  ftdc-3089447  |                                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                                     prepend_name();
+ 0)  ftdc-3089447  |                                     prepend_name();
+ 0)  ftdc-3089447  |                                     prepend_name();
+ 0)  ftdc-3089447  |                                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                                   }
+ 0)  ftdc-3089447  |                                 }
+ 0)  ftdc-3089447  |                                 our_mnt();
+ 0)  ftdc-3089447  |                                 our_mnt();
+ 0)  ftdc-3089447  |                               }
+ 0)  ftdc-3089447  |                             }
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                           __aa_path_perm() {
+ 0)  ftdc-3089447  |                             aa_str_perms() {
+ 0)  ftdc-3089447  |                               aa_dfa_match();
+ 0)  ftdc-3089447  |                               aa_compute_fperms() {
+ 0)  ftdc-3089447  |                                 map_old_perms();
+ 0)  ftdc-3089447  |                                 map_old_perms();
+ 0)  ftdc-3089447  |                                 map_old_perms();
+ 0)  ftdc-3089447  |                               }
+ 0)  ftdc-3089447  |                             }
+ 0)  ftdc-3089447  |                             aa_audit_file();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         aa_label_next_confined();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     __fsnotify_parent();
+ 0)  ftdc-3089447  |                     fsnotify();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   proc_single_open() {
+ 0)  ftdc-3089447  |                     single_open() {
+ 0)  ftdc-3089447  |                       kmem_cache_alloc_trace() {
+ 0)  ftdc-3089447  |                         should_failslab();
+ 0)  ftdc-3089447  |                         memcg_kmem_get_cache() {
+ 0)  ftdc-3089447  |                           __rcu_read_lock();
+ 0)  ftdc-3089447  |                           __rcu_read_unlock();
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       seq_open() {
+ 0)  ftdc-3089447  |                         kmem_cache_alloc() {
+ 0)  ftdc-3089447  |                           should_failslab();
+ 0)  ftdc-3089447  |                           memcg_kmem_get_cache() {
+ 0)  ftdc-3089447  |                             __rcu_read_lock();
+ 0)  ftdc-3089447  |                             __rcu_read_unlock();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                           memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         __mutex_init();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   file_ra_state_init();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               ima_file_check() {
+ 0)  ftdc-3089447  |                 security_task_getsecid();
+ 0)  ftdc-3089447  |                 process_measurement();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             terminate_walk() {
+ 0)  ftdc-3089447  |               dput() {
+ 0)  ftdc-3089447  |                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               mntput() {
+ 0)  ftdc-3089447  |                 mntput_no_expire() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               dput() {
+ 0)  ftdc-3089447  |                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               mntput() {
+ 0)  ftdc-3089447  |                 mntput_no_expire() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           restore_nameidata();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         __fsnotify_parent();
+ 0)  ftdc-3089447  |         fsnotify();
+ 0)  ftdc-3089447  |         fd_install() {
+ 0)  ftdc-3089447  |           __fd_install();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         putname() {
+ 0)  ftdc-3089447  |           kmem_cache_free();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_newfstat() {
+ 0)  ftdc-3089447  |       vfs_statx_fd() {
+ 0)  ftdc-3089447  |         __fdget_raw() {
+ 0)  ftdc-3089447  |           __fget_light() {
+ 0)  ftdc-3089447  |             __fget() {
+ 0)  ftdc-3089447  |               __rcu_read_lock();
+ 0)  ftdc-3089447  |               __rcu_read_unlock();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         vfs_getattr() {
+ 0)  ftdc-3089447  |           security_inode_getattr() {
+ 0)  ftdc-3089447  |             apparmor_inode_getattr() {
+ 0)  ftdc-3089447  |               common_perm_cond() {
+ 0)  ftdc-3089447  |                 common_perm() {
+ 0)  ftdc-3089447  |                   aa_path_perm() {
+ 0)  ftdc-3089447  |                     aa_label_next_confined();
+ 0)  ftdc-3089447  |                     profile_path_perm.part.0() {
+ 0)  ftdc-3089447  |                       path_name.isra.0() {
+ 0)  ftdc-3089447  |                         aa_path_name() {
+ 0)  ftdc-3089447  |                           d_namespace_path.constprop.0() {
+ 0)  ftdc-3089447  |                             d_absolute_path() {
+ 0)  ftdc-3089447  |                               prepend();
+ 0)  ftdc-3089447  |                               prepend_path.isra.0() {
+ 0)  ftdc-3089447  |                                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                                 prepend_name();
+ 0)  ftdc-3089447  |                                 prepend_name();
+ 0)  ftdc-3089447  |                                 prepend_name();
+ 0)  ftdc-3089447  |                                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |                                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |                               }
+ 0)  ftdc-3089447  |                             }
+ 0)  ftdc-3089447  |                             our_mnt();
+ 0)  ftdc-3089447  |                             our_mnt();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       __aa_path_perm() {
+ 0)  ftdc-3089447  |                         aa_str_perms() {
+ 0)  ftdc-3089447  |                           aa_dfa_match();
+ 0)  ftdc-3089447  |                           aa_compute_fperms() {
+ 0)  ftdc-3089447  |                             map_old_perms();
+ 0)  ftdc-3089447  |                             map_old_perms();
+ 0)  ftdc-3089447  |                             map_old_perms();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         aa_audit_file();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     aa_label_next_confined();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           vfs_getattr_nosec();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         fput() {
+ 0)  ftdc-3089447  |           fput_many();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |       cp_new_stat() {
+ 0)  ftdc-3089447  |         from_kuid_munged() {
+ 0)  ftdc-3089447  |           map_id_up();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         from_kgid_munged() {
+ 0)  ftdc-3089447  |           map_id_up();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_read() {
+ 0)  ftdc-3089447  |       ksys_read() {
+ 0)  ftdc-3089447  |         __fdget_pos() {
+ 0)  ftdc-3089447  |           __fget_light() {
+ 0)  ftdc-3089447  |             __fget() {
+ 0)  ftdc-3089447  |               __rcu_read_lock();
+ 0)  ftdc-3089447  |               __rcu_read_unlock();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           mutex_lock();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         vfs_read() {
+ 0)  ftdc-3089447  |           rw_verify_area() {
+ 0)  ftdc-3089447  |             security_file_permission() {
+ 0)  ftdc-3089447  |               apparmor_file_permission() {
+ 0)  ftdc-3089447  |                 common_file_perm() {
+ 0)  ftdc-3089447  |                   aa_file_perm() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     aa_label_is_subset();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               __fsnotify_parent();
+ 0)  ftdc-3089447  |               fsnotify();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           __vfs_read() {
+ 0)  ftdc-3089447  |             seq_read() {
+ 0)  ftdc-3089447  |               mutex_lock();
+ 0)  ftdc-3089447  |               kvmalloc_node() {
+ 0)  ftdc-3089447  |                 __kmalloc() {
+ 0)  ftdc-3089447  |                   kmalloc_slab();
+ 0)  ftdc-3089447  |                   should_failslab();
+ 0)  ftdc-3089447  |                   memcg_kmem_get_cache() {
+ 0)  ftdc-3089447  |                     __rcu_read_lock();
+ 0)  ftdc-3089447  |                     __rcu_read_unlock();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                   memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               single_start();
+ 0)  ftdc-3089447  |               proc_single_show() {
+ 0)  ftdc-3089447  |                 get_pid_task() {
+ 0)  ftdc-3089447  |                   __rcu_read_lock();
+ 0)  ftdc-3089447  |                   __rcu_read_unlock();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 proc_tgid_stat() {
+ 0)  ftdc-3089447  |                   do_task_stat() {
+ 0)  ftdc-3089447  |                     ptrace_may_access() {
+ 0)  ftdc-3089447  |                       _raw_spin_lock();
+ 0)  ftdc-3089447  |                       __ptrace_may_access();
+ 0)  ftdc-3089447  |                       _raw_spin_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     get_task_mm() {
+ 0)  ftdc-3089447  |                       _raw_spin_lock();
+ 0)  ftdc-3089447  |                       _raw_spin_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     task_vsize();
+ 0)  ftdc-3089447  |                     __lock_task_sighand() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     thread_group_cputime_adjusted() {
+ 0)  ftdc-3089447  |                       thread_group_cputime() {
+ 0)  ftdc-3089447  |                         task_sched_runtime() {
+ 0)  ftdc-3089447  |                           task_rq_lock() {
+ 0)  ftdc-3089447  |                             _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |                             _raw_spin_lock();
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                           update_rq_clock();
+ 0)  ftdc-3089447  |                           update_curr_fair() {
+ 0)  ftdc-3089447  |                             update_curr() {
+ 0)  ftdc-3089447  |                               update_min_vruntime();
+ 0)  ftdc-3089447  |                               cpuacct_charge() {
+ 0)  ftdc-3089447  |                                 __rcu_read_lock();
+ 0)  ftdc-3089447  |                                 __rcu_read_unlock();
+ 0)  ftdc-3089447  |                               }
+ 0)  ftdc-3089447  |                               __rcu_read_lock();
+ 0)  ftdc-3089447  |                               __cgroup_account_cputime() {
+ 0)  ftdc-3089447  |                                 cgroup_base_stat_cputime_account_begin();
+ 0)  ftdc-3089447  |                                 cgroup_base_stat_cputime_account_end.isra.0() {
+ 0)  ftdc-3089447  |                                   cgroup_rstat_updated();
+ 0)  ftdc-3089447  |                                 }
+ 0)  ftdc-3089447  |                               }
+ 0)  ftdc-3089447  |                               __rcu_read_unlock();
+ 0)  ftdc-3089447  |                             }
+ 0)  ftdc-3089447  |                           }
+ 0)  ftdc-3089447  |                           _raw_spin_unlock();
+ 0)  ftdc-3089447  |                           _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |                         }
+ 0)  ftdc-3089447  |                         __rcu_read_lock();
+ 0)  ftdc-3089447  |                         __rcu_read_unlock();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                       cputime_adjust() {
+ 0)  ftdc-3089447  |                         _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |                         _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     __task_pid_nr_ns() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     __task_pid_nr_ns() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     __task_pid_nr_ns() {
+ 0)  ftdc-3089447  |                       __rcu_read_lock();
+ 0)  ftdc-3089447  |                       __rcu_read_unlock();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |                     task_prio();
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     pid_nr_ns();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_puts();
+ 0)  ftdc-3089447  |                     proc_task_name() {
+ 0)  ftdc-3089447  |                       __get_task_comm() {
+ 0)  ftdc-3089447  |                         _raw_spin_lock();
+ 0)  ftdc-3089447  |                         _raw_spin_unlock();
+ 0)  ftdc-3089447  |                       }
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_puts();
+ 0)  ftdc-3089447  |                     seq_putc();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_puts();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     __delayacct_blkio_ticks() {
+ 0)  ftdc-3089447  |                       _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |                       nsec_to_clock_t();
+ 0)  ftdc-3089447  |                       _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     nsec_to_clock_t();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ull() {
+ 0)  ftdc-3089447  |                       seq_put_decimal_ull_width();
+ 0)  ftdc-3089447  |                     }
+ 0)  ftdc-3089447  |                     seq_put_decimal_ll();
+ 0)  ftdc-3089447  |                     seq_putc();
+ 0)  ftdc-3089447  |                     mmput();
+ 0)  ftdc-3089447  |                   }
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               single_next();
+ 0)  ftdc-3089447  |               single_stop();
+ 0)  ftdc-3089447  |               __check_object_size() {
+ 0)  ftdc-3089447  |                 check_stack_object();
+ 0)  ftdc-3089447  |                 pfn_valid() {
+ 0)  ftdc-3089447  |                   memblock_is_map_memory();
+ 0)  ftdc-3089447  |                 }
+ 0)  ftdc-3089447  |                 __check_heap_object();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |               mutex_unlock();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           __fsnotify_parent();
+ 0)  ftdc-3089447  |           fsnotify();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         __f_unlock_pos() {
+ 0)  ftdc-3089447  |           mutex_unlock();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         fput() {
+ 0)  ftdc-3089447  |           fput_many();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_close() {
+ 0)  ftdc-3089447  |       __close_fd() {
+ 0)  ftdc-3089447  |         _raw_spin_lock();
+ 0)  ftdc-3089447  |         _raw_spin_unlock();
+ 0)  ftdc-3089447  |         filp_close() {
+ 0)  ftdc-3089447  |           dnotify_flush();
+ 0)  ftdc-3089447  |           locks_remove_posix();
+ 0)  ftdc-3089447  |           fput() {
+ 0)  ftdc-3089447  |             fput_many() {
+ 0)  ftdc-3089447  |               task_work_add() {
+ 0)  ftdc-3089447  |                 kick_process();
+ 0)  ftdc-3089447  |               }
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | do_notify_resume() {
+ 0)  ftdc-3089447  |   task_work_run() {
+ 0)  ftdc-3089447  |     _raw_spin_lock_irq();
+ 0)  ftdc-3089447  |     _raw_spin_unlock_irq();
+ 0)  ftdc-3089447  |     ____fput() {
+ 0)  ftdc-3089447  |       __fput() {
+ 0)  ftdc-3089447  |         __fsnotify_parent();
+ 0)  ftdc-3089447  |         fsnotify();
+ 0)  ftdc-3089447  |         locks_remove_file();
+ 0)  ftdc-3089447  |         ima_file_free();
+ 0)  ftdc-3089447  |         single_release() {
+ 0)  ftdc-3089447  |           kvfree() {
+ 0)  ftdc-3089447  |             kfree();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |           kmem_cache_free();
+ 0)  ftdc-3089447  |           kfree();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         module_put();
+ 0)  ftdc-3089447  |         put_pid();
+ 0)  ftdc-3089447  |         dput() {
+ 0)  ftdc-3089447  |           __rcu_read_lock();
+ 0)  ftdc-3089447  |           _raw_spin_lock();
+ 0)  ftdc-3089447  |           __rcu_read_unlock();
+ 0)  ftdc-3089447  |           pid_delete_dentry();
+ 0)  ftdc-3089447  |           _raw_spin_unlock();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         mntput() {
+ 0)  ftdc-3089447  |           mntput_no_expire() {
+ 0)  ftdc-3089447  |             __rcu_read_lock();
+ 0)  ftdc-3089447  |             __rcu_read_unlock();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         security_file_free() {
+ 0)  ftdc-3089447  |           apparmor_file_free_security();
+ 0)  ftdc-3089447  |           kmem_cache_free();
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |         call_rcu() {
+ 0)  ftdc-3089447  |           __call_rcu() {
+ 0)  ftdc-3089447  |             rcu_segcblist_enqueue();
+ 0)  ftdc-3089447  |           }
+ 0)  ftdc-3089447  |         }
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |     _raw_spin_lock_irq();
+ 0)  ftdc-3089447  |     _raw_spin_unlock_irq();
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  |   mem_cgroup_handle_over_high();
+ 0)  ftdc-3089447  |   blkcg_maybe_throttle_current();
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_getpid() {
+ 0)  ftdc-3089447  |       __task_pid_nr_ns() {
+ 0)  ftdc-3089447  |         __rcu_read_lock();
+ 0)  ftdc-3089447  |         __rcu_read_unlock();
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_sched_getaffinity() {
+ 0)  ftdc-3089447  |       sched_getaffinity() {
+ 0)  ftdc-3089447  |         __rcu_read_lock();
+ 0)  ftdc-3089447  |         security_task_getscheduler();
+ 0)  ftdc-3089447  |         _raw_spin_lock_irqsave();
+ 0)  ftdc-3089447  |         _raw_spin_unlock_irqrestore();
+ 0)  ftdc-3089447  |         __rcu_read_unlock();
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |       __check_object_size() {
+ 0)  ftdc-3089447  |         check_stack_object();
+ 0)  ftdc-3089447  |       }
+ 0)  ftdc-3089447  |     }
+ 0)  ftdc-3089447  |   }
+ 0)  ftdc-3089447  | }
+ 0)  ftdc-3089447  | post_ttbr_update_workaround();
+ 0)  ftdc-3089447  | el0_svc_handler() {
+ 0)  ftdc-3089447  |   el0_svc_common.constprop.0() {
+ 0)  ftdc-3089447  |     __arm64_sys_openat() {
+ 0)  ftdc-3089447  |       do_sys_open() {
+ 0)  ftdc-3089447  |         getname() {
+ 0)  ftdc-3089447  |           getname_flags() {
+ 0)  ftdc-3089447  |             kmem_cache_alloc() {
+ 0)  ftdc-3089447  |               should_failslab();
+ 0)  ftdc-3089447  |               memcg_kmem_put_cache();
+ 0)  ftdc-3089447  |             }
+ 0)  ftdc-3089447  |             __check_object_size() {

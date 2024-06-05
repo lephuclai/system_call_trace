@@ -1,0 +1,199 @@
+ 0) <...>-3170231  |               finish_task_switch() {
+ 0) <...>-3170231  |                 _raw_spin_unlock_irq();
+ 0) <...>-3170231  |               }
+ 0) <...>-3170231  |             }
+ 0) <...>-3170231  |           }
+ 0) <...>-3170231  |           _raw_spin_lock();
+ 0) <...>-3170231  |           __unqueue_futex();
+ 0) <...>-3170231  |           _raw_spin_unlock();
+ 0) <...>-3170231  |           drop_futex_key_refs.isra.0();
+ 0) <...>-3170231  |           hrtimer_cancel() {
+ 0) <...>-3170231  |             hrtimer_try_to_cancel() {
+ 0) <...>-3170231  |               hrtimer_active();
+ 0) <...>-3170231  |             }
+ 0) <...>-3170231  |           }
+ 0) <...>-3170231  |         }
+ 0) <...>-3170231  |       }
+ 0) <...>-3170231  |     } /* __arm64_sys_futex */
+ 0) <...>-3170231  |   } /* el0_svc_common.constprop.0 */
+ 0) <...>-3170231  | } /* el0_svc_handler */
+ 0) <...>-3170231  | do_notify_resume() {
+ 0) <...>-3170231  |   fpsimd_restore_current_state() {
+ 0) <...>-3170231  |     __get_cpu_fpsimd_context();
+ 0) <...>-3170231  |     task_fpsimd_load() {
+ 0) <...>-3170231  |       have_cpu_fpsimd_context();
+ 0) <...>-3170231  |     }
+ 0) <...>-3170231  |     fpsimd_bind_task_to_cpu();
+ 0) <...>-3170231  |     put_cpu_fpsimd_context() {
+ 0) <...>-3170231  |       __put_cpu_fpsimd_context();
+ 0) <...>-3170231  |     }
+ 0) <...>-3170231  |   }
+ 0) <...>-3170231  | }
+ 0) <...>-3170231  | post_ttbr_update_workaround();
+ 0) <...>-3170231  | el0_svc_handler() {
+ 0) <...>-3170231  |   el0_svc_common.constprop.0() {
+ 0) <...>-3170231  |     __arm64_sys_futex() {
+ 0) <...>-3170231  |       do_futex() {
+ 0) <...>-3170231  |         futex_wake() {
+ 0) <...>-3170231  |           get_futex_key() {
+ 0) <...>-3170231  |             get_futex_key_refs.isra.0();
+ 0) <...>-3170231  |           }
+ 0) <...>-3170231  |           hash_futex();
+ 0) <...>-3170231  |           drop_futex_key_refs.isra.0();
+ 0) <...>-3170231  |         }
+ 0) <...>-3170231  |       }
+ 0) <...>-3170231  |     }
+ 0) <...>-3170231  |   }
+ 0) <...>-3170231  | }
+ 0) <...>-3170231  | post_ttbr_update_workaround();
+ 0) <...>-3170231  | el0_svc_handler() {
+ 0) <...>-3170231  |   el0_svc_common.constprop.0() {
+ 0) <...>-3170231  |     __arm64_sys_futex() {
+ 0) <...>-3170231  |       get_timespec64();
+ 0) <...>-3170231  |       do_futex() {
+ 0) <...>-3170231  |         futex_wait() {
+ 0) <...>-3170231  |           hrtimer_init_sleeper() {
+ 0) <...>-3170231  |             __hrtimer_init();
+ 0) <...>-3170231  |           }
+ 0) <...>-3170231  |           ktime_add_safe();
+ 0) <...>-3170231  |           futex_wait_setup() {
+ 0) <...>-3170231  |             get_futex_key() {
+ 0) <...>-3170231  |               get_futex_key_refs.isra.0();
+ 0) <...>-3170231  |             }
+ 0) <...>-3170231  |             hash_futex();
+ 0) <...>-3170231  |             _raw_spin_lock();
+ 0) <...>-3170231  |             get_futex_value_locked();
+ 0) <...>-3170231  |           }
+ 0) <...>-3170231  |           futex_wait_queue_me() {
+ 0) <...>-3170231  |             _raw_spin_unlock();
+ 0) <...>-3170231  |             hrtimer_sleeper_start_expires() {
+ 0) <...>-3170231  |               hrtimer_start_range_ns() {
+ 0) <...>-3170231  |                 lock_hrtimer_base() {
+ 0) <...>-3170231  |                   _raw_spin_lock_irqsave();
+ 0) <...>-3170231  |                 }
+ 0) <...>-3170231  |                 get_nohz_timer_target();
+ 0) <...>-3170231  |                 enqueue_hrtimer();
+ 0) <...>-3170231  |                 _raw_spin_unlock_irqrestore();
+ 0) <...>-3170231  |               }
+ 0) <...>-3170231  |             }
+ 0) <...>-3170231  |             schedule() {
+ 0) <...>-3170231  |               rcu_note_context_switch() {
+ 0) <...>-3170231  |                 rcu_preempt_deferred_qs() {
+ 0) <...>-3170231  |                   rcu_preempt_need_deferred_qs();
+ 0) <...>-3170231  |                 }
+ 0) <...>-3170231  |                 rcu_qs();
+ 0) <...>-3170231  |               }
+ 0) <...>-3170231  |               _raw_spin_lock();
+ 0) <...>-3170231  |               update_rq_clock();
+ 0) <...>-3170231  |               deactivate_task() {
+ 0) <...>-3170231  |                 psi_task_change() {
+ 0) <...>-3170231  |                   record_times.isra.0();
+ 0) <...>-3170231  |                   record_times.isra.0();
+ 0) <...>-3170231  |                   record_times.isra.0();
+ 0) <...>-3170231  |                   record_times.isra.0();
+ 0) <...>-3170231  |                   record_times.isra.0();
+ 0) <...>-3170231  |                 }
+ 0) <...>-3170231  |                 dequeue_task_fair() {
+ 0) <...>-3170231  |                   dequeue_entity() {
+ 0) <...>-3170231  |                     update_curr() {
+ 0) <...>-3170231  |                       update_min_vruntime();
+ 0) <...>-3170231  |                       cpuacct_charge() {
+ 0) <...>-3170231  |                         __rcu_read_lock();
+ 0) <...>-3170231  |                         __rcu_read_unlock();
+ 0) <...>-3170231  |                       }
+ 0) <...>-3170231  |                       __rcu_read_lock();
+ 0) <...>-3170231  |                       __cgroup_account_cputime() {
+ 0) <...>-3170231  |                         cgroup_base_stat_cputime_account_begin();
+ 0) <...>-3170231  |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) <...>-3170231  |                           cgroup_rstat_updated();
+ 0) <...>-3170231  |                         }
+ 0) <...>-3170231  |                       }
+ 0) <...>-3170231  |                       __rcu_read_unlock();
+ 0) <...>-3170231  |                     }
+ 0) <...>-3170231  |                     __update_load_avg_se();
+ 0) <...>-3170231  |                     __update_load_avg_cfs_rq();
+ 0) <...>-3170231  |                     clear_buddies();
+ 0) <...>-3170231  |                     update_cfs_group();
+ 0) <...>-3170231  |                     update_min_vruntime();
+ 0) <...>-3170231  |                   }
+ 0) <...>-3170231  |                   dequeue_entity() {
+ 0) <...>-3170231  |                     update_curr() {
+ 0) <...>-3170231  |                       __calc_delta();
+ 0) <...>-3170231  |                       update_min_vruntime();
+ 0) <...>-3170231  |                     }
+ 0) <...>-3170231  |                     __update_load_avg_se();
+ 0) <...>-3170231  |                     __update_load_avg_cfs_rq();
+ 0) <...>-3170231  |                     clear_buddies();
+ 0) <...>-3170231  |                     update_cfs_group() {
+ 0) <...>-3170231  |                       reweight_entity();
+ 0) <...>-3170231  |                     }
+ 0) <...>-3170231  |                     update_min_vruntime();
+ 0) <...>-3170231  |                   }
+ 0) <...>-3170231  |                   dequeue_entity() {
+ 0) <...>-3170231  |                     update_curr() {
+ 0) <...>-3170231  |                       __calc_delta();
+ 0) <...>-3170231  |                       update_min_vruntime();
+ 0) <...>-3170231  |                     }
+ 0) <...>-3170231  |                     __update_load_avg_se();
+ 0) <...>-3170231  |                     __update_load_avg_cfs_rq();
+ 0) <...>-3170231  |                     clear_buddies();
+ 0) <...>-3170231  |                     update_cfs_group() {
+ 0) <...>-3170231  |                       reweight_entity();
+ 0) <...>-3170231  |                     }
+ 0) <...>-3170231  |                     update_min_vruntime();
+ 0) <...>-3170231  |                   }
+ 0) <...>-3170231  |                   dequeue_entity() {
+ 0) <...>-3170231  |                     update_curr() {
+ 0) <...>-3170231  |                       __calc_delta();
+ 0) <...>-3170231  |                       update_min_vruntime();
+ 0) <...>-3170231  |                     }
+ 0) <...>-3170231  |                     __update_load_avg_se();
+ 0) <...>-3170231  |                     __update_load_avg_cfs_rq();
+ 0) <...>-3170231  |                     clear_buddies();
+ 0) <...>-3170231  |                     update_cfs_group() {
+ 0) <...>-3170231  |                       reweight_entity();
+ 0) <...>-3170231  |                     }
+ 0) <...>-3170231  |                     update_min_vruntime();
+ 0) <...>-3170231  |                   }
+ 0) <...>-3170231  |                   dequeue_entity() {
+ 0) <...>-3170231  |                     update_curr() {
+ 0) <...>-3170231  |                       __calc_delta();
+ 0) <...>-3170231  |                       update_min_vruntime();
+ 0) <...>-3170231  |                     }
+ 0) <...>-3170231  |                     __update_load_avg_se();
+ 0) <...>-3170231  |                     __update_load_avg_cfs_rq();
+ 0) <...>-3170231  |                     clear_buddies();
+ 0) <...>-3170231  |                     update_cfs_group() {
+ 0) <...>-3170231  |                       reweight_entity();
+ 0) <...>-3170231  |                     }
+ 0) <...>-3170231  |                     update_min_vruntime();
+ 0) <...>-3170231  |                   }
+ 0) <...>-3170231  |                   hrtick_update();
+ 0) <...>-3170231  |                 }
+ 0) <...>-3170231  |               }
+ 0) <...>-3170231  |               pick_next_task_fair() {
+ 0) <...>-3170231  |                 newidle_balance() {
+ 0) <...>-3170231  |                   __rcu_read_lock();
+ 0) <...>-3170231  |                   __msecs_to_jiffies();
+ 0) <...>-3170231  |                   __rcu_read_unlock();
+ 0) <...>-3170231  |                 }
+ 0) <...>-3170231  |               }
+ 0) <...>-3170231  |               pick_next_task_idle() {
+ 0) <...>-3170231  |                 put_prev_task_fair() {
+ 0) <...>-3170231  |                   put_prev_entity() {
+ 0) <...>-3170231  |                     check_cfs_rq_runtime();
+ 0) <...>-3170231  |                   }
+ 0) <...>-3170231  |                   put_prev_entity() {
+ 0) <...>-3170231  |                     check_cfs_rq_runtime();
+ 0) <...>-3170231  |                   }
+ 0) <...>-3170231  |                   put_prev_entity() {
+ 0) <...>-3170231  |                     check_cfs_rq_runtime();
+ 0) <...>-3170231  |                   }
+ 0) <...>-3170231  |                   put_prev_entity() {
+ 0) <...>-3170231  |                     check_cfs_rq_runtime();
+ 0) <...>-3170231  |                   }
+ 0) <...>-3170231  |                   put_prev_entity() {
+ 0) <...>-3170231  |                     check_cfs_rq_runtime();
+ 0) <...>-3170231  |                   }
+ 0) <...>-3170231  |                 }
+ 0) <...>-3170231  |               }

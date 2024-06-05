@@ -1,0 +1,168 @@
+ 0) clientc-3350403 |               finish_task_switch() {
+ 0) clientc-3350403 |                 _raw_spin_unlock_irq();
+ 0) clientc-3350403 |               }
+ 0) clientc-3350403 |             } /* schedule */
+ 0) clientc-3350403 |             hrtimer_try_to_cancel() {
+ 0) clientc-3350403 |               hrtimer_active();
+ 0) clientc-3350403 |             }
+ 0) clientc-3350403 |           } /* do_nanosleep */
+ 0) clientc-3350403 |         } /* hrtimer_nanosleep */
+ 0) clientc-3350403 |       } /* common_nsleep */
+ 0) clientc-3350403 |     } /* __arm64_sys_clock_nanosleep */
+ 0) clientc-3350403 |   } /* el0_svc_common.constprop.0 */
+ 0) clientc-3350403 | } /* el0_svc_handler */
+ 0) clientc-3350403 | do_notify_resume() {
+ 0) clientc-3350403 |   fpsimd_restore_current_state() {
+ 0) clientc-3350403 |     __get_cpu_fpsimd_context();
+ 0) clientc-3350403 |     task_fpsimd_load() {
+ 0) clientc-3350403 |       have_cpu_fpsimd_context();
+ 0) clientc-3350403 |     }
+ 0) clientc-3350403 |     fpsimd_bind_task_to_cpu();
+ 0) clientc-3350403 |     put_cpu_fpsimd_context() {
+ 0) clientc-3350403 |       __put_cpu_fpsimd_context();
+ 0) clientc-3350403 |     }
+ 0) clientc-3350403 |   }
+ 0) clientc-3350403 | }
+ 0) clientc-3350403 | post_ttbr_update_workaround();
+ 0) clientc-3350403 | el0_svc_handler() {
+ 0) clientc-3350403 |   el0_svc_common.constprop.0() {
+ 0) clientc-3350403 |     __arm64_sys_clock_nanosleep() {
+ 0) clientc-3350403 |       get_timespec64();
+ 0) clientc-3350403 |       common_nsleep() {
+ 0) clientc-3350403 |         hrtimer_nanosleep() {
+ 0) clientc-3350403 |           hrtimer_init_sleeper() {
+ 0) clientc-3350403 |             __hrtimer_init();
+ 0) clientc-3350403 |           }
+ 0) clientc-3350403 |           do_nanosleep() {
+ 0) clientc-3350403 |             hrtimer_start_range_ns() {
+ 0) clientc-3350403 |               lock_hrtimer_base() {
+ 0) clientc-3350403 |                 _raw_spin_lock_irqsave();
+ 0) clientc-3350403 |               }
+ 0) clientc-3350403 |               ktime_get() {
+ 0) clientc-3350403 |                 arch_counter_read();
+ 0) clientc-3350403 |               }
+ 0) clientc-3350403 |               get_nohz_timer_target();
+ 0) clientc-3350403 |               enqueue_hrtimer();
+ 0) clientc-3350403 |               _raw_spin_unlock_irqrestore();
+ 0) clientc-3350403 |             }
+ 0) clientc-3350403 |             schedule() {
+ 0) clientc-3350403 |               rcu_note_context_switch() {
+ 0) clientc-3350403 |                 rcu_preempt_deferred_qs() {
+ 0) clientc-3350403 |                   rcu_preempt_need_deferred_qs();
+ 0) clientc-3350403 |                 }
+ 0) clientc-3350403 |                 rcu_qs();
+ 0) clientc-3350403 |               }
+ 0) clientc-3350403 |               _raw_spin_lock();
+ 0) clientc-3350403 |               update_rq_clock();
+ 0) clientc-3350403 |               deactivate_task() {
+ 0) clientc-3350403 |                 psi_task_change() {
+ 0) clientc-3350403 |                   record_times.isra.0();
+ 0) clientc-3350403 |                   record_times.isra.0();
+ 0) clientc-3350403 |                   record_times.isra.0();
+ 0) clientc-3350403 |                   record_times.isra.0();
+ 0) clientc-3350403 |                   record_times.isra.0();
+ 0) clientc-3350403 |                 }
+ 0) clientc-3350403 |                 dequeue_task_fair() {
+ 0) clientc-3350403 |                   dequeue_entity() {
+ 0) clientc-3350403 |                     update_curr() {
+ 0) clientc-3350403 |                       update_min_vruntime();
+ 0) clientc-3350403 |                       cpuacct_charge() {
+ 0) clientc-3350403 |                         __rcu_read_lock();
+ 0) clientc-3350403 |                         __rcu_read_unlock();
+ 0) clientc-3350403 |                       }
+ 0) clientc-3350403 |                       __rcu_read_lock();
+ 0) clientc-3350403 |                       __cgroup_account_cputime() {
+ 0) clientc-3350403 |                         cgroup_base_stat_cputime_account_begin();
+ 0) clientc-3350403 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) clientc-3350403 |                           cgroup_rstat_updated();
+ 0) clientc-3350403 |                         }
+ 0) clientc-3350403 |                       }
+ 0) clientc-3350403 |                       __rcu_read_unlock();
+ 0) clientc-3350403 |                     }
+ 0) clientc-3350403 |                     __update_load_avg_se();
+ 0) clientc-3350403 |                     __update_load_avg_cfs_rq();
+ 0) clientc-3350403 |                     clear_buddies();
+ 0) clientc-3350403 |                     update_cfs_group();
+ 0) clientc-3350403 |                     update_min_vruntime();
+ 0) clientc-3350403 |                   }
+ 0) clientc-3350403 |                   dequeue_entity() {
+ 0) clientc-3350403 |                     update_curr() {
+ 0) clientc-3350403 |                       __calc_delta();
+ 0) clientc-3350403 |                       update_min_vruntime();
+ 0) clientc-3350403 |                     }
+ 0) clientc-3350403 |                     __update_load_avg_se();
+ 0) clientc-3350403 |                     __update_load_avg_cfs_rq();
+ 0) clientc-3350403 |                     clear_buddies();
+ 0) clientc-3350403 |                     update_cfs_group() {
+ 0) clientc-3350403 |                       reweight_entity();
+ 0) clientc-3350403 |                     }
+ 0) clientc-3350403 |                     update_min_vruntime();
+ 0) clientc-3350403 |                   }
+ 0) clientc-3350403 |                   dequeue_entity() {
+ 0) clientc-3350403 |                     update_curr() {
+ 0) clientc-3350403 |                       __calc_delta();
+ 0) clientc-3350403 |                       update_min_vruntime();
+ 0) clientc-3350403 |                     }
+ 0) clientc-3350403 |                     __update_load_avg_se();
+ 0) clientc-3350403 |                     __update_load_avg_cfs_rq();
+ 0) clientc-3350403 |                     clear_buddies();
+ 0) clientc-3350403 |                     update_cfs_group() {
+ 0) clientc-3350403 |                       reweight_entity();
+ 0) clientc-3350403 |                     }
+ 0) clientc-3350403 |                     update_min_vruntime();
+ 0) clientc-3350403 |                   }
+ 0) clientc-3350403 |                   dequeue_entity() {
+ 0) clientc-3350403 |                     update_curr() {
+ 0) clientc-3350403 |                       __calc_delta();
+ 0) clientc-3350403 |                       update_min_vruntime();
+ 0) clientc-3350403 |                     }
+ 0) clientc-3350403 |                     __update_load_avg_se();
+ 0) clientc-3350403 |                     __update_load_avg_cfs_rq();
+ 0) clientc-3350403 |                     clear_buddies();
+ 0) clientc-3350403 |                     update_cfs_group() {
+ 0) clientc-3350403 |                       reweight_entity();
+ 0) clientc-3350403 |                     }
+ 0) clientc-3350403 |                     update_min_vruntime();
+ 0) clientc-3350403 |                   }
+ 0) clientc-3350403 |                   dequeue_entity() {
+ 0) clientc-3350403 |                     update_curr() {
+ 0) clientc-3350403 |                       __calc_delta();
+ 0) clientc-3350403 |                       update_min_vruntime();
+ 0) clientc-3350403 |                     }
+ 0) clientc-3350403 |                     __update_load_avg_se();
+ 0) clientc-3350403 |                     __update_load_avg_cfs_rq();
+ 0) clientc-3350403 |                     clear_buddies();
+ 0) clientc-3350403 |                     update_cfs_group() {
+ 0) clientc-3350403 |                       reweight_entity();
+ 0) clientc-3350403 |                     }
+ 0) clientc-3350403 |                     update_min_vruntime();
+ 0) clientc-3350403 |                   }
+ 0) clientc-3350403 |                   hrtick_update();
+ 0) clientc-3350403 |                 }
+ 0) clientc-3350403 |               }
+ 0) clientc-3350403 |               pick_next_task_fair() {
+ 0) clientc-3350403 |                 newidle_balance() {
+ 0) clientc-3350403 |                   __rcu_read_lock();
+ 0) clientc-3350403 |                   __msecs_to_jiffies();
+ 0) clientc-3350403 |                   __rcu_read_unlock();
+ 0) clientc-3350403 |                 }
+ 0) clientc-3350403 |               }
+ 0) clientc-3350403 |               pick_next_task_idle() {
+ 0) clientc-3350403 |                 put_prev_task_fair() {
+ 0) clientc-3350403 |                   put_prev_entity() {
+ 0) clientc-3350403 |                     check_cfs_rq_runtime();
+ 0) clientc-3350403 |                   }
+ 0) clientc-3350403 |                   put_prev_entity() {
+ 0) clientc-3350403 |                     check_cfs_rq_runtime();
+ 0) clientc-3350403 |                   }
+ 0) clientc-3350403 |                   put_prev_entity() {
+ 0) clientc-3350403 |                     check_cfs_rq_runtime();
+ 0) clientc-3350403 |                   }
+ 0) clientc-3350403 |                   put_prev_entity() {
+ 0) clientc-3350403 |                     check_cfs_rq_runtime();
+ 0) clientc-3350403 |                   }
+ 0) clientc-3350403 |                   put_prev_entity() {
+ 0) clientc-3350403 |                     check_cfs_rq_runtime();
+ 0) clientc-3350403 |                   }
+ 0) clientc-3350403 |                 }
+ 0) clientc-3350403 |               }

@@ -1,0 +1,47 @@
+containerd-shim,1568172 -namespace k8s.io -id 93200e08a5ee5457974b446c88843b5b027882b8e89f7f44a770ece91dc06103 -address /run/containerd/containerd.sock
+  |-mongod,1568343 --auth --bind_ip_all
+  |   |-{mongod},1568379
+  |   |-{mongod},1568380
+  |   |-{mongod},1568381
+  |   |-{mongod},1568382
+  |   |-{mongod},1568441
+  |   |-{mongod},1568452
+  |   |-{mongod},1568453
+  |   |-{mongod},1568454
+  |   |-{mongod},1568455
+  |   |-{mongod},1568456
+  |   |-{mongod},1568457
+  |   |-{mongod},1568458
+  |   |-{mongod},1568459
+  |   |-{mongod},1568460
+  |   |-{mongod},1568461
+  |   |-{mongod},1568462
+  |   |-{mongod},1568463
+  |   |-{mongod},1568464
+  |   |-{mongod},1568466
+  |   |-{mongod},1568467
+  |   |-{mongod},1568468
+  |   |-{mongod},1568469
+  |   |-{mongod},1568470
+  |   |-{mongod},1568471
+  |   |-{mongod},1568472
+  |   |-{mongod},1568473
+  |   |-{mongod},1568474
+  |   |-{mongod},1568475
+  |   |-{mongod},1568476
+  |   |-{mongod},1568477
+  |   |-{mongod},1568478
+  |   |-{mongod},1568479
+  |   `-{mongod},1568480
+  |-pause,1568218
+  |-{containerd-shim},1568174
+  |-{containerd-shim},1568175
+  |-{containerd-shim},1568176
+  |-{containerd-shim},1568185
+  |-{containerd-shim},1568186
+  |-{containerd-shim},1568187
+  |-{containerd-shim},1568188
+  |-{containerd-shim},1568190
+  |-{containerd-shim},1568191
+  |-{containerd-shim},1568192
+  `-{containerd-shim},1568193

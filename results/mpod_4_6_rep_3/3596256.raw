@@ -1,0 +1,649 @@
+ 0) mongod-3596256 |               finish_task_switch() {
+ 0) mongod-3596256 |                 _raw_spin_unlock_irq();
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |             }
+ 0) mongod-3596256 |           }
+ 0) mongod-3596256 |           _raw_spin_lock();
+ 0) mongod-3596256 |           __unqueue_futex();
+ 0) mongod-3596256 |           _raw_spin_unlock();
+ 0) mongod-3596256 |           drop_futex_key_refs.isra.0();
+ 0) mongod-3596256 |           hrtimer_cancel() {
+ 0) mongod-3596256 |             hrtimer_try_to_cancel() {
+ 0) mongod-3596256 |               hrtimer_active();
+ 0) mongod-3596256 |             }
+ 0) mongod-3596256 |           }
+ 0) mongod-3596256 |         }
+ 0) mongod-3596256 |       }
+ 0) mongod-3596256 |     } /* __arm64_sys_futex */
+ 0) mongod-3596256 |   } /* el0_svc_common.constprop.0 */
+ 0) mongod-3596256 | } /* el0_svc_handler */
+ 0) mongod-3596256 | do_notify_resume() {
+ 0) mongod-3596256 |   fpsimd_restore_current_state() {
+ 0) mongod-3596256 |     __get_cpu_fpsimd_context();
+ 0) mongod-3596256 |     task_fpsimd_load() {
+ 0) mongod-3596256 |       have_cpu_fpsimd_context();
+ 0) mongod-3596256 |     }
+ 0) mongod-3596256 |     fpsimd_bind_task_to_cpu();
+ 0) mongod-3596256 |     put_cpu_fpsimd_context() {
+ 0) mongod-3596256 |       __put_cpu_fpsimd_context();
+ 0) mongod-3596256 |     }
+ 0) mongod-3596256 |   }
+ 0) mongod-3596256 | }
+ 0) mongod-3596256 | post_ttbr_update_workaround();
+ 0) mongod-3596256 | el0_svc_handler() {
+ 0) mongod-3596256 |   el0_svc_common.constprop.0() {
+ 0) mongod-3596256 |     __arm64_sys_futex() {
+ 0) mongod-3596256 |       do_futex() {
+ 0) mongod-3596256 |         futex_wake() {
+ 0) mongod-3596256 |           get_futex_key() {
+ 0) mongod-3596256 |             get_futex_key_refs.isra.0();
+ 0) mongod-3596256 |           }
+ 0) mongod-3596256 |           hash_futex();
+ 0) mongod-3596256 |           _raw_spin_lock();
+ 0) mongod-3596256 |           _raw_spin_unlock();
+ 0) mongod-3596256 |           wake_up_q();
+ 0) mongod-3596256 |           drop_futex_key_refs.isra.0();
+ 0) mongod-3596256 |         }
+ 0) mongod-3596256 |       }
+ 0) mongod-3596256 |     }
+ 0) mongod-3596256 |   }
+ 0) mongod-3596256 | }
+ 0) mongod-3596256 | post_ttbr_update_workaround();
+ 0) mongod-3596256 | el0_svc_handler() {
+ 0) mongod-3596256 |   el0_svc_common.constprop.0() {
+ 0) mongod-3596256 |     __arm64_sys_futex() {
+ 0) mongod-3596256 |       get_timespec64();
+ 0) mongod-3596256 |       do_futex() {
+ 0) mongod-3596256 |         futex_wait() {
+ 0) mongod-3596256 |           hrtimer_init_sleeper() {
+ 0) mongod-3596256 |             __hrtimer_init();
+ 0) mongod-3596256 |           }
+ 0) mongod-3596256 |           ktime_add_safe();
+ 0) mongod-3596256 |           futex_wait_setup() {
+ 0) mongod-3596256 |             get_futex_key() {
+ 0) mongod-3596256 |               get_futex_key_refs.isra.0();
+ 0) mongod-3596256 |             }
+ 0) mongod-3596256 |             hash_futex();
+ 0) mongod-3596256 |             _raw_spin_lock();
+ 0) mongod-3596256 |             get_futex_value_locked();
+ 0) mongod-3596256 |           }
+ 0) mongod-3596256 |           futex_wait_queue_me() {
+ 0) mongod-3596256 |             _raw_spin_unlock();
+ 0) mongod-3596256 |             hrtimer_sleeper_start_expires() {
+ 0) mongod-3596256 |               hrtimer_start_range_ns() {
+ 0) mongod-3596256 |                 lock_hrtimer_base() {
+ 0) mongod-3596256 |                   _raw_spin_lock_irqsave();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 get_nohz_timer_target();
+ 0) mongod-3596256 |                 enqueue_hrtimer();
+ 0) mongod-3596256 |                 _raw_spin_unlock_irqrestore();
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |             }
+ 0) mongod-3596256 |             schedule() {
+ 0) mongod-3596256 |               rcu_note_context_switch() {
+ 0) mongod-3596256 |                 rcu_preempt_deferred_qs() {
+ 0) mongod-3596256 |                   rcu_preempt_need_deferred_qs();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 rcu_qs();
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |               _raw_spin_lock();
+ 0) mongod-3596256 |               update_rq_clock();
+ 0) mongod-3596256 |               deactivate_task() {
+ 0) mongod-3596256 |                 psi_task_change() {
+ 0) mongod-3596256 |                   record_times.isra.0();
+ 0) mongod-3596256 |                   record_times.isra.0();
+ 0) mongod-3596256 |                   record_times.isra.0();
+ 0) mongod-3596256 |                   record_times.isra.0();
+ 0) mongod-3596256 |                   record_times.isra.0();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 dequeue_task_fair() {
+ 0) mongod-3596256 |                   dequeue_entity() {
+ 0) mongod-3596256 |                     update_curr() {
+ 0) mongod-3596256 |                       update_min_vruntime();
+ 0) mongod-3596256 |                       cpuacct_charge() {
+ 0) mongod-3596256 |                         __rcu_read_lock();
+ 0) mongod-3596256 |                         __rcu_read_unlock();
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                       __rcu_read_lock();
+ 0) mongod-3596256 |                       __cgroup_account_cputime() {
+ 0) mongod-3596256 |                         cgroup_base_stat_cputime_account_begin();
+ 0) mongod-3596256 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) mongod-3596256 |                           cgroup_rstat_updated();
+ 0) mongod-3596256 |                         }
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                       __rcu_read_unlock();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_se() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     clear_buddies();
+ 0) mongod-3596256 |                     update_cfs_group();
+ 0) mongod-3596256 |                     update_min_vruntime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   dequeue_entity() {
+ 0) mongod-3596256 |                     update_curr() {
+ 0) mongod-3596256 |                       __calc_delta();
+ 0) mongod-3596256 |                       update_min_vruntime();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_se() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     clear_buddies();
+ 0) mongod-3596256 |                     update_cfs_group() {
+ 0) mongod-3596256 |                       reweight_entity();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     update_min_vruntime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   dequeue_entity() {
+ 0) mongod-3596256 |                     update_curr() {
+ 0) mongod-3596256 |                       __calc_delta();
+ 0) mongod-3596256 |                       update_min_vruntime();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_se() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     clear_buddies();
+ 0) mongod-3596256 |                     update_cfs_group() {
+ 0) mongod-3596256 |                       reweight_entity();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     update_min_vruntime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   dequeue_entity() {
+ 0) mongod-3596256 |                     update_curr() {
+ 0) mongod-3596256 |                       __calc_delta();
+ 0) mongod-3596256 |                       update_min_vruntime();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_se() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     clear_buddies();
+ 0) mongod-3596256 |                     update_cfs_group() {
+ 0) mongod-3596256 |                       reweight_entity();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     update_min_vruntime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   dequeue_entity() {
+ 0) mongod-3596256 |                     update_curr() {
+ 0) mongod-3596256 |                       __calc_delta();
+ 0) mongod-3596256 |                       update_min_vruntime();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_se() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     dbs_update_util_handler() {
+ 0) mongod-3596256 |                       cpufreq_this_cpu_can_update();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     clear_buddies();
+ 0) mongod-3596256 |                     update_cfs_group() {
+ 0) mongod-3596256 |                       reweight_entity();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     update_min_vruntime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   hrtick_update();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |               pick_next_task_fair() {
+ 0) mongod-3596256 |                 newidle_balance() {
+ 0) mongod-3596256 |                   _raw_spin_unlock();
+ 0) mongod-3596256 |                   update_blocked_averages() {
+ 0) mongod-3596256 |                     _raw_spin_lock_irqsave();
+ 0) mongod-3596256 |                     update_rq_clock();
+ 0) mongod-3596256 |                     update_rt_rq_load_avg() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     update_dl_rq_load_avg() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_se() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     __update_load_avg_se();
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     __update_load_avg_se();
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     __update_load_avg_se() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     __update_load_avg_se();
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     __update_load_avg_se();
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                       __accumulate_pelt_segments();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     dbs_update_util_handler() {
+ 0) mongod-3596256 |                       cpufreq_this_cpu_can_update();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     _raw_spin_unlock_irqrestore();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   __rcu_read_lock();
+ 0) mongod-3596256 |                   load_balance() {
+ 0) mongod-3596256 |                     find_busiest_group() {
+ 0) mongod-3596256 |                       update_group_capacity() {
+ 0) mongod-3596256 |                         __msecs_to_jiffies();
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                       update_nohz_stats();
+ 0) mongod-3596256 |                       idle_cpu();
+ 0) mongod-3596256 |                       update_nohz_stats() {
+ 0) mongod-3596256 |                         update_blocked_averages() {
+ 0) mongod-3596256 |                           _raw_spin_lock_irqsave();
+ 0) mongod-3596256 |                           update_rq_clock();
+ 0) mongod-3596256 |                           update_rt_rq_load_avg() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           update_dl_rq_load_avg() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_se() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           dbs_update_util_handler() {
+ 0) mongod-3596256 |                             cpufreq_this_cpu_can_update();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_se() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                           __update_load_avg_se() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                           dbs_update_util_handler() {
+ 0) mongod-3596256 |                             cpufreq_this_cpu_can_update();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           _raw_spin_unlock_irqrestore();
+ 0) mongod-3596256 |                         }
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                       idle_cpu();
+ 0) mongod-3596256 |                       update_nohz_stats() {
+ 0) mongod-3596256 |                         update_blocked_averages() {
+ 0) mongod-3596256 |                           _raw_spin_lock_irqsave();
+ 0) mongod-3596256 |                           update_rq_clock();
+ 0) mongod-3596256 |                           update_rt_rq_load_avg() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           update_dl_rq_load_avg() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_se() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_se() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           dbs_update_util_handler() {
+ 0) mongod-3596256 |                             cpufreq_this_cpu_can_update();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                           __update_load_avg_se() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                           dbs_update_util_handler() {
+ 0) mongod-3596256 |                             cpufreq_this_cpu_can_update();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           _raw_spin_unlock_irqrestore();
+ 0) mongod-3596256 |                         }
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                       idle_cpu();
+ 0) mongod-3596256 |                       update_nohz_stats() {
+ 0) mongod-3596256 |                         update_blocked_averages() {
+ 0) mongod-3596256 |                           _raw_spin_lock_irqsave();
+ 0) mongod-3596256 |                           update_rq_clock();
+ 0) mongod-3596256 |                           update_rt_rq_load_avg() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           update_dl_rq_load_avg() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_se() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           dbs_update_util_handler() {
+ 0) mongod-3596256 |                             cpufreq_this_cpu_can_update();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_se() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                           __update_load_avg_se() {
+ 0) mongod-3596256 |                             __accumulate_pelt_segments();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                           __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                           dbs_update_util_handler() {
+ 0) mongod-3596256 |                             cpufreq_this_cpu_can_update();
+ 0) mongod-3596256 |                           }
+ 0) mongod-3596256 |                           _raw_spin_unlock_irqrestore();
+ 0) mongod-3596256 |                         }
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                       idle_cpu();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   __msecs_to_jiffies();
+ 0) mongod-3596256 |                   __rcu_read_unlock();
+ 0) mongod-3596256 |                   _raw_spin_lock();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |               pick_next_task_idle() {
+ 0) mongod-3596256 |                 put_prev_task_fair() {
+ 0) mongod-3596256 |                   put_prev_entity() {
+ 0) mongod-3596256 |                     check_cfs_rq_runtime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   put_prev_entity() {
+ 0) mongod-3596256 |                     check_cfs_rq_runtime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   put_prev_entity() {
+ 0) mongod-3596256 |                     check_cfs_rq_runtime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   put_prev_entity() {
+ 0) mongod-3596256 |                     check_cfs_rq_runtime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   put_prev_entity() {
+ 0) mongod-3596256 |                     check_cfs_rq_runtime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |               finish_task_switch() {
+ 0) mongod-3596256 |                 _raw_spin_unlock_irq();
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |             } /* schedule */
+ 0) mongod-3596256 |           } /* futex_wait_queue_me */
+ 0) mongod-3596256 |           _raw_spin_lock();
+ 0) mongod-3596256 |           __unqueue_futex();
+ 0) mongod-3596256 |           _raw_spin_unlock();
+ 0) mongod-3596256 |           drop_futex_key_refs.isra.0();
+ 0) mongod-3596256 |           hrtimer_cancel() {
+ 0) mongod-3596256 |             hrtimer_try_to_cancel() {
+ 0) mongod-3596256 |               hrtimer_active();
+ 0) mongod-3596256 |             }
+ 0) mongod-3596256 |           }
+ 0) mongod-3596256 |         } /* futex_wait */
+ 0) mongod-3596256 |       } /* do_futex */
+ 0) mongod-3596256 |     } /* __arm64_sys_futex */
+ 0) mongod-3596256 |   } /* el0_svc_common.constprop.0 */
+ 0) mongod-3596256 | } /* el0_svc_handler */
+ 0) mongod-3596256 | do_notify_resume() {
+ 0) mongod-3596256 |   fpsimd_restore_current_state() {
+ 0) mongod-3596256 |     __get_cpu_fpsimd_context();
+ 0) mongod-3596256 |     task_fpsimd_load() {
+ 0) mongod-3596256 |       have_cpu_fpsimd_context();
+ 0) mongod-3596256 |     }
+ 0) mongod-3596256 |     fpsimd_bind_task_to_cpu();
+ 0) mongod-3596256 |     put_cpu_fpsimd_context() {
+ 0) mongod-3596256 |       __put_cpu_fpsimd_context();
+ 0) mongod-3596256 |     }
+ 0) mongod-3596256 |   }
+ 0) mongod-3596256 | }
+ 0) mongod-3596256 | post_ttbr_update_workaround();
+ 0) mongod-3596256 | el0_svc_handler() {
+ 0) mongod-3596256 |   el0_svc_common.constprop.0() {
+ 0) mongod-3596256 |     __arm64_sys_futex() {
+ 0) mongod-3596256 |       do_futex() {
+ 0) mongod-3596256 |         futex_wake() {
+ 0) mongod-3596256 |           get_futex_key() {
+ 0) mongod-3596256 |             get_futex_key_refs.isra.0();
+ 0) mongod-3596256 |           }
+ 0) mongod-3596256 |           hash_futex();
+ 0) mongod-3596256 |           _raw_spin_lock();
+ 0) mongod-3596256 |           _raw_spin_unlock();
+ 0) mongod-3596256 |           wake_up_q();
+ 0) mongod-3596256 |           drop_futex_key_refs.isra.0();
+ 0) mongod-3596256 |         }
+ 0) mongod-3596256 |       }
+ 0) mongod-3596256 |     }
+ 0) mongod-3596256 |   }
+ 0) mongod-3596256 | }
+ 0) mongod-3596256 | post_ttbr_update_workaround();
+ 0) mongod-3596256 | el0_svc_handler() {
+ 0) mongod-3596256 |   el0_svc_common.constprop.0() {
+ 0) mongod-3596256 |     __arm64_sys_futex() {
+ 0) mongod-3596256 |       get_timespec64();
+ 0) mongod-3596256 |       do_futex() {
+ 0) mongod-3596256 |         futex_wait() {
+ 0) mongod-3596256 |           hrtimer_init_sleeper() {
+ 0) mongod-3596256 |             __hrtimer_init();
+ 0) mongod-3596256 |           }
+ 0) mongod-3596256 |           ktime_add_safe();
+ 0) mongod-3596256 |           futex_wait_setup() {
+ 0) mongod-3596256 |             get_futex_key() {
+ 0) mongod-3596256 |               get_futex_key_refs.isra.0();
+ 0) mongod-3596256 |             }
+ 0) mongod-3596256 |             hash_futex();
+ 0) mongod-3596256 |             _raw_spin_lock();
+ 0) mongod-3596256 |             get_futex_value_locked();
+ 0) mongod-3596256 |           }
+ 0) mongod-3596256 |           futex_wait_queue_me() {
+ 0) mongod-3596256 |             _raw_spin_unlock();
+ 0) mongod-3596256 |             hrtimer_sleeper_start_expires() {
+ 0) mongod-3596256 |               hrtimer_start_range_ns() {
+ 0) mongod-3596256 |                 lock_hrtimer_base() {
+ 0) mongod-3596256 |                   _raw_spin_lock_irqsave();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 get_nohz_timer_target();
+ 0) mongod-3596256 |                 enqueue_hrtimer();
+ 0) mongod-3596256 |                 _raw_spin_unlock_irqrestore();
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |             }
+ 0) mongod-3596256 |             schedule() {
+ 0) mongod-3596256 |               rcu_note_context_switch() {
+ 0) mongod-3596256 |                 rcu_preempt_deferred_qs() {
+ 0) mongod-3596256 |                   rcu_preempt_need_deferred_qs();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 rcu_qs();
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |               _raw_spin_lock();
+ 0) mongod-3596256 |               update_rq_clock();
+ 0) mongod-3596256 |               deactivate_task() {
+ 0) mongod-3596256 |                 psi_task_change() {
+ 0) mongod-3596256 |                   record_times.isra.0();
+ 0) mongod-3596256 |                   record_times.isra.0();
+ 0) mongod-3596256 |                   record_times.isra.0();
+ 0) mongod-3596256 |                   record_times.isra.0();
+ 0) mongod-3596256 |                   record_times.isra.0();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 dequeue_task_fair() {
+ 0) mongod-3596256 |                   dequeue_entity() {
+ 0) mongod-3596256 |                     update_curr() {
+ 0) mongod-3596256 |                       update_min_vruntime();
+ 0) mongod-3596256 |                       cpuacct_charge() {
+ 0) mongod-3596256 |                         __rcu_read_lock();
+ 0) mongod-3596256 |                         __rcu_read_unlock();
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                       __rcu_read_lock();
+ 0) mongod-3596256 |                       __cgroup_account_cputime() {
+ 0) mongod-3596256 |                         cgroup_base_stat_cputime_account_begin();
+ 0) mongod-3596256 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) mongod-3596256 |                           cgroup_rstat_updated();
+ 0) mongod-3596256 |                         }
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                       __rcu_read_unlock();
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                     __update_load_avg_se();
+ 0) mongod-3596256 |                     __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                     clear_buddies();
+ 0) mongod-3596256 |                     update_cfs_group();
+ 0) mongod-3596256 |                     update_min_vruntime();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   set_next_buddy();
+ 0) mongod-3596256 |                   __update_load_avg_se();
+ 0) mongod-3596256 |                   __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                   update_cfs_group() {
+ 0) mongod-3596256 |                     reweight_entity() {
+ 0) mongod-3596256 |                       update_curr() {
+ 0) mongod-3596256 |                         __calc_delta();
+ 0) mongod-3596256 |                         update_min_vruntime();
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   __update_load_avg_se();
+ 0) mongod-3596256 |                   __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                   update_cfs_group() {
+ 0) mongod-3596256 |                     reweight_entity() {
+ 0) mongod-3596256 |                       update_curr() {
+ 0) mongod-3596256 |                         __calc_delta();
+ 0) mongod-3596256 |                         update_min_vruntime();
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   __update_load_avg_se();
+ 0) mongod-3596256 |                   __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                   update_cfs_group() {
+ 0) mongod-3596256 |                     reweight_entity() {
+ 0) mongod-3596256 |                       update_curr() {
+ 0) mongod-3596256 |                         __calc_delta();
+ 0) mongod-3596256 |                         update_min_vruntime();
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   __update_load_avg_se();
+ 0) mongod-3596256 |                   __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                   update_cfs_group() {
+ 0) mongod-3596256 |                     reweight_entity() {
+ 0) mongod-3596256 |                       update_curr() {
+ 0) mongod-3596256 |                         __calc_delta();
+ 0) mongod-3596256 |                         update_min_vruntime();
+ 0) mongod-3596256 |                       }
+ 0) mongod-3596256 |                     }
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   hrtick_update();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |               pick_next_task_fair() {
+ 0) mongod-3596256 |                 update_curr();
+ 0) mongod-3596256 |                 check_cfs_rq_runtime();
+ 0) mongod-3596256 |                 pick_next_entity() {
+ 0) mongod-3596256 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-3596256 |                   clear_buddies();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 update_curr();
+ 0) mongod-3596256 |                 check_cfs_rq_runtime();
+ 0) mongod-3596256 |                 pick_next_entity() {
+ 0) mongod-3596256 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-3596256 |                   clear_buddies();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 update_curr();
+ 0) mongod-3596256 |                 check_cfs_rq_runtime();
+ 0) mongod-3596256 |                 pick_next_entity() {
+ 0) mongod-3596256 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-3596256 |                   clear_buddies();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 update_curr();
+ 0) mongod-3596256 |                 check_cfs_rq_runtime();
+ 0) mongod-3596256 |                 pick_next_entity() {
+ 0) mongod-3596256 |                   wakeup_preempt_entity.isra.0();
+ 0) mongod-3596256 |                   clear_buddies();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 check_cfs_rq_runtime();
+ 0) mongod-3596256 |                 pick_next_entity() {
+ 0) mongod-3596256 |                   clear_buddies();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 put_prev_entity() {
+ 0) mongod-3596256 |                   check_cfs_rq_runtime();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 set_next_entity() {
+ 0) mongod-3596256 |                   __update_load_avg_se() {
+ 0) mongod-3596256 |                     __accumulate_pelt_segments();
+ 0) mongod-3596256 |                   }
+ 0) mongod-3596256 |                   __update_load_avg_cfs_rq();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |               fpsimd_thread_switch() {
+ 0) mongod-3596256 |                 __get_cpu_fpsimd_context();
+ 0) mongod-3596256 |                 fpsimd_save() {
+ 0) mongod-3596256 |                   have_cpu_fpsimd_context();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |                 __put_cpu_fpsimd_context();
+ 0) mongod-3596256 |               }
+ 0) mongod-3596256 |               hw_breakpoint_thread_switch();
+ 0) mongod-3596256 |               uao_thread_switch();
+ 0) mongod-3596256 |               cpu_have_feature();
+ 0) mongod-3596256 |               erratum_1418040_thread_switch() {
+ 0) mongod-3596256 |                 this_cpu_has_cap() {
+ 0) mongod-3596256 |                   is_affected_midr_range_list();
+ 0) mongod-3596256 |                 }
+ 0) mongod-3596256 |               }

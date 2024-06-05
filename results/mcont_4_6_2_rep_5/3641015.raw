@@ -1,0 +1,835 @@
+ 0) gunicor-3641015 |                 finish_task_switch() {
+ 0) gunicor-3641015 |                   _raw_spin_unlock_irq();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               } /* schedule */
+ 0) gunicor-3641015 |               hrtimer_try_to_cancel() {
+ 0) gunicor-3641015 |                 hrtimer_active();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |             } /* schedule_hrtimeout_range_clock */
+ 0) gunicor-3641015 |           } /* schedule_hrtimeout_range */
+ 0) gunicor-3641015 |           __fdget() {
+ 0) gunicor-3641015 |             __fget_light();
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           pipe_poll();
+ 0) gunicor-3641015 |           poll_freewait() {
+ 0) gunicor-3641015 |             remove_wait_queue() {
+ 0) gunicor-3641015 |               _raw_spin_lock_irqsave();
+ 0) gunicor-3641015 |               _raw_spin_unlock_irqrestore();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |             fput() {
+ 0) gunicor-3641015 |               fput_many();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         } /* do_select */
+ 0) gunicor-3641015 |         __check_object_size() {
+ 0) gunicor-3641015 |           check_stack_object();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         __check_object_size() {
+ 0) gunicor-3641015 |           check_stack_object();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         __check_object_size() {
+ 0) gunicor-3641015 |           check_stack_object();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |       } /* core_sys_select */
+ 0) gunicor-3641015 |       poll_select_finish() {
+ 0) gunicor-3641015 |         ktime_get_ts64() {
+ 0) gunicor-3641015 |           arch_counter_read();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         set_normalized_timespec64();
+ 0) gunicor-3641015 |         put_timespec64();
+ 0) gunicor-3641015 |       }
+ 0) gunicor-3641015 |     } /* __arm64_sys_pselect6 */
+ 0) gunicor-3641015 |   } /* el0_svc_common.constprop.0 */
+ 0) gunicor-3641015 | } /* el0_svc_handler */
+ 0) gunicor-3641015 | do_notify_resume() {
+ 0) gunicor-3641015 |   mem_cgroup_handle_over_high();
+ 0) gunicor-3641015 |   blkcg_maybe_throttle_current();
+ 0) gunicor-3641015 |   __rseq_handle_notify_resume();
+ 0) gunicor-3641015 |   fpsimd_restore_current_state() {
+ 0) gunicor-3641015 |     __get_cpu_fpsimd_context();
+ 0) gunicor-3641015 |     task_fpsimd_load() {
+ 0) gunicor-3641015 |       have_cpu_fpsimd_context();
+ 0) gunicor-3641015 |     }
+ 0) gunicor-3641015 |     fpsimd_bind_task_to_cpu();
+ 0) gunicor-3641015 |     put_cpu_fpsimd_context() {
+ 0) gunicor-3641015 |       __put_cpu_fpsimd_context();
+ 0) gunicor-3641015 |     }
+ 0) gunicor-3641015 |   }
+ 0) gunicor-3641015 | }
+ 0) gunicor-3641015 | post_ttbr_update_workaround();
+ 0) gunicor-3641015 | el0_svc_handler() {
+ 0) gunicor-3641015 |   el0_svc_common.constprop.0() {
+ 0) gunicor-3641015 |     __arm64_sys_newfstatat() {
+ 0) gunicor-3641015 |       vfs_statx() {
+ 0) gunicor-3641015 |         user_path_at_empty() {
+ 0) gunicor-3641015 |           getname_flags() {
+ 0) gunicor-3641015 |             kmem_cache_alloc() {
+ 0) gunicor-3641015 |               should_failslab();
+ 0) gunicor-3641015 |               memcg_kmem_put_cache();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |             __check_object_size() {
+ 0) gunicor-3641015 |               check_stack_object();
+ 0) gunicor-3641015 |               pfn_valid() {
+ 0) gunicor-3641015 |                 memblock_is_map_memory();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               __check_heap_object();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           filename_lookup() {
+ 0) gunicor-3641015 |             path_lookupat.isra.0() {
+ 0) gunicor-3641015 |               path_init() {
+ 0) gunicor-3641015 |                 __fdget_raw() {
+ 0) gunicor-3641015 |                   __fget_light();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 path_get() {
+ 0) gunicor-3641015 |                   mntget();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               link_path_walk.part.0();
+ 0) gunicor-3641015 |               walk_component();
+ 0) gunicor-3641015 |               complete_walk();
+ 0) gunicor-3641015 |               terminate_walk() {
+ 0) gunicor-3641015 |                 dput();
+ 0) gunicor-3641015 |                 mntput();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |             restore_nameidata();
+ 0) gunicor-3641015 |             putname() {
+ 0) gunicor-3641015 |               kmem_cache_free();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         vfs_getattr() {
+ 0) gunicor-3641015 |           security_inode_getattr() {
+ 0) gunicor-3641015 |             apparmor_inode_getattr() {
+ 0) gunicor-3641015 |               common_perm_cond() {
+ 0) gunicor-3641015 |                 common_perm() {
+ 0) gunicor-3641015 |                   aa_path_perm() {
+ 0) gunicor-3641015 |                     aa_label_next_confined();
+ 0) gunicor-3641015 |                     profile_path_perm.part.0() {
+ 0) gunicor-3641015 |                       path_name.isra.0() {
+ 0) gunicor-3641015 |                         aa_path_name() {
+ 0) gunicor-3641015 |                           d_namespace_path.constprop.0() {
+ 0) gunicor-3641015 |                             d_absolute_path() {
+ 0) gunicor-3641015 |                               prepend();
+ 0) gunicor-3641015 |                               prepend_path.isra.0() {
+ 0) gunicor-3641015 |                                 __rcu_read_lock();
+ 0) gunicor-3641015 |                                 __rcu_read_lock();
+ 0) gunicor-3641015 |                                 prepend_name();
+ 0) gunicor-3641015 |                                 prepend_name();
+ 0) gunicor-3641015 |                                 __rcu_read_unlock();
+ 0) gunicor-3641015 |                                 __rcu_read_unlock();
+ 0) gunicor-3641015 |                               }
+ 0) gunicor-3641015 |                             }
+ 0) gunicor-3641015 |                             our_mnt();
+ 0) gunicor-3641015 |                             our_mnt();
+ 0) gunicor-3641015 |                           }
+ 0) gunicor-3641015 |                         }
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __aa_path_perm() {
+ 0) gunicor-3641015 |                         aa_str_perms() {
+ 0) gunicor-3641015 |                           aa_dfa_match();
+ 0) gunicor-3641015 |                           aa_compute_fperms() {
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                           }
+ 0) gunicor-3641015 |                         }
+ 0) gunicor-3641015 |                         aa_audit_file();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     aa_label_next_confined();
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           vfs_getattr_nosec() {
+ 0) gunicor-3641015 |             ovl_getattr [overlay]() {
+ 0) gunicor-3641015 |               ovl_same_sb [overlay]();
+ 0) gunicor-3641015 |               ovl_is_metacopy_dentry [overlay]();
+ 0) gunicor-3641015 |               ovl_path_real [overlay]() {
+ 0) gunicor-3641015 |                 ovl_path_type [overlay]();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               ovl_override_creds [overlay]() {
+ 0) gunicor-3641015 |                 override_creds();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               vfs_getattr() {
+ 0) gunicor-3641015 |                 security_inode_getattr() {
+ 0) gunicor-3641015 |                   apparmor_inode_getattr() {
+ 0) gunicor-3641015 |                     common_perm_cond() {
+ 0) gunicor-3641015 |                       common_perm();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 vfs_getattr_nosec() {
+ 0) gunicor-3641015 |                   ext4_file_getattr() {
+ 0) gunicor-3641015 |                     ext4_getattr() {
+ 0) gunicor-3641015 |                       generic_fillattr();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               ovl_same_sb [overlay]();
+ 0) gunicor-3641015 |               ovl_test_flag [overlay]();
+ 0) gunicor-3641015 |               revert_creds();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         path_put() {
+ 0) gunicor-3641015 |           dput() {
+ 0) gunicor-3641015 |             __rcu_read_lock();
+ 0) gunicor-3641015 |             __rcu_read_unlock();
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           mntput() {
+ 0) gunicor-3641015 |             mntput_no_expire() {
+ 0) gunicor-3641015 |               __rcu_read_lock();
+ 0) gunicor-3641015 |               __rcu_read_unlock();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |       }
+ 0) gunicor-3641015 |       cp_new_stat() {
+ 0) gunicor-3641015 |         from_kuid_munged() {
+ 0) gunicor-3641015 |           map_id_up();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         from_kgid_munged() {
+ 0) gunicor-3641015 |           map_id_up();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |       }
+ 0) gunicor-3641015 |     }
+ 0) gunicor-3641015 |   }
+ 0) gunicor-3641015 | }
+ 0) gunicor-3641015 | post_ttbr_update_workaround();
+ 0) gunicor-3641015 | el0_svc_handler() {
+ 0) gunicor-3641015 |   el0_svc_common.constprop.0() {
+ 0) gunicor-3641015 |     __arm64_sys_newfstatat() {
+ 0) gunicor-3641015 |       vfs_statx() {
+ 0) gunicor-3641015 |         user_path_at_empty() {
+ 0) gunicor-3641015 |           getname_flags() {
+ 0) gunicor-3641015 |             kmem_cache_alloc() {
+ 0) gunicor-3641015 |               should_failslab();
+ 0) gunicor-3641015 |               memcg_kmem_put_cache();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |             __check_object_size() {
+ 0) gunicor-3641015 |               check_stack_object();
+ 0) gunicor-3641015 |               pfn_valid() {
+ 0) gunicor-3641015 |                 memblock_is_map_memory();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               __check_heap_object();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           filename_lookup() {
+ 0) gunicor-3641015 |             path_lookupat.isra.0() {
+ 0) gunicor-3641015 |               path_init() {
+ 0) gunicor-3641015 |                 __fdget_raw() {
+ 0) gunicor-3641015 |                   __fget_light();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 path_get() {
+ 0) gunicor-3641015 |                   mntget();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               link_path_walk.part.0();
+ 0) gunicor-3641015 |               walk_component();
+ 0) gunicor-3641015 |               complete_walk();
+ 0) gunicor-3641015 |               terminate_walk() {
+ 0) gunicor-3641015 |                 dput();
+ 0) gunicor-3641015 |                 mntput();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |             restore_nameidata();
+ 0) gunicor-3641015 |             putname() {
+ 0) gunicor-3641015 |               kmem_cache_free();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         vfs_getattr() {
+ 0) gunicor-3641015 |           security_inode_getattr() {
+ 0) gunicor-3641015 |             apparmor_inode_getattr() {
+ 0) gunicor-3641015 |               common_perm_cond() {
+ 0) gunicor-3641015 |                 common_perm() {
+ 0) gunicor-3641015 |                   aa_path_perm() {
+ 0) gunicor-3641015 |                     aa_label_next_confined();
+ 0) gunicor-3641015 |                     profile_path_perm.part.0() {
+ 0) gunicor-3641015 |                       path_name.isra.0() {
+ 0) gunicor-3641015 |                         aa_path_name() {
+ 0) gunicor-3641015 |                           d_namespace_path.constprop.0() {
+ 0) gunicor-3641015 |                             d_absolute_path() {
+ 0) gunicor-3641015 |                               prepend();
+ 0) gunicor-3641015 |                               prepend_path.isra.0() {
+ 0) gunicor-3641015 |                                 __rcu_read_lock();
+ 0) gunicor-3641015 |                                 __rcu_read_lock();
+ 0) gunicor-3641015 |                                 prepend_name();
+ 0) gunicor-3641015 |                                 prepend_name();
+ 0) gunicor-3641015 |                                 __rcu_read_unlock();
+ 0) gunicor-3641015 |                                 __rcu_read_unlock();
+ 0) gunicor-3641015 |                               }
+ 0) gunicor-3641015 |                             }
+ 0) gunicor-3641015 |                             our_mnt();
+ 0) gunicor-3641015 |                             our_mnt();
+ 0) gunicor-3641015 |                           }
+ 0) gunicor-3641015 |                         }
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __aa_path_perm() {
+ 0) gunicor-3641015 |                         aa_str_perms() {
+ 0) gunicor-3641015 |                           aa_dfa_match();
+ 0) gunicor-3641015 |                           aa_compute_fperms() {
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                           }
+ 0) gunicor-3641015 |                         }
+ 0) gunicor-3641015 |                         aa_audit_file();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     aa_label_next_confined();
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           vfs_getattr_nosec() {
+ 0) gunicor-3641015 |             ovl_getattr [overlay]() {
+ 0) gunicor-3641015 |               ovl_same_sb [overlay]();
+ 0) gunicor-3641015 |               ovl_is_metacopy_dentry [overlay]();
+ 0) gunicor-3641015 |               ovl_path_real [overlay]() {
+ 0) gunicor-3641015 |                 ovl_path_type [overlay]();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               ovl_override_creds [overlay]() {
+ 0) gunicor-3641015 |                 override_creds();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               vfs_getattr() {
+ 0) gunicor-3641015 |                 security_inode_getattr() {
+ 0) gunicor-3641015 |                   apparmor_inode_getattr() {
+ 0) gunicor-3641015 |                     common_perm_cond() {
+ 0) gunicor-3641015 |                       common_perm();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 vfs_getattr_nosec() {
+ 0) gunicor-3641015 |                   ext4_file_getattr() {
+ 0) gunicor-3641015 |                     ext4_getattr() {
+ 0) gunicor-3641015 |                       generic_fillattr();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               ovl_same_sb [overlay]();
+ 0) gunicor-3641015 |               ovl_test_flag [overlay]();
+ 0) gunicor-3641015 |               revert_creds();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         path_put() {
+ 0) gunicor-3641015 |           dput() {
+ 0) gunicor-3641015 |             __rcu_read_lock();
+ 0) gunicor-3641015 |             __rcu_read_unlock();
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           mntput() {
+ 0) gunicor-3641015 |             mntput_no_expire() {
+ 0) gunicor-3641015 |               __rcu_read_lock();
+ 0) gunicor-3641015 |               __rcu_read_unlock();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |       }
+ 0) gunicor-3641015 |       cp_new_stat() {
+ 0) gunicor-3641015 |         from_kuid_munged() {
+ 0) gunicor-3641015 |           map_id_up();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         from_kgid_munged() {
+ 0) gunicor-3641015 |           map_id_up();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |       }
+ 0) gunicor-3641015 |     }
+ 0) gunicor-3641015 |   }
+ 0) gunicor-3641015 | }
+ 0) gunicor-3641015 | post_ttbr_update_workaround();
+ 0) gunicor-3641015 | el0_svc_handler() {
+ 0) gunicor-3641015 |   el0_svc_common.constprop.0() {
+ 0) gunicor-3641015 |     __arm64_sys_newfstatat() {
+ 0) gunicor-3641015 |       vfs_statx() {
+ 0) gunicor-3641015 |         user_path_at_empty() {
+ 0) gunicor-3641015 |           getname_flags() {
+ 0) gunicor-3641015 |             kmem_cache_alloc() {
+ 0) gunicor-3641015 |               should_failslab();
+ 0) gunicor-3641015 |               memcg_kmem_put_cache();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |             __check_object_size() {
+ 0) gunicor-3641015 |               check_stack_object();
+ 0) gunicor-3641015 |               pfn_valid() {
+ 0) gunicor-3641015 |                 memblock_is_map_memory();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               __check_heap_object();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           filename_lookup() {
+ 0) gunicor-3641015 |             path_lookupat.isra.0() {
+ 0) gunicor-3641015 |               path_init() {
+ 0) gunicor-3641015 |                 __fdget_raw() {
+ 0) gunicor-3641015 |                   __fget_light();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 path_get() {
+ 0) gunicor-3641015 |                   mntget();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               link_path_walk.part.0();
+ 0) gunicor-3641015 |               walk_component();
+ 0) gunicor-3641015 |               complete_walk();
+ 0) gunicor-3641015 |               terminate_walk() {
+ 0) gunicor-3641015 |                 dput();
+ 0) gunicor-3641015 |                 mntput();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |             restore_nameidata();
+ 0) gunicor-3641015 |             putname() {
+ 0) gunicor-3641015 |               kmem_cache_free();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         vfs_getattr() {
+ 0) gunicor-3641015 |           security_inode_getattr() {
+ 0) gunicor-3641015 |             apparmor_inode_getattr() {
+ 0) gunicor-3641015 |               common_perm_cond() {
+ 0) gunicor-3641015 |                 common_perm() {
+ 0) gunicor-3641015 |                   aa_path_perm() {
+ 0) gunicor-3641015 |                     aa_label_next_confined();
+ 0) gunicor-3641015 |                     profile_path_perm.part.0() {
+ 0) gunicor-3641015 |                       path_name.isra.0() {
+ 0) gunicor-3641015 |                         aa_path_name() {
+ 0) gunicor-3641015 |                           d_namespace_path.constprop.0() {
+ 0) gunicor-3641015 |                             d_absolute_path() {
+ 0) gunicor-3641015 |                               prepend();
+ 0) gunicor-3641015 |                               prepend_path.isra.0() {
+ 0) gunicor-3641015 |                                 __rcu_read_lock();
+ 0) gunicor-3641015 |                                 __rcu_read_lock();
+ 0) gunicor-3641015 |                                 prepend_name();
+ 0) gunicor-3641015 |                                 prepend_name();
+ 0) gunicor-3641015 |                                 __rcu_read_unlock();
+ 0) gunicor-3641015 |                                 __rcu_read_unlock();
+ 0) gunicor-3641015 |                               }
+ 0) gunicor-3641015 |                             }
+ 0) gunicor-3641015 |                             our_mnt();
+ 0) gunicor-3641015 |                             our_mnt();
+ 0) gunicor-3641015 |                           }
+ 0) gunicor-3641015 |                         }
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __aa_path_perm() {
+ 0) gunicor-3641015 |                         aa_str_perms() {
+ 0) gunicor-3641015 |                           aa_dfa_match();
+ 0) gunicor-3641015 |                           aa_compute_fperms() {
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                           }
+ 0) gunicor-3641015 |                         }
+ 0) gunicor-3641015 |                         aa_audit_file();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     aa_label_next_confined();
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           vfs_getattr_nosec() {
+ 0) gunicor-3641015 |             ovl_getattr [overlay]() {
+ 0) gunicor-3641015 |               ovl_same_sb [overlay]();
+ 0) gunicor-3641015 |               ovl_is_metacopy_dentry [overlay]();
+ 0) gunicor-3641015 |               ovl_path_real [overlay]() {
+ 0) gunicor-3641015 |                 ovl_path_type [overlay]();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               ovl_override_creds [overlay]() {
+ 0) gunicor-3641015 |                 override_creds();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               vfs_getattr() {
+ 0) gunicor-3641015 |                 security_inode_getattr() {
+ 0) gunicor-3641015 |                   apparmor_inode_getattr() {
+ 0) gunicor-3641015 |                     common_perm_cond() {
+ 0) gunicor-3641015 |                       common_perm();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 vfs_getattr_nosec() {
+ 0) gunicor-3641015 |                   ext4_file_getattr() {
+ 0) gunicor-3641015 |                     ext4_getattr() {
+ 0) gunicor-3641015 |                       generic_fillattr();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               ovl_same_sb [overlay]();
+ 0) gunicor-3641015 |               ovl_test_flag [overlay]();
+ 0) gunicor-3641015 |               revert_creds();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         path_put() {
+ 0) gunicor-3641015 |           dput() {
+ 0) gunicor-3641015 |             __rcu_read_lock();
+ 0) gunicor-3641015 |             __rcu_read_unlock();
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           mntput() {
+ 0) gunicor-3641015 |             mntput_no_expire() {
+ 0) gunicor-3641015 |               __rcu_read_lock();
+ 0) gunicor-3641015 |               __rcu_read_unlock();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |       }
+ 0) gunicor-3641015 |       cp_new_stat() {
+ 0) gunicor-3641015 |         from_kuid_munged() {
+ 0) gunicor-3641015 |           map_id_up();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         from_kgid_munged() {
+ 0) gunicor-3641015 |           map_id_up();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |       }
+ 0) gunicor-3641015 |     }
+ 0) gunicor-3641015 |   }
+ 0) gunicor-3641015 | }
+ 0) gunicor-3641015 | post_ttbr_update_workaround();
+ 0) gunicor-3641015 | el0_svc_handler() {
+ 0) gunicor-3641015 |   el0_svc_common.constprop.0() {
+ 0) gunicor-3641015 |     __arm64_sys_newfstatat() {
+ 0) gunicor-3641015 |       vfs_statx() {
+ 0) gunicor-3641015 |         user_path_at_empty() {
+ 0) gunicor-3641015 |           getname_flags() {
+ 0) gunicor-3641015 |             kmem_cache_alloc() {
+ 0) gunicor-3641015 |               should_failslab();
+ 0) gunicor-3641015 |               memcg_kmem_put_cache();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |             __check_object_size() {
+ 0) gunicor-3641015 |               check_stack_object();
+ 0) gunicor-3641015 |               pfn_valid() {
+ 0) gunicor-3641015 |                 memblock_is_map_memory();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               __check_heap_object();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           filename_lookup() {
+ 0) gunicor-3641015 |             path_lookupat.isra.0() {
+ 0) gunicor-3641015 |               path_init() {
+ 0) gunicor-3641015 |                 __fdget_raw() {
+ 0) gunicor-3641015 |                   __fget_light();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 path_get() {
+ 0) gunicor-3641015 |                   mntget();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               link_path_walk.part.0();
+ 0) gunicor-3641015 |               walk_component();
+ 0) gunicor-3641015 |               complete_walk();
+ 0) gunicor-3641015 |               terminate_walk() {
+ 0) gunicor-3641015 |                 dput();
+ 0) gunicor-3641015 |                 mntput();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |             restore_nameidata();
+ 0) gunicor-3641015 |             putname() {
+ 0) gunicor-3641015 |               kmem_cache_free();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         vfs_getattr() {
+ 0) gunicor-3641015 |           security_inode_getattr() {
+ 0) gunicor-3641015 |             apparmor_inode_getattr() {
+ 0) gunicor-3641015 |               common_perm_cond() {
+ 0) gunicor-3641015 |                 common_perm() {
+ 0) gunicor-3641015 |                   aa_path_perm() {
+ 0) gunicor-3641015 |                     aa_label_next_confined();
+ 0) gunicor-3641015 |                     profile_path_perm.part.0() {
+ 0) gunicor-3641015 |                       path_name.isra.0() {
+ 0) gunicor-3641015 |                         aa_path_name() {
+ 0) gunicor-3641015 |                           d_namespace_path.constprop.0() {
+ 0) gunicor-3641015 |                             d_absolute_path() {
+ 0) gunicor-3641015 |                               prepend();
+ 0) gunicor-3641015 |                               prepend_path.isra.0() {
+ 0) gunicor-3641015 |                                 __rcu_read_lock();
+ 0) gunicor-3641015 |                                 __rcu_read_lock();
+ 0) gunicor-3641015 |                                 prepend_name();
+ 0) gunicor-3641015 |                                 prepend_name();
+ 0) gunicor-3641015 |                                 __rcu_read_unlock();
+ 0) gunicor-3641015 |                                 __rcu_read_unlock();
+ 0) gunicor-3641015 |                               }
+ 0) gunicor-3641015 |                             }
+ 0) gunicor-3641015 |                             our_mnt();
+ 0) gunicor-3641015 |                             our_mnt();
+ 0) gunicor-3641015 |                           }
+ 0) gunicor-3641015 |                         }
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __aa_path_perm() {
+ 0) gunicor-3641015 |                         aa_str_perms() {
+ 0) gunicor-3641015 |                           aa_dfa_match();
+ 0) gunicor-3641015 |                           aa_compute_fperms() {
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                             map_old_perms();
+ 0) gunicor-3641015 |                           }
+ 0) gunicor-3641015 |                         }
+ 0) gunicor-3641015 |                         aa_audit_file();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     aa_label_next_confined();
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           vfs_getattr_nosec() {
+ 0) gunicor-3641015 |             ovl_getattr [overlay]() {
+ 0) gunicor-3641015 |               ovl_same_sb [overlay]();
+ 0) gunicor-3641015 |               ovl_is_metacopy_dentry [overlay]();
+ 0) gunicor-3641015 |               ovl_path_real [overlay]() {
+ 0) gunicor-3641015 |                 ovl_path_type [overlay]();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               ovl_override_creds [overlay]() {
+ 0) gunicor-3641015 |                 override_creds();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               vfs_getattr() {
+ 0) gunicor-3641015 |                 security_inode_getattr() {
+ 0) gunicor-3641015 |                   apparmor_inode_getattr() {
+ 0) gunicor-3641015 |                     common_perm_cond() {
+ 0) gunicor-3641015 |                       common_perm();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 vfs_getattr_nosec() {
+ 0) gunicor-3641015 |                   ext4_file_getattr() {
+ 0) gunicor-3641015 |                     ext4_getattr() {
+ 0) gunicor-3641015 |                       generic_fillattr();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               ovl_same_sb [overlay]();
+ 0) gunicor-3641015 |               ovl_test_flag [overlay]();
+ 0) gunicor-3641015 |               revert_creds();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         path_put() {
+ 0) gunicor-3641015 |           dput() {
+ 0) gunicor-3641015 |             __rcu_read_lock();
+ 0) gunicor-3641015 |             __rcu_read_unlock();
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           mntput() {
+ 0) gunicor-3641015 |             mntput_no_expire() {
+ 0) gunicor-3641015 |               __rcu_read_lock();
+ 0) gunicor-3641015 |               __rcu_read_unlock();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |       }
+ 0) gunicor-3641015 |       cp_new_stat() {
+ 0) gunicor-3641015 |         from_kuid_munged() {
+ 0) gunicor-3641015 |           map_id_up();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         from_kgid_munged() {
+ 0) gunicor-3641015 |           map_id_up();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |       }
+ 0) gunicor-3641015 |     }
+ 0) gunicor-3641015 |   }
+ 0) gunicor-3641015 | }
+ 0) gunicor-3641015 | post_ttbr_update_workaround();
+ 0) gunicor-3641015 | el0_svc_handler() {
+ 0) gunicor-3641015 |   el0_svc_common.constprop.0() {
+ 0) gunicor-3641015 |     __arm64_sys_pselect6() {
+ 0) gunicor-3641015 |       get_timespec64();
+ 0) gunicor-3641015 |       poll_select_set_timeout() {
+ 0) gunicor-3641015 |         ktime_get_ts64() {
+ 0) gunicor-3641015 |           arch_counter_read();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         timespec64_add_safe();
+ 0) gunicor-3641015 |       }
+ 0) gunicor-3641015 |       set_user_sigmask();
+ 0) gunicor-3641015 |       core_sys_select() {
+ 0) gunicor-3641015 |         __rcu_read_lock();
+ 0) gunicor-3641015 |         __rcu_read_unlock();
+ 0) gunicor-3641015 |         __check_object_size() {
+ 0) gunicor-3641015 |           check_stack_object();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         __check_object_size() {
+ 0) gunicor-3641015 |           check_stack_object();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         __check_object_size() {
+ 0) gunicor-3641015 |           check_stack_object();
+ 0) gunicor-3641015 |         }
+ 0) gunicor-3641015 |         do_select() {
+ 0) gunicor-3641015 |           __rcu_read_lock();
+ 0) gunicor-3641015 |           __rcu_read_unlock();
+ 0) gunicor-3641015 |           select_estimate_accuracy() {
+ 0) gunicor-3641015 |             ktime_get_ts64() {
+ 0) gunicor-3641015 |               arch_counter_read();
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |             set_normalized_timespec64();
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           __fdget() {
+ 0) gunicor-3641015 |             __fget_light();
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           pipe_poll() {
+ 0) gunicor-3641015 |             __pollwait() {
+ 0) gunicor-3641015 |               add_wait_queue() {
+ 0) gunicor-3641015 |                 _raw_spin_lock_irqsave();
+ 0) gunicor-3641015 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |             }
+ 0) gunicor-3641015 |           }
+ 0) gunicor-3641015 |           schedule_hrtimeout_range() {
+ 0) gunicor-3641015 |             schedule_hrtimeout_range_clock() {
+ 0) gunicor-3641015 |               hrtimer_init_sleeper() {
+ 0) gunicor-3641015 |                 __hrtimer_init();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               hrtimer_start_range_ns() {
+ 0) gunicor-3641015 |                 lock_hrtimer_base() {
+ 0) gunicor-3641015 |                   _raw_spin_lock_irqsave();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 get_nohz_timer_target();
+ 0) gunicor-3641015 |                 enqueue_hrtimer();
+ 0) gunicor-3641015 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-3641015 |               }
+ 0) gunicor-3641015 |               schedule() {
+ 0) gunicor-3641015 |                 rcu_note_context_switch() {
+ 0) gunicor-3641015 |                   rcu_preempt_deferred_qs() {
+ 0) gunicor-3641015 |                     rcu_preempt_need_deferred_qs();
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                   rcu_qs();
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 _raw_spin_lock();
+ 0) gunicor-3641015 |                 update_rq_clock();
+ 0) gunicor-3641015 |                 deactivate_task() {
+ 0) gunicor-3641015 |                   psi_task_change() {
+ 0) gunicor-3641015 |                     record_times.isra.0();
+ 0) gunicor-3641015 |                     record_times.isra.0();
+ 0) gunicor-3641015 |                     record_times.isra.0();
+ 0) gunicor-3641015 |                     record_times.isra.0();
+ 0) gunicor-3641015 |                     record_times.isra.0();
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                   dequeue_task_fair() {
+ 0) gunicor-3641015 |                     dequeue_entity() {
+ 0) gunicor-3641015 |                       update_curr() {
+ 0) gunicor-3641015 |                         update_min_vruntime();
+ 0) gunicor-3641015 |                         cpuacct_charge() {
+ 0) gunicor-3641015 |                           __rcu_read_lock();
+ 0) gunicor-3641015 |                           __rcu_read_unlock();
+ 0) gunicor-3641015 |                         }
+ 0) gunicor-3641015 |                         __rcu_read_lock();
+ 0) gunicor-3641015 |                         __cgroup_account_cputime() {
+ 0) gunicor-3641015 |                           cgroup_base_stat_cputime_account_begin();
+ 0) gunicor-3641015 |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) gunicor-3641015 |                             cgroup_rstat_updated();
+ 0) gunicor-3641015 |                           }
+ 0) gunicor-3641015 |                         }
+ 0) gunicor-3641015 |                         __rcu_read_unlock();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __update_load_avg_se() {
+ 0) gunicor-3641015 |                         __accumulate_pelt_segments();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3641015 |                         __accumulate_pelt_segments();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       clear_buddies();
+ 0) gunicor-3641015 |                       update_cfs_group();
+ 0) gunicor-3641015 |                       update_min_vruntime();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     dequeue_entity() {
+ 0) gunicor-3641015 |                       update_curr() {
+ 0) gunicor-3641015 |                         __calc_delta();
+ 0) gunicor-3641015 |                         update_min_vruntime();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __update_load_avg_se() {
+ 0) gunicor-3641015 |                         __accumulate_pelt_segments();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3641015 |                         __accumulate_pelt_segments();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       clear_buddies();
+ 0) gunicor-3641015 |                       update_cfs_group() {
+ 0) gunicor-3641015 |                         reweight_entity();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       update_min_vruntime();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     dequeue_entity() {
+ 0) gunicor-3641015 |                       update_curr() {
+ 0) gunicor-3641015 |                         __calc_delta();
+ 0) gunicor-3641015 |                         update_min_vruntime();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __update_load_avg_se() {
+ 0) gunicor-3641015 |                         __accumulate_pelt_segments();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3641015 |                         __accumulate_pelt_segments();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       clear_buddies();
+ 0) gunicor-3641015 |                       update_cfs_group() {
+ 0) gunicor-3641015 |                         reweight_entity();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       update_min_vruntime();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     dequeue_entity() {
+ 0) gunicor-3641015 |                       update_curr() {
+ 0) gunicor-3641015 |                         __calc_delta();
+ 0) gunicor-3641015 |                         update_min_vruntime();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __update_load_avg_se() {
+ 0) gunicor-3641015 |                         __accumulate_pelt_segments();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3641015 |                         __accumulate_pelt_segments();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       clear_buddies();
+ 0) gunicor-3641015 |                       update_cfs_group() {
+ 0) gunicor-3641015 |                         reweight_entity();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       update_min_vruntime();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     dequeue_entity() {
+ 0) gunicor-3641015 |                       update_curr() {
+ 0) gunicor-3641015 |                         __calc_delta();
+ 0) gunicor-3641015 |                         update_min_vruntime();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __update_load_avg_se() {
+ 0) gunicor-3641015 |                         __accumulate_pelt_segments();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3641015 |                         __accumulate_pelt_segments();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       dbs_update_util_handler() {
+ 0) gunicor-3641015 |                         cpufreq_this_cpu_can_update();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       clear_buddies();
+ 0) gunicor-3641015 |                       update_cfs_group() {
+ 0) gunicor-3641015 |                         reweight_entity();
+ 0) gunicor-3641015 |                       }
+ 0) gunicor-3641015 |                       update_min_vruntime();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     hrtick_update();
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 pick_next_task_fair() {
+ 0) gunicor-3641015 |                   newidle_balance() {
+ 0) gunicor-3641015 |                     __rcu_read_lock();
+ 0) gunicor-3641015 |                     __msecs_to_jiffies();
+ 0) gunicor-3641015 |                     __rcu_read_unlock();
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }
+ 0) gunicor-3641015 |                 pick_next_task_idle() {
+ 0) gunicor-3641015 |                   put_prev_task_fair() {
+ 0) gunicor-3641015 |                     put_prev_entity() {
+ 0) gunicor-3641015 |                       check_cfs_rq_runtime();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     put_prev_entity() {
+ 0) gunicor-3641015 |                       check_cfs_rq_runtime();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     put_prev_entity() {
+ 0) gunicor-3641015 |                       check_cfs_rq_runtime();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     put_prev_entity() {
+ 0) gunicor-3641015 |                       check_cfs_rq_runtime();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                     put_prev_entity() {
+ 0) gunicor-3641015 |                       check_cfs_rq_runtime();
+ 0) gunicor-3641015 |                     }
+ 0) gunicor-3641015 |                   }
+ 0) gunicor-3641015 |                 }

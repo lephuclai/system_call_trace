@@ -1,0 +1,576 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.3 172516 11864 ?        Ss   May15   5:34 /sbin/init fixrtc splash splash
+root           2  0.0  0.0      0     0 ?        S    May15   0:04 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   May15   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   May15   0:00 [rcu_par_gp]
+root           8  0.0  0.0      0     0 ?        I<   May15   0:00 [mm_percpu_wq]
+root           9  0.0  0.0      0     0 ?        S    May15  12:03 [ksoftirqd/0]
+root          10  0.1  0.0      0     0 ?        I    May15  35:50 [rcu_preempt]
+root          11  0.0  0.0      0     0 ?        S    May15   0:14 [migration/0]
+root          12  0.0  0.0      0     0 ?        S    May15   0:00 [idle_inject/0]
+root          14  0.0  0.0      0     0 ?        S    May15   0:00 [cpuhp/0]
+root          15  0.0  0.0      0     0 ?        S    May15   0:00 [cpuhp/1]
+root          16  0.0  0.0      0     0 ?        S    May15   0:00 [idle_inject/1]
+root          17  0.0  0.0      0     0 ?        S    May15   0:13 [migration/1]
+root          18  0.0  0.0      0     0 ?        S    May15   2:04 [ksoftirqd/1]
+root          21  0.0  0.0      0     0 ?        S    May15   0:00 [cpuhp/2]
+root          22  0.0  0.0      0     0 ?        S    May15   0:00 [idle_inject/2]
+root          23  0.0  0.0      0     0 ?        S    May15   0:13 [migration/2]
+root          24  0.0  0.0      0     0 ?        S    May15   2:10 [ksoftirqd/2]
+root          27  0.0  0.0      0     0 ?        S    May15   0:00 [cpuhp/3]
+root          28  0.0  0.0      0     0 ?        S    May15   0:00 [idle_inject/3]
+root          29  0.0  0.0      0     0 ?        S    May15   0:13 [migration/3]
+root          30  0.0  0.0      0     0 ?        S    May15   1:45 [ksoftirqd/3]
+root          33  0.0  0.0      0     0 ?        S    May15   0:00 [kdevtmpfs]
+root          34  0.0  0.0      0     0 ?        I<   May15   0:00 [netns]
+root          35  0.0  0.0      0     0 ?        S    May15   0:00 [rcu_tasks_kthre]
+root          36  0.0  0.0      0     0 ?        S    May15   0:00 [kauditd]
+root          37  0.0  0.0      0     0 ?        S    May15   0:02 [khungtaskd]
+root          38  0.0  0.0      0     0 ?        S    May15   0:00 [oom_reaper]
+root          39  0.0  0.0      0     0 ?        I<   May15   0:00 [writeback]
+root          40  0.0  0.0      0     0 ?        S    May15   0:00 [kcompactd0]
+root          41  0.0  0.0      0     0 ?        SN   May15   0:00 [ksmd]
+root          42  0.0  0.0      0     0 ?        SN   May15   0:02 [khugepaged]
+root          91  0.0  0.0      0     0 ?        I<   May15   0:00 [kintegrityd]
+root          92  0.0  0.0      0     0 ?        I<   May15   0:00 [kblockd]
+root          93  0.0  0.0      0     0 ?        I<   May15   0:00 [blkcg_punt_bio]
+root          94  0.0  0.0      0     0 ?        I<   May15   0:00 [tpm_dev_wq]
+root          95  0.0  0.0      0     0 ?        I<   May15   0:00 [ata_sff]
+root          96  0.0  0.0      0     0 ?        I<   May15   0:00 [md]
+root          97  0.0  0.0      0     0 ?        I<   May15   0:00 [edac-poller]
+root          98  0.0  0.0      0     0 ?        I<   May15   0:00 [devfreq_wq]
+root          99  0.0  0.0      0     0 ?        S    May15   0:00 [watchdogd]
+root         102  0.0  0.0      0     0 ?        S    May15   1:29 [kswapd0]
+root         103  0.0  0.0      0     0 ?        S    May15   0:00 [ecryptfs-kthrea]
+root         105  0.0  0.0      0     0 ?        I<   May15   0:00 [kthrotld]
+root         106  0.0  0.0      0     0 ?        S    May15   0:00 [irq/43-aerdrv]
+root         108  0.0  0.0      0     0 ?        I<   May15   0:00 [DWC Notificatio]
+root         109  0.0  0.0      0     0 ?        S<   May15   0:00 [vchiq-slot/0]
+root         110  0.0  0.0      0     0 ?        S<   May15   0:00 [vchiq-recy/0]
+root         111  0.0  0.0      0     0 ?        S<   May15   0:00 [vchiq-sync/0]
+root         112  0.0  0.0      0     0 ?        I<   May15   0:00 [ipv6_addrconf]
+root         122  0.0  0.0      0     0 ?        I<   May15   0:00 [kstrp]
+root         125  0.0  0.0      0     0 ?        I<   May15   0:00 [kworker/u9:0]
+root         130  0.0  0.0      0     0 ?        I<   May15   0:00 [cryptd]
+root         156  0.0  0.0      0     0 ?        S    May15   0:00 [spi0]
+root         158  0.0  0.0      0     0 ?        I<   May15   0:00 [sdhci]
+root         159  0.0  0.0      0     0 ?        S    May15   0:00 [irq/30-mmc0]
+root         160  0.0  0.0      0     0 ?        I<   May15   0:00 [charger_manager]
+root         183  0.0  0.0      0     0 ?        I<   May15   0:00 [mmc_complete]
+root         263  0.0  0.0      0     0 ?        I<   May15   0:00 [raid5wq]
+root         324  0.0  0.0      0     0 ?        S    May15   2:00 [jbd2/mmcblk0p2-]
+root         325  0.0  0.0      0     0 ?        I<   May15   0:00 [ext4-rsv-conver]
+root         401  0.0  2.5 247564 99228 ?        S<s  May15   2:46 /lib/systemd/systemd-journald
+root         437  0.0  0.1  21336  4504 ?        Ss   May15   1:11 /lib/systemd/systemd-udevd
+root         470  0.0  0.0      0     0 ?        S    May15   0:00 [vchiq-keep/0]
+root         471  0.0  0.0      0     0 ?        S<   May15   0:00 [SMIO]
+root         496  0.0  0.0      0     0 ?        I<   May15   0:00 [cfg80211]
+root         497  0.0  0.0      0     0 ?        I<   May15   0:00 [mmal-vchiq]
+root         498  0.0  0.0      0     0 ?        I<   May15   0:00 [mmal-vchiq]
+root         499  0.0  0.0      0     0 ?        I<   May15   0:00 [mmal-vchiq]
+root         500  0.0  0.0      0     0 ?        I<   May15   0:00 [mmal-vchiq]
+root         502  0.0  0.0      0     0 ?        I<   May15   0:00 [brcmf_wq/mmc1:0]
+root         503  0.0  0.0      0     0 ?        S    May15   0:00 [brcmf_wdog/mmc1]
+root         545  0.0  0.0      0     0 ?        I<   May15   0:00 [kaluad]
+root         546  0.0  0.0      0     0 ?        I<   May15   0:00 [kmpath_rdacd]
+root         547  0.0  0.0      0     0 ?        I<   May15   0:00 [kmpathd]
+root         548  0.0  0.0      0     0 ?        I<   May15   0:00 [kmpath_handlerd]
+root         549  0.0  0.4 279928 16312 ?        SLsl May15   1:05 /sbin/multipathd -d -s
+root         549  0.0  0.4 279928 16312 ?        SLsl May15   0:21 /sbin/multipathd -d -s
+root         549  0.0  0.4 279928 16312 ?        SLsl May15   0:00 /sbin/multipathd -d -s
+root         549  0.0  0.4 279928 16312 ?        SLsl May15   0:03 /sbin/multipathd -d -s
+root         549  0.0  0.4 279928 16312 ?        SLsl May15   1:54 /sbin/multipathd -d -s
+root         549  0.0  0.4 279928 16312 ?        SLsl May15   0:00 /sbin/multipathd -d -s
+root         549  0.0  0.4 279928 16312 ?        SLsl May15   0:00 /sbin/multipathd -d -s
+root         563  0.0  0.0      0     0 ?        S<   May15   0:00 [loop1]
+root         565  0.0  0.0      0     0 ?        S<   May15   0:00 [loop2]
+root         568  0.0  0.0      0     0 ?        S<   May15   0:00 [loop3]
+root         571  0.0  0.0      0     0 ?        S<   May15   0:00 [loop5]
+root         603  0.0  0.0   1920   460 ?        S    May15  11:51 bpfilter_umh
+systemd+     614  0.0  0.1  90588  4092 ?        Ssl  May15   0:07 /lib/systemd/systemd-timesyncd
+systemd+     614  0.0  0.1  90588  4092 ?        Ssl  May15   0:00 /lib/systemd/systemd-timesyncd
+systemd+     662  0.0  0.1  27040  4588 ?        Ss   May15   1:24 /lib/systemd/systemd-networkd
+systemd+     664  0.0  0.2  24784  8444 ?        Ss   May15  13:28 /lib/systemd/systemd-resolved
+root         697  0.0  0.1 239052  6404 ?        Ssl  May15   0:24 /usr/lib/accountsservice/accounts-daemon
+root         697  0.0  0.1 239052  6404 ?        Ssl  May15   1:23 /usr/lib/accountsservice/accounts-daemon
+root         697  0.0  0.1 239052  6404 ?        Ssl  May15   0:01 /usr/lib/accountsservice/accounts-daemon
+message+     698  0.0  0.1   8696  4192 ?        Ss   May15   2:04 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         701  0.0  0.0  80948  2440 ?        Ssl  May15   4:42 /usr/sbin/irqbalance --foreground
+root         701  0.0  0.0  80948  2440 ?        Ssl  May15   0:00 /usr/sbin/irqbalance --foreground
+root         702  0.0  0.3  29776 13792 ?        Ss   May15   0:08 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         705  0.0  0.1 232956  4564 ?        Ssl  May15   0:01 /usr/lib/policykit-1/polkitd --no-debug
+root         705  0.0  0.1 232956  4564 ?        Ssl  May15   0:00 /usr/lib/policykit-1/polkitd --no-debug
+root         705  0.0  0.1 232956  4564 ?        Ssl  May15   0:03 /usr/lib/policykit-1/polkitd --no-debug
+root         711  0.0  0.1  18828  6784 ?        Ss   May15   0:26 /lib/systemd/systemd-logind
+root         713  0.0  0.1 391960  6936 ?        Ssl  May15   0:25 /usr/lib/udisks2/udisksd
+root         713  0.0  0.1 391960  6936 ?        Ssl  May15   0:00 /usr/lib/udisks2/udisksd
+root         713  0.0  0.1 391960  6936 ?        Ssl  May15   0:00 /usr/lib/udisks2/udisksd
+root         713  0.0  0.1 391960  6936 ?        Ssl  May15   0:00 /usr/lib/udisks2/udisksd
+root         713  0.0  0.1 391960  6936 ?        Ssl  May15   0:00 /usr/lib/udisks2/udisksd
+root         714  0.0  0.0  12404  1676 ?        Ss   May15   0:12 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+node_ex+     731  0.1  0.2 1242020 8656 ?        Ssl  May15  35:07 /usr/local/bin/node_exporter
+node_ex+     731  0.0  0.2 1242020 8656 ?        Ssl  May15  13:11 /usr/local/bin/node_exporter
+node_ex+     731  0.1  0.2 1242020 8656 ?        Ssl  May15  37:26 /usr/local/bin/node_exporter
+node_ex+     731  0.0  0.2 1242020 8656 ?        Ssl  May15   4:06 /usr/local/bin/node_exporter
+node_ex+     731  0.1  0.2 1242020 8656 ?        Ssl  May15  31:57 /usr/local/bin/node_exporter
+node_ex+     731  0.2  0.2 1242020 8656 ?        Ssl  May15  43:17 /usr/local/bin/node_exporter
+node_ex+     731  0.0  0.2 1242020 8656 ?        Ssl  May19  11:05 /usr/local/bin/node_exporter
+node_ex+     731  0.1  0.2 1242020 8656 ?        Ssl  May19  17:12 /usr/local/bin/node_exporter
+node_ex+     731  0.0  0.2 1242020 8656 ?        Ssl  May19  12:20 /usr/local/bin/node_exporter
+node_ex+     731  0.0  0.2 1242020 8656 ?        Ssl  May21  10:46 /usr/local/bin/node_exporter
+root         734  0.0  0.0  85064  1220 ?        Sl   May15   0:00 /usr/bin/brickd --daemon
+root         734  0.0  0.0  85064  1220 ?        Sl   May15   0:00 /usr/bin/brickd --daemon
+root         734  0.0  0.0  85064  1220 ?        Sl   May15   0:00 /usr/bin/brickd --daemon
+root         742  0.0  0.0   8340  1948 ?        Ss   May15   0:05 /usr/sbin/cron -f
+root         758  0.0  0.2 107864  9980 ?        Ssl  May15   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         758  0.0  0.2 107864  9980 ?        Ssl  May15   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+vnstat       759  0.0  0.0   4732  3240 ?        Ss   May15   4:31 /usr/sbin/vnstatd -n
+root         766  0.0  1.3 2835036 52156 ?       Ssl  May15   0:00 /usr/bin/containerd
+root         766  0.2  1.3 2835036 52156 ?       Ssl  May15  51:27 /usr/bin/containerd
+root         766  0.0  1.3 2835036 52156 ?       Ssl  May15   0:00 /usr/bin/containerd
+root         766  0.0  1.3 2835036 52156 ?       Ssl  May15   0:00 /usr/bin/containerd
+root         766  0.0  1.3 2835036 52156 ?       Ssl  May15   0:00 /usr/bin/containerd
+root         766  0.3  1.3 2835036 52156 ?       Ssl  11:52   0:19 /usr/bin/containerd
+root         766  0.2  1.3 2835036 52156 ?       Ssl  12:45   0:03 /usr/bin/containerd
+root         766  0.2  1.3 2835036 52156 ?       Ssl  12:59   0:02 /usr/bin/containerd
+root         766  0.0  1.3 2835036 52156 ?       Ssl  12:59   0:00 /usr/bin/containerd
+root         766  0.3  1.3 2835036 52156 ?       Ssl  13:08   0:01 /usr/bin/containerd
+root         766  0.0  1.3 2835036 52156 ?       Ssl  13:11   0:00 /usr/bin/containerd
+root         766  0.0  1.3 2835036 52156 ?       Ssl  13:15   0:00 /usr/bin/containerd
+daemon       767  0.0  0.0   3596  1564 ?        Ss   May15   0:00 /usr/sbin/atd -f
+root         768  0.0  0.1 245612  7600 ?        Ssl  May15   0:02 /usr/sbin/ModemManager
+root         768  0.0  0.1 245612  7600 ?        Ssl  May15   0:00 /usr/sbin/ModemManager
+root         768  0.0  0.1 245612  7600 ?        Ssl  May15   0:01 /usr/sbin/ModemManager
+root         772  0.0  0.0   6836  1448 ttyS0    Ss+  May15   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 ttyS0 vt220
+root         775  0.0  0.0   5312  1140 tty1     Ss+  May15   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         802  0.0  0.1  12232  4020 ?        Ss   May15   0:01 sshd: /usr/sbin/sshd -D [listener] 1 of 10-100 startups
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May15   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May15   1:06 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May15   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May15   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May15   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:09 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:24 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:09 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:05 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:19 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:26 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:03 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:14 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:24 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:27 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:25 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:34 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1039  0.0  1.3 2108740 53116 ?       Ssl  May29   0:17 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1411  0.0  0.0      0     0 ?        S<   May15   0:00 [loop6]
+root       19686  0.5  1.6 2149344 65184 ?       Ssl  May16 104:39 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.4  1.6 2149344 65184 ?       Ssl  May16  95:03 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.0  1.6 2149344 65184 ?       Ssl  May16   0:00 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.0  1.6 2149344 65184 ?       Ssl  May16   0:00 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.6  1.6 2149344 65184 ?       Ssl  May16 127:00 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.0  1.6 2149344 65184 ?       Ssl  May16   0:00 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.0  1.6 2149344 65184 ?       Ssl  May16   0:00 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.4  1.6 2149344 65184 ?       Ssl  May16  91:07 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.2  1.6 2149344 65184 ?       Ssl  May16  42:50 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.7  1.6 2149344 65184 ?       Ssl  May16 157:02 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.5  1.6 2149344 65184 ?       Ssl  May16 116:13 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.8  1.6 2149344 65184 ?       Ssl  May16 169:41 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.4  1.6 2149344 65184 ?       Ssl  May16 100:04 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.8  1.6 2149344 65184 ?       Ssl  May16 160:58 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.2  1.6 2149344 65184 ?       Ssl  May18  43:57 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.3  1.6 2149344 65184 ?       Ssl  May19  55:37 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.6  1.6 2149344 65184 ?       Ssl  May19 103:39 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.7  1.6 2149344 65184 ?       Ssl  May19 123:07 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19686  0.5  1.6 2149344 65184 ?       Ssl  May23  54:01 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock --pod-infra-container-image=registry.k8s.io/pause:3.9
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   1:27 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   1:59 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   1:52 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   2:04 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   1:24 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   1:45 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   1:47 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   1:42 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May16   1:54 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19754  0.0  0.1 711928  4360 ?        Sl   May17   1:50 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id cdf40bc739b1fdfb1ca87c42a04e3d12f33c77efad070bcf4841300076b23740 -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   1:35 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   1:37 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   1:55 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   1:55 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   1:47 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   1:14 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   2:12 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   1:54 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   1:32 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May16   1:40 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+root       19755  0.0  0.1 712184  4600 ?        Sl   May21   0:27 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3a74d86e25999173fdf7e3f51efc79da2885962e22a37b5006dafe24072d202c -address /run/containerd/containerd.sock
+65535      19800  0.0  0.0    756     4 ?        Ss   May16   0:00 /pause
+65535      19801  0.0  0.0    756     4 ?        Ss   May16   0:00 /pause
+root       19859  0.0  0.5 1280776 20044 ?       Ssl  May16   1:16 /usr/local/bin/kube-proxy --config=/var/lib/kube-proxy/config.conf --hostname-override=worker1
+root       19859  0.0  0.5 1280776 20044 ?       Ssl  May16   3:15 /usr/local/bin/kube-proxy --config=/var/lib/kube-proxy/config.conf --hostname-override=worker1
+root       19859  0.0  0.5 1280776 20044 ?       Ssl  May16   1:31 /usr/local/bin/kube-proxy --config=/var/lib/kube-proxy/config.conf --hostname-override=worker1
+root       19859  0.0  0.5 1280776 20044 ?       Ssl  May16   0:23 /usr/local/bin/kube-proxy --config=/var/lib/kube-proxy/config.conf --hostname-override=worker1
+root       19859  0.0  0.5 1280776 20044 ?       Ssl  May16   1:22 /usr/local/bin/kube-proxy --config=/var/lib/kube-proxy/config.conf --hostname-override=worker1
+root       19859  0.0  0.5 1280776 20044 ?       Ssl  May16   1:32 /usr/local/bin/kube-proxy --config=/var/lib/kube-proxy/config.conf --hostname-override=worker1
+root       19859  0.0  0.5 1280776 20044 ?       Ssl  May16   1:33 /usr/local/bin/kube-proxy --config=/var/lib/kube-proxy/config.conf --hostname-override=worker1
+root       19859  0.0  0.5 1280776 20044 ?       Ssl  May16   1:20 /usr/local/bin/kube-proxy --config=/var/lib/kube-proxy/config.conf --hostname-override=worker1
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May16   0:00 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.2  0.3 1266132 15496 ?       Ssl  May16  44:38 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May16  16:07 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May16  16:08 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May16  20:02 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May16   0:00 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May16   0:00 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May16   6:00 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May16  16:59 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May16  17:16 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May17  16:40 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       20009  0.0  0.3 1266132 15496 ?       Ssl  May21  12:50 /opt/bin/flanneld --ip-masq --kube-subnet-mgr
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   1:31 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   1:44 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   1:40 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   1:40 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   1:48 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   1:42 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   1:49 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   0:33 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   2:01 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May16   1:28 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+root       43339  0.0  0.1 711928  4028 ?        Sl   May22   1:24 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 31204b28a9945cb5e9b2ac92b2f2912cd10312890ee0eb5ef28e3142a9b1df56 -address /run/containerd/containerd.sock
+65535      43363  0.0  0.0    756     4 ?        Ss   May16   0:00 /pause
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16  14:26 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16  18:47 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16  18:03 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16  15:20 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16   0:00 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16   0:00 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16  13:37 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16   0:00 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16  16:52 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16  14:24 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16  17:14 /coredns -conf /etc/coredns/Corefile
+root       43411  0.0  0.5 763100 21452 ?        Ssl  May16   7:41 /coredns -conf /etc/coredns/Corefile
+syslog   1175701  0.0  0.0 221184  3648 ?        Ssl  May19   0:00 /usr/sbin/rsyslogd -n -iNONE
+syslog   1175701  0.0  0.0 221184  3648 ?        Ssl  May19   0:07 /usr/sbin/rsyslogd -n -iNONE
+syslog   1175701  0.0  0.0 221184  3648 ?        Ssl  May19   0:00 /usr/sbin/rsyslogd -n -iNONE
+syslog   1175701  0.0  0.0 221184  3648 ?        Ssl  May19   0:07 /usr/sbin/rsyslogd -n -iNONE
+kien     1515457  0.1  0.2  19852  8156 ?        Ss   10:01   0:20 /lib/systemd/systemd --user
+kien     1515458  0.0  0.2 174444  8320 ?        S    10:01   0:00 (sd-pam)
+kien     1515620  0.0  0.0   2056    68 ?        S    10:01   0:00 sh /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/code-server --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.4  2.4 960180 93552 ?        Sl   10:01   0:53 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.0  2.4 960180 93552 ?        Sl   10:01   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.0  2.4 960180 93552 ?        Sl   10:01   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.0  2.4 960180 93552 ?        Sl   10:01   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.0  2.4 960180 93552 ?        Sl   10:01   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.0  2.4 960180 93552 ?        Sl   10:01   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.0  2.4 960180 93552 ?        Sl   10:01   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.0  2.4 960180 93552 ?        Sl   10:01   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.0  2.4 960180 93552 ?        Sl   10:01   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.0  2.4 960180 93552 ?        Sl   10:01   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1515624  0.0  2.4 960180 93552 ?        Sl   10:01   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-28d92794-f784-423a-b2e4-c415f648d6b3
+kien     1516081  1.2  1.6 766004 63504 ?        Sl   10:03   2:23 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:03   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:23   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:23   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:35   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   10:54   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516081  0.0  1.6 766004 63504 ?        Sl   13:00   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=ptyHost --logsPath /home/kien/.vscode-server/data/logs/20240530T100122
+kien     1516162  0.0  0.0   9864  2664 pts/0    Ss+  10:03   0:00 /bin/bash --init-file /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1517514  0.0  1.0 714280 42176 ?        Sl   10:06   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+root     1521934  0.0  0.1  15636  6044 ?        Ss   10:22   0:00 sshd: kien [priv]
+kien     1522072  0.0  0.1  16016  4156 ?        S    10:22   0:02 sshd: kien@notty
+kien     1522088  0.0  0.0   8328  1816 ?        Ss   10:22   0:00 bash
+kien     1522107  0.0  0.1  31468  4884 ?        Sl   10:22   0:01 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1522088 --on-port
+kien     1522107  0.0  0.1  31468  4884 ?        Sl   10:22   0:01 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1522088 --on-port
+kien     1522107  0.0  0.1  31468  4884 ?        Sl   10:22   0:01 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1522088 --on-port
+kien     1522107  0.0  0.1  31468  4884 ?        Sl   10:22   0:00 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1522088 --on-port
+kien     1522107  0.1  0.1  31468  4884 ?        Sl   10:22   0:10 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1522088 --on-port
+kien     1522146  1.0  7.1 5336576 276552 ?      Sl   10:22   1:50 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:22   0:07 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:22   0:08 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:22   0:07 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:22   0:07 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:22   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:22   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:22   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:22   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522146  0.0  7.1 5336576 276552 ?      Sl   10:23   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --dns-result-order=ipv4first /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:02 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.0  1.4 914752 54556 ?        Sl   10:22   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+kien     1522172  0.1  1.4 914752 54556 ?        Sl   10:22   0:13 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/bootstrap-fork --type=fileWatcher
+root     1522233  0.0  0.1  15636  5976 ?        Ss   10:23   0:00 sshd: kien [priv]
+kien     1522343  0.0  0.0  15636  3664 ?        S    10:23   0:00 sshd: kien@notty
+kien     1522350  0.0  0.0   8328  1796 ?        Ss   10:23   0:00 bash
+kien     1522369  0.0  0.1  31072  4248 ?        Sl   10:23   0:00 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1522350 --on-port
+kien     1522369  0.0  0.1  31072  4248 ?        Sl   10:23   0:00 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1522350 --on-port
+kien     1522369  0.0  0.1  31072  4248 ?        Sl   10:23   0:00 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1522350 --on-port
+kien     1522369  0.1  0.1  31072  4248 ?        Sl   10:23   0:11 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1522350 --on-port
+kien     1522369  0.0  0.1  31072  4248 ?        Sl   10:23   0:00 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1522350 --on-port
+kien     1522520  0.0  0.0   9864  2688 pts/2    Ss+  10:23   0:00 /bin/bash --init-file /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+kien     1522586  0.1  6.4 1051148 249096 ?      Sl   10:23   0:14 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/extensions/ms-python.vscode-pylance-2024.5.1/dist/server.bundle.js --cancellationReceive=file:97f0b7bea6ef380780d4477f37a49490733c876e5d --node-ipc --clientProcessId=1522146
+kien     1522586  0.0  6.4 1051148 249096 ?      Sl   10:23   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/extensions/ms-python.vscode-pylance-2024.5.1/dist/server.bundle.js --cancellationReceive=file:97f0b7bea6ef380780d4477f37a49490733c876e5d --node-ipc --clientProcessId=1522146
+kien     1522586  0.0  6.4 1051148 249096 ?      Sl   10:23   0:02 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/extensions/ms-python.vscode-pylance-2024.5.1/dist/server.bundle.js --cancellationReceive=file:97f0b7bea6ef380780d4477f37a49490733c876e5d --node-ipc --clientProcessId=1522146
+kien     1522586  0.0  6.4 1051148 249096 ?      Sl   10:23   0:02 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/extensions/ms-python.vscode-pylance-2024.5.1/dist/server.bundle.js --cancellationReceive=file:97f0b7bea6ef380780d4477f37a49490733c876e5d --node-ipc --clientProcessId=1522146
+kien     1522586  0.0  6.4 1051148 249096 ?      Sl   10:23   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/extensions/ms-python.vscode-pylance-2024.5.1/dist/server.bundle.js --cancellationReceive=file:97f0b7bea6ef380780d4477f37a49490733c876e5d --node-ipc --clientProcessId=1522146
+kien     1522586  0.0  6.4 1051148 249096 ?      Sl   10:23   0:03 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/extensions/ms-python.vscode-pylance-2024.5.1/dist/server.bundle.js --cancellationReceive=file:97f0b7bea6ef380780d4477f37a49490733c876e5d --node-ipc --clientProcessId=1522146
+kien     1522586  0.0  6.4 1051148 249096 ?      Sl   10:23   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/extensions/ms-python.vscode-pylance-2024.5.1/dist/server.bundle.js --cancellationReceive=file:97f0b7bea6ef380780d4477f37a49490733c876e5d --node-ipc --clientProcessId=1522146
+kien     1522586  0.0  6.4 1051148 249096 ?      Sl   10:23   0:09 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/extensions/ms-python.vscode-pylance-2024.5.1/dist/server.bundle.js --cancellationReceive=file:97f0b7bea6ef380780d4477f37a49490733c876e5d --node-ipc --clientProcessId=1522146
+kien     1522599  0.0  0.1   9996  3888 pts/3    Ss+  10:23   0:00 /bin/bash --init-file /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+kien     1526392  0.0  0.0   9864  2696 pts/4    Ss+  10:35   0:00 /bin/bash --init-file /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:53   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+root     1533203  0.0  0.2 711928 10340 ?        Sl   10:59   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id c374b0bb2862f9faaba9ffc22ef4db1de7e6a378b89637c89c3ff92a5bd1b41e -address /run/containerd/containerd.sock
+kien     1533494  0.0  0.1  11640  5420 pts/5    Ss+  10:54   0:01 /bin/bash --init-file /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+root     1561824  0.0  0.0      0     0 ?        I<   11:32   0:03 [kworker/2:0H-kblockd]
+kien     1592766  0.3  1.6 642800 64400 ?        Sl   12:02   0:13 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/markdown-language-features/server/dist/node/workerMain --node-ipc --clientProcessId=1522146
+kien     1592766  0.0  1.6 642800 64400 ?        Sl   12:02   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/markdown-language-features/server/dist/node/workerMain --node-ipc --clientProcessId=1522146
+kien     1592766  0.0  1.6 642800 64400 ?        Sl   12:02   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/markdown-language-features/server/dist/node/workerMain --node-ipc --clientProcessId=1522146
+kien     1592766  0.0  1.6 642800 64400 ?        Sl   12:02   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/markdown-language-features/server/dist/node/workerMain --node-ipc --clientProcessId=1522146
+kien     1592766  0.0  1.6 642800 64400 ?        Sl   12:02   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/markdown-language-features/server/dist/node/workerMain --node-ipc --clientProcessId=1522146
+kien     1592766  0.0  1.6 642800 64400 ?        Sl   12:02   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/markdown-language-features/server/dist/node/workerMain --node-ipc --clientProcessId=1522146
+kien     1592766  0.0  1.6 642800 64400 ?        Sl   12:02   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/markdown-language-features/server/dist/node/workerMain --node-ipc --clientProcessId=1522146
+root     1593231  0.3  0.0      0     0 ?        I    12:03   0:15 [kworker/u8:1-events_unbound]
+kien     1594775  0.1  4.5 731184 177312 ?       Sl   12:04   0:08 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --serverMode partialSemantic --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-6c1e94341faa7a53a8d4.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594775  0.0  4.5 731184 177312 ?       Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --serverMode partialSemantic --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-6c1e94341faa7a53a8d4.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594775  0.0  4.5 731184 177312 ?       Sl   12:04   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --serverMode partialSemantic --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-6c1e94341faa7a53a8d4.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594775  0.0  4.5 731184 177312 ?       Sl   12:04   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --serverMode partialSemantic --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-6c1e94341faa7a53a8d4.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594775  0.0  4.5 731184 177312 ?       Sl   12:04   0:02 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --serverMode partialSemantic --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-6c1e94341faa7a53a8d4.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594775  0.0  4.5 731184 177312 ?       Sl   12:04   0:01 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --serverMode partialSemantic --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-6c1e94341faa7a53a8d4.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594775  0.0  4.5 731184 177312 ?       Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --serverMode partialSemantic --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-6c1e94341faa7a53a8d4.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594781  0.2  4.6 742496 180016 ?       Sl   12:04   0:12 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-17457ea4c91ad095d0eb.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594781  0.0  4.6 742496 180016 ?       Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-17457ea4c91ad095d0eb.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594781  0.0  4.6 742496 180016 ?       Sl   12:04   0:02 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-17457ea4c91ad095d0eb.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594781  0.0  4.6 742496 180016 ?       Sl   12:04   0:02 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-17457ea4c91ad095d0eb.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594781  0.0  4.6 742496 180016 ?       Sl   12:04   0:02 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-17457ea4c91ad095d0eb.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594781  0.0  4.6 742496 180016 ?       Sl   12:04   0:02 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-17457ea4c91ad095d0eb.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594781  0.0  4.6 742496 180016 ?       Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node --max-old-space-size=3072 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /tmp/vscode-typescript1000/353e76c6e36ad2ca0872/tscancellation-17457ea4c91ad095d0eb.tmp* --locale en --noGetErrOnBackgroundUpdate --canUseWatchEvents --validateDefaultNpmLocation --useNodeIpc
+kien     1594789  0.0  1.3 602108 50864 ?        Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /home/kien/.cache/typescript/5.4 --enableTelemetry --typesMapLocation /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+kien     1594789  0.0  1.3 602108 50864 ?        Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /home/kien/.cache/typescript/5.4 --enableTelemetry --typesMapLocation /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+kien     1594789  0.0  1.3 602108 50864 ?        Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /home/kien/.cache/typescript/5.4 --enableTelemetry --typesMapLocation /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+kien     1594789  0.0  1.3 602108 50864 ?        Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /home/kien/.cache/typescript/5.4 --enableTelemetry --typesMapLocation /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+kien     1594789  0.0  1.3 602108 50864 ?        Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /home/kien/.cache/typescript/5.4 --enableTelemetry --typesMapLocation /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+kien     1594789  0.0  1.3 602108 50864 ?        Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /home/kien/.cache/typescript/5.4 --enableTelemetry --typesMapLocation /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+kien     1594789  0.0  1.3 602108 50864 ?        Sl   12:04   0:00 /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /home/kien/.cache/typescript/5.4 --enableTelemetry --typesMapLocation /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+root     1604773  0.1  0.0      0     0 ?        I    12:30   0:03 [kworker/2:1-events]
+root     1605497  0.1  0.0      0     0 ?        I    12:32   0:02 [kworker/0:0-events]
+root     1610328  0.1  0.0      0     0 ?        I<   12:38   0:03 [kworker/0:1H-mmc_complete]
+root     1614601  0.3  0.0      0     0 ?        I    12:43   0:07 [kworker/u8:3-events_power_efficient]
+root     1616369  0.1  0.0      0     0 ?        I    12:45   0:02 [kworker/0:3-cgroup_destroy]
+root     1616370  0.1  0.0      0     0 ?        I    12:45   0:01 [kworker/0:4-events]
+root     1620950  0.1  0.0      0     0 ?        I    12:49   0:02 [kworker/1:5-events]
+root     1623373  0.0  0.0      0     0 ?        I    12:52   0:01 [kworker/1:6-events]
+root     1624559  0.0  0.2  15636  7816 ?        Ss   12:53   0:00 sshd: kien [priv]
+kien     1624700  0.1  0.1  15636  5164 ?        S    12:53   0:01 sshd: kien@notty
+kien     1624710  0.0  0.0   8328  2924 ?        Ss   12:53   0:00 bash
+kien     1624743  0.0  0.3  32028 12688 ?        Sl   12:53   0:01 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1624710 --on-port
+kien     1624743  0.0  0.3  32028 12688 ?        Sl   12:53   0:00 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1624710 --on-port
+kien     1624743  0.0  0.3  32028 12688 ?        Sl   12:53   0:00 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1624710 --on-port
+kien     1624743  0.0  0.3  32028 12688 ?        Sl   12:53   0:00 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1624710 --on-port
+kien     1624743  0.0  0.3  32028 12688 ?        Sl   12:53   0:00 /home/kien/.vscode-server/code-dc96b837cf6bb4af9cd736aa3af08cf8279f7685 command-shell --cli-data-dir /home/kien/.vscode-server/cli --parent-process-id 1624710 --on-port
+root     1628086  0.0  0.0      0     0 ?        I<   12:56   0:00 [kworker/3:2H-kblockd]
+root     1630376  0.0  0.0      0     0 ?        I    12:59   0:00 [kworker/3:1-events]
+root     1630377  0.1  0.0      0     0 ?        I    12:59   0:01 [kworker/3:2-events]
+root     1630425  0.1  0.0      0     0 ?        I    12:59   0:01 [kworker/0:7-events]
+root     1630796  0.0  0.0      0     0 ?        I<   12:59   0:00 [kworker/1:0H-kblockd]
+kien     1631767  0.0  0.1   9864  4808 pts/7    Ss   13:00   0:00 /bin/bash --init-file /home/kien/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+root     1631770  0.0  0.0      0     0 ?        I<   13:00   0:00 [kworker/0:2H]
+root     1632484  0.0  0.0  12560  3852 pts/7    S    13:00   0:00 sudo su
+root     1632501  0.0  0.0  11460  3756 pts/7    S    13:00   0:00 su
+root     1632503  0.0  0.0   8600  3456 pts/7    S+   13:00   0:00 bash
+root     1635245  0.2  0.0      0     0 ?        I    13:03   0:01 [kworker/1:1-cgroup_pidlist_destroy]
+root     1635246  0.0  0.0      0     0 ?        I    13:03   0:00 [kworker/1:2-events]
+root     1635331  0.4  0.0      0     0 ?        I    13:03   0:03 [kworker/u8:0-events_unbound]
+root     1635334  0.1  0.0      0     0 ?        I    13:03   0:01 [kworker/2:6-events]
+root     1635335  0.1  0.0      0     0 ?        I    13:03   0:00 [kworker/2:7-cgroup_destroy]
+root     1635487  0.1  0.0      0     0 ?        I    13:04   0:00 [kworker/3:0-events]
+root     1636264  0.0  0.0      0     0 ?        I<   13:06   0:00 [kworker/0:0H-kblockd]
+root     1636321  0.0  0.2  15604  7808 ?        Ss   13:06   0:00 sshd: kien [priv]
+root     1636323  0.0  0.0      0     0 ?        I<   13:06   0:00 [kworker/1:1H]
+kien     1636372  0.4  0.1  15736  4884 ?        S    13:06   0:02 sshd: kien@notty
+root     1636452  0.0  0.0      0     0 ?        I<   13:06   0:00 [kworker/2:1H]
+root     1638992  0.0  0.0      0     0 ?        I<   13:08   0:00 [kworker/3:1H]
+root     1639022  0.0  0.2  15604  7780 ?        Ss   13:08   0:00 sshd: kien [priv]
+kien     1639070  0.5  0.1  15736  4876 ?        S    13:08   0:02 sshd: kien@notty
+root     1641415  0.1  0.0      0     0 ?        I    13:10   0:00 [kworker/3:3-cgroup_destroy]
+root     1641416  0.3  0.0      0     0 ?        I    13:10   0:01 [kworker/u8:2-events_power_efficient]
+root     1641417  0.2  0.0      0     0 ?        I    13:10   0:00 [kworker/2:0-events]
+root     1641462  0.0  0.1  15604  7736 ?        Ss   13:10   0:00 sshd: kien [priv]
+kien     1641511  0.7  0.1  15736  4836 ?        S    13:10   0:02 sshd: kien@notty
+root     1641950  0.0  0.0      0     0 ?        I<   13:11   0:00 [kworker/1:2H]
+root     1642159  0.0  0.0      0     0 ?        I<   13:11   0:00 [kworker/2:2H]
+root     1643666  0.0  0.0      0     0 ?        I    13:13   0:00 [kworker/3:4-events]
+root     1643667  0.2  0.0      0     0 ?        I    13:13   0:00 [kworker/3:5-events]
+root     1643668  0.2  0.0      0     0 ?        I    13:13   0:00 [kworker/3:6-events]
+root     1643669  0.0  0.0      0     0 ?        I    13:13   0:00 [kworker/3:7]
+root     1643709  0.3  0.0      0     0 ?        I    13:13   0:00 [kworker/1:0-mm_percpu_wq]
+root     1643710  0.0  0.0      0     0 ?        I    13:13   0:00 [kworker/1:3]
+root     1643751  0.0  0.0      0     0 ?        I    13:13   0:00 [kworker/2:2-cgroup_pidlist_destroy]
+root     1643825  0.0  0.1  15604  7752 ?        Ss   13:13   0:00 sshd: kien [priv]
+kien     1643874  1.3  0.1  15736  4844 ?        S    13:13   0:02 sshd: kien@notty
+root     1644262  0.0  0.0      0     0 ?        I<   13:13   0:00 [kworker/3:0H]
+kien     1644265  0.0  0.0   6664   428 ?        S    13:13   0:00 sleep 180
+kien     1645014  0.0  0.0   6664   456 ?        S    13:14   0:00 sleep 180
+kien     1645034  0.0  0.0   6664   436 ?        S    13:14   0:00 sleep 180
+root     1646028  0.0  0.0      0     0 ?        I    13:15   0:00 [kworker/0:1-events]
+root     1646029  0.0  0.0      0     0 ?        I    13:15   0:00 [kworker/0:2-events]
+root     1646030  0.5  0.0      0     0 ?        I    13:15   0:00 [kworker/0:5-events]
+root     1646031  0.0  0.0      0     0 ?        I    13:15   0:00 [kworker/0:6]
+root     1646075  0.0  0.0      0     0 ?        I    13:15   0:00 [kworker/2:3-memcg_kmem_cache]
+root     1646078  0.1  0.1  15124  7232 ?        Ss   13:15   0:00 sshd: kien [priv]
+sshd     1646079  0.0  0.1  12232  4504 ?        S    13:15   0:00 sshd: kien [net]
+root     1646101  0.3  0.2  15604  7944 ?        Ss   13:15   0:00 sshd: kien [priv]
+kien     1646152  0.0  0.1  15736  4868 ?        S    13:15   0:00 sshd: kien@pts/6
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+root     1646204  0.0  0.2 712184  9476 ?        Sl   13:15   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id dd7616780f38436e22e3a81a422be5f02ed8a7d314affb1d3589d072e84a318b -address /run/containerd/containerd.sock
+65535    1646240  0.2  0.0    756     4 ?        Ss   13:15   0:00 /pause
+root     1646275  0.4  0.0   3616  2404 ?        Ss   13:15   0:00 /bin/bash /startup.sh
+root     1646289  1.5  0.4  23288 18128 ?        S    13:15   0:00 /usr/bin/python3 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+root     1646291  6.7  2.1 1504752 84080 ?       Sl   13:15   0:01 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.2  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.3  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.2  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  1.2  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646291  0.0  2.1 1504752 84080 ?       Sl   13:15   0:00 mongod --fork --logpath /var/log/mongodb.log --bind_ip_all
+root     1646297  2.9  0.8  38548 32056 ?        S    13:15   0:00 /usr/bin/python3 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+root     1646298  3.0  0.8  38572 32060 ?        S    13:15   0:00 /usr/bin/python3 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+root     1646299  3.1  0.8  38576 32088 ?        S    13:15   0:00 /usr/bin/python3 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+root     1646300  2.9  0.8  38616 32088 ?        S    13:15   0:00 /usr/bin/python3 /usr/local/bin/gunicorn -w 4 -b 0.0.0.0:5500 app:application
+root     1646482  1.0  0.0  21336  3480 ?        S    13:16   0:00 /lib/systemd/systemd-udevd
+kien     1646513  0.0  0.0   8196  2876 pts/6    Ss+  13:16   0:00 bash -c cd /home/kien/systemcall_trace/ ; sudo ./syscall.bash 1646291 1646289 results/mproc_5
+root     1646514  3.0  0.0  12556  3856 pts/6    S+   13:16   0:00 sudo ./syscall.bash 1646291 1646289 results/mproc_5
+root     1646515  3.0  0.0   8196  3128 pts/6    S+   13:16   0:00 /bin/bash ./syscall.bash 1646291 1646289 results/mproc_5
+root     1646554  0.0  0.0  11300  2940 pts/6    R+   13:16   0:00 ps -auxH
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:03 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:22 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:20 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:20 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:20 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:22 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:21 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2863029  0.0  0.2 711928 10192 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id d766a3d0df500628d33cd7b64e1a9249ba814737d4290c7419cf912e0aa81666 -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:02 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:00 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:19 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:21 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:20 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:19 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:20 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     2870515  0.0  0.2 711928  9588 ?        Sl   May23   0:19 /usr/local/bin/containerd-shim-runc-v2 -namespace k8s.io -id 903da9b3c6d450a1d765c3440846779a62d258614e1d17d48f18e5f016042e9a -address /run/containerd/containerd.sock
+root     3038932  0.0  0.0      0     0 ?        S<   May23   0:00 [loop0]
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:01 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:21 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:15 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:00 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:16 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:00 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:11 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:00 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:14 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:15 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:13 /usr/lib/snapd/snapd
+root     3039050  0.0  0.5 1540672 19756 ?       Ssl  May23   0:13 /usr/lib/snapd/snapd

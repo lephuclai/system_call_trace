@@ -1,0 +1,26 @@
+               finish_task_switch() {
+                 _raw_spin_unlock_irq();
+               }
+             } /* schedule */
+             hrtimer_try_to_cancel() {
+               hrtimer_active();
+             }
+           } /* do_nanosleep */
+         } /* hrtimer_nanosleep */
+       } /* common_nsleep */
+     } /* __arm64_sys_clock_nanosleep */
+   } /* el0_svc_common.constprop.0 */
+ } /* el0_svc_handler */
+ do_notify_resume() {
+   fpsimd_restore_current_state() {
+     __get_cpu_fpsimd_context();
+     task_fpsimd_load() {
+       have_cpu_fpsimd_context();
+     }
+     fpsimd_bind_task_to_cpu();
+     put_cpu_fpsimd_context() {
+       __put_cpu_fpsimd_context();
+     }
+   }
+ }
+ post_ttbr_update_workaround();

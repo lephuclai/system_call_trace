@@ -1,0 +1,232 @@
+ 0) Journal-3064428 |               finish_task_switch() {
+ 0) Journal-3064428 |                 _raw_spin_unlock_irq();
+ 0) Journal-3064428 |               }
+ 0) Journal-3064428 |             }
+ 0) Journal-3064428 |           }
+ 0) Journal-3064428 |           _raw_spin_lock();
+ 0) Journal-3064428 |           __unqueue_futex();
+ 0) Journal-3064428 |           _raw_spin_unlock();
+ 0) Journal-3064428 |           drop_futex_key_refs.isra.0();
+ 0) Journal-3064428 |           hrtimer_cancel() {
+ 0) Journal-3064428 |             hrtimer_try_to_cancel() {
+ 0) Journal-3064428 |               hrtimer_active();
+ 0) Journal-3064428 |             }
+ 0) Journal-3064428 |           }
+ 0) Journal-3064428 |         }
+ 0) Journal-3064428 |       }
+ 0) Journal-3064428 |     } /* __arm64_sys_futex */
+ 0) Journal-3064428 |   } /* el0_svc_common.constprop.0 */
+ 0) Journal-3064428 | } /* el0_svc_handler */
+ 0) Journal-3064428 | do_notify_resume() {
+ 0) Journal-3064428 |   fpsimd_restore_current_state() {
+ 0) Journal-3064428 |     __get_cpu_fpsimd_context();
+ 0) Journal-3064428 |     task_fpsimd_load() {
+ 0) Journal-3064428 |       have_cpu_fpsimd_context();
+ 0) Journal-3064428 |     }
+ 0) Journal-3064428 |     fpsimd_bind_task_to_cpu();
+ 0) Journal-3064428 |     put_cpu_fpsimd_context() {
+ 0) Journal-3064428 |       __put_cpu_fpsimd_context();
+ 0) Journal-3064428 |     }
+ 0) Journal-3064428 |   }
+ 0) Journal-3064428 | }
+ 0) Journal-3064428 | post_ttbr_update_workaround();
+ 0) Journal-3064428 | el0_svc_handler() {
+ 0) Journal-3064428 |   el0_svc_common.constprop.0() {
+ 0) Journal-3064428 |     __arm64_sys_futex() {
+ 0) Journal-3064428 |       do_futex() {
+ 0) Journal-3064428 |         futex_wake() {
+ 0) Journal-3064428 |           get_futex_key() {
+ 0) Journal-3064428 |             get_futex_key_refs.isra.0();
+ 0) Journal-3064428 |           }
+ 0) Journal-3064428 |           hash_futex();
+ 0) Journal-3064428 |           drop_futex_key_refs.isra.0();
+ 0) Journal-3064428 |         }
+ 0) Journal-3064428 |       }
+ 0) Journal-3064428 |     }
+ 0) Journal-3064428 |   }
+ 0) Journal-3064428 | }
+ 0) Journal-3064428 | post_ttbr_update_workaround();
+ 0) Journal-3064428 | el0_svc_handler() {
+ 0) Journal-3064428 |   el0_svc_common.constprop.0() {
+ 0) Journal-3064428 |     __arm64_sys_futex() {
+ 0) Journal-3064428 |       get_timespec64();
+ 0) Journal-3064428 |       do_futex() {
+ 0) Journal-3064428 |         futex_wait() {
+ 0) Journal-3064428 |           hrtimer_init_sleeper() {
+ 0) Journal-3064428 |             __hrtimer_init();
+ 0) Journal-3064428 |           }
+ 0) Journal-3064428 |           ktime_add_safe();
+ 0) Journal-3064428 |           futex_wait_setup() {
+ 0) Journal-3064428 |             get_futex_key() {
+ 0) Journal-3064428 |               get_futex_key_refs.isra.0();
+ 0) Journal-3064428 |             }
+ 0) Journal-3064428 |             hash_futex();
+ 0) Journal-3064428 |             _raw_spin_lock();
+ 0) Journal-3064428 |             get_futex_value_locked();
+ 0) Journal-3064428 |           }
+ 0) Journal-3064428 |           futex_wait_queue_me() {
+ 0) Journal-3064428 |             _raw_spin_unlock();
+ 0) Journal-3064428 |             hrtimer_sleeper_start_expires() {
+ 0) Journal-3064428 |               hrtimer_start_range_ns() {
+ 0) Journal-3064428 |                 lock_hrtimer_base() {
+ 0) Journal-3064428 |                   _raw_spin_lock_irqsave();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 get_nohz_timer_target();
+ 0) Journal-3064428 |                 enqueue_hrtimer();
+ 0) Journal-3064428 |                 hrtimer_reprogram.constprop.0();
+ 0) Journal-3064428 |                 _raw_spin_unlock_irqrestore();
+ 0) Journal-3064428 |               }
+ 0) Journal-3064428 |             }
+ 0) Journal-3064428 |             schedule() {
+ 0) Journal-3064428 |               rcu_note_context_switch() {
+ 0) Journal-3064428 |                 rcu_preempt_deferred_qs() {
+ 0) Journal-3064428 |                   rcu_preempt_need_deferred_qs();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 rcu_qs();
+ 0) Journal-3064428 |               }
+ 0) Journal-3064428 |               _raw_spin_lock() {
+ 0) Journal-3064428 |                 queued_spin_lock_slowpath();
+ 0) Journal-3064428 |               }
+ 0) Journal-3064428 |               update_rq_clock();
+ 0) Journal-3064428 |               deactivate_task() {
+ 0) Journal-3064428 |                 psi_task_change() {
+ 0) Journal-3064428 |                   record_times.isra.0();
+ 0) Journal-3064428 |                   record_times.isra.0();
+ 0) Journal-3064428 |                   record_times.isra.0();
+ 0) Journal-3064428 |                   record_times.isra.0();
+ 0) Journal-3064428 |                   record_times.isra.0();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 dequeue_task_fair() {
+ 0) Journal-3064428 |                   dequeue_entity() {
+ 0) Journal-3064428 |                     update_curr() {
+ 0) Journal-3064428 |                       update_min_vruntime();
+ 0) Journal-3064428 |                       cpuacct_charge() {
+ 0) Journal-3064428 |                         __rcu_read_lock();
+ 0) Journal-3064428 |                         __rcu_read_unlock();
+ 0) Journal-3064428 |                       }
+ 0) Journal-3064428 |                       __rcu_read_lock();
+ 0) Journal-3064428 |                       __cgroup_account_cputime() {
+ 0) Journal-3064428 |                         cgroup_base_stat_cputime_account_begin();
+ 0) Journal-3064428 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) Journal-3064428 |                           cgroup_rstat_updated();
+ 0) Journal-3064428 |                         }
+ 0) Journal-3064428 |                       }
+ 0) Journal-3064428 |                       __rcu_read_unlock();
+ 0) Journal-3064428 |                     }
+ 0) Journal-3064428 |                     __update_load_avg_se();
+ 0) Journal-3064428 |                     __update_load_avg_cfs_rq();
+ 0) Journal-3064428 |                     clear_buddies();
+ 0) Journal-3064428 |                     update_cfs_group();
+ 0) Journal-3064428 |                     update_min_vruntime();
+ 0) Journal-3064428 |                   }
+ 0) Journal-3064428 |                   dequeue_entity() {
+ 0) Journal-3064428 |                     update_curr() {
+ 0) Journal-3064428 |                       __calc_delta();
+ 0) Journal-3064428 |                       update_min_vruntime();
+ 0) Journal-3064428 |                     }
+ 0) Journal-3064428 |                     __update_load_avg_se();
+ 0) Journal-3064428 |                     __update_load_avg_cfs_rq();
+ 0) Journal-3064428 |                     clear_buddies();
+ 0) Journal-3064428 |                     update_cfs_group() {
+ 0) Journal-3064428 |                       reweight_entity();
+ 0) Journal-3064428 |                     }
+ 0) Journal-3064428 |                     update_min_vruntime();
+ 0) Journal-3064428 |                   }
+ 0) Journal-3064428 |                   dequeue_entity() {
+ 0) Journal-3064428 |                     update_curr() {
+ 0) Journal-3064428 |                       __calc_delta();
+ 0) Journal-3064428 |                       update_min_vruntime();
+ 0) Journal-3064428 |                     }
+ 0) Journal-3064428 |                     __update_load_avg_se();
+ 0) Journal-3064428 |                     __update_load_avg_cfs_rq();
+ 0) Journal-3064428 |                     clear_buddies();
+ 0) Journal-3064428 |                     update_cfs_group() {
+ 0) Journal-3064428 |                       reweight_entity();
+ 0) Journal-3064428 |                     }
+ 0) Journal-3064428 |                     update_min_vruntime();
+ 0) Journal-3064428 |                   }
+ 0) Journal-3064428 |                   set_next_buddy();
+ 0) Journal-3064428 |                   __update_load_avg_se();
+ 0) Journal-3064428 |                   __update_load_avg_cfs_rq();
+ 0) Journal-3064428 |                   update_cfs_group() {
+ 0) Journal-3064428 |                     reweight_entity() {
+ 0) Journal-3064428 |                       update_curr() {
+ 0) Journal-3064428 |                         __calc_delta();
+ 0) Journal-3064428 |                         update_min_vruntime();
+ 0) Journal-3064428 |                       }
+ 0) Journal-3064428 |                     }
+ 0) Journal-3064428 |                   }
+ 0) Journal-3064428 |                   __update_load_avg_se();
+ 0) Journal-3064428 |                   __update_load_avg_cfs_rq();
+ 0) Journal-3064428 |                   update_cfs_group() {
+ 0) Journal-3064428 |                     reweight_entity() {
+ 0) Journal-3064428 |                       update_curr() {
+ 0) Journal-3064428 |                         __calc_delta();
+ 0) Journal-3064428 |                         update_min_vruntime();
+ 0) Journal-3064428 |                       }
+ 0) Journal-3064428 |                     }
+ 0) Journal-3064428 |                   }
+ 0) Journal-3064428 |                   hrtick_update();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |               }
+ 0) Journal-3064428 |               pick_next_task_fair() {
+ 0) Journal-3064428 |                 update_curr();
+ 0) Journal-3064428 |                 check_cfs_rq_runtime();
+ 0) Journal-3064428 |                 pick_next_entity() {
+ 0) Journal-3064428 |                   wakeup_preempt_entity.isra.0();
+ 0) Journal-3064428 |                   clear_buddies();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 update_curr();
+ 0) Journal-3064428 |                 check_cfs_rq_runtime();
+ 0) Journal-3064428 |                 pick_next_entity() {
+ 0) Journal-3064428 |                   wakeup_preempt_entity.isra.0();
+ 0) Journal-3064428 |                   clear_buddies();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 check_cfs_rq_runtime();
+ 0) Journal-3064428 |                 pick_next_entity() {
+ 0) Journal-3064428 |                   clear_buddies();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 pick_next_entity() {
+ 0) Journal-3064428 |                   clear_buddies();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 pick_next_entity() {
+ 0) Journal-3064428 |                   clear_buddies();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 put_prev_entity() {
+ 0) Journal-3064428 |                   check_cfs_rq_runtime();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 set_next_entity() {
+ 0) Journal-3064428 |                   __update_load_avg_se();
+ 0) Journal-3064428 |                   __update_load_avg_cfs_rq();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 put_prev_entity() {
+ 0) Journal-3064428 |                   check_cfs_rq_runtime();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 set_next_entity() {
+ 0) Journal-3064428 |                   __update_load_avg_se();
+ 0) Journal-3064428 |                   __update_load_avg_cfs_rq();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 put_prev_entity() {
+ 0) Journal-3064428 |                   check_cfs_rq_runtime();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 set_next_entity() {
+ 0) Journal-3064428 |                   __update_load_avg_se();
+ 0) Journal-3064428 |                   __update_load_avg_cfs_rq();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |               }
+ 0) Journal-3064428 |               check_and_switch_context();
+ 0) Journal-3064428 |               fpsimd_thread_switch() {
+ 0) Journal-3064428 |                 __get_cpu_fpsimd_context();
+ 0) Journal-3064428 |                 fpsimd_save() {
+ 0) Journal-3064428 |                   have_cpu_fpsimd_context();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |                 __put_cpu_fpsimd_context();
+ 0) Journal-3064428 |               }
+ 0) Journal-3064428 |               hw_breakpoint_thread_switch();
+ 0) Journal-3064428 |               uao_thread_switch();
+ 0) Journal-3064428 |               cpu_have_feature();
+ 0) Journal-3064428 |               erratum_1418040_thread_switch() {
+ 0) Journal-3064428 |                 this_cpu_has_cap() {
+ 0) Journal-3064428 |                   is_affected_midr_range_list();
+ 0) Journal-3064428 |                 }
+ 0) Journal-3064428 |               }

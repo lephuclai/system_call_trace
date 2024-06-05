@@ -1,2 +1,0 @@
-# test [sum: N min max sum mean stddev][max: N min max sum mean stddev][mean: N min max sum mean stddev][unknown: N min max sum mean stddev]
-runc-redis-test runsc-redis-test runsck-redis-test 

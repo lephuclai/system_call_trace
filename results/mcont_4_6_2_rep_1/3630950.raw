@@ -1,0 +1,490 @@
+ 0) gunicor-3630950 |                       finish_task_switch() {
+ 0) gunicor-3630950 |                         _raw_spin_unlock_irq();
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                     } /* preempt_schedule_irq */
+ 0) gunicor-3630950 |                   } /* arm64_preempt_schedule_irq */
+ 0) gunicor-3630950 |                   _raw_spin_lock_irqsave();
+ 0) gunicor-3630950 |                 } /* lock_hrtimer_base */
+ 0) gunicor-3630950 |                 __remove_hrtimer();
+ 0) gunicor-3630950 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-3630950 |               } /* hrtimer_try_to_cancel */
+ 0) gunicor-3630950 |             }
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           __fdget() {
+ 0) gunicor-3630950 |             __fget_light() {
+ 0) gunicor-3630950 |               __fget() {
+ 0) gunicor-3630950 |                 __rcu_read_lock();
+ 0) gunicor-3630950 |                 __rcu_read_unlock();
+ 0) gunicor-3630950 |               }
+ 0) gunicor-3630950 |             }
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           sock_poll() {
+ 0) gunicor-3630950 |             tcp_poll();
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           fput() {
+ 0) gunicor-3630950 |             fput_many();
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           __fdget() {
+ 0) gunicor-3630950 |             __fget_light() {
+ 0) gunicor-3630950 |               __fget() {
+ 0) gunicor-3630950 |                 __rcu_read_lock() {
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 __rcu_read_unlock();
+ 0) gunicor-3630950 |               }
+ 0) gunicor-3630950 |             }
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           pipe_poll();
+ 0) gunicor-3630950 |           fput() {
+ 0) gunicor-3630950 |             fput_many();
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           schedule_hrtimeout_range() {
+ 0) gunicor-3630950 |             schedule_hrtimeout_range_clock() {
+ 0) gunicor-3630950 |               hrtimer_init_sleeper() {
+ 0) gunicor-3630950 |                 __hrtimer_init();
+ 0) gunicor-3630950 |               }
+ 0) gunicor-3630950 |               hrtimer_start_range_ns() {
+ 0) gunicor-3630950 |                 lock_hrtimer_base() {
+ 0) gunicor-3630950 |                   _raw_spin_lock_irqsave();
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 get_nohz_timer_target();
+ 0) gunicor-3630950 |                 enqueue_hrtimer();
+ 0) gunicor-3630950 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-3630950 |               }
+ 0) gunicor-3630950 |               schedule() {
+ 0) gunicor-3630950 |                 rcu_note_context_switch() {
+ 0) gunicor-3630950 |                   rcu_preempt_deferred_qs() {
+ 0) gunicor-3630950 |                     rcu_preempt_need_deferred_qs();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   rcu_qs();
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 _raw_spin_lock();
+ 0) gunicor-3630950 |                 update_rq_clock();
+ 0) gunicor-3630950 |                 deactivate_task() {
+ 0) gunicor-3630950 |                   psi_task_change() {
+ 0) gunicor-3630950 |                     record_times.isra.0();
+ 0) gunicor-3630950 |                     record_times.isra.0();
+ 0) gunicor-3630950 |                     record_times.isra.0();
+ 0) gunicor-3630950 |                     record_times.isra.0();
+ 0) gunicor-3630950 |                     record_times.isra.0();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   dequeue_task_fair() {
+ 0) gunicor-3630950 |                     dequeue_entity() {
+ 0) gunicor-3630950 |                       update_curr() {
+ 0) gunicor-3630950 |                         update_min_vruntime();
+ 0) gunicor-3630950 |                         cpuacct_charge() {
+ 0) gunicor-3630950 |                           __rcu_read_lock();
+ 0) gunicor-3630950 |                           __rcu_read_unlock();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                         __rcu_read_lock();
+ 0) gunicor-3630950 |                         __cgroup_account_cputime() {
+ 0) gunicor-3630950 |                           cgroup_base_stat_cputime_account_begin();
+ 0) gunicor-3630950 |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) gunicor-3630950 |                             cgroup_rstat_updated();
+ 0) gunicor-3630950 |                           }
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                         __rcu_read_unlock();
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                       __update_load_avg_se();
+ 0) gunicor-3630950 |                       __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                       clear_buddies();
+ 0) gunicor-3630950 |                       update_cfs_group();
+ 0) gunicor-3630950 |                       update_min_vruntime();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     set_next_buddy();
+ 0) gunicor-3630950 |                     __update_load_avg_se();
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                     update_cfs_group() {
+ 0) gunicor-3630950 |                       reweight_entity() {
+ 0) gunicor-3630950 |                         update_curr() {
+ 0) gunicor-3630950 |                           __calc_delta();
+ 0) gunicor-3630950 |                           update_min_vruntime();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_se();
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                     update_cfs_group() {
+ 0) gunicor-3630950 |                       reweight_entity() {
+ 0) gunicor-3630950 |                         update_curr() {
+ 0) gunicor-3630950 |                           __calc_delta();
+ 0) gunicor-3630950 |                           update_min_vruntime();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_se();
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                     update_cfs_group() {
+ 0) gunicor-3630950 |                       reweight_entity() {
+ 0) gunicor-3630950 |                         update_curr() {
+ 0) gunicor-3630950 |                           __calc_delta();
+ 0) gunicor-3630950 |                           update_min_vruntime();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_se();
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                     update_cfs_group() {
+ 0) gunicor-3630950 |                       reweight_entity() {
+ 0) gunicor-3630950 |                         update_curr() {
+ 0) gunicor-3630950 |                           __calc_delta();
+ 0) gunicor-3630950 |                           update_min_vruntime();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     hrtick_update();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 pick_next_task_fair() {
+ 0) gunicor-3630950 |                   update_curr();
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   update_curr();
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   update_curr();
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   update_curr();
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   put_prev_entity() {
+ 0) gunicor-3630950 |                     check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   set_next_entity() {
+ 0) gunicor-3630950 |                     __update_load_avg_se() {
+ 0) gunicor-3630950 |                       __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 check_and_switch_context();
+ 0) gunicor-3630950 |                 fpsimd_thread_switch() {
+ 0) gunicor-3630950 |                   __get_cpu_fpsimd_context();
+ 0) gunicor-3630950 |                   fpsimd_save() {
+ 0) gunicor-3630950 |                     have_cpu_fpsimd_context();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   __put_cpu_fpsimd_context();
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 hw_breakpoint_thread_switch();
+ 0) gunicor-3630950 |                 uao_thread_switch();
+ 0) gunicor-3630950 |                 cpu_have_feature();
+ 0) gunicor-3630950 |                 erratum_1418040_thread_switch() {
+ 0) gunicor-3630950 |                   this_cpu_has_cap() {
+ 0) gunicor-3630950 |                     is_affected_midr_range_list();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 finish_task_switch() {
+ 0) gunicor-3630950 |                   _raw_spin_unlock_irq() {
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |               } /* schedule */
+ 0) gunicor-3630950 |                 rcu_note_context_switch() {
+ 0) gunicor-3630950 |                   rcu_preempt_deferred_qs() {
+ 0) gunicor-3630950 |                     rcu_preempt_need_deferred_qs();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   rcu_qs();
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 _raw_spin_lock();
+ 0) gunicor-3630950 |                 update_rq_clock();
+ 0) gunicor-3630950 |                 pick_next_task_fair() {
+ 0) gunicor-3630950 |                   update_curr();
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   put_prev_entity() {
+ 0) gunicor-3630950 |                     update_curr() {
+ 0) gunicor-3630950 |                       update_min_vruntime();
+ 0) gunicor-3630950 |                       cpuacct_charge() {
+ 0) gunicor-3630950 |                         __rcu_read_lock();
+ 0) gunicor-3630950 |                         __rcu_read_unlock();
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                       __rcu_read_lock();
+ 0) gunicor-3630950 |                       __cgroup_account_cputime() {
+ 0) gunicor-3630950 |                         cgroup_base_stat_cputime_account_begin();
+ 0) gunicor-3630950 |                         cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) gunicor-3630950 |                           cgroup_rstat_updated();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                       __rcu_read_unlock();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                     __enqueue_entity();
+ 0) gunicor-3630950 |                     __update_load_avg_se();
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   put_prev_entity() {
+ 0) gunicor-3630950 |                     update_curr() {
+ 0) gunicor-3630950 |                       __calc_delta();
+ 0) gunicor-3630950 |                       update_min_vruntime();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                     __enqueue_entity();
+ 0) gunicor-3630950 |                     __update_load_avg_se();
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   put_prev_entity() {
+ 0) gunicor-3630950 |                     update_curr() {
+ 0) gunicor-3630950 |                       __calc_delta();
+ 0) gunicor-3630950 |                       update_min_vruntime();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                     __enqueue_entity();
+ 0) gunicor-3630950 |                     __update_load_avg_se();
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   put_prev_entity() {
+ 0) gunicor-3630950 |                     update_curr() {
+ 0) gunicor-3630950 |                       __calc_delta();
+ 0) gunicor-3630950 |                       update_min_vruntime();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                     __enqueue_entity();
+ 0) gunicor-3630950 |                     __update_load_avg_se();
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   put_prev_entity() {
+ 0) gunicor-3630950 |                     update_curr();
+ 0) gunicor-3630950 |                     check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                     __enqueue_entity();
+ 0) gunicor-3630950 |                     __update_load_avg_se();
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   set_next_entity() {
+ 0) gunicor-3630950 |                     __update_load_avg_se();
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 finish_task_switch() {
+ 0) gunicor-3630950 |                   _raw_spin_unlock_irq();
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |               hrtimer_try_to_cancel() {
+ 0) gunicor-3630950 |                 hrtimer_active();
+ 0) gunicor-3630950 |                 lock_hrtimer_base() {
+ 0) gunicor-3630950 |                   _raw_spin_lock_irqsave();
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 __remove_hrtimer();
+ 0) gunicor-3630950 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-3630950 |               }
+ 0) gunicor-3630950 |             } /* schedule_hrtimeout_range_clock */
+ 0) gunicor-3630950 |           } /* schedule_hrtimeout_range */
+ 0) gunicor-3630950 |           __fdget() {
+ 0) gunicor-3630950 |             __fget_light() {
+ 0) gunicor-3630950 |               __fget() {
+ 0) gunicor-3630950 |                 __rcu_read_lock();
+ 0) gunicor-3630950 |                 __rcu_read_unlock();
+ 0) gunicor-3630950 |               }
+ 0) gunicor-3630950 |             }
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           sock_poll() {
+ 0) gunicor-3630950 |             tcp_poll();
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           fput() {
+ 0) gunicor-3630950 |             fput_many();
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           __fdget() {
+ 0) gunicor-3630950 |             __fget_light() {
+ 0) gunicor-3630950 |               __fget() {
+ 0) gunicor-3630950 |                 __rcu_read_lock();
+ 0) gunicor-3630950 |                 __rcu_read_unlock();
+ 0) gunicor-3630950 |               }
+ 0) gunicor-3630950 |             }
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           pipe_poll();
+ 0) gunicor-3630950 |           fput() {
+ 0) gunicor-3630950 |             fput_many();
+ 0) gunicor-3630950 |           }
+ 0) gunicor-3630950 |           schedule_hrtimeout_range() {
+ 0) gunicor-3630950 |             schedule_hrtimeout_range_clock() {
+ 0) gunicor-3630950 |               hrtimer_init_sleeper() {
+ 0) gunicor-3630950 |                 __hrtimer_init();
+ 0) gunicor-3630950 |               }
+ 0) gunicor-3630950 |               hrtimer_start_range_ns() {
+ 0) gunicor-3630950 |                 lock_hrtimer_base() {
+ 0) gunicor-3630950 |                   _raw_spin_lock_irqsave();
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 get_nohz_timer_target();
+ 0) gunicor-3630950 |                 enqueue_hrtimer();
+ 0) gunicor-3630950 |                 _raw_spin_unlock_irqrestore();
+ 0) gunicor-3630950 |               }
+ 0) gunicor-3630950 |               schedule() {
+ 0) gunicor-3630950 |                 rcu_note_context_switch() {
+ 0) gunicor-3630950 |                   rcu_preempt_deferred_qs() {
+ 0) gunicor-3630950 |                     rcu_preempt_need_deferred_qs();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   rcu_qs();
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 _raw_spin_lock();
+ 0) gunicor-3630950 |                 update_rq_clock();
+ 0) gunicor-3630950 |                 deactivate_task() {
+ 0) gunicor-3630950 |                   psi_task_change() {
+ 0) gunicor-3630950 |                     record_times.isra.0();
+ 0) gunicor-3630950 |                     record_times.isra.0();
+ 0) gunicor-3630950 |                     record_times.isra.0();
+ 0) gunicor-3630950 |                     record_times.isra.0();
+ 0) gunicor-3630950 |                     record_times.isra.0();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   dequeue_task_fair() {
+ 0) gunicor-3630950 |                     dequeue_entity() {
+ 0) gunicor-3630950 |                       update_curr() {
+ 0) gunicor-3630950 |                         update_min_vruntime();
+ 0) gunicor-3630950 |                         cpuacct_charge() {
+ 0) gunicor-3630950 |                           __rcu_read_lock();
+ 0) gunicor-3630950 |                           __rcu_read_unlock();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                         __rcu_read_lock();
+ 0) gunicor-3630950 |                         __cgroup_account_cputime() {
+ 0) gunicor-3630950 |                           cgroup_base_stat_cputime_account_begin();
+ 0) gunicor-3630950 |                           cgroup_base_stat_cputime_account_end.isra.0() {
+ 0) gunicor-3630950 |                             cgroup_rstat_updated();
+ 0) gunicor-3630950 |                           }
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                         __rcu_read_unlock();
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                       __update_load_avg_se() {
+ 0) gunicor-3630950 |                         __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                       __update_load_avg_cfs_rq() {
+ 0) gunicor-3630950 |                         __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                       clear_buddies();
+ 0) gunicor-3630950 |                       update_cfs_group();
+ 0) gunicor-3630950 |                       update_min_vruntime();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     set_next_buddy();
+ 0) gunicor-3630950 |                     __update_load_avg_se() {
+ 0) gunicor-3630950 |                       __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq() {
+ 0) gunicor-3630950 |                       __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     update_cfs_group() {
+ 0) gunicor-3630950 |                       reweight_entity() {
+ 0) gunicor-3630950 |                         update_curr() {
+ 0) gunicor-3630950 |                           __calc_delta();
+ 0) gunicor-3630950 |                           update_min_vruntime();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_se() {
+ 0) gunicor-3630950 |                       __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq() {
+ 0) gunicor-3630950 |                       __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     update_cfs_group() {
+ 0) gunicor-3630950 |                       reweight_entity() {
+ 0) gunicor-3630950 |                         update_curr() {
+ 0) gunicor-3630950 |                           __calc_delta();
+ 0) gunicor-3630950 |                           update_min_vruntime();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_se() {
+ 0) gunicor-3630950 |                       __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq() {
+ 0) gunicor-3630950 |                       __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     update_cfs_group() {
+ 0) gunicor-3630950 |                       reweight_entity() {
+ 0) gunicor-3630950 |                         update_curr() {
+ 0) gunicor-3630950 |                           __calc_delta();
+ 0) gunicor-3630950 |                           update_min_vruntime();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_se() {
+ 0) gunicor-3630950 |                       __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq() {
+ 0) gunicor-3630950 |                       __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     dbs_update_util_handler() {
+ 0) gunicor-3630950 |                       cpufreq_this_cpu_can_update();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     update_cfs_group() {
+ 0) gunicor-3630950 |                       reweight_entity() {
+ 0) gunicor-3630950 |                         update_curr() {
+ 0) gunicor-3630950 |                           __calc_delta();
+ 0) gunicor-3630950 |                           update_min_vruntime();
+ 0) gunicor-3630950 |                         }
+ 0) gunicor-3630950 |                       }
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     hrtick_update();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 pick_next_task_fair() {
+ 0) gunicor-3630950 |                   update_curr();
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   update_curr();
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   update_curr();
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     wakeup_preempt_entity.isra.0();
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   update_curr();
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     wakeup_preempt_entity.isra.0() {
+ 0) gunicor-3630950 |                       __calc_delta();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   pick_next_entity() {
+ 0) gunicor-3630950 |                     clear_buddies();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   put_prev_entity() {
+ 0) gunicor-3630950 |                     check_cfs_rq_runtime();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   set_next_entity() {
+ 0) gunicor-3630950 |                     __update_load_avg_se() {
+ 0) gunicor-3630950 |                       __accumulate_pelt_segments();
+ 0) gunicor-3630950 |                     }
+ 0) gunicor-3630950 |                     __update_load_avg_cfs_rq();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 check_and_switch_context();
+ 0) gunicor-3630950 |                 fpsimd_thread_switch() {
+ 0) gunicor-3630950 |                   __get_cpu_fpsimd_context();
+ 0) gunicor-3630950 |                   fpsimd_save() {
+ 0) gunicor-3630950 |                     have_cpu_fpsimd_context();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                   __put_cpu_fpsimd_context();
+ 0) gunicor-3630950 |                 }
+ 0) gunicor-3630950 |                 hw_breakpoint_thread_switch();
+ 0) gunicor-3630950 |                 uao_thread_switch();
+ 0) gunicor-3630950 |                 cpu_have_feature();
+ 0) gunicor-3630950 |                 erratum_1418040_thread_switch() {
+ 0) gunicor-3630950 |                   this_cpu_has_cap() {
+ 0) gunicor-3630950 |                     is_affected_midr_range_list();
+ 0) gunicor-3630950 |                   }
+ 0) gunicor-3630950 |                 }
