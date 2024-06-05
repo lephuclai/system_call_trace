@@ -120,15 +120,15 @@ results/mcont_1
 
 Trong đó:
 
-- pidinfo_mongo và pidinfo_web: chứa thông tin cây tiến trình của service mongo và flask-web
-- pidinfo_more: chứa thông tin của tất cả các tiến trình đang chạy trên node tại thời điểm đo
-- pids:_mongo và pids_web chứa danh sách các tiến trình của service, dùng để ghi vào filter của ftrace
-- trace: kết quả trace kernel function call
-- trace_mongo.list và trace_web.list: chứa danh sách các kernel function mà service gọi tới, số lượng dòng của file chính là số lượng các function được gọi
+- `pidinfo_mongo` và `pidinfo_web`: chứa thông tin cây tiến trình của service mongo và flask-web
+- `pidinfo_more`: chứa thông tin của tất cả các tiến trình đang chạy trên node tại thời điểm đo
+- `pids:_mongo` và `pids_web` chứa danh sách các tiến trình của service, dùng để ghi vào filter của ftrace
+- `trace`: kết quả trace kernel function call
+- `trace_mongo.list` và `trace_web.list`: chứa danh sách các kernel function mà service gọi tới, số lượng dòng của file chính là số lượng các function được gọi
 - Mỗi PID sẽ được xử lý và tạo ra các file chứa thông tin về kernel function call của process đó:
-    - <pid>.raw: Kết quả trace chỉ của pid đó, được cắt từ file `trace`
-    - <pid>.filt-se và <pid>.filt-sei: Kết quả sau khi được xử lý bởi các filter
-    - <pid>.list: Danh sách các kernel function call của process đó
+    - `<pid>.raw`: Kết quả trace chỉ của pid đó, được cắt từ file `trace`
+    - `<pid>.filt-se` và `<pid>.filt-sei`: Kết quả sau khi được xử lý bởi các filter
+    - `<pid>.list`: Danh sách các kernel function call của process đó
 
 ## Refference
 
